@@ -32,9 +32,7 @@ namespace ViewProvision
 
         private void ApplyCalibrationParameters(ViewData viewData)
         {
-            throw new NotImplementedException();
-
-            viewData.LeftImage = viewData.LeftImage.Rotate(LeftImageRotationTimes * 90.0, new Bgr(0, 0, 0));
+            viewData = viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
         }
 
         private void CalibrateCaptures(ViewData viewData)
@@ -43,7 +41,7 @@ namespace ViewProvision
             //1. Detect ArUco markers on both images
             //   If markers are detected:
             //2.    Calculate rotation of each image (save it to instance field)
-            //3.    After rotating the images determine which is right and left (save it to instance field)
+            //3.    After rotating the images determine which is right and left [if yes, swap captures]
             //4.    If both results are saved, set flag Calibrated on true;            
         }
     }
