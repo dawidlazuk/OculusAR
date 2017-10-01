@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Emgu.CV;
 using Emgu.CV.Structure;
 
-namespace ViewProvision
+namespace ViewProvision.Contract
 {
     public class ViewData
     {

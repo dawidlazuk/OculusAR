@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
-using ViewProvision;
+
+using IoCContainer;
+
+using ViewProvision.Contract;
 using ViewVisualization.Annotations;
 
 namespace ViewVisualization
@@ -14,28 +13,30 @@ namespace ViewVisualization
     {
         private ViewData viewData;
         public ViewData ViewData { get
-            {return viewData;;}
+            {return viewData;}
             set
             {
                 viewData = value;
                 OnPropertyChanged();
             } }
 
-        private readonly ViewProvider viewProvider;
+        private readonly IViewProvider viewProvider;
 
         public MainViewModel()
         {
-            viewProvider = new ViewProvider();
+            IoCManager.Initialize();
+            viewProvider = IoCManager.Get<IViewProvider>();
 
             Task.Run(() =>
             {
-                while(true)
+                while (true)
                     ProcessNextFrames();
             });
         }
 
+        int i = 0;
         private void ProcessNextFrames()
-        {
+        {            
             ViewData = viewProvider.GetCurrentView();
         }
 

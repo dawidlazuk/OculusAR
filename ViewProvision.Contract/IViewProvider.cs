@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ViewProvision
+namespace ViewProvision.Contract
 {
-    interface IViewProvider
+    public interface IViewProvider
     {
         bool IsCalibrated { get; }
+        void ResetCalibration();
 
         ViewData GetCurrentView();
     }

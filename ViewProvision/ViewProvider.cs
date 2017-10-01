@@ -1,6 +1,8 @@
-﻿using Emgu.CV;
+﻿using System;
+using Emgu.CV;
 using Emgu.CV.Structure;
-using System;
+
+using ViewProvision.Contract;
 
 namespace ViewProvision
 {
@@ -37,12 +39,17 @@ namespace ViewProvision
 
         private void CalibrateCaptures(ViewData viewData)
         {
-            throw new NotImplementedException();
             //1. Detect ArUco markers on both images
             //   If markers are detected:
             //2.    Calculate rotation of each image (save it to instance field)
             //3.    After rotating the images determine which is right and left [if yes, swap captures]
             //4.    If both results are saved, set flag Calibrated on true;            
         }
+
+        public void ResetCalibration()
+        {
+            IsCalibrated = false;
+        }
+        
     }
 }

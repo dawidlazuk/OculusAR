@@ -123,8 +123,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IoCContainer\IoCContainer.csproj">
+      <Project>{51F683D8-1EFE-44A0-A4DD-B23701239766}</Project>
+      <Name>IoCContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
+      <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>
+      <Name>ViewProvision.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewProvision\ViewProvision.csproj">
-      <Project>{03469CC9-4D9F-4620-9837-979E9BB6378F}</Project>
+      <Project>{03469cc9-4d9f-4620-9837-979e9bb6378f}</Project>
       <Name>ViewProvision</Name>
     </ProjectReference>
   </ItemGroup>
