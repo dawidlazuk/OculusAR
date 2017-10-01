@@ -13,8 +13,8 @@ namespace IoCContainer
         {
             var builder = new ContainerBuilder();
 
-            //Register types here
-            builder.RegisterType<ViewProvider>().As<IViewProvider>();
+            //Register modules here
+            builder.RegisterInstance(new ViewProvider()).As<IViewProvider>().ExternallyOwned();
 
             Container = builder.Build();
         }
