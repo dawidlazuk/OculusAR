@@ -123,7 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImagesProvision\ViewProvision.csproj">
+    <ProjectReference Include="..\ViewProvision\ViewProvision.csproj">
       <Project>{03469CC9-4D9F-4620-9837-979E9BB6378F}</Project>
       <Name>ViewProvision</Name>
     </ProjectReference>

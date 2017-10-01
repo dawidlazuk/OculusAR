@@ -17,6 +17,9 @@ namespace ViewVisualization
 
         public static BitmapSource ToBitmapSource(IImage image)
         {
+            if (image == null)
+                return null; //TODO set image as sth like "no image captured"
+
             using (System.Drawing.Bitmap source = image.Bitmap)
             {
                 IntPtr ptr = source.GetHbitmap();

@@ -27,7 +27,11 @@ namespace ViewVisualization
         {
             viewProvider = new ViewProvider();
 
-            Task.Run(() => ProcessNextFrames());
+            Task.Run(() =>
+            {
+                while(true)
+                    ProcessNextFrames();
+            });
         }
 
         private void ProcessNextFrames()
@@ -35,6 +39,8 @@ namespace ViewVisualization
             ViewData = viewProvider.GetCurrentView();
         }
 
+
+        #region INotifyPropertyChanged implementation
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -42,5 +48,6 @@ namespace ViewVisualization
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
     }
 }

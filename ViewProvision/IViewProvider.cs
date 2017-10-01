@@ -8,6 +8,8 @@ namespace ViewProvision
 {
     interface IViewProvider
     {
+        bool IsCalibrated { get; }
+
         ViewData GetCurrentView();
     }
 }
