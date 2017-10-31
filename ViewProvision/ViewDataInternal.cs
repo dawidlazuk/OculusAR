@@ -37,12 +37,18 @@ namespace ViewProvision
             return new ViewDataInternal(leftImage: RightImage, rightImage: LeftImage);
         }
 
-        public ViewDataInternal RotateImages(ushort leftImageRotationTimes, ushort rightImageRotationTimes)
+        public ViewDataInternal RotateImages(short leftImageRotationTimes, short rightImageRotationTimes)
         {
-            LeftImage = LeftImage.Rotate(leftImageRotationTimes * StraightAngle, new Bgr(0, 0, 0), true);
-            RightImage = RightImage.Rotate(rightImageRotationTimes * StraightAngle, new Bgr(0, 0, 0), true);
-
+            if (leftImageRotationTimes % 4 != 0)
+                LeftImage = LeftImage.Rotate(GetRotatonAngle(leftImageRotationTimes), new Bgr(0, 0, 0), true);
+            if(rightImageRotationTimes % 4 != 0)
+                RightImage = RightImage.Rotate(GetRotatonAngle(rightImageRotationTimes), new Bgr(0, 0, 0), true);
             return this;
+        }
+
+        private static double GetRotatonAngle(short rotationTimes)
+        {
+            return (rotationTimes % 4) * StraightAngle;
         }
 
         public ViewData External
