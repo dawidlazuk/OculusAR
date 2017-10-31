@@ -2,13 +2,11 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-
 using IoCContainer;
-
 using ViewProvision.Contract;
 using ViewVisualization.Annotations;
 
-namespace ViewVisualization
+namespace ViewVisualization.ViewModels
 {
     class MainViewModel : INotifyPropertyChanged
     {
@@ -58,7 +56,7 @@ namespace ViewVisualization
         {
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProvider>();
-            CameraIndexes = new ObservableCollection<int>(viewProvider.AvailableCameraIndexes);
+            CameraIndexes = new ObservableCollection<int>(viewProvider.AvailableCaptureIndexes);
 
             Task.Run(() =>
             {

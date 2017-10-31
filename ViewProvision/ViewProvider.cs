@@ -8,15 +8,6 @@ namespace ViewProvision
 {
     public class ViewProvider : IViewProvider
     {
-        public const uint NumberOfCameraIndexes = 4;
-
-        public bool IsCalibrated { get; private set; }
-
-        private ushort LeftImageRotationTimes { get; set; } = 0;
-        private ushort RightImageRotationTimes { get; set; } = 0;
-
-        private Dictionary<int,ICapture> OpenedCaptures { get; set; }
-
         private ICapture firstCapture;
         private ICapture secondCapture;
 
@@ -26,7 +17,7 @@ namespace ViewProvision
             firstCapture = GetCapture(0);
             secondCapture = GetCapture(1);
         }
-
+        
         public ViewData GetCurrentView()
         {
             var firstImage = firstCapture.QueryFrame()?.ToImage<Bgr, byte>();
@@ -37,15 +28,44 @@ namespace ViewProvision
             if (IsCalibrated == false)
                 CalibrateCaptures(viewData);
 
-            if (IsCalibrated == true)
+            //if (IsCalibrated == true)
                 ApplyCalibrationParameters(viewData);
 
             return viewData.External;
         }
+        
+        #region IViewCalibrator implementation
+        public bool IsCalibrated { get; private set; }
 
-        private void ApplyCalibrationParameters(ViewDataInternal viewData)
+        private short LeftImageRotationTimes { get; set; } = 0;
+        private short RightImageRotationTimes { get; set; } = 0;
+
+
+        public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
-            viewData = viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
+            short valueToAdd = 0;
+            switch (rotateSide)
+            {
+                case RotateSide.Left:
+                    valueToAdd = -1;
+                    break;
+                case RotateSide.Right:
+                    valueToAdd = 1;
+                    break;
+            }
+            switch (captureSide)
+            {
+                case CaptureSide.Left:
+                    LeftImageRotationTimes += valueToAdd;
+                    break;
+                case CaptureSide.Right:
+                    RightImageRotationTimes += valueToAdd;
+                    break;
+            }
+        }
+        public void ResetCalibration()
+        {
+            IsCalibrated = false;
         }
 
         private void CalibrateCaptures(ViewDataInternal viewData)
@@ -58,11 +78,11 @@ namespace ViewProvision
             //4.    If both results are saved, set flag Calibrated on true;            
         }
 
-        public void ResetCalibration()
+        private void ApplyCalibrationParameters(ViewDataInternal viewData)
         {
-            IsCalibrated = false;
+            viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
         }
-        
+
 
         //private void DetectMarkers(ViewDataInternal viewData)
         //{
@@ -92,10 +112,18 @@ namespace ViewProvision
         //        }
         //    }
         //}
+        #endregion
+
+        #region ICaptureManager implementation
+
+        public const uint NumberOfCameraIndexes = 4;
+
+        private Dictionary<int, ICapture> OpenedCaptures { get; set; }
+
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
-            switch ((int) captureSide)
+            switch ((int)captureSide)
             {
                 case (int)CaptureSide.Left:
                     firstCapture = GetCapture(cameraIndex);
@@ -107,28 +135,29 @@ namespace ViewProvision
             }
         }
 
-        private ICapture GetCapture(int index)
-        {
-            ICapture capture;
-            if (OpenedCaptures.TryGetValue(index,out capture) == false)
-            {
-                capture = new VideoCapture(index);
-                OpenedCaptures.Add(index,capture);
-            }
-            return capture;
-        }
-
-        public IEnumerable<int> AvailableCameraIndexes
+        public IEnumerable<int> AvailableCaptureIndexes
         {
             get
             {
                 var result = new SortedSet<int>();
-                for(int i = 0; i < NumberOfCameraIndexes; ++i)
-                    using(var capture = new VideoCapture(i))
-                        if(capture.IsOpened)
+                for (int i = 0; i < NumberOfCameraIndexes; ++i)
+                    using (var capture = new VideoCapture(i))
+                        if (capture.IsOpened)
                             result.Add(i);
                 return result;
             }
         }
+
+        private ICapture GetCapture(int index)
+        {
+            ICapture capture;
+            if (OpenedCaptures.TryGetValue(index, out capture) == false)
+            {
+                capture = new VideoCapture(index);
+                OpenedCaptures.Add(index, capture);
+            }
+            return capture;
+        }
+        #endregion
     }
 }

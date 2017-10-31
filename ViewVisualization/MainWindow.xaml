@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewVisualization"
         xmlns:converters="clr-namespace:ViewVisualization.Converters"
+        xmlns:controls="clr-namespace:ViewVisualization.Controls"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
@@ -20,6 +21,10 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <!--<controls:ChannelControl Image="{Binding Path=ViewData.LeftImage}" 
+                                 CameraIndexes="{Binding Path=CameraIndexes}"
+                                 CameraIndex="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>-->
+        
         <Image Grid.Column="0"
                Source="{Binding Path=ViewData.LeftImage, Converter={StaticResource BitmapSourceConverter}}"/>
         <ComboBox Grid.Row="1" Grid.Column="0"
