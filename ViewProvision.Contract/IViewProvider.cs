@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace ViewProvision.Contract
 {
-    public interface IViewProvider
+    public interface IViewCalibrator
     {
+        [Obsolete]
         bool IsCalibrated { get; }
-        IEnumerable<int> AvailableCameraIndexes { get; }
-
+        [Obsolete]
         void ResetCalibration();
-        void SetCapture(CaptureSide captureSide, int cameraIndex);
 
+        void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
+    }
+
+    public interface ICaptureManager
+    {
+        void SetCapture(CaptureSide captureSide, int cameraIndex);
+        IEnumerable<int> AvailableCaptureIndexes { get; }
+    }
+
+    public interface IViewProvider : IViewCalibrator, ICaptureManager
+    {
         ViewData GetCurrentView();
     }
 }
