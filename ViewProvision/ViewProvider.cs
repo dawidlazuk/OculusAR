@@ -45,7 +45,7 @@ namespace ViewProvision
 
             if (IsCalibrated == true)
                 ApplyCalibrationParameters(viewData);
-            
+
             return viewData.External;
         }
 
@@ -70,34 +70,34 @@ namespace ViewProvision
         }
         
 
-        private void DetectMarkers(ViewDataInternal viewData)
-        {
-            var cameraMatrix = new OpenCV.Net.Mat(3, 3, OpenCV.Net.Depth.F32, 1);
-            var distortion = new OpenCV.Net.Mat(1, 4, OpenCV.Net.Depth.F32, 1);
+        //private void DetectMarkers(ViewDataInternal viewData)
+        //{
+        //    var cameraMatrix = new OpenCV.Net.Mat(3, 3, OpenCV.Net.Depth.F32, 1);
+        //    var distortion = new OpenCV.Net.Mat(1, 4, OpenCV.Net.Depth.F32, 1);
 
-            using (var detector = new MarkerDetector())
-            {
-                detector.ThresholdMethod = ThresholdMethod.AdaptiveThreshold;
-                detector.Param1 = 7.0;
-                detector.Param2 = 7.0;
-                detector.MinSize = 0.04f;
-                detector.MaxSize = 0.5f;
-                detector.CornerRefinement = CornerRefinementMethod.Lines;
+        //    using (var detector = new MarkerDetector())
+        //    {
+        //        detector.ThresholdMethod = ThresholdMethod.AdaptiveThreshold;
+        //        detector.Param1 = 7.0;
+        //        detector.Param2 = 7.0;
+        //        detector.MinSize = 0.04f;
+        //        detector.MaxSize = 0.5f;
+        //        detector.CornerRefinement = CornerRefinementMethod.Lines;
 
-                // Detect markers in a sequence of camera images.
-                var markerSize = 10;
-                using (var image = OpenCV.Net.Mat.FromArray(viewData.LeftImage.Bytes))
-                {
-                    var detectedMarkers = detector.Detect(image, cameraMatrix, distortion, markerSize);
-                    Debug.WriteLine($"Left image markers: {detectedMarkers.Count}");
-                }
-                using (var image = OpenCV.Net.Mat.FromArray(viewData.RightImage.Bytes))
-                {
-                    var detectedMarkers = detector.Detect(image, cameraMatrix, distortion, markerSize);
-                    Debug.WriteLine($"Right image markers: {detectedMarkers.Count}");
-                }
-            }
-        }
+        //        // Detect markers in a sequence of camera images.
+        //        var markerSize = 10;
+        //        using (var image = OpenCV.Net.Mat.FromArray(viewData.LeftImage.Bytes))
+        //        {
+        //            var detectedMarkers = detector.Detect(image, cameraMatrix, distortion, markerSize);
+        //            Debug.WriteLine($"Left image markers: {detectedMarkers.Count}");
+        //        }
+        //        using (var image = OpenCV.Net.Mat.FromArray(viewData.RightImage.Bytes))
+        //        {
+        //            var detectedMarkers = detector.Detect(image, cameraMatrix, distortion, markerSize);
+        //            Debug.WriteLine($"Right image markers: {detectedMarkers.Count}");
+        //        }
+        //    }
+        //}
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {

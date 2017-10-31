@@ -4,20 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ViewVisualization"
+        xmlns:converters="clr-namespace:ViewVisualization.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        <local:ImageToBitmapConverter x:Key="ImageToBitmapConverter"/>
+        <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </Window.Resources>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Image Grid.Column="0"
-               Source="{Binding ViewData.LeftImage, Converter={StaticResource ImageToBitmapConverter}}"/>
+               Source="{Binding Path=ViewData.LeftImage, Converter={StaticResource BitmapSourceConverter}}"/>
+        <ComboBox Grid.Row="1" Grid.Column="0"
+                  ItemsSource="{Binding Path=CameraIndexes}"
+                  SelectedItem="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>
+        
         <Image Grid.Column="1"
-               Source="{Binding ViewData.RightImage, Converter={StaticResource ImageToBitmapConverter}}"/>
+               Source="{Binding Path=ViewData.RightImage, Converter={StaticResource BitmapSourceConverter}}"/>
+        <ComboBox Grid.Row="1" Grid.Column="1"
+                  ItemsSource="{Binding Path=CameraIndexes}"
+                  SelectedItem="{Binding Path=RightCameraIndex, Mode=TwoWay}"/>
     </Grid>
 </Window>
