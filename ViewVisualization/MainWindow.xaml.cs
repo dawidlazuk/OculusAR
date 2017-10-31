@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ViewVisualization.ViewModels;
 
 namespace ViewVisualization
 {
@@ -20,11 +21,14 @@ namespace ViewVisualization
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            this.DataContext = new MainViewModel();
+            viewModel = new MainViewModel();
+            this.DataContext = viewModel;
         }
     }
 }

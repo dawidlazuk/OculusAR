@@ -20,38 +20,26 @@ namespace ViewVisualization.Converters
         {
             if (value == null)
                 return null;
+            try
+            {
+                var bitmap = (Bitmap) value;
+                var bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+                    ImageLockMode.ReadOnly,
+                    bitmap.PixelFormat);
 
-            //try
-            //{
-            //    var bitmap = (Bitmap) value;
-            //    MemoryStream stream = new MemoryStream();
+                var bitmapSource = BitmapSource.Create(bitmapData.Width, bitmapData.Height, 96, 96,
+                    ConvertPixelFormat(bitmapData.PixelFormat), null,
+                    bitmapData.Scan0, bitmapData.Stride*bitmapData.Height, bitmapData.Stride);
 
-            //    bitmap.Save(stream, ImageFormat.Bmp);
-            //    GC.KeepAlive(stream);
-            //    stream.Position = 0;
-            //    BitmapImage bitmapImage = new BitmapImage();
-            //    bitmapImage.BeginInit();
-            //    bitmapImage.StreamSource = stream;
-            //    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-            //    bitmapImage.EndInit();
+                bitmap.UnlockBits(bitmapData);
 
-            //    return bitmapImage;
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.Message);
-            //    return null;
-            //}
-
-            var bitmap = (Bitmap) value;
-            var bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadOnly,
-                bitmap.PixelFormat);
-
-            var bitmapSource = BitmapSource.Create(bitmapData.Width, bitmapData.Height, 96, 96, ConvertPixelFormat(bitmapData.PixelFormat), null,
-                bitmapData.Scan0, bitmapData.Stride*bitmapData.Height, bitmapData.Stride);
-
-            bitmap.UnlockBits(bitmapData);
-            return bitmapSource;
+                return bitmapSource;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
