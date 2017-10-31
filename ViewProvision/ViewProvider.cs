@@ -1,14 +1,8 @@
-﻿using System;
-using Emgu.CV;
+﻿using Emgu.CV;
 using Emgu.CV.Structure;
 
 using ViewProvision.Contract;
-using Aruco.Net;
-using System.Diagnostics;
-using Emgu.CV.CvEnum;
-using System.Collections;
 using System.Collections.Generic;
-using Emgu.Util;
 
 namespace ViewProvision
 {
