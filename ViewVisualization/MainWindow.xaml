@@ -6,35 +6,29 @@
         xmlns:local="clr-namespace:ViewVisualization"
         xmlns:converters="clr-namespace:ViewVisualization.Converters"
         xmlns:controls="clr-namespace:ViewVisualization.Controls"
+        xmlns:viewmodels="clr-namespace:ViewVisualization.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </Window.Resources>
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <!--<controls:ChannelControl Image="{Binding Path=ViewData.LeftImage}" 
+        <controls:ChannelControl Grid.Column="0"
+                                 Image="{Binding Path=ViewData.LeftImage}" 
                                  CameraIndexes="{Binding Path=CameraIndexes}"
-                                 CameraIndex="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>-->
-        
-        <Image Grid.Column="0"
-               Source="{Binding Path=ViewData.LeftImage, Converter={StaticResource BitmapSourceConverter}}"/>
-        <ComboBox Grid.Row="1" Grid.Column="0"
-                  ItemsSource="{Binding Path=CameraIndexes}"
-                  SelectedItem="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>
-        
-        <Image Grid.Column="1"
-               Source="{Binding Path=ViewData.RightImage, Converter={StaticResource BitmapSourceConverter}}"/>
-        <ComboBox Grid.Row="1" Grid.Column="1"
-                  ItemsSource="{Binding Path=CameraIndexes}"
-                  SelectedItem="{Binding Path=RightCameraIndex, Mode=TwoWay}"/>
+                                 CameraIndex="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>
+
+        <controls:ChannelControl Grid.Column="1"
+                                 Image="{Binding Path=ViewData.RightImage}" 
+                                 CameraIndexes="{Binding Path=CameraIndexes}"
+                                 CameraIndex="{Binding Path=RightCameraIndex, Mode=TwoWay}"/>
     </Grid>
 </Window>

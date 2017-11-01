@@ -6,11 +6,12 @@
              xmlns:local="clr-namespace:ViewVisualization.Controls"
              xmlns:converters="clr-namespace:ViewVisualization.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             Name="OneChannelControl">
     <UserControl.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </UserControl.Resources>
-    <Grid>
+    <Grid Name="ChannelGrid">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="40"/>
@@ -21,7 +22,5 @@
         <ComboBox Grid.Row="1" Grid.Column="0"
                   ItemsSource="{Binding Path=CameraIndexes}"
                   SelectedItem="{Binding Path=CameraIndex, Mode=TwoWay}"/>
-
-
     </Grid>
 </UserControl>
