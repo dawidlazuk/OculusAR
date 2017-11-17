@@ -12,9 +12,6 @@
     <Window.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </Window.Resources>
-    <Window.DataContext>
-        <viewmodels:MainViewModel/>
-    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
