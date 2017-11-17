@@ -20,8 +20,8 @@ namespace ViewProvision
         
         public ViewData GetCurrentView()
         {
-            var firstImage = firstCapture.QueryFrame()?.ToImage<Bgr, byte>();
-            var secondImage = secondCapture.QueryFrame()?.ToImage<Bgr, byte>();
+            var firstImage = GetFrame(firstCapture);
+            var secondImage = GetFrame(secondCapture);
 
             var viewData = new ViewDataInternal(firstImage, secondImage);
 
@@ -33,7 +33,19 @@ namespace ViewProvision
 
             return viewData.External;
         }
-        
+
+        public Image<Bgr, byte> GetFrame(ICapture capture)
+        {
+            try
+            {
+                return capture.QueryFrame()?.ToImage<Bgr, byte>();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         #region IViewCalibrator implementation
         public bool IsCalibrated { get; private set; }
 
@@ -143,8 +155,9 @@ namespace ViewProvision
                 for (int i = 0; i < NumberOfCameraIndexes; ++i)
                     using (var capture = new VideoCapture(i))
                         if (capture.IsOpened)
-                            result.Add(i);
-                return result;
+                            yield return i;
+                //return result;
+                yield break;
             }
         }
 
