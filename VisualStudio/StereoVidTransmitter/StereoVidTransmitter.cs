@@ -1,16 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
-namespace StereoVidTransmitter
+namespace UnityTransmitter
 {
-    public class StereoVidTransmitter
+    public class StereoVidTransmitter : IStereoVidTransmitter
     {
-        public StereoVidTransmitter()
-        {
+        private readonly IEyeBitmapSource _eyeBitmapSource;
+        private readonly ITextureConverter _textureConverter;
 
+        public StereoVidTransmitter(IEyeBitmapSource eyeBitmapSource, ITextureConverter textureConverter)
+        {
+            _eyeBitmapSource = eyeBitmapSource;
+            _textureConverter = textureConverter;
+        }
+
+        public Texture GetLeftEyeTexture()
+        {
+            return _textureConverter.FromBitmap(_eyeBitmapSource.GetLeftEyeBitmap());
+        }
+
+        public Texture GetRightEyeTexture()
+        {
+            return _textureConverter.FromBitmap(_eyeBitmapSource.GetRightEyeBitmap());
         }
     }
 }
