@@ -387,9 +387,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 563254099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 194a9eaf3d456f946bc22dac2cab9088, type: 3}
+  m_Script: {fileID: 11500000, guid: a6b769f768f018948a4834fb52442554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VideoPlayer: {fileID: 0}
 --- !u!1 &916036816
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +908,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -931,7 +932,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
 --- !u!114 &1424802107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,9 +941,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1424802102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 194a9eaf3d456f946bc22dac2cab9088, type: 3}
+  m_Script: {fileID: 11500000, guid: a6b769f768f018948a4834fb52442554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VideoPlayer: {fileID: 0}
 --- !u!328 &1424802108
 VideoPlayer:
   m_ObjectHideFlags: 0
