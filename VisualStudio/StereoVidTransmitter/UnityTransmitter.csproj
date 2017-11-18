@@ -40,13 +40,11 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\Unity\DoubleEye\Temp\UnityVS_bin\Debug\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MockEyeBitmapSource.cs" />
     <Compile Include="EyeMode.cs" />
-    <Compile Include="IEyeBitmapSource.cs" />
     <Compile Include="ITextureConverter.cs" />
     <Compile Include="IStereoVidTransmitter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,6 +54,15 @@
   <ItemGroup>
     <Content Include="TestBitmaps\1test.jpg" />
     <Content Include="TestBitmaps\2test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
+      <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>
+      <Name>ViewProvision.Contract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

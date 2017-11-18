@@ -1,5 +1,5 @@
 ﻿using Autofac;
-
+using UnityTransmitter;
 using ViewProvision;
 using ViewProvision.Contract;
 
@@ -15,7 +15,8 @@ namespace IoCContainer
 
             //Register modules here
             builder.RegisterInstance(new ViewProvider()).As<IViewProvider>().ExternallyOwned();
-
+            builder.RegisterInstance(new TextureConverter()).As<ITextureConverter>();
+            builder.RegisterType<StereoVidTransmitter>().As<IStereoVidTransmitter>();
             Container = builder.Build();
         }
 

@@ -51,6 +51,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StereoVidTransmitter\UnityTransmitter.csproj">
+      <Project>{3CCD1AF3-6E54-423B-8298-704ED1F6C65B}</Project>
+      <Name>UnityTransmitter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
       <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>
       <Name>ViewProvision.Contract</Name>
