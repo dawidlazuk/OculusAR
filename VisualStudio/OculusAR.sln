@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewProvision.Contract", "V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainer", "IoCContainer\IoCContainer.csproj", "{51F683D8-1EFE-44A0-A4DD-B23701239766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StereoVidTransmitter", "StereoVidTransmitter\StereoVidTransmitter.csproj", "{3CCD1AF3-6E54-423B-8298-704ED1F6C65B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityTransmitter", "UnityTransmitter\UnityTransmitter.csproj", "{3CCD1AF3-6E54-423B-8298-704ED1F6C65B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity", "..\Unity\DoubleEye\Unity.csproj", "{C3E515A1-6A72-DA45-F005-AFBA01172E38}"
 EndProject
