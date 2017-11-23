@@ -151,7 +151,7 @@ namespace ViewProvision
         {
             get
             {
-                var result = new SortedSet<int>();
+                var result = new List<int>();
                 for (int i = 0; i < NumberOfCameraIndexes; ++i)
                     using (var capture = new VideoCapture(i))
                         if (capture.IsOpened)
