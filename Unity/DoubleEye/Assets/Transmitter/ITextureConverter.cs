@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using Emgu.CV;
+using Emgu.CV.Structure;
 using UnityEngine;
 
 namespace Assets.Transmitter
@@ -14,10 +16,17 @@ namespace Assets.Transmitter
     {
         public Texture FromBitmap(Bitmap source)
         {
-
             var texture = new Texture2D(source.Width, source.Height, TextureFormat.RGB24, false);
             var bytes = ImageToByteArray(source);
             texture.LoadImage(bytes);
+            return texture;
+        }
+
+        public Texture FromImage(Image<Bgr, byte> source)
+        {
+            var texture = new Texture2D(source.Width, source.Height, TextureFormat.RGB24, false);
+            var bytes = source.Bytes;
+            texture.LoadRawTextureData(bytes);
             return texture;
         }
 
