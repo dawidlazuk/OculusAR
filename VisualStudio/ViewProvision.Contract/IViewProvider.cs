@@ -22,5 +22,6 @@ namespace ViewProvision.Contract
     public interface IViewProvider : IViewCalibrator, ICaptureManager
     {
         ViewData GetCurrentView();
+        ViewDataInternal GetCurrentViewInternal();
     }
 }

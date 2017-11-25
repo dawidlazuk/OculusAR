@@ -15,12 +15,12 @@ namespace Assets.Transmitter
 
         public StereoView GetStereoView()
         {
-            var currentView = _viewProvider.GetCurrentView();
+            var currentView = _viewProvider.GetCurrentViewInternal();
 
             return new StereoView()
             {
-                LeftEye = _textureConverter.FromBitmap(currentView.LeftImage),
-                RightEye = _textureConverter.FromBitmap(currentView.RightImage)
+                LeftEye = _textureConverter.FromImage(currentView.LeftImage),
+                RightEye = _textureConverter.FromImage(currentView.RightImage)
             };
         }
     }

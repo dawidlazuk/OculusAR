@@ -7,11 +7,6 @@ using UnityEngine;
 
 namespace Assets.Transmitter
 {
-    public interface ITextureConverter
-    {
-        Texture FromBitmap(Bitmap source);
-    }
-
     public class TextureConverter : ITextureConverter
     {
         public Texture FromBitmap(Bitmap source)

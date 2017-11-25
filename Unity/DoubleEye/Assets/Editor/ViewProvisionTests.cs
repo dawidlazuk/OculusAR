@@ -27,5 +27,18 @@ public class ViewProvisionTests
         Assert.IsNotNull(result);
     }
 
+    [Test]
+    public void GetCurrentViewInternal_ShouldReturnNotNull()
+    {
+        //arrange
+        var viewProvider = new ViewProvider();
+
+        //act
+        var result = viewProvider.GetCurrentViewInternal();
+
+        //assert
+        Assert.IsNotNull(result);
+    }
+
 }
 

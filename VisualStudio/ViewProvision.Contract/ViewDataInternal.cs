@@ -1,11 +1,10 @@
 ﻿using System.Drawing;
 using Emgu.CV;
 using Emgu.CV.Structure;
-using ViewProvision.Contract;
 
-namespace ViewProvision
+namespace ViewProvision.Contract
 {
-    class ViewDataInternal
+    public class ViewDataInternal
     {
         const double StraightAngle = 90.0;
 

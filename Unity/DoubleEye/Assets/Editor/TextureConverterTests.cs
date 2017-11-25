@@ -15,8 +15,8 @@ using ViewProvision;
         {
             //arrange
             var viewProvider = new ViewProvider();
-            var videoCapture = new VideoCapture(0);
-            var image = viewProvider.GetFrame(videoCapture);
+            var viewDataInternal = viewProvider.GetCurrentViewInternal();
+            var image = viewDataInternal.LeftImage ?? viewDataInternal.RightImage;
             var converter = new TextureConverter();
 
             //act
@@ -32,7 +32,8 @@ using ViewProvision;
         {
             //arrange
             var viewProvider = new ViewProvider();
-            var bitmap = viewProvider.GetCurrentView().RightImage;
+            var viewData = viewProvider.GetCurrentView();
+            var bitmap = viewData.LeftImage ?? viewData.RightImage;
             var converter = new TextureConverter();
 
             //act
