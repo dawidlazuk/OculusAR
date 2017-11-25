@@ -34,6 +34,22 @@ namespace ViewProvision
             return viewData.External;
         }
 
+        public ViewDataInternal GetCurrentViewInternal()
+        {
+            var firstImage = GetFrame(firstCapture);
+            var secondImage = GetFrame(secondCapture);
+
+            var viewData = new ViewDataInternal(firstImage, secondImage);
+
+            if (IsCalibrated == false)
+                CalibrateCaptures(viewData);
+
+            //if (IsCalibrated == true)
+            ApplyCalibrationParameters(viewData);
+
+            return viewData;
+        }
+
         public Image<Bgr, byte> GetFrame(ICapture capture)
         {
             try
