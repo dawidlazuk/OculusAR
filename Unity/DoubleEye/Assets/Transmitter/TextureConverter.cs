@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using UnityEngine;
+using System.IO;
 
 namespace Assets.Transmitter
 {
@@ -19,10 +20,48 @@ namespace Assets.Transmitter
 
         public Texture FromImage(Image<Bgr, byte> source)
         {
-            var texture = new Texture2D(source.Width, source.Height, TextureFormat.RGB24, false);
-            var bytes = source.Bytes;
-            texture.LoadRawTextureData(bytes);
-            return texture;
+            return ImageToTexture2D(source, true);
+        }
+
+        private static Texture2D ImageToTexture2D<TColor, TDepth>(Image<TColor, TDepth> image, bool correctForVerticleFlip)
+             where TColor : struct, IColor
+             where TDepth : new()
+        {
+            Size size = image.Size;
+
+            if (typeof(TColor) == typeof(Rgb) && typeof(TDepth) == typeof(Byte))
+            {
+                Texture2D texture = new Texture2D(size.Width, size.Height, TextureFormat.RGB24, false);
+                byte[] data = new byte[size.Width * size.Height * 3];
+                GCHandle dataHandle = GCHandle.Alloc(data, GCHandleType.Pinned);
+                using (Image<Rgb, byte> rgb = new Image<Rgb, byte>(size.Width, size.Height, size.Width * 3, dataHandle.AddrOfPinnedObject()))
+                {
+                    rgb.ConvertFrom(image);
+                    if (correctForVerticleFlip)
+                        CvInvoke.Flip(rgb, rgb, Emgu.CV.CvEnum.FlipType.Vertical);
+                }
+                dataHandle.Free();
+                texture.LoadRawTextureData(data);
+                texture.Apply();
+                return texture;
+            }
+            else //if (typeof(TColor) == typeof(Rgba) && typeof(TDepth) == typeof(Byte))
+            {
+                Texture2D texture = new Texture2D(size.Width, size.Height, TextureFormat.RGBA32, false);
+                byte[] data = new byte[size.Width * size.Height * 4];
+                GCHandle dataHandle = GCHandle.Alloc(data, GCHandleType.Pinned);
+                using (Image<Rgba, byte> rgba = new Image<Rgba, byte>(size.Width, size.Height, size.Width * 4, dataHandle.AddrOfPinnedObject()))
+                {
+                    rgba.ConvertFrom(image);
+                    if (correctForVerticleFlip)
+                        CvInvoke.Flip(rgba, rgba, Emgu.CV.CvEnum.FlipType.Vertical);
+                }
+                dataHandle.Free();
+                texture.LoadRawTextureData(data);
+
+                texture.Apply();
+                return texture;
+            }
         }
 
         public byte[] ImageToByteArray(System.Drawing.Image imageIn)
