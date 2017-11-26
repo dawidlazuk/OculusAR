@@ -67,7 +67,10 @@ namespace ViewVisualization.ViewModels
 
         int i = 0;
         private void ProcessNextFrames()
-        {            
+        {
+            //TODO - remove (only for developement)
+            viewProvider.UpdateFrames();
+
             ViewData = viewProvider.GetCurrentView();
         }
 

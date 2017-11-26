@@ -11,30 +11,28 @@ namespace ViewProvision
         private ICapture firstCapture;
         private ICapture secondCapture;
 
+        private ViewDataInternal currentFrames;
+
         public ViewProvider()
         {
             OpenedCaptures = new Dictionary<int, ICapture>();
             firstCapture = GetCapture(0);
             secondCapture = GetCapture(1);
+
+            UpdateFrames();
         }
         
         public ViewData GetCurrentView()
         {
-            var firstImage = GetFrame(firstCapture);
-            var secondImage = GetFrame(secondCapture);
-
-            var viewData = new ViewDataInternal(firstImage, secondImage);
-
-            if (IsCalibrated == false)
-                CalibrateCaptures(viewData);
-
-            //if (IsCalibrated == true)
-                ApplyCalibrationParameters(viewData);
-
-            return viewData.External;
+            return currentFrames.External;
         }
 
         public ViewDataInternal GetCurrentViewInternal()
+        {          
+            return currentFrames;
+        }
+
+        public void UpdateFrames()
         {
             var firstImage = GetFrame(firstCapture);
             var secondImage = GetFrame(secondCapture);
@@ -47,10 +45,11 @@ namespace ViewProvision
             //if (IsCalibrated == true)
             ApplyCalibrationParameters(viewData);
 
-            return viewData;
+            currentFrames = viewData;
         }
 
-        public Image<Bgr, byte> GetFrame(ICapture capture)
+
+        private Image<Bgr, byte> GetFrame(ICapture capture)
         {
             try
             {
@@ -61,6 +60,7 @@ namespace ViewProvision
                 return null;
             }
         }
+        
 
         #region IViewCalibrator implementation
         public bool IsCalibrated { get; private set; }

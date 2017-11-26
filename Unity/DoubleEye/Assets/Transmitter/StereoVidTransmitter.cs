@@ -15,6 +15,7 @@ namespace Assets.Transmitter
 
         public StereoView GetStereoView()
         {
+            _viewProvider.UpdateFrames();
             var currentView = _viewProvider.GetCurrentViewInternal();
 
             return new StereoView()
