@@ -32,3 +32,6 @@ ExportedObj/
 # Builds
 **/*.apk
 **/*.unitypackage
+
+# External DLLs from Visual Studio part
+DoubleEye/Assets/ExternalDLL/
