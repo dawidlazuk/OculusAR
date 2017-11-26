@@ -56,7 +56,7 @@ namespace ViewVisualization.ViewModels
         {
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProvider>();
-            CameraIndexes = new ObservableCollection<int>(viewProvider.AvailableCaptureIndexes);
+            CameraIndexes = new ObservableCollection<int>(viewProvider.GetAvailableCaptureIndexes());
 
             Task.Run(() =>
             {

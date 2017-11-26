@@ -163,18 +163,15 @@ namespace ViewProvision
             }
         }
 
-        public IEnumerable<int> AvailableCaptureIndexes
+        public IEnumerable<int> GetAvailableCaptureIndexes()
         {
-            get
-            {
-                var result = new List<int>();
-                for (int i = 0; i < NumberOfCameraIndexes; ++i)
-                    using (var capture = new VideoCapture(i))
-                        if (capture.IsOpened)
-                            yield return i;
-                //return result;
-                yield break;
-            }
+            var result = new List<int>();
+            for (int i = 0; i < NumberOfCameraIndexes; ++i)
+                using (var capture = new VideoCapture(i))
+                    if (capture.IsOpened)
+                        yield return i;
+
+            yield break;
         }
 
         private ICapture GetCapture(int index)
