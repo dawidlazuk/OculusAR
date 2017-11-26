@@ -10,8 +10,6 @@ using ViewProvision;
 
 public class PlayCameraVideos : MonoBehaviour
 {
-
-
     public RawImage LeftImage;
     public RawImage RightImage;
 
@@ -21,6 +19,15 @@ public class PlayCameraVideos : MonoBehaviour
     void Start()
     {
         var viewProvider = new ViewProvider();
+
+        /* 
+         * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
+         * Change the hardcoded indexes regard to needs.
+         * TODO Delete / Review during future developement
+         */
+        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 1);
+        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 2);
+
         var converter = new TextureConverter();
 
         _stereoVidTransmitter = new StereoVidTransmitter(converter, viewProvider);
