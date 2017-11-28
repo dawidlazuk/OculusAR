@@ -1,5 +1,5 @@
 ﻿using Autofac;
-
+using ConfigService.Client;
 using ViewProvision;
 using ViewProvision.Contract;
 
@@ -13,8 +13,10 @@ namespace IoCContainer
         {
             var builder = new ContainerBuilder();
 
-            //Register modules here
-            builder.RegisterInstance(new ViewProvider()).As<IViewProvider>().ExternallyOwned();
+            //Register modules here            
+            //builder.RegisterInstance(new ViewProvider()).As<IViewProvider>().ExternallyOwned();
+            builder.RegisterInstance(new ViewProviderClient()).As<IViewProvider>().ExternallyOwned();
+
 
             Container = builder.Build();
         }

@@ -3,6 +3,11 @@ using Emgu.CV.Structure;
 
 using ViewProvision.Contract;
 using System.Collections.Generic;
+using System.ServiceModel;
+using System;
+using ConfigService;
+using System.ServiceModel.Description;
+using System.Diagnostics;
 
 namespace ViewProvision
 {
@@ -20,6 +25,8 @@ namespace ViewProvision
             secondCapture = GetCapture(1);
 
             UpdateFrames();
+
+            InitService();
         }
         
         public ViewData GetCurrentView()
@@ -185,5 +192,10 @@ namespace ViewProvision
             return capture;
         }
         #endregion
+
+        private void InitService(string serviceUrl = "net.pipe://OculusAR")
+        {
+            ViewProviderService.Create(this, serviceUrl);
+        }
     }
 }

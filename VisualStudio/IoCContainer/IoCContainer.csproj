@@ -51,6 +51,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConfigService.Client\ConfigService.Client.csproj">
+      <Project>{3f0284c9-e3ec-4ce9-9061-078bc723f661}</Project>
+      <Name>ConfigService.Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
       <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>
       <Name>ViewProvision.Contract</Name>

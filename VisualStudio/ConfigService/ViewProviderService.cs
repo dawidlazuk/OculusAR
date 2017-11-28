@@ -1,11 +1,44 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.ServiceModel;
 using ViewProvision.Contract;
 
 namespace ConfigService
 {
-    class ViewProviderService : IViewProvider
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = false)]
+    public class ViewProviderService : IViewProvider
     {
         private IViewProvider viewProvider;
+
+        public static ViewProviderService Create(IViewProvider provider, string serviceUrl)
+        {
+            ServiceHost host = null;
+
+            ViewProviderService serviceInstance = new ViewProviderService(provider);
+            try
+            {
+                var uri = new Uri(serviceUrl);
+                host = new ServiceHost(serviceInstance, uri);
+
+                var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+
+                host.AddServiceEndpoint(
+                    typeof(IViewProvider),
+                    binding,
+                    uri + "Config");
+
+                host.Open();
+                return serviceInstance;
+            }
+            catch (Exception ex)
+            {
+                host = null;
+                Debug.WriteLine("Error hosting config service: " + ex.Message);
+                return null;
+            }
+        }
+
 
         public ViewProviderService(IViewProvider viewProvider)
         {
