@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using IoCContainer;
 using ViewProvision.Contract;
 using ViewVisualization.Annotations;
+using System;
+using System.Threading;
+using System.Windows;
 
 namespace ViewVisualization.ViewModels
 {
@@ -56,22 +59,28 @@ namespace ViewVisualization.ViewModels
         {
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProvider>();
-            CameraIndexes = new ObservableCollection<int>(viewProvider.AvailableCaptureIndexes);
-
+            CameraIndexes = new ObservableCollection<int>(viewProvider.AvailableCaptureIndexes);            
+        }
+        
+        internal void StartProcessingFrames(object sender, EventArgs e)
+        {
             Task.Run(() =>
             {
                 while (true)
+                {
                     ProcessNextFrames();
+                }
             });
         }
 
-        int i = 0;
         private void ProcessNextFrames()
         {
-            //TODO - remove (only for developement)
-            viewProvider.UpdateFrames();
+            var frames = viewProvider.GetCurrentView();
 
-            ViewData = viewProvider.GetCurrentViewAsBitmaps();
+            Application.Current.Dispatcher.Invoke(() => 
+            {
+                ViewData = frames;
+            });
         }
 
 

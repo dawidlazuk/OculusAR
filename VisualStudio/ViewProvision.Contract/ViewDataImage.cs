@@ -8,8 +8,8 @@ namespace ViewProvision.Contract
     {
         const double StraightAngle = 90.0;
 
-        public Image<Bgr,byte> LeftImage { get; internal set; }
-        public Image<Bgr, byte> RightImage { get; internal set; }
+        public Image<Bgr,byte> LeftImage { get; set; }
+        public Image<Bgr, byte> RightImage { get; set; }
 
         public ViewDataImage(Image<Bgr, byte> leftImage, Image<Bgr, byte> rightImage)
         {

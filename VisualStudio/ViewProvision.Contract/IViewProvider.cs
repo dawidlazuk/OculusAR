@@ -25,6 +25,6 @@ namespace ViewProvision.Contract
         ViewDataBitmap GetCurrentViewAsBitmaps();
         ViewDataImage GetCurrentView();
 
-        void UpdateFrames();
+        //void UpdateFrames();
     }
 }
