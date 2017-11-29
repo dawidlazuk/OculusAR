@@ -11,7 +11,7 @@ namespace ViewProvision
         private ICapture firstCapture;
         private ICapture secondCapture;
 
-        private ViewDataInternal currentFrames;
+        private ViewDataImage currentFrames;
 
         public ViewProvider()
         {
@@ -22,12 +22,12 @@ namespace ViewProvision
             UpdateFrames();
         }
         
-        public ViewData GetCurrentView()
+        public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return currentFrames.External;
+            return currentFrames.Bitmaps;
         }
 
-        public ViewDataInternal GetCurrentViewInternal()
+        public ViewDataImage GetCurrentView()
         {          
             return currentFrames;
         }
@@ -37,7 +37,7 @@ namespace ViewProvision
             var firstImage = GetFrame(firstCapture);
             var secondImage = GetFrame(secondCapture);
 
-            var viewData = new ViewDataInternal(firstImage, secondImage);
+            var viewData = new ViewDataImage(firstImage, secondImage);
 
             if (IsCalibrated == false)
                 CalibrateCaptures(viewData);
@@ -96,7 +96,7 @@ namespace ViewProvision
             IsCalibrated = false;
         }
 
-        private void CalibrateCaptures(ViewDataInternal viewData)
+        private void CalibrateCaptures(ViewDataImage viewData)
         {
             //DetectMarkers(viewData);
             //1. Detect ArUco markers on both images
@@ -106,7 +106,7 @@ namespace ViewProvision
             //4.    If both results are saved, set flag Calibrated on true;            
         }
 
-        private void ApplyCalibrationParameters(ViewDataInternal viewData)
+        private void ApplyCalibrationParameters(ViewDataImage viewData)
         {
             viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
         }

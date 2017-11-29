@@ -51,8 +51,8 @@
     <Compile Include="IViewProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotateSide.cs" />
-    <Compile Include="ViewData.cs" />
-    <Compile Include="ViewDataInternal.cs" />
+    <Compile Include="ViewDataBitmap.cs" />
+    <Compile Include="ViewDataImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -4,14 +4,14 @@ using Emgu.CV.Structure;
 
 namespace ViewProvision.Contract
 {
-    public class ViewDataInternal
+    public class ViewDataImage
     {
         const double StraightAngle = 90.0;
 
         public Image<Bgr,byte> LeftImage { get; internal set; }
         public Image<Bgr, byte> RightImage { get; internal set; }
 
-        public ViewDataInternal(Image<Bgr, byte> leftImage, Image<Bgr, byte> rightImage)
+        public ViewDataImage(Image<Bgr, byte> leftImage, Image<Bgr, byte> rightImage)
         {
             this.LeftImage = leftImage;
             this.RightImage = rightImage;
@@ -31,12 +31,12 @@ namespace ViewProvision.Contract
         /// Create new object with swapped image's sides.
         /// </summary>
         /// <returns>Swapped ViewData</returns>
-        public ViewDataInternal GetSwapedImages()
+        public ViewDataImage GetSwapedImages()
         {
-            return new ViewDataInternal(leftImage: RightImage, rightImage: LeftImage);
+            return new ViewDataImage(leftImage: RightImage, rightImage: LeftImage);
         }
 
-        public ViewDataInternal RotateImages(short leftImageRotationTimes, short rightImageRotationTimes)
+        public ViewDataImage RotateImages(short leftImageRotationTimes, short rightImageRotationTimes)
         {
             if (leftImageRotationTimes % 4 != 0)
                 LeftImage = LeftImage.Rotate(GetRotatonAngle(leftImageRotationTimes), new Bgr(0, 0, 0), true);
@@ -50,7 +50,7 @@ namespace ViewProvision.Contract
             return (rotationTimes % 4) * StraightAngle;
         }
 
-        public ViewData External
+        public ViewDataBitmap Bitmaps
         {
             get
             {
@@ -60,7 +60,7 @@ namespace ViewProvision.Contract
                 if (RightImage != null && RightImage.Width > 0 && RightImage.Height > 0)
                     rightBitmap = RightImage.Bitmap;
 
-                return new ViewData(leftBitmap, rightBitmap);
+                return new ViewDataBitmap(leftBitmap, rightBitmap);
             }
         }
     }

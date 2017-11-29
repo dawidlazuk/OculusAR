@@ -15,8 +15,8 @@ using ViewProvision;
         {
             //arrange
             var viewProvider = new ViewProvider();
-            var viewDataInternal = viewProvider.GetCurrentViewInternal();
-            var image = viewDataInternal.LeftImage ?? viewDataInternal.RightImage;
+            var viewData = viewProvider.GetCurrentView();
+            var image = viewData.LeftImage ?? viewData.RightImage;
             var converter = new TextureConverter();
 
             //act
@@ -27,20 +27,21 @@ using ViewProvision;
             Assert.AreEqual(texture.height, image.Height);
         }
 
-        [Test]
-        public void FromBitmap_GivenBitmap_ShouldCreateUnityTexture()
-        {
-            //arrange
-            var viewProvider = new ViewProvider();
-            var viewData = viewProvider.GetCurrentView();
-            var bitmap = viewData.LeftImage ?? viewData.RightImage;
-            var converter = new TextureConverter();
+        //[Obsolete]
+        //[Test]
+        //public void FromBitmap_GivenBitmap_ShouldCreateUnityTexture()
+        //{
+        //    //arrange
+        //    var viewProvider = new ViewProvider();
+        //    var viewData = viewProvider.GetCurrentView();
+        //    var bitmap = viewData.LeftImage ?? viewData.RightImage;
+        //    var converter = new TextureConverter();
 
-            //act
-            var texture = converter.FromBitmap(bitmap);
+        //    //act
+        //    var texture = converter.FromBitmap(bitmap);
 
-            //assert
-            Assert.AreEqual(texture.width, bitmap.Width);
-            Assert.AreEqual(texture.height, bitmap.Height);
-        }
+        //    //assert
+        //    Assert.AreEqual(texture.width, bitmap.Width);
+        //    Assert.AreEqual(texture.height, bitmap.Height);
+        //}
     }

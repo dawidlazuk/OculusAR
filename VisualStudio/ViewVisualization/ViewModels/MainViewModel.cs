@@ -10,8 +10,8 @@ namespace ViewVisualization.ViewModels
 {
     class MainViewModel : INotifyPropertyChanged
     {
-        private ViewData viewData;
-        public ViewData ViewData { get
+        private ViewDataBitmap viewData;
+        public ViewDataBitmap ViewData { get
             {return viewData;}
             set
             {
@@ -71,7 +71,7 @@ namespace ViewVisualization.ViewModels
             //TODO - remove (only for developement)
             viewProvider.UpdateFrames();
 
-            ViewData = viewProvider.GetCurrentView();
+            ViewData = viewProvider.GetCurrentViewAsBitmaps();
         }
 
 
