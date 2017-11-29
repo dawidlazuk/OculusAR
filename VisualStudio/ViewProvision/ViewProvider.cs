@@ -219,6 +219,7 @@ namespace ViewProvision
                 case (int)CaptureSide.Left:
                     //leftCapture?.Dispose();
                     leftCapture = GetCapture(cameraIndex);
+                    SetCaptureFullHd(leftCapture);
                     if (leftCaptureThread.IsAlive == false)
                         leftCaptureThread.Start();
                     break;
@@ -226,10 +227,17 @@ namespace ViewProvision
                 case (int)CaptureSide.Right:
                     //rightCapture?.Dispose();
                     rightCapture = GetCapture(cameraIndex);
+                    SetCaptureFullHd(rightCapture);
                     if (rightCaptureThread.IsAlive == false)
                         rightCaptureThread.Start();
                     break;
             }
+        }
+
+        private void SetCaptureFullHd(VideoCapture capture)
+        {
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 1080);
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, 1920);
         }
 
         public IEnumerable<int> AvailableCaptureIndexes
