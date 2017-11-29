@@ -25,6 +25,6 @@ namespace ViewProvision.Contract
         ViewData GetCurrentView();
         ViewDataInternal GetCurrentViewInternal();
 
-        void UpdateFrames();
+        //void UpdateFrames();
     }
 }
