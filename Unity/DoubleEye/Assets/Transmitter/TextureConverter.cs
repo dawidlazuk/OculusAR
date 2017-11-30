@@ -27,6 +27,9 @@ namespace Assets.Transmitter
              where TColor : struct, IColor
              where TDepth : new()
         {
+            if (image == null)
+                return null;
+
             Size size = image.Size;
 
             if (typeof(TColor) == typeof(Rgb) && typeof(TDepth) == typeof(Byte))
