@@ -1,11 +1,11 @@
-﻿using Emgu.CV;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+
+using Emgu.CV;
 using Emgu.CV.Structure;
 
 using ViewProvision.Contract;
-using System.Collections.Generic;
-using System;
-using System.Threading;
-using System.Runtime.Remoting.Contexts;
 
 namespace ViewProvision
 {
@@ -39,8 +39,7 @@ namespace ViewProvision
             
             InitLeftCaptureThread();
             InitRightCaptureThread();
-
-            //StartCaptureThreads();            
+      
             StartTimestampsChecking();
         }
         
@@ -63,10 +62,6 @@ namespace ViewProvision
 
             var viewData = new ViewDataImage(firstImage, secondImage);
 
-            if (IsCalibrated == false)
-                CalibrateCaptures(viewData);
-
-            //if (IsCalibrated == true)
             ApplyCalibrationParameters(viewData);
 
             currentFrames = viewData;        
@@ -113,7 +108,7 @@ namespace ViewProvision
         private void StartTimestampsChecking()
         {
             Thread timestampCheckThread = new Thread(new ThreadStart(() =>
-            {
+            {                
                 while (true)
                 {
                     if (leftCaptureThread.IsAlive)
@@ -200,7 +195,7 @@ namespace ViewProvision
         }
      
 
-        private void ApplyCalibrationParameters(ViewDataInternal viewData)
+        private void ApplyCalibrationParameters(ViewDataImage viewData)
         {
             //TODO modify to operate on single images;
             viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
@@ -244,15 +239,16 @@ namespace ViewProvision
             capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, 1920);
         }
 
-        public IEnumerable<int> AvailableCaptureIndexes
+        public IEnumerable<int> GetAvailableCaptureIndexes()
         {
             var result = new List<int>();
             for (int i = 0; i < NumberOfCameraIndexes; ++i)
                 using (var capture = new VideoCapture(i))
                     if (capture.IsOpened)
                         yield return i;
-
             yield break;
+
+
         }
 
         private VideoCapture GetCapture(int index)

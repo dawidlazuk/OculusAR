@@ -19,14 +19,14 @@ namespace ConfigService
             return viewProvider.GetAvailableCaptureIndexes();
         }
 
-        public ViewData GetCurrentView()
+        public ViewDataImage GetCurrentView()
         {
             return viewProvider.GetCurrentView();
         }
 
-        public ViewDataInternal GetCurrentViewInternal()
+        public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return viewProvider.GetCurrentViewInternal();
+            return viewProvider.GetCurrentViewAsBitmaps();
         }
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
@@ -37,13 +37,7 @@ namespace ConfigService
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
             viewProvider.SetCapture(captureSide, cameraIndex);
-        }
-
-        public void UpdateFrames()
-        {
-            viewProvider.UpdateFrames();
-        }
-
+        }        
 #endregion
     }
 }
