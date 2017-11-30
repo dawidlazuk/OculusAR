@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using ViewProvision.Contract;
+﻿using ViewProvision.Contract;
+
+using ConfigService.Contract;
 
 namespace ConfigService
 {
-
-    //TODO set contract
-    class ViewProviderService
+    class ViewProviderService : IViewProviderService
     {
         private readonly IViewProvider viewProvider;
 
@@ -14,27 +13,37 @@ namespace ConfigService
             this.viewProvider = viewProvider;
         }
 
-#region IViewProvider implementation
-        
-        public ViewDataImage GetCurrentView()
-        {
-            return viewProvider.GetCurrentView();
-        }
+
+        #region IViewProviderService implementation
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
             return viewProvider.GetCurrentViewAsBitmaps();
         }
 
+        #region IViewCalibrator implementation
+
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
             viewProvider.RotateImage(captureSide, rotateSide);
         }
 
+        #endregion
+
+        #region ICaptureManagerService implementation
+
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
             viewProvider.SetCapture(captureSide, cameraIndex);
-        }        
-#endregion
+        }
+
+        public CaptureDetails GetCaptureDetails()
+        {
+            return viewProvider.GetCaptureDetails();
+        }
+
+        #endregion
+
+        #endregion
     }
 }
