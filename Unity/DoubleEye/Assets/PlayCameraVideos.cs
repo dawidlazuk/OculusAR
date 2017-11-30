@@ -6,8 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using ViewProvision;
 
-[RequireComponent(typeof(AudioSource))]
-
 public class PlayCameraVideos : MonoBehaviour
 {
     public RawImage LeftImage;

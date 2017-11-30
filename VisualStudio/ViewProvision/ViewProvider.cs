@@ -3,41 +3,65 @@ using Emgu.CV.Structure;
 
 using ViewProvision.Contract;
 using System.Collections.Generic;
+using System;
+using System.Threading;
+using System.Runtime.Remoting.Contexts;
 
 namespace ViewProvision
 {
     public class ViewProvider : IViewProvider
     {
-        private ICapture firstCapture;
-        private ICapture secondCapture;
+        /// <summary>
+        /// Capture timeout in miliseconds
+        /// </summary>
+        private static double CaptureTimeout = 1000;
 
-        private ViewDataInternal currentFrames;
+        private VideoCapture leftCapture;
+        private VideoCapture rightCapture;
 
+        private ViewDataImage currentFrames;
+
+        private DateTime leftImageUpdateTime;
+        private DateTime rightImageUpdateTime;
+
+        private int firstCaptureIndex;
+
+        private Thread leftCaptureThread;
+        private Thread rightCaptureThread;
+        
         public ViewProvider()
         {
-            OpenedCaptures = new Dictionary<int, ICapture>();
-            firstCapture = GetCapture(0);
-            secondCapture = GetCapture(1);
+            OpenedCaptures = new Dictionary<int, VideoCapture>();
+            //leftCapture = GetCapture(0);
+            //rightCapture = GetCapture(1);
 
-            UpdateFrames();
+            currentFrames = new ViewDataImage(null,null);
+            
+            InitLeftCaptureThread();
+            InitRightCaptureThread();
+
+            //StartCaptureThreads();            
+            StartTimestampsChecking();
         }
         
-        public ViewData GetCurrentView()
+        public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return currentFrames.External;
+            return currentFrames.Bitmaps;
         }
 
-        public ViewDataInternal GetCurrentViewInternal()
+        public ViewDataImage GetCurrentView()
         {          
             return currentFrames;
         }
 
+        [Obsolete]
         public void UpdateFrames()
         {
-            var firstImage = GetFrame(firstCapture);
-            var secondImage = GetFrame(secondCapture);
+            throw new InvalidOperationException("Do not use. It's obsolete method.");
+            var firstImage = GetFrame(leftCapture);
+            var secondImage = GetFrame(rightCapture);
 
-            var viewData = new ViewDataInternal(firstImage, secondImage);
+            var viewData = new ViewDataImage(firstImage, secondImage);
 
             if (IsCalibrated == false)
                 CalibrateCaptures(viewData);
@@ -45,9 +69,88 @@ namespace ViewProvision
             //if (IsCalibrated == true)
             ApplyCalibrationParameters(viewData);
 
-            currentFrames = viewData;
+            currentFrames = viewData;        
         }
 
+        private void InitLeftCaptureThread()
+        {
+            leftCaptureThread = new Thread(new ThreadStart(() =>
+            {
+                while (true)
+                {
+                    var image = GetFrame(leftCapture);
+                    if (image != null)
+                    {
+                        currentFrames.LeftImage = image;
+                        leftImageUpdateTime = DateTime.Now;
+                    }
+                }
+            }));            
+        }
+
+        private void InitRightCaptureThread()
+        {
+            rightCaptureThread = new Thread(new ThreadStart(() =>
+            {
+                while (true)
+                {
+                    var image = GetFrame(rightCapture);
+                    if (image != null)
+                    {
+                        currentFrames.RightImage = image;
+                        rightImageUpdateTime = DateTime.Now;
+                    }
+                }
+            }));
+        }
+
+        private void StartCaptureThreads()
+        {        
+            leftCaptureThread.Start();
+            rightCaptureThread.Start();
+        }
+
+        private void StartTimestampsChecking()
+        {
+            Thread timestampCheckThread = new Thread(new ThreadStart(() =>
+            {
+                while (true)
+                {
+                    if (leftCaptureThread.IsAlive)
+                        if ((DateTime.Now - leftImageUpdateTime).TotalMilliseconds > CaptureTimeout)
+                        {
+                            leftCapture = null;
+                            KillAndCreateCaptureThread(CaptureSide.Left);
+                        }
+
+                    if (rightCaptureThread.IsAlive)
+                        if ((DateTime.Now - rightImageUpdateTime).TotalMilliseconds > CaptureTimeout)
+                        {
+                            rightCapture = null;
+                            KillAndCreateCaptureThread(CaptureSide.Right);
+                        }
+                    Thread.Sleep((int)CaptureTimeout);
+                }
+            }));
+
+            timestampCheckThread.Start();
+        }
+
+        private void KillAndCreateCaptureThread(CaptureSide side)
+        {
+            switch (side)
+            {
+                case CaptureSide.Left:
+                    leftCaptureThread.Abort();
+                    InitLeftCaptureThread();
+                    break;
+
+                case CaptureSide.Right:
+                    rightCaptureThread.Abort();
+                    InitRightCaptureThread();
+                    break;
+            }
+        }
 
         private Image<Bgr, byte> GetFrame(ICapture capture)
         {
@@ -95,58 +198,22 @@ namespace ViewProvision
         {
             IsCalibrated = false;
         }
-
-        private void CalibrateCaptures(ViewDataInternal viewData)
-        {
-            //DetectMarkers(viewData);
-            //1. Detect ArUco markers on both images
-            //   If markers are detected:
-            //2.    Calculate rotation of each image (save it to instance field)
-            //3.    After rotating the images determine which is right and left [if yes, swap captures]
-            //4.    If both results are saved, set flag Calibrated on true;            
-        }
+     
 
         private void ApplyCalibrationParameters(ViewDataInternal viewData)
         {
+            //TODO modify to operate on single images;
             viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
         }
 
-
-        //private void DetectMarkers(ViewDataInternal viewData)
-        //{
-        //    var cameraMatrix = new OpenCV.Net.Mat(3, 3, OpenCV.Net.Depth.F32, 1);
-        //    var distortion = new OpenCV.Net.Mat(1, 4, OpenCV.Net.Depth.F32, 1);
-
-        //    using (var detector = new MarkerDetector())
-        //    {
-        //        detector.ThresholdMethod = ThresholdMethod.AdaptiveThreshold;
-        //        detector.Param1 = 7.0;
-        //        detector.Param2 = 7.0;
-        //        detector.MinSize = 0.04f;
-        //        detector.MaxSize = 0.5f;
-        //        detector.CornerRefinement = CornerRefinementMethod.Lines;
-
-        //        // Detect markers in a sequence of camera images.
-        //        var markerSize = 10;
-        //        using (var image = OpenCV.Net.Mat.FromArray(viewData.LeftImage.Bytes))
-        //        {
-        //            var detectedMarkers = detector.Detect(image, cameraMatrix, distortion, markerSize);
-        //            Debug.WriteLine($"Left image markers: {detectedMarkers.Count}");
-        //        }
-        //        using (var image = OpenCV.Net.Mat.FromArray(viewData.RightImage.Bytes))
-        //        {
-        //            var detectedMarkers = detector.Detect(image, cameraMatrix, distortion, markerSize);
-        //            Debug.WriteLine($"Right image markers: {detectedMarkers.Count}");
-        //        }
-        //    }
-        //}
+       
         #endregion
 
         #region ICaptureManager implementation
 
         public const uint NumberOfCameraIndexes = 4;
 
-        private Dictionary<int, ICapture> OpenedCaptures { get; set; }
+        private Dictionary<int, VideoCapture> OpenedCaptures { get; set; }
 
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
@@ -154,16 +221,30 @@ namespace ViewProvision
             switch ((int)captureSide)
             {
                 case (int)CaptureSide.Left:
-                    firstCapture = GetCapture(cameraIndex);
+                    //leftCapture?.Dispose();
+                    leftCapture = GetCapture(cameraIndex);
+                    SetCaptureFullHd(leftCapture);
+                    if (leftCaptureThread.IsAlive == false)
+                        leftCaptureThread.Start();
                     break;
 
                 case (int)CaptureSide.Right:
-                    secondCapture = GetCapture(cameraIndex);
+                    //rightCapture?.Dispose();
+                    rightCapture = GetCapture(cameraIndex);
+                    SetCaptureFullHd(rightCapture);
+                    if (rightCaptureThread.IsAlive == false)
+                        rightCaptureThread.Start();
                     break;
             }
         }
 
-        public IEnumerable<int> GetAvailableCaptureIndexes()
+        private void SetCaptureFullHd(VideoCapture capture)
+        {
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 1080);
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, 1920);
+        }
+
+        public IEnumerable<int> AvailableCaptureIndexes
         {
             var result = new List<int>();
             for (int i = 0; i < NumberOfCameraIndexes; ++i)
@@ -174,9 +255,9 @@ namespace ViewProvision
             yield break;
         }
 
-        private ICapture GetCapture(int index)
+        private VideoCapture GetCapture(int index)
         {
-            ICapture capture;
+            VideoCapture capture;
             if (OpenedCaptures.TryGetValue(index, out capture) == false)
             {
                 capture = new VideoCapture(index);
