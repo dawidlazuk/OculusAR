@@ -8,13 +8,15 @@ namespace ConfigService.Client
 {
     public class ViewProviderClient : IViewProviderService
     {
-        private IViewProviderService channel;
+        private readonly IViewProviderService channel;
 
-        public ViewProviderClient(string serviceUrl = "net.pipe://oculusar/Config")
+        public ViewProviderClient(string serviceUrl = "net.pipe://OculusAR/Config")
         {
+            var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            binding.MaxReceivedMessageSize = (long)20e6;
 
             var channelFactory = new ChannelFactory<IViewProviderService>(
-                new NetNamedPipeBinding(NetNamedPipeSecurityMode.None),
+                binding,
                 new EndpointAddress(serviceUrl));
 
             this.channel = channelFactory.CreateChannel();
@@ -23,7 +25,7 @@ namespace ConfigService.Client
         
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            throw new System.NotImplementedException();
+            return channel.GetCurrentViewAsBitmaps();
         }
 
         public ViewDataBitmap GetCurrentViewInternal()
@@ -38,7 +40,7 @@ namespace ConfigService.Client
 
         public CaptureDetails GetCaptureDetails()
         {
-            throw new System.NotImplementedException();
+            return channel.GetCaptureDetails();
         }
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)

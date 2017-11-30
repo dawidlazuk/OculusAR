@@ -7,6 +7,7 @@ using ConfigService.Contract;
 
 namespace ConfigService
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false)]
     public class ViewProviderService : IViewProviderService
     {
         private readonly IViewProvider viewProvider;
@@ -24,7 +25,7 @@ namespace ConfigService
                 var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
 
                 host.AddServiceEndpoint(
-                    typeof(IViewProvider),
+                    typeof(IViewProviderService),
                     binding,
                     uri + "Config");
 

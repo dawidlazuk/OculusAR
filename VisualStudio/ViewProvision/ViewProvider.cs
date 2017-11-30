@@ -49,6 +49,8 @@ namespace ViewProvision
 
             SetCapture(CaptureSide.Left, 0);
             SetCapture(CaptureSide.Right, 1);
+
+            InitService();
         }
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
