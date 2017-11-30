@@ -8,6 +8,9 @@ using ViewVisualization.Annotations;
 using System;
 using System.Threading;
 using System.Windows;
+using System.Collections.Generic;
+using DirectShowLib;
+using System.Linq;
 
 namespace ViewVisualization.ViewModels
 {
@@ -31,7 +34,7 @@ namespace ViewVisualization.ViewModels
 
         private readonly IViewProvider viewProvider;
 
-        public ObservableCollection<int> CameraIndexes { get; set; }
+        public ObservableCollection<string> SystemCameras { get; set; }
 
         private int leftCameraIndex;
         public int LeftCameraIndex
@@ -59,7 +62,13 @@ namespace ViewVisualization.ViewModels
         {
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProvider>();
-            CameraIndexes = new ObservableCollection<int>(viewProvider.AvailableCaptureIndexes);            
+            SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());            
+        }
+
+        private IEnumerable<string> GetAvailableCaptureIndexes()
+        {
+            DsDevice[] systemCameras = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);                        
+            return systemCameras.Select(cam => cam.Name);
         }
         
         internal void StartProcessingFrames(object sender, EventArgs e)

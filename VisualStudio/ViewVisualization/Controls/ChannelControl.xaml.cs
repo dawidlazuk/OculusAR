@@ -26,16 +26,16 @@ namespace ViewVisualization.Controls
             set { SetValue(CameraIndexProperty,value);}
         }
 
-        public ObservableCollection<int> CameraIndexes
+        public ObservableCollection<string> CameraNames
         {
-            get { return (ObservableCollection<int>) GetValue(CameraIndexesProperty); }
-            set { SetValue(CameraIndexesProperty,value);}
+            get { return (ObservableCollection<string>) GetValue(CameraNamesProperty); }
+            set { SetValue(CameraNamesProperty, value);}
         }
 
         public static readonly DependencyProperty ImageProperty = DependencyProperty.Register("Image",typeof(Bitmap),typeof(ChannelControl));
         public static readonly DependencyProperty CameraIndexProperty = DependencyProperty.Register("CameraIndex",typeof(int),typeof(ChannelControl));
-        public static readonly DependencyProperty CameraIndexesProperty = DependencyProperty.Register("CameraIndexes",
-            typeof(ObservableCollection<int>), typeof(ChannelControl));
+        public static readonly DependencyProperty CameraNamesProperty = DependencyProperty.Register("CameraNames",
+            typeof(ObservableCollection<string>), typeof(ChannelControl));
 
 
         public ChannelControl()
