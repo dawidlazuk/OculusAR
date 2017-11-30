@@ -5,13 +5,9 @@ using System.Threading;
 using Emgu.CV;
 using Emgu.CV.Structure;
 
-using ViewProvision.Contract;
-using System.Collections.Generic;
-using System.ServiceModel;
-using System;
 using ConfigService;
-using System.ServiceModel.Description;
-using System.Diagnostics;
+using ViewProvision.Contract;
+
 
 namespace ViewProvision
 {

@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConfigService.Contract\ConfigService.Contract.csproj">
+      <Project>{7C189916-7244-4791-998D-45593E386020}</Project>
+      <Name>ConfigService.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConfigService\ConfigService.csproj">
       <Project>{579b6b0d-7bac-4ad2-b637-4531e18c52df}</Project>
       <Name>ConfigService</Name>

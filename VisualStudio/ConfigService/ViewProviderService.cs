@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
 using System.ServiceModel;
+using System.Diagnostics;
 
 using ViewProvision.Contract;
-
 using ConfigService.Contract;
 
 namespace ConfigService
@@ -45,8 +44,7 @@ namespace ConfigService
         {
             this.viewProvider = viewProvider;
         }
-
-
+        
         #region IViewProviderService implementation
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
