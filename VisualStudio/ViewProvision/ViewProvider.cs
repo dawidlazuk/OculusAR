@@ -13,7 +13,7 @@ namespace ViewProvision
 {
     public class ViewProvider : IViewProvider
     {
-        const int ResolutionWidth = 1920;
+        const int ResolutionWidth = 1440;
         const int ResolutionHeight = 1080;
 
         /// <summary>
@@ -237,8 +237,8 @@ namespace ViewProvision
 
         private void SetCaptureResolution(VideoCapture capture)
         {
-            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, ResolutionWidth);
-            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, ResolutionHeight);
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, ResolutionWidth);
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, ResolutionHeight);
         }
 
         private VideoCapture GetCapture(int index)

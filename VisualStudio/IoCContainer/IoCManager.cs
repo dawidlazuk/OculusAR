@@ -1,8 +1,6 @@
 ﻿using Autofac;
 using ConfigService.Client;
 using ConfigService.Contract;
-using ViewProvision;
-using ViewProvision.Contract;
 
 namespace IoCContainer
 {
