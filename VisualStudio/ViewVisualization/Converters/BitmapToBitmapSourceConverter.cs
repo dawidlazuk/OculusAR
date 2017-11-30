@@ -44,7 +44,9 @@ namespace ViewVisualization.Converters
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
+#pragma warning disable RECS0083 // Shows NotImplementedException throws in the quick task bar
             throw new NotImplementedException();
+#pragma warning restore RECS0083 // Shows NotImplementedException throws in the quick task bar
         }
 
         private System.Windows.Media.PixelFormat ConvertPixelFormat(System.Drawing.Imaging.PixelFormat format)
@@ -61,7 +63,9 @@ namespace ViewVisualization.Converters
                     return PixelFormats.Bgr32;
 
                 default:
+#pragma warning disable RECS0083 // Shows NotImplementedException throws in the quick task bar
                     throw new NotImplementedException($"Pixel format {format} not implemented");
+#pragma warning restore RECS0083 // Shows NotImplementedException throws in the quick task bar
             }
         }
     }

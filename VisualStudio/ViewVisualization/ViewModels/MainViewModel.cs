@@ -5,13 +5,19 @@ using System.Threading.Tasks;
 using IoCContainer;
 using ViewProvision.Contract;
 using ViewVisualization.Annotations;
+using System;
+using System.Threading;
+using System.Windows;
+using System.Collections.Generic;
+using DirectShowLib;
+using System.Linq;
 
 namespace ViewVisualization.ViewModels
 {
     class MainViewModel : INotifyPropertyChanged
     {
-        private ViewData viewData;
-        public ViewData ViewData { get
+        private ViewDataBitmap viewData;
+        public ViewDataBitmap ViewData { get
             {return viewData;}
             set
             {
@@ -28,7 +34,7 @@ namespace ViewVisualization.ViewModels
 
         private readonly IViewProvider viewProvider;
 
-        public ObservableCollection<int> CameraIndexes { get; set; }
+        public ObservableCollection<string> SystemCameras { get; set; }
 
         private int leftCameraIndex;
         public int LeftCameraIndex
@@ -58,8 +64,22 @@ namespace ViewVisualization.ViewModels
 
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProvider>();
-            CameraIndexes = new ObservableCollection<int>(viewProvider.GetAvailableCaptureIndexes());
+            SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
 
+            var captureDetails = viewProvider.GetCaptureDetails();
+
+            leftCameraIndex = captureDetails.LeftIndex;
+            rightCameraIndex = captureDetails.RightIndex;       
+        }
+
+        private IEnumerable<string> GetAvailableCaptureIndexes()
+        {
+            DsDevice[] systemCameras = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);                        
+            return systemCameras.Select(cam => cam.Name);
+        }
+        
+        internal void StartProcessingFrames(object sender, EventArgs e)
+        {
             Task.Run(() =>
             {
                 while (true)
@@ -67,13 +87,14 @@ namespace ViewVisualization.ViewModels
             });
         }
 
-        int i = 0;
         private void ProcessNextFrames()
         {
-            //TODO - remove (only for developement)
-            viewProvider.UpdateFrames();
+            var frames = viewProvider.GetCurrentViewAsBitmaps();
 
-            ViewData = viewProvider.GetCurrentView();
+            Application.Current.Dispatcher.Invoke(() => 
+            {
+                ViewData = frames;
+            });
         }
 
 

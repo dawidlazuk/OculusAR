@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewProvision", "ViewProvision\ViewProvision.csproj", "{03469CC9-4D9F-4620-9837-979E9BB6378F}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainer", "IoCContainer\IoCContainer.csproj", "{51F683D8-1EFE-44A0-A4DD-B23701239766}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService", "ConfigService\ConfigService.csproj", "{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService.Contract", "ConfigService.Contract\ConfigService.Contract.csproj", "{7C189916-7244-4791-998D-45593E386020}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService.Client", "ConfigService.Client\ConfigService.Client.csproj", "{3F0284C9-E3EC-4CE9-9061-078BC723F661}"
 EndProject
@@ -41,6 +43,10 @@ Global
 		{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C189916-7244-4791-998D-45593E386020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C189916-7244-4791-998D-45593E386020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C189916-7244-4791-998D-45593E386020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C189916-7244-4791-998D-45593E386020}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F0284C9-E3EC-4CE9-9061-078BC723F661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F0284C9-E3EC-4CE9-9061-078BC723F661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0284C9-E3EC-4CE9-9061-078BC723F661}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -20,7 +20,7 @@
         <Image Grid.Column="0"
                Source="{Binding Path=Image, Converter={StaticResource BitmapSourceConverter}}"/>
         <ComboBox Grid.Row="1" Grid.Column="0"
-                  ItemsSource="{Binding Path=CameraIndexes}"
-                  SelectedItem="{Binding Path=CameraIndex, Mode=TwoWay}"/>
+                  ItemsSource="{Binding Path=CameraNames}"
+                  SelectedIndex="{Binding Path=CameraIndex, Mode=TwoWay}"/>
     </Grid>
 </UserControl>

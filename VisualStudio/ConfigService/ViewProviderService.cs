@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.ServiceModel;
+
 using ViewProvision.Contract;
+
+using ConfigService.Contract;
 
 namespace ConfigService
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, UseSynchronizationContext = false)]
-    public class ViewProviderService : IViewProvider
+    public class ViewProviderService : IViewProviderService
     {
-        private IViewProvider viewProvider;
+        private readonly IViewProvider viewProvider;
 
         public static ViewProviderService Create(IViewProvider provider, string serviceUrl)
         {
@@ -45,38 +46,37 @@ namespace ConfigService
             this.viewProvider = viewProvider;
         }
 
-#region IViewProvider implementation
 
-        public IEnumerable<int> GetAvailableCaptureIndexes()
+        #region IViewProviderService implementation
+
+        public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return viewProvider.GetAvailableCaptureIndexes();
+            return viewProvider.GetCurrentViewAsBitmaps();
         }
 
-        public ViewData GetCurrentView()
-        {
-            return viewProvider.GetCurrentView();
-        }
-
-        public ViewDataInternal GetCurrentViewInternal()
-        {
-            return viewProvider.GetCurrentViewInternal();
-        }
+        #region IViewCalibrator implementation
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
             viewProvider.RotateImage(captureSide, rotateSide);
         }
 
+        #endregion
+
+        #region ICaptureManagerService implementation
+
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
             viewProvider.SetCapture(captureSide, cameraIndex);
         }
 
-        public void UpdateFrames()
+        public CaptureDetails GetCaptureDetails()
         {
-            viewProvider.UpdateFrames();
+            return viewProvider.GetCaptureDetails();
         }
 
-#endregion
+        #endregion
+
+        #endregion
     }
 }

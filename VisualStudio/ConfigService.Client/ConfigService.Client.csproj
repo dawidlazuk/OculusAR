@@ -36,9 +36,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +44,10 @@
     <Compile Include="ViewProviderClient.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConfigService.Contract\ConfigService.Contract.csproj">
+      <Project>{7c189916-7244-4791-998d-45593e386020}</Project>
+      <Name>ConfigService.Contract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
       <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>
       <Name>ViewProvision.Contract</Name>

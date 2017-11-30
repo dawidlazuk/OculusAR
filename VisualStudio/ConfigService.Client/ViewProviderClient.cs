@@ -1,37 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ServiceModel;
+﻿using System.ServiceModel;
+
 using ViewProvision.Contract;
+
+using ConfigService.Contract;
 
 namespace ConfigService.Client
 {
-    public class ViewProviderClient : IViewProvider
+    public class ViewProviderClient : IViewProviderService
     {
-        private IViewProvider channel;
+        private IViewProviderService channel;
 
         public ViewProviderClient(string serviceUrl = "net.pipe://oculusar/Config")
         {
 
-            var channelFactory = new ChannelFactory<IViewProvider>(
+            var channelFactory = new ChannelFactory<IViewProviderService>(
                 new NetNamedPipeBinding(NetNamedPipeSecurityMode.None),
                 new EndpointAddress(serviceUrl));
 
             this.channel = channelFactory.CreateChannel();
         }
-
-        public IEnumerable<int> GetAvailableCaptureIndexes()
+               
+        
+        public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return channel.GetAvailableCaptureIndexes();
+            throw new System.NotImplementedException();
         }
 
-        public ViewData GetCurrentView()
+        public ViewDataBitmap GetCurrentViewInternal()
         {
-            return channel.GetCurrentView();
-        }
-
-        public ViewDataInternal GetCurrentViewInternal()
-        {
-            return channel.GetCurrentViewInternal();
+            return channel.GetCurrentViewAsBitmaps();
         }
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
@@ -39,14 +36,14 @@ namespace ConfigService.Client
             channel.RotateImage(captureSide, rotateSide);
         }
 
+        public CaptureDetails GetCaptureDetails()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
             channel.SetCapture(captureSide, cameraIndex);
-        }
-
-        public void UpdateFrames()
-        {
-            channel.UpdateFrames();
-        }
+        }        
     }
 }
