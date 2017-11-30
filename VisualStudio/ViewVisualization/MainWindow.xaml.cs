@@ -16,6 +16,8 @@ namespace ViewVisualization
 
             viewModel = new MainViewModel();
             this.DataContext = viewModel;
+
+            this.Loaded += viewModel.StartProcessingFrames;
         }
     }
 }

@@ -34,7 +34,7 @@ public class ViewProvisionTests
         var viewProvider = new ViewProvider();
 
         //act
-        var result = viewProvider.GetCurrentViewInternal();
+        var result = viewProvider.GetCurrentView();
 
         //assert
         Assert.IsNotNull(result);
