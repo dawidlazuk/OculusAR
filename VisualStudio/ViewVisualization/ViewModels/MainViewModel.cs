@@ -11,6 +11,7 @@ using System.Windows;
 using System.Collections.Generic;
 using DirectShowLib;
 using System.Linq;
+using ConfigService.Contract;
 
 namespace ViewVisualization.ViewModels
 {
@@ -32,7 +33,7 @@ namespace ViewVisualization.ViewModels
             }
         }
 
-        private readonly IViewProvider viewProvider;
+        private readonly IViewProviderService viewProvider;
 
         public ObservableCollection<string> SystemCameras { get; set; }
 
@@ -63,7 +64,7 @@ namespace ViewVisualization.ViewModels
             ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider();
 
             IoCManager.Initialize();
-            viewProvider = IoCManager.Get<IViewProvider>();
+            viewProvider = IoCManager.Get<IViewProviderService>();
             SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
 
             var captureDetails = viewProvider.GetCaptureDetails();
