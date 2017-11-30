@@ -1,12 +1,18 @@
 ﻿using System.Drawing;
+using System.Runtime.Serialization;
 
 namespace ViewProvision.Contract
 {
+
+    [DataContract]
     public class ViewDataBitmap
     {
         const double StraightAngle = 90.0;
 
+        [DataMember]
         public Bitmap LeftImage { get; internal set; }
+
+        [DataMember]
         public Bitmap RightImage { get; internal set; }
 
         public ViewDataBitmap(Bitmap leftImage, Bitmap rightImage)
