@@ -62,7 +62,12 @@ namespace ViewVisualization.ViewModels
         {
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProvider>();
-            SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());            
+            SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
+
+            var captureDetails = viewProvider.GetCaptureDetails();
+
+            leftCameraIndex = captureDetails.LeftIndex;
+            rightCameraIndex = captureDetails.RightIndex;       
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()

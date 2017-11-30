@@ -11,6 +11,9 @@ namespace ViewProvision
 {
     public class ViewProvider : IViewProvider
     {
+        const int ResolutionWidth = 1920;
+        const int ResolutionHeight = 1080;
+
         /// <summary>
         /// Capture timeout in miliseconds
         /// </summary>
@@ -19,30 +22,33 @@ namespace ViewProvision
         private VideoCapture leftCapture;
         private VideoCapture rightCapture;
 
-        private ViewDataImage currentFrames;
+        private int leftCaptureIndex;
+        private int rightCaptureIndex;
 
         private DateTime leftImageUpdateTime;
         private DateTime rightImageUpdateTime;
 
-        private int firstCaptureIndex;
-
         private Thread leftCaptureThread;
         private Thread rightCaptureThread;
+
+        private ViewDataImage currentFrames;
+                      
         
         public ViewProvider()
         {
             OpenedCaptures = new Dictionary<int, VideoCapture>();
-            //leftCapture = GetCapture(0);
-            //rightCapture = GetCapture(1);
 
             currentFrames = new ViewDataImage(null,null);
             
             InitLeftCaptureThread();
             InitRightCaptureThread();
-      
+
             StartTimestampsChecking();
+
+            SetCapture(CaptureSide.Left, 0);
+            SetCapture(CaptureSide.Right, 1);
         }
-        
+
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
             return currentFrames.Bitmaps;
@@ -159,9 +165,7 @@ namespace ViewProvision
             }
         }
         
-
         #region IViewCalibrator implementation
-        public bool IsCalibrated { get; private set; }
 
         private short LeftImageRotationTimes { get; set; } = 0;
         private short RightImageRotationTimes { get; set; } = 0;
@@ -188,20 +192,14 @@ namespace ViewProvision
                     RightImageRotationTimes += valueToAdd;
                     break;
             }
-        }
-        public void ResetCalibration()
-        {
-            IsCalibrated = false;
-        }
-     
+        }     
 
         private void ApplyCalibrationParameters(ViewDataImage viewData)
         {
             //TODO modify to operate on single images;
             viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
         }
-
-       
+               
         #endregion
 
         #region ICaptureManager implementation
@@ -216,39 +214,27 @@ namespace ViewProvision
             switch ((int)captureSide)
             {
                 case (int)CaptureSide.Left:
-                    //leftCapture?.Dispose();
                     leftCapture = GetCapture(cameraIndex);
-                    SetCaptureFullHd(leftCapture);
+                    leftCaptureIndex = cameraIndex;
+                    SetCaptureResolution(leftCapture);
                     if (leftCaptureThread.IsAlive == false)
                         leftCaptureThread.Start();
                     break;
 
                 case (int)CaptureSide.Right:
-                    //rightCapture?.Dispose();
                     rightCapture = GetCapture(cameraIndex);
-                    SetCaptureFullHd(rightCapture);
+                    rightCaptureIndex = cameraIndex;
+                    SetCaptureResolution(rightCapture);
                     if (rightCaptureThread.IsAlive == false)
                         rightCaptureThread.Start();
                     break;
             }
         }
 
-        private void SetCaptureFullHd(VideoCapture capture)
+        private void SetCaptureResolution(VideoCapture capture)
         {
-            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, 1080);
-            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, 1920);
-        }
-
-        public IEnumerable<int> GetAvailableCaptureIndexes()
-        {
-            var result = new List<int>();
-            for (int i = 0; i < NumberOfCameraIndexes; ++i)
-                using (var capture = new VideoCapture(i))
-                    if (capture.IsOpened)
-                        yield return i;
-            yield break;
-
-
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, ResolutionWidth);
+            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, ResolutionHeight);
         }
 
         private VideoCapture GetCapture(int index)
@@ -261,6 +247,16 @@ namespace ViewProvision
             }
             return capture;
         }
+
+        public CaptureDetails GetCaptureDetails()
+        {
+            return new CaptureDetails
+            {
+                LeftIndex = leftCaptureIndex,
+                RightIndex = rightCaptureIndex
+            };
+        }
+
         #endregion
     }
 }

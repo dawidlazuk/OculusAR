@@ -3,9 +3,11 @@ using ViewProvision.Contract;
 
 namespace ConfigService
 {
-    class ViewProviderService : IViewProvider
+
+    //TODO set contract
+    class ViewProviderService
     {
-        private IViewProvider viewProvider;
+        private readonly IViewProvider viewProvider;
 
         public ViewProviderService(IViewProvider viewProvider)
         {
@@ -13,12 +15,7 @@ namespace ConfigService
         }
 
 #region IViewProvider implementation
-
-        public IEnumerable<int> GetAvailableCaptureIndexes()
-        {
-            return viewProvider.GetAvailableCaptureIndexes();
-        }
-
+        
         public ViewDataImage GetCurrentView()
         {
             return viewProvider.GetCurrentView();

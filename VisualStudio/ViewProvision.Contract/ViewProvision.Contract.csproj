@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaptureDetails.cs" />
     <Compile Include="CaptureSide.cs" />
     <Compile Include="IViewProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

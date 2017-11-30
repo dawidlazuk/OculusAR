@@ -7,11 +7,6 @@ namespace ViewProvision.Contract
     [ServiceContract]
     public interface IViewCalibrator
     {
-        //[Obsolete]
-        //bool IsCalibrated { get; }
-        //[Obsolete]
-        //void ResetCalibration();
-
         [OperationContract]
         void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
     }
@@ -23,13 +18,13 @@ namespace ViewProvision.Contract
         void SetCapture(CaptureSide captureSide, int cameraIndex);
 
         [OperationContract]
-        IEnumerable<int> GetAvailableCaptureIndexes();
+        CaptureDetails GetCaptureDetails();
     }
 
     [ServiceContract]
     public interface IViewProvider : IViewCalibrator, ICaptureManager
     {      
-	[OperationContract]  
+	    [OperationContract]  
         ViewDataBitmap GetCurrentViewAsBitmaps();
 
         ViewDataImage GetCurrentView();
