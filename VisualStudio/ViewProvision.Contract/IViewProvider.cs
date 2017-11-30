@@ -21,10 +21,7 @@ namespace ViewProvision.Contract
 
     public interface IViewProvider : IViewCalibrator, ICaptureManager
     {        
-        //TODO remove with ViewDataInternal version
         ViewDataBitmap GetCurrentViewAsBitmaps();
         ViewDataImage GetCurrentView();
-
-        //void UpdateFrames();
     }
 }

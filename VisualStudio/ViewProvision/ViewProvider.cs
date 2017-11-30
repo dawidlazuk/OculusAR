@@ -35,7 +35,7 @@ namespace ViewProvision
             //leftCapture = GetCapture(0);
             //rightCapture = GetCapture(1);
 
-            currentFrames = new ViewDataInternal(null,null);
+            currentFrames = new ViewDataImage(null,null);
             
             InitLeftCaptureThread();
             InitRightCaptureThread();

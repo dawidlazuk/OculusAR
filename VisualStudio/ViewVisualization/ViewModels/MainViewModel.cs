@@ -75,7 +75,7 @@ namespace ViewVisualization.ViewModels
 
         private void ProcessNextFrames()
         {
-            var frames = viewProvider.GetCurrentView();
+            var frames = viewProvider.GetCurrentViewAsBitmaps();
 
             Application.Current.Dispatcher.Invoke(() => 
             {
