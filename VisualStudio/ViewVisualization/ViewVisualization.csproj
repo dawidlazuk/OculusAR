@@ -115,6 +115,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConfigService.Client\ConfigService.Client.csproj">
+      <Project>{3F0284C9-E3EC-4CE9-9061-078BC723F661}</Project>
+      <Name>ConfigService.Client</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConfigService.Contract\ConfigService.Contract.csproj">
       <Project>{7C189916-7244-4791-998D-45593E386020}</Project>
       <Name>ConfigService.Contract</Name>

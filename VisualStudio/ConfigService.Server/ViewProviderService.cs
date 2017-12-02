@@ -4,30 +4,35 @@ using System.Diagnostics;
 
 using ViewProvision.Contract;
 using ConfigService.Contract;
+using System.ServiceModel.Description;
 
 namespace ConfigService.Server
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false, IncludeExceptionDetailInFaults = true)]
     public class ViewProviderService : IViewProviderService
     {
+        private static readonly string EndpointName = "Config";
+
         private readonly IViewProvider viewProvider;
 
-        public static ViewProviderService Create(IViewProvider provider, string serviceUrl)
+        public static ViewProviderService Create(IViewProvider provider, string port = "56719")
         {
             ServiceHost host = null;
 
             ViewProviderService serviceInstance = new ViewProviderService(provider);
             try
             {
-                var uri = new Uri(serviceUrl);
+                Uri uri = new Uri($"http://localhost:{port}/OculusAR");
                 host = new ServiceHost(serviceInstance, uri);
 
-                var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+                var binding = new BasicHttpBinding();              
 
                 host.AddServiceEndpoint(
                     typeof(IViewProviderService),
                     binding,
-                    uri + "Config");
+                    EndpointName);
+
+                host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
 
                 host.Open();
                 return serviceInstance;

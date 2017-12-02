@@ -3,6 +3,7 @@
 using ViewProvision.Contract;
 
 using ConfigService.Contract;
+using System;
 
 namespace ConfigService.Client
 {
@@ -10,42 +11,78 @@ namespace ConfigService.Client
     {
         private readonly IViewProviderService channel;
 
-        public ViewProviderClient(string serviceUrl = "net.pipe://OculusAR/Config")
+
+        public event ExceptionEventHandler OnException;
+
+        public ViewProviderClient(string port = "56719")
         {
-            var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            //var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            var binding = new BasicHttpBinding();
             binding.MaxReceivedMessageSize = (long)20e6;
 
             var channelFactory = new ChannelFactory<IViewProviderService>(
                 binding,
-                new EndpointAddress(serviceUrl));
+                new EndpointAddress($"http://localhost:{port}/OculusAR/Config"));
 
-            this.channel = channelFactory.CreateChannel();
+            try
+            {
+                this.channel = channelFactory.CreateChannel();
+            }
+            catch(Exception ex)
+            {
+                OnException?.Invoke(this, new ExceptionEventArgs() { Exception = ex });
+            }
         }
                
         
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return channel.GetCurrentViewAsBitmaps();
+            return Call(() => channel.GetCurrentViewAsBitmaps());
         }
 
         public ViewDataBitmap GetCurrentViewInternal()
         {
-            return channel.GetCurrentViewAsBitmaps();
+            return Call(() => channel.GetCurrentViewAsBitmaps());
         }
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
-            channel.RotateImage(captureSide, rotateSide);
+            Call(() => channel.RotateImage(captureSide, rotateSide));
         }
 
         public CaptureDetails GetCaptureDetails()
         {
-            return channel.GetCaptureDetails();
+            return Call(() => channel.GetCaptureDetails());
         }
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
-            channel.SetCapture(captureSide, cameraIndex);
+            Call(() => channel.SetCapture(captureSide, cameraIndex));
         }        
+
+        private T Call<T>(Func<T> function)
+        {
+            try
+            {
+                return function();
+            }
+            catch(Exception ex)
+            {
+                OnException?.Invoke(this, new ExceptionEventArgs() { Exception = ex });
+                return default(T);
+            }
+        }
+
+        private void Call(Action function)
+        {
+            try
+            {
+                function();
+            }
+            catch (Exception ex)
+            {
+                OnException?.Invoke(this, new ExceptionEventArgs() { Exception = ex });
+            }
+        }
     }
 }

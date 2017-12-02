@@ -5,9 +5,8 @@ using System.Threading;
 using Emgu.CV;
 using Emgu.CV.Structure;
 
-using ConfigService;
-using ViewProvision.Contract;
 using ConfigService.Server;
+using ViewProvision.Contract;
 
 namespace ViewProvision
 {
@@ -244,7 +243,8 @@ namespace ViewProvision
                 case (int)CaptureSide.Left:
                     leftCapture = GetCapture(cameraIndex);
                     leftCaptureIndex = cameraIndex;
-                    SetCaptureResolution(leftCapture);
+                    //TODO uncomment
+                    //SetCaptureResolution(leftCapture);
                     if (leftCaptureThread.IsAlive == false)
                         leftCaptureThread.Start();
                     break;
@@ -252,7 +252,8 @@ namespace ViewProvision
                 case (int)CaptureSide.Right:
                     rightCapture = GetCapture(cameraIndex);
                     rightCaptureIndex = cameraIndex;
-                    SetCaptureResolution(rightCapture);
+                    //TODO uncomment
+                    //SetCaptureResolution(rightCapture);
                     if (rightCaptureThread.IsAlive == false)
                         rightCaptureThread.Start();
                     break;
@@ -287,9 +288,9 @@ namespace ViewProvision
 
         #endregion
 
-        private void InitService(string serviceUrl = "net.pipe://OculusAR")
+        private void InitService(string port = "56719")
         {
-            ViewProviderService.Create(this, serviceUrl);
+            ViewProviderService.Create(this, port);
         }
     }
 }
