@@ -16,7 +16,7 @@ public class PlayCameraVideos : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var viewProvider = new ViewProvider();
+        var viewProvider = new ViewProvider(true);
 
         /* 
          * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
