@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using DirectShowLib;
 using System.Linq;
 using ConfigService.Contract;
+using ConfigService.Client;
 
 namespace ViewVisualization.ViewModels
 {
@@ -61,16 +62,17 @@ namespace ViewVisualization.ViewModels
 
         public MainViewModel()
         {
-            ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
+            //ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
 
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();
+            (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{e.Exception.Message}");
             SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
 
             var captureDetails = viewProvider.GetCaptureDetails();
 
-            leftCameraIndex = captureDetails.LeftIndex;
-            rightCameraIndex = captureDetails.RightIndex;       
+            leftCameraIndex = captureDetails?.LeftIndex ?? 0;
+            rightCameraIndex = captureDetails?.RightIndex ?? 0;
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()
