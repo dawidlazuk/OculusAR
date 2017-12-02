@@ -10,14 +10,15 @@ namespace ConfigService.Client
     {
         private readonly IViewProviderService channel;
 
-        public ViewProviderClient(string serviceUrl = "net.pipe://OculusAR/Config")
+        public ViewProviderClient(string port = "56719")
         {
-            var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            //var binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            var binding = new NetTcpBinding();
             binding.MaxReceivedMessageSize = (long)20e6;
 
             var channelFactory = new ChannelFactory<IViewProviderService>(
                 binding,
-                new EndpointAddress(serviceUrl));
+                new EndpointAddress($"net.tcp://localhost:{port}/OculusAR_Config"));
 
             this.channel = channelFactory.CreateChannel();
         }

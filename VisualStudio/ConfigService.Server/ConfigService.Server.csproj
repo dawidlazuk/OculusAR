@@ -9,8 +9,8 @@
     <ProjectGuid>{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConfigService</RootNamespace>
-    <AssemblyName>ConfigService</AssemblyName>
+    <RootNamespace>ConfigService.Server</RootNamespace>
+    <AssemblyName>ConfigService.Server</AssemblyName>
     <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>

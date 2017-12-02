@@ -24,7 +24,7 @@ public class PlayCameraVideos : MonoBehaviour
          * TODO Delete / Review during future developement
          */
         viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 1);
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 2);
+        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 0);
 
         var converter = new TextureConverter();
 
@@ -44,7 +44,7 @@ public class PlayCameraVideos : MonoBehaviour
         }
 
         var view = _stereoVidTransmitter.GetStereoView();
-        RightImage.texture = view.LeftEye;
-        LeftImage.texture = view.RightEye;
+        RightImage.texture = view.RightEye;
+        LeftImage.texture = view.LeftEye;
     }
 }

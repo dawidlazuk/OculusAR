@@ -5,9 +5,8 @@ using System.Threading;
 using Emgu.CV;
 using Emgu.CV.Structure;
 
-using ConfigService;
+using ConfigService.Server;
 using ViewProvision.Contract;
-
 
 namespace ViewProvision
 {
@@ -36,7 +35,7 @@ namespace ViewProvision
         private ViewDataImage currentFrames;
                       
         
-        public ViewProvider()
+        public ViewProvider(bool initService = false)
         {
             OpenedCaptures = new Dictionary<int, VideoCapture>();
 
@@ -50,7 +49,8 @@ namespace ViewProvision
             SetCapture(CaptureSide.Left, 0);
             SetCapture(CaptureSide.Right, 1);
 
-            InitService();
+            if(initService)
+                InitService();
         }
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
@@ -265,9 +265,9 @@ namespace ViewProvision
 
         #endregion
 
-        private void InitService(string serviceUrl = "net.pipe://OculusAR")
+        private void InitService(string port = "56719")
         {
-            ViewProviderService.Create(this, serviceUrl);
+            ViewProviderService.Create(this, port);
         }
     }
 }
