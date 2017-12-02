@@ -5,9 +5,8 @@ using System.Threading;
 using Emgu.CV;
 using Emgu.CV.Structure;
 
-using ConfigService;
+using ConfigService.Server;
 using ViewProvision.Contract;
-
 
 namespace ViewProvision
 {
@@ -264,9 +263,9 @@ namespace ViewProvision
 
         #endregion
 
-        private void InitService(string serviceUrl = "net.pipe://OculusAR")
+        private void InitService(string port = "56719")
         {
-            ViewProviderService.Create(this, serviceUrl);
+            ViewProviderService.Create(this, port);
         }
     }
 }
