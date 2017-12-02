@@ -220,7 +220,8 @@ namespace ViewProvision
                 case (int)CaptureSide.Left:
                     leftCapture = GetCapture(cameraIndex);
                     leftCaptureIndex = cameraIndex;
-                    SetCaptureResolution(leftCapture);
+                    //TODO uncomment
+                    //SetCaptureResolution(leftCapture);
                     if (leftCaptureThread.IsAlive == false)
                         leftCaptureThread.Start();
                     break;
@@ -228,7 +229,8 @@ namespace ViewProvision
                 case (int)CaptureSide.Right:
                     rightCapture = GetCapture(cameraIndex);
                     rightCaptureIndex = cameraIndex;
-                    SetCaptureResolution(rightCapture);
+                    //TODO uncomment
+                    //SetCaptureResolution(rightCapture);
                     if (rightCaptureThread.IsAlive == false)
                         rightCaptureThread.Start();
                     break;
