@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewProvision.Contract", "V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainer", "IoCContainer\IoCContainer.csproj", "{51F683D8-1EFE-44A0-A4DD-B23701239766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService", "ConfigService\ConfigService.csproj", "{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService.Server", "ConfigService.Server\ConfigService.Server.csproj", "{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigService.Contract", "ConfigService.Contract\ConfigService.Contract.csproj", "{7C189916-7244-4791-998D-45593E386020}"
 EndProject

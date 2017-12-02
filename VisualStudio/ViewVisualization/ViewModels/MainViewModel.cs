@@ -61,7 +61,7 @@ namespace ViewVisualization.ViewModels
 
         public MainViewModel()
         {
-            //ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider();
+            ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
 
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();

@@ -60,9 +60,9 @@
       <Project>{7C189916-7244-4791-998D-45593E386020}</Project>
       <Name>ConfigService.Contract</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ConfigService\ConfigService.csproj">
+    <ProjectReference Include="..\ConfigService.Server\ConfigService.Server.csproj">
       <Project>{579b6b0d-7bac-4ad2-b637-4531e18c52df}</Project>
-      <Name>ConfigService</Name>
+      <Name>ConfigService.Server</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
       <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>

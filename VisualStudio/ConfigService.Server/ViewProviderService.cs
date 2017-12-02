@@ -5,7 +5,7 @@ using System.Diagnostics;
 using ViewProvision.Contract;
 using ConfigService.Contract;
 
-namespace ConfigService
+namespace ConfigService.Server
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false)]
     public class ViewProviderService : IViewProviderService
