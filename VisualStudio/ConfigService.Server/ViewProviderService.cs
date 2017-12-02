@@ -10,7 +10,7 @@ namespace ConfigService.Server
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false)]
     public class ViewProviderService : IViewProviderService
     {
-        private static readonly string EndpointName = "OculusAR_Config";
+        private static readonly string EndpointName = "Config";
 
         private readonly IViewProvider viewProvider;
 
@@ -21,15 +21,15 @@ namespace ConfigService.Server
             ViewProviderService serviceInstance = new ViewProviderService(provider);
             try
             {
-                Uri uri = new Uri($"net.tcp://localhost:{port}");
+                Uri uri = new Uri($"http://localhost:{port}/OculusAR");
                 host = new ServiceHost(serviceInstance, uri);
 
-                var binding = new NetTcpBinding();
+                var binding = new BasicHttpBinding();
 
                 host.AddServiceEndpoint(
                     typeof(IViewProviderService),
                     binding,
-                    uri + EndpointName);
+                    EndpointName);
 
                 host.Open();
                 return serviceInstance;
