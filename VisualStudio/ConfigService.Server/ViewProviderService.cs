@@ -4,10 +4,11 @@ using System.Diagnostics;
 
 using ViewProvision.Contract;
 using ConfigService.Contract;
+using System.ServiceModel.Description;
 
 namespace ConfigService.Server
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false, IncludeExceptionDetailInFaults = true)]
     public class ViewProviderService : IViewProviderService
     {
         private static readonly string EndpointName = "Config";
@@ -24,12 +25,14 @@ namespace ConfigService.Server
                 Uri uri = new Uri($"http://localhost:{port}/OculusAR");
                 host = new ServiceHost(serviceInstance, uri);
 
-                var binding = new BasicHttpBinding();
+                var binding = new BasicHttpBinding();              
 
                 host.AddServiceEndpoint(
                     typeof(IViewProviderService),
                     binding,
                     EndpointName);
+
+                host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
 
                 host.Open();
                 return serviceInstance;
