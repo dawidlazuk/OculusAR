@@ -33,6 +33,9 @@ namespace ViewProvision
         private Thread rightCaptureThread;
 
         private ViewDataImage currentFrames;
+
+        private object leftCaptureMutex = new object();
+        private object rightCaptureMutex = new object();
                       
         
         public ViewProvider(bool initService = false)
@@ -55,12 +58,24 @@ namespace ViewProvision
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return currentFrames.Bitmaps;
+            lock (leftCaptureMutex)
+            {
+                lock (rightCaptureMutex)
+                {
+                    return currentFrames.Bitmaps;
+                }
+            }
         }
 
         public ViewDataImage GetCurrentView()
-        {          
-            return currentFrames;
+        {
+            lock (leftCaptureMutex)
+            {
+                lock (rightCaptureMutex)
+                {
+                    return currentFrames;
+                }
+            }
         }
 
         [Obsolete]
@@ -86,7 +101,11 @@ namespace ViewProvision
                     var image = GetFrame(leftCapture);
                     if (image != null)
                     {
-                        currentFrames.LeftImage = image;
+                        lock (leftCaptureMutex)
+                        {
+                            currentFrames.LeftImage?.Dispose();
+                            currentFrames.LeftImage = image;
+                        }
                         leftImageUpdateTime = DateTime.Now;
                     }
                 }
@@ -102,7 +121,11 @@ namespace ViewProvision
                     var image = GetFrame(rightCapture);
                     if (image != null)
                     {
-                        currentFrames.RightImage = image;
+                        lock (rightCaptureMutex)
+                        {
+                            currentFrames.RightImage?.Dispose();
+                            currentFrames.RightImage = image;
+                        }
                         rightImageUpdateTime = DateTime.Now;
                     }
                 }
