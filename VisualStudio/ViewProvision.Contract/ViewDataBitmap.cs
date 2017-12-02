@@ -10,15 +10,15 @@ namespace ViewProvision.Contract
         const double StraightAngle = 90.0;
 
         [DataMember]
-        public Bitmap LeftImage { get; internal set; }
+        public BitmapDTO LeftImage { get; internal set; }
 
         [DataMember]
-        public Bitmap RightImage { get; internal set; }
+        public BitmapDTO RightImage { get; internal set; }
 
         public ViewDataBitmap(Bitmap leftImage, Bitmap rightImage)
         {
-            this.LeftImage = leftImage;
-            this.RightImage = rightImage;
+            this.LeftImage = new BitmapDTO(leftImage);
+            this.RightImage = new BitmapDTO(rightImage);
         }
 
         ///// <summary>
