@@ -37,12 +37,12 @@ namespace ConfigService.Client
         
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return Call(() => channel.GetCurrentViewAsBitmaps());
+            return Call(channel.GetCurrentViewAsBitmaps);
         }
 
         public ViewDataBitmap GetCurrentViewInternal()
         {
-            return Call(() => channel.GetCurrentViewAsBitmaps());
+            return Call(channel.GetCurrentViewAsBitmaps);
         }
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
@@ -52,7 +52,7 @@ namespace ConfigService.Client
 
         public CaptureDetails GetCaptureDetails()
         {
-            return Call(() => channel.GetCaptureDetails());
+            return Call(channel.GetCaptureDetails);
         }
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
