@@ -99,6 +99,7 @@ namespace ViewProvision
                     var image = GetFrame(leftCapture);
                     if (image != null)
                     {
+                        image = image.RotateImage(LeftImageRotationTimes);
                         lock (leftCaptureMutex)
                         {
                             currentFrames.LeftImage?.Dispose();
@@ -120,6 +121,7 @@ namespace ViewProvision
                     var image = GetFrame(rightCapture);
                     if (image != null)
                     {
+                        image = image.RotateImage(RightImageRotationTimes);
                         lock (rightCaptureMutex)
                         {
                             currentFrames.RightImage?.Dispose();
@@ -191,7 +193,7 @@ namespace ViewProvision
                 return null;
             }
         }
-        
+
         #region IViewCalibrator implementation
 
         private short LeftImageRotationTimes { get; set; } = 0;
@@ -230,8 +232,6 @@ namespace ViewProvision
         #endregion
 
         #region ICaptureManager implementation
-
-        public const uint NumberOfCameraIndexes = 4;
 
         private Dictionary<int, VideoCapture> OpenedCaptures { get; set; }
 
