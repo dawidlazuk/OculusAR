@@ -9,6 +9,7 @@ namespace ViewProvision.Contract
     [DataContract]
     public class BitmapDTO
     {
+        [DataMember]
         private byte[] bytes;
 
         private Bitmap bitmap;
