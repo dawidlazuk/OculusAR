@@ -12,7 +12,7 @@ namespace ConfigService.Client
         private readonly IViewProviderService channel;
 
 
-        public event ExceptionEventHandler OnException;
+        public event UnhandledExceptionEventHandler OnException;
 
         public ViewProviderClient(string port = "56719")
         {
@@ -30,7 +30,7 @@ namespace ConfigService.Client
             }
             catch(Exception ex)
             {
-                OnException?.Invoke(this, new ExceptionEventArgs() { Exception = ex });
+                OnException?.Invoke(this, new UnhandledExceptionEventArgs(ex, false));
             }
         }
                
@@ -68,7 +68,7 @@ namespace ConfigService.Client
             }
             catch(Exception ex)
             {
-                OnException?.Invoke(this, new ExceptionEventArgs() { Exception = ex });
+                OnException?.Invoke(this, new UnhandledExceptionEventArgs(ex,false));
                 return default(T);
             }
         }
@@ -81,7 +81,7 @@ namespace ConfigService.Client
             }
             catch (Exception ex)
             {
-                OnException?.Invoke(this, new ExceptionEventArgs() { Exception = ex });
+                OnException?.Invoke(this, new UnhandledExceptionEventArgs(ex, false));
             }
         }
     }
