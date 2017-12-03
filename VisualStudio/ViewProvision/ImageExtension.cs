@@ -11,7 +11,7 @@ namespace ViewProvision
             where TColor : struct, IColor
             where TDepth : new()
         {
-            if (rotationTimes == 4)
+            if (rotationTimes % 4 == 0)
                 return image;
             return image.Rotate(GetRotatonAngle(rotationTimes), default(TColor), true);
         }
