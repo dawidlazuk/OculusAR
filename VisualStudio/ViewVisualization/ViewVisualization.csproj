@@ -75,6 +75,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BitmapSourceConvert.cs" />
+    <Compile Include="UsbNotification.cs" />
     <Compile Include="ViewModels\ChannelViewModel.cs" />
     <Compile Include="Controls\ChannelControl.xaml.cs">
       <DependentUpon>ChannelControl.xaml</DependentUpon>

@@ -36,7 +36,16 @@ namespace ViewVisualization.ViewModels
 
         private readonly IViewProviderService viewProvider;
 
-        public ObservableCollection<string> SystemCameras { get; set; }
+        private ObservableCollection<string> _systemCameras;
+        public ObservableCollection<string> SystemCameras
+        {
+            get { return _systemCameras; }
+            set
+            {
+                _systemCameras = value;
+                OnPropertyChanged();
+            }
+        }
 
         private int leftCameraIndex;
         public int LeftCameraIndex
@@ -70,8 +79,8 @@ namespace ViewVisualization.ViewModels
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();
             (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{(e.ExceptionObject as Exception)?.Message}");
-            SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
 
+            RefreshAvailableCameras();
             var captureDetails = viewProvider.GetCaptureDetails();
 
             leftCameraIndex = captureDetails?.LeftIndex ?? 0;
@@ -82,6 +91,11 @@ namespace ViewVisualization.ViewModels
         {
             DsDevice[] systemCameras = DsDevice.GetDevicesOfCat(FilterCategory.VideoInputDevice);                        
             return systemCameras.Select(cam => cam.Name);
+        }
+
+        internal void RefreshAvailableCameras()
+        {
+            SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
         }
         
         internal void StartProcessingFrames(object sender, EventArgs e)
