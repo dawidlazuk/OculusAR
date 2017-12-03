@@ -62,11 +62,11 @@ namespace ViewVisualization.ViewModels
 
         public MainViewModel()
         {
-            //ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
+            ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
 
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();
-            (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{e.Exception.Message}");
+            (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{(e.ExceptionObject as Exception)?.Message}");
             SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
 
             var captureDetails = viewProvider.GetCaptureDetails();
