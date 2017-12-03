@@ -62,7 +62,10 @@ namespace ViewVisualization.ViewModels
 
         public MainViewModel()
         {
+#if DEBUG
+            //TODO remove - only for using without Unity to host the service
             ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
+#endif
 
             IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();
@@ -89,9 +92,14 @@ namespace ViewVisualization.ViewModels
                     ProcessNextFrames();
             });
         }
-
+        
         private void ProcessNextFrames()
         {
+#if DEBUG
+            //TODO remove, only for developement & testing
+            viewProvider.UpdateFrames();
+#endif
+
             var frames = viewProvider.GetCurrentViewAsBitmaps();
 
             Application.Current.Dispatcher.Invoke(() => 

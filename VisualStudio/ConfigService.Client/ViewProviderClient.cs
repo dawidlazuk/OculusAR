@@ -45,6 +45,14 @@ namespace ConfigService.Client
             return Call(channel.GetCurrentViewAsBitmaps);
         }
 
+#if DEBUG
+        //TODO delete, only for developement
+        public void UpdateFrames()
+        {
+            Call(channel.UpdateFrames);
+        }
+#endif
+
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
             Call(() => channel.RotateImage(captureSide, rotateSide));
@@ -84,5 +92,6 @@ namespace ConfigService.Client
                 OnException?.Invoke(this, new UnhandledExceptionEventArgs(ex, false));
             }
         }
+
     }
 }

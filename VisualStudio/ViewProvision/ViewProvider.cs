@@ -18,7 +18,7 @@ namespace ViewProvision
         /// <summary>
         /// Capture timeout in miliseconds
         /// </summary>
-        private static double CaptureTimeout = 1000;
+        private static double CaptureTimeout = 10000;
 
         private VideoCapture leftCapture;
         private VideoCapture rightCapture;
@@ -32,6 +32,9 @@ namespace ViewProvision
         private Thread leftCaptureThread;
         private Thread rightCaptureThread;
 
+        private AutoResetEvent leftWaitEvent;
+        private AutoResetEvent rightWaitEvent;
+
         private ViewDataImage currentFrames;
 
         private object leftCaptureMutex = new object();
@@ -43,6 +46,9 @@ namespace ViewProvision
             OpenedCaptures = new Dictionary<int, VideoCapture>();
 
             currentFrames = new ViewDataImage(null,null);
+
+            leftWaitEvent = new AutoResetEvent(true);
+            rightWaitEvent = new AutoResetEvent(true);
             
             InitLeftCaptureThread();
             InitRightCaptureThread();
@@ -77,19 +83,11 @@ namespace ViewProvision
                 }
             }
         }
-
-        [Obsolete]
+        
         public void UpdateFrames()
         {
-            throw new InvalidOperationException("Do not use. It's obsolete method.");
-            var firstImage = GetFrame(leftCapture);
-            var secondImage = GetFrame(rightCapture);
-
-            var viewData = new ViewDataImage(firstImage, secondImage);
-
-            ApplyCalibrationParameters(viewData);
-
-            currentFrames = viewData;        
+            leftWaitEvent.Set();
+            rightWaitEvent.Set();
         }
 
         private void InitLeftCaptureThread()
@@ -108,6 +106,7 @@ namespace ViewProvision
                         }
                         leftImageUpdateTime = DateTime.Now;
                     }
+                    leftWaitEvent.WaitOne();
                 }
             }));            
         }
@@ -128,6 +127,7 @@ namespace ViewProvision
                         }
                         rightImageUpdateTime = DateTime.Now;
                     }
+                    rightWaitEvent.WaitOne();
                 }
             }));
         }
@@ -292,5 +292,6 @@ namespace ViewProvision
         {
             ViewProviderService.Create(this, port);
         }
+
     }
 }
