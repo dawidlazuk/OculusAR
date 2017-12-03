@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GrayImageProcessor.cs" />
+    <Compile Include="IImageProcessor.cs" />
+    <Compile Include="ProcessedViewProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewProvider.cs" />
   </ItemGroup>

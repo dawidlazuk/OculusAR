@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-
+using ConfigService.Server;
 using Emgu.CV;
 using Emgu.CV.Structure;
-
-using ConfigService.Server;
 using ViewProvision.Contract;
+
 
 namespace ViewProvision
 {
