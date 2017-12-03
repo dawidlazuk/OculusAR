@@ -37,6 +37,8 @@ namespace ViewVisualization.Converters
             }
             catch (Exception ex)
             {
+                if (ex is NotImplementedException)
+                    throw;
                 Debug.WriteLine(ex.Message);
                 return null;
             }
