@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace ViewProvision.Contract
 {
     [DataContract]
-    public class BitmapDTO
+    class BitmapDTO
     {
         [DataMember]
         private byte[] bytes;

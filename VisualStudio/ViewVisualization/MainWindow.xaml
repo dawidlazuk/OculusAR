@@ -19,12 +19,12 @@
         </Grid.ColumnDefinitions>
 
         <controls:ChannelControl Grid.Column="0"
-                                 Image="{Binding Path=ViewData.LeftImage.Bitmap}" 
+                                 Image="{Binding Path=ViewData.LeftImage}" 
                                  CameraNames="{Binding Path=SystemCameras}"
                                  CameraIndex="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>
 
         <controls:ChannelControl Grid.Column="1"
-                                 Image="{Binding Path=ViewData.RightImage.Bitmap}" 
+                                 Image="{Binding Path=ViewData.RightImage}" 
                                  CameraNames="{Binding Path=SystemCameras}"
                                  CameraIndex="{Binding Path=RightCameraIndex, Mode=TwoWay}"/>
     </Grid>
