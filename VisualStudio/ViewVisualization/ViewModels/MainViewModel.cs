@@ -83,8 +83,8 @@ namespace ViewVisualization.ViewModels
             RefreshAvailableCameras();
             var captureDetails = viewProvider.GetCaptureDetails();
 
-            leftCameraIndex = captureDetails?.LeftIndex ?? 0;
-            rightCameraIndex = captureDetails?.RightIndex ?? 0;
+            leftCameraIndex = captureDetails?.LeftChannel.CaptureIndex ?? 0;
+            rightCameraIndex = captureDetails?.RightChannel.CaptureIndex ?? 0;
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()

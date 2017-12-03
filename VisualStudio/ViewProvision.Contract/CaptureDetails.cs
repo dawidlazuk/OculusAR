@@ -6,8 +6,29 @@ namespace ViewProvision.Contract
     public class CaptureDetails
     {
         [DataMember]
-        public int LeftIndex { get; set; }
+        public ChannelDetails LeftChannel { get; set; }
         [DataMember]
-        public int RightIndex { get; set; }
+        public ChannelDetails RightChannel { get; set; }
+
+        //[DataMember]
+        //public int LeftIndex { get; set; }
+        //[DataMember]
+        //public int RightIndex { get; set; }
+    }
+
+    [DataContract]
+    public class ChannelDetails
+    {
+        [DataMember]
+        public int CaptureIndex { get; set; }
+
+        [DataMember]
+        public int RotationAngle { get; set; }
+
+        [DataMember]
+        public int FrameWidth { get; set; }
+
+        [DataMember]
+        public int FrameHeight { get; set; }
     }
 }

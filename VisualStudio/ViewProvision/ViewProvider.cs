@@ -99,7 +99,7 @@ namespace ViewProvision
                     var image = GetFrame(leftCapture);
                     if (image != null)
                     {
-                        image = image.RotateImage(LeftImageRotationTimes);
+                        image = image.RotateImage(leftImageRotationTimes);
                         lock (leftCaptureMutex)
                         {
                             currentFrames.LeftImage?.Dispose();
@@ -121,7 +121,7 @@ namespace ViewProvision
                     var image = GetFrame(rightCapture);
                     if (image != null)
                     {
-                        image = image.RotateImage(RightImageRotationTimes);
+                        image = image.RotateImage(rightImageRotationTimes);
                         lock (rightCaptureMutex)
                         {
                             currentFrames.RightImage?.Dispose();
@@ -196,9 +196,8 @@ namespace ViewProvision
 
         #region IViewCalibrator implementation
 
-        private short LeftImageRotationTimes { get; set; } = 0;
-        private short RightImageRotationTimes { get; set; } = 0;
-
+        private short leftImageRotationTimes;
+        private short rightImageRotationTimes;
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
@@ -215,26 +214,19 @@ namespace ViewProvision
             switch (captureSide)
             {
                 case CaptureSide.Left:
-                    LeftImageRotationTimes += valueToAdd;
+                    leftImageRotationTimes += valueToAdd;
                     break;
                 case CaptureSide.Right:
-                    RightImageRotationTimes += valueToAdd;
+                    rightImageRotationTimes += valueToAdd;
                     break;
             }
         }     
-
-        private void ApplyCalibrationParameters(ViewDataImage viewData)
-        {
-            //TODO modify to operate on single images;
-            viewData.RotateImages(LeftImageRotationTimes, RightImageRotationTimes);
-        }
-               
+                       
         #endregion
 
         #region ICaptureManager implementation
 
         private Dictionary<int, VideoCapture> OpenedCaptures { get; set; }
-
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
@@ -281,8 +273,20 @@ namespace ViewProvision
         {
             return new CaptureDetails
             {
-                LeftIndex = leftCaptureIndex,
-                RightIndex = rightCaptureIndex
+                LeftChannel = new ChannelDetails
+                {
+                    CaptureIndex = leftCaptureIndex,
+                    RotationAngle = 90 * (leftImageRotationTimes % 4),             
+                    FrameWidth = leftCapture.Width,
+                    FrameHeight = leftCapture.Height                    
+                },
+                RightChannel = new ChannelDetails
+                {
+                    CaptureIndex = rightCaptureIndex,
+                    RotationAngle = 90 * (rightImageRotationTimes % 4),
+                    FrameWidth = rightCapture.Width,
+                    FrameHeight = rightCapture.Height
+                }
             };
         }
 
