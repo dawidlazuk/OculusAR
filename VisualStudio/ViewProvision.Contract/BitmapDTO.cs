@@ -26,10 +26,15 @@ namespace ViewProvision.Contract
             {
                 if (bitmap == null)
                 {
-                    var bf = new BinaryFormatter();
-                    using (var stream = new MemoryStream(bytes))
+                    if (bytes == null)
+                        bitmap = null;
+                    else
                     {
-                        bitmap = (Bitmap)bf.Deserialize(stream);
+                        var bf = new BinaryFormatter();
+                        using (var stream = new MemoryStream(bytes))
+                        {
+                            bitmap = (Bitmap)bf.Deserialize(stream);
+                        }
                     }
                 }
                 return bitmap;
@@ -43,6 +48,9 @@ namespace ViewProvision.Contract
 
         private byte[] GetBytesFromBitmap(Bitmap bitmap)
         {
+            if (bitmap == null)
+                return null;
+
             using (var stream = new MemoryStream())
             {
                 var bf = new BinaryFormatter();
