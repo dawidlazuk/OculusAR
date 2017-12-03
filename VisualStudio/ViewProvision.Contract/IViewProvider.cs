@@ -20,5 +20,6 @@ namespace ViewProvision.Contract
 
         //not exposed by service
         ViewDataImage GetCurrentView();
+        void UpdateFrames();
     }
 }

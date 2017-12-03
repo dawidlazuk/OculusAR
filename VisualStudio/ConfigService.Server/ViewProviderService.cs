@@ -58,6 +58,14 @@ namespace ConfigService.Server
             return viewProvider.GetCurrentViewAsBitmaps();
         }
 
+#if DEBUG
+        //TODO remove - only for development
+        public void UpdateFrames()
+        {
+            viewProvider.UpdateFrames();
+        }
+#endif
+
         #region IViewCalibrator implementation
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)

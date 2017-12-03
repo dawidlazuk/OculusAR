@@ -26,5 +26,14 @@ namespace ConfigService.Contract
     {
         [OperationContract]
         ViewDataBitmap GetCurrentViewAsBitmaps();
+
+
+#if DEBUG
+        //TODO remove this region - it's only for development & testing
+        #region TODO Delete - only for development & testing!
+        [OperationContract]
+        void UpdateFrames();
+        #endregion
+#endif
     }
 }
