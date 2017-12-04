@@ -51,5 +51,10 @@ namespace ViewProvision
 
             return data;
         }
+
+        public void UpdateFrames()
+        {
+            _originViewProvider.UpdateFrames();
+        }
     }
 }

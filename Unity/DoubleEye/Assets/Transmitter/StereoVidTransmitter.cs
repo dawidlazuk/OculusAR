@@ -25,6 +25,13 @@ namespace Assets.Transmitter
             _viewProvider = viewProvider;
 
             InitializeThreadsAndEvents();
+            StartThreads();
+        }
+
+        private void StartThreads()
+        {
+            foreach (var thread in _threads)
+                thread.Start();
         }
 
         public StereoView GetStereoView()
