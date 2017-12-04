@@ -23,18 +23,30 @@ namespace Assets.Transmitter
             return ImageToTexture2D(source, true);
         }
 
-        private static Texture2D ImageToTexture2D<TColor, TDepth>(Image<TColor, TDepth> image, bool correctForVerticleFlip)
-             where TColor : struct, IColor
-             where TDepth : new()
+        public byte[] DataFromImage(Image<Bgr, byte> image)
         {
-            if(image == null)
+            return ImageToBytesForTexture(image, true);
+        }
+
+        public void LoadFromImage(Image<Bgr, byte> image, Texture text)
+        {
+           var data = ImageToBytesForTexture(image, true);
+            var texture = (Texture2D) text;
+            texture.LoadRawTextureData(data);
+            texture.Apply();
+        }
+
+        private static byte[] ImageToBytesForTexture<TColor, TDepth>(Image<TColor, TDepth> image, bool correctForVerticleFlip)
+              where TColor : struct, IColor
+              where TDepth : new()
+        {
+            if (image == null)
                 return null;
 
             Size size = image.Size;
 
             if (typeof(TColor) == typeof(Rgb) && typeof(TDepth) == typeof(Byte))
             {
-                Texture2D texture = new Texture2D(size.Width, size.Height, TextureFormat.RGB24, false);
                 byte[] data = new byte[size.Width * size.Height * 3];
                 GCHandle dataHandle = GCHandle.Alloc(data, GCHandleType.Pinned);
                 using (Image<Rgb, byte> rgb = new Image<Rgb, byte>(size.Width, size.Height, size.Width * 3, dataHandle.AddrOfPinnedObject()))
@@ -44,13 +56,10 @@ namespace Assets.Transmitter
                         CvInvoke.Flip(rgb, rgb, Emgu.CV.CvEnum.FlipType.Vertical);
                 }
                 dataHandle.Free();
-                texture.LoadRawTextureData(data);
-                texture.Apply();
-                return texture;
+                return data;
             }
             else //if (typeof(TColor) == typeof(Rgba) && typeof(TDepth) == typeof(Byte))
             {
-                Texture2D texture = new Texture2D(size.Width, size.Height, TextureFormat.RGBA32, false);
                 byte[] data = new byte[size.Width * size.Height * 4];
                 GCHandle dataHandle = GCHandle.Alloc(data, GCHandleType.Pinned);
                 using (Image<Rgba, byte> rgba = new Image<Rgba, byte>(size.Width, size.Height, size.Width * 4, dataHandle.AddrOfPinnedObject()))
@@ -60,12 +69,36 @@ namespace Assets.Transmitter
                         CvInvoke.Flip(rgba, rgba, Emgu.CV.CvEnum.FlipType.Vertical);
                 }
                 dataHandle.Free();
-                texture.LoadRawTextureData(data);
-
-                texture.Apply();
-                return texture;
+                return data;
             }
         }
+
+        private static Texture2D ImageToTexture2D<TColor, TDepth>(Image<TColor, TDepth> image, bool correctForVerticleFlip)
+             where TColor : struct, IColor
+             where TDepth : new()
+        {
+            if(image == null)
+                return null;
+
+            Size size = image.Size;
+
+            Texture2D texture;
+            if (typeof(TColor) == typeof(Rgb) && typeof(TDepth) == typeof(Byte))
+            {
+                texture = new Texture2D(size.Width, size.Height, TextureFormat.RGB24, false);
+            }
+            else //if (typeof(TColor) == typeof(Rgba) && typeof(TDepth) == typeof(Byte))
+            {
+                texture = new Texture2D(size.Width, size.Height, TextureFormat.RGBA32, false);
+            }
+
+            var data = ImageToBytesForTexture(image, correctForVerticleFlip);
+
+            texture.LoadRawTextureData(data);
+            texture.Apply();
+            return texture;
+        }
+
 
         public byte[] ImageToByteArray(System.Drawing.Image imageIn)
         {

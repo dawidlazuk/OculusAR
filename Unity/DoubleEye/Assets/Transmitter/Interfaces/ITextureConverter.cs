@@ -9,5 +9,7 @@ namespace Assets.Transmitter
     {
         Texture FromBitmap(Bitmap source);
         Texture FromImage(Image<Bgr, byte> source);
+        byte[] DataFromImage(Image<Bgr, byte> image);
+        void LoadFromImage(Image<Bgr, byte> sourceImage, Texture targetTexture);
     }
 }

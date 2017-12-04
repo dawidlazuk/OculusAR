@@ -24,7 +24,7 @@ public class PlayCameraVideos : MonoBehaviour
          * TODO Delete / Review during future developement
          */
         viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 1);
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 0);
+        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 1);
 
         var converter = new TextureConverter();
 

@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Networking;
 using ViewProvision.Contract;
 
 namespace Assets.Transmitter
@@ -13,6 +14,8 @@ namespace Assets.Transmitter
         private ViewDataImage _currentView;
 
         private Texture _leftTexture, _rightTexture;
+
+        private byte[] _leftTextureData, _rightTextureData;
         private Thread[] _threads;
 
         private Action[] _threadActions;
@@ -25,6 +28,7 @@ namespace Assets.Transmitter
             _viewProvider = viewProvider;
 
             InitializeThreadsAndEvents();
+
             StartThreads();
         }
 
@@ -39,7 +43,14 @@ namespace Assets.Transmitter
             _viewProvider.UpdateFrames();
             _currentView = _viewProvider.GetCurrentView();
 
-            ConvertImageToTexturesInSeparateThreads();
+
+            return  CreateStereoView();
+            //return CreateStereoViewParallel();
+        }
+
+        private StereoView CreateStereoView()
+        {
+            SetTextures();
 
             return new StereoView()
             {
@@ -48,7 +59,42 @@ namespace Assets.Transmitter
             };
         }
 
-        private void ConvertImageToTexturesInSeparateThreads()
+        private void SetTextures()
+        {
+            if (_leftTexture == null)
+                _leftTexture = _textureConverter.FromImage(_currentView.LeftImage);
+            else
+                _textureConverter.LoadFromImage(_currentView.LeftImage, _leftTexture);
+
+            if (_rightTexture == null)
+                _rightTexture = _textureConverter.FromImage(_currentView.LeftImage);
+            else
+                _textureConverter.LoadFromImage(_currentView.LeftImage, _rightTexture);
+        }
+
+        private StereoView CreateStereoViewParallel()
+        {
+            var leftTexture = new Texture2D(_currentView.LeftImage.Width, _currentView.LeftImage.Height, TextureFormat.RGB24,
+                false);
+            var rightTexture = new Texture2D(_currentView.RightImage.Width, _currentView.RightImage.Height, TextureFormat.RGB24,
+                false);
+
+            SetImageDataForTextures();
+
+            leftTexture.LoadRawTextureData(_leftTextureData);
+            rightTexture.LoadRawTextureData(_rightTextureData);
+
+            leftTexture.Apply();
+            rightTexture.Apply();
+
+            return new StereoView()
+            {
+                LeftEye = leftTexture,
+                RightEye = rightTexture
+            };
+        }
+
+        private void SetImageDataForTextures()
         {
             foreach (var startEvent in _startEvents)
                 startEvent.Set();
@@ -61,16 +107,28 @@ namespace Assets.Transmitter
 
         private void InitializeThreadsAndEvents()
         {
-            _threads[0] = new Thread(() => SetTexture(0));
-            _threads[1] = new Thread(() => SetTexture(1));
+            _threads = new[]
+            {
+                new Thread(() => SetTexture(0)),
+                new Thread(() => SetTexture(1))
+            };
 
-            _startEvents = new ManualResetEvent[2];
-            _finishEvents = new ManualResetEvent[2];
+            _startEvents = new[]
+            {
+                new ManualResetEvent(false),
+                new ManualResetEvent(false)
+            };
+
+            _finishEvents = new[]
+            {
+                new ManualResetEvent(false),
+                new ManualResetEvent(false)
+            };
 
             _threadActions = new Action[]
             {
-                () => _leftTexture = _textureConverter.FromImage(_currentView.LeftImage),
-                () => _rightTexture = _textureConverter.FromImage(_currentView.RightImage)
+                () =>  _leftTextureData = _textureConverter.DataFromImage(_currentView.LeftImage),
+                () =>  _rightTextureData = _textureConverter.DataFromImage(_currentView.RightImage)
             };
         }
 
