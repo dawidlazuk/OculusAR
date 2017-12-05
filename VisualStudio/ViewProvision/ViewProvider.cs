@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using ConfigService.Server;
+//using ConfigService.Server;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using ViewProvision.Contract;
@@ -48,37 +48,44 @@ namespace ViewProvision
 
             leftWaitEvent = new AutoResetEvent(true);
             rightWaitEvent = new AutoResetEvent(true);
-            
-            InitLeftCaptureThread();
-            InitRightCaptureThread();
 
-            StartTimestampsChecking();
+            //InitLeftCaptureThread();
+            //InitRightCaptureThread();
+
+            //StartTimestampsChecking();
 
             SetCapture(CaptureSide.Left, 0);
             SetCapture(CaptureSide.Right, 1);
 
-            if(initService)
+            if (initService)
                 InitService();
         }
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            lock (leftCaptureMutex)
+           // lock (leftCaptureMutex)
             {
-                lock (rightCaptureMutex)
+               // lock (rightCaptureMutex)
                 {
-                    return currentFrames.Bitmaps;
+                    return GetCurrentView().Bitmaps;
                 }
             }
         }
 
         public ViewDataImage GetCurrentView()
         {
-            lock (leftCaptureMutex)
+            //lock (leftCaptureMutex)
             {
-                lock (rightCaptureMutex)
+                //lock (rightCaptureMutex)
                 {
-                    return currentFrames;
+                    return new ViewDataImage(
+                            GetFrame(leftCapture),
+                            GetFrame(rightCapture)
+                            );
+
+                    //return currentFrames;
+
+
                 }
             }
         }
@@ -99,14 +106,14 @@ namespace ViewProvision
                     if (image != null)
                     {
                         image = image.RotateImage(leftImageRotationTimes);
-                        lock (leftCaptureMutex)
+                        //lock (leftCaptureMutex)
                         {
-                            currentFrames.LeftImage?.Dispose();
+                            //currentFrames.LeftImage?.Dispose();
                             currentFrames.LeftImage = image;
                         }
                         leftImageUpdateTime = DateTime.Now;
                     }
-                    leftWaitEvent.WaitOne();
+                    //leftWaitEvent.WaitOne();
                 }
             }));            
         }
@@ -121,14 +128,14 @@ namespace ViewProvision
                     if (image != null)
                     {
                         image = image.RotateImage(rightImageRotationTimes);
-                        lock (rightCaptureMutex)
+                        //lock (rightCaptureMutex)
                         {
-                            currentFrames.RightImage?.Dispose();
+                            //currentFrames.RightImage?.Dispose();
                             currentFrames.RightImage = image;
                         }
                         rightImageUpdateTime = DateTime.Now;
                     }
-                    rightWaitEvent.WaitOne();
+                    //rightWaitEvent.WaitOne();
                 }
             }));
         }
@@ -236,8 +243,8 @@ namespace ViewProvision
                     leftCaptureIndex = cameraIndex;
                     //TODO uncomment
                     //SetCaptureResolution(leftCapture);
-                    if (leftCaptureThread.IsAlive == false)
-                        leftCaptureThread.Start();
+                    //if (leftCaptureThread.IsAlive == false)
+                    //    leftCaptureThread.Start();
                     break;
 
                 case (int)CaptureSide.Right:
@@ -245,8 +252,8 @@ namespace ViewProvision
                     rightCaptureIndex = cameraIndex;
                     //TODO uncomment
                     //SetCaptureResolution(rightCapture);
-                    if (rightCaptureThread.IsAlive == false)
-                        rightCaptureThread.Start();
+                    //if (rightCaptureThread.IsAlive == false)
+                    //    rightCaptureThread.Start();
                     break;
             }
         }
@@ -276,15 +283,15 @@ namespace ViewProvision
                 {
                     CaptureIndex = leftCaptureIndex,
                     RotationAngle = 90 * (leftImageRotationTimes % 4),             
-                    FrameWidth = leftCapture.Width,
-                    FrameHeight = leftCapture.Height                    
+                    FrameWidth = leftCapture?.Width ?? 0,
+                    FrameHeight = leftCapture?.Height ?? 0                    
                 },
                 RightChannel = new ChannelDetails
                 {
                     CaptureIndex = rightCaptureIndex,
                     RotationAngle = 90 * (rightImageRotationTimes % 4),
-                    FrameWidth = rightCapture.Width,
-                    FrameHeight = rightCapture.Height
+                    FrameWidth = rightCapture?.Width ?? 0,
+                    FrameHeight = rightCapture?.Height ?? 0
                 }
             };
         }
@@ -293,7 +300,7 @@ namespace ViewProvision
 
         private void InitService(string port = "56719")
         {
-            ViewProviderService.Create(this, port);
+            //ViewProviderService.Create(this, port);
         }
 
     }

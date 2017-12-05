@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using ViewProvision;
+using System;
 
 public class PlayCameraVideos : MonoBehaviour
 {
@@ -16,32 +17,34 @@ public class PlayCameraVideos : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var viewProvider = new ViewProvider();
+        ViewProvider viewProvider = null;
+        try
+        {
+            viewProvider = new ViewProvider();
 
-        /* 
-         * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
-         * Change the hardcoded indexes regard to needs.
-         * TODO Delete / Review during future developement
-         */
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 1);
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 1);
+            /* 
+             * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
+             * Change the hardcoded indexes regard to needs.
+             * TODO Delete / Review during future developement
+             */
+            viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 0);
+            viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 1);
 
-        var converter = new TextureConverter();
+            var converter = new TextureConverter();
 
-        _stereoVidTransmitter = new StereoVidTransmitter(converter, viewProvider);
+            _stereoVidTransmitter = new StereoVidTransmitter(converter, viewProvider);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError(ex.Message);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           // VideoPlayer.Pause();
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //VideoPlayer.Play();
-        }
+
+        Debug.Log("mamnamama" + DateTime.Now);
 
         var view = _stereoVidTransmitter.GetStereoView();
         RightImage.texture = view.RightEye;

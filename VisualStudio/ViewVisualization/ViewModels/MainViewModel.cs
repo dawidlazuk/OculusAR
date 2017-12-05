@@ -34,7 +34,7 @@ namespace ViewVisualization.ViewModels
             }
         }
 
-        private readonly IViewProviderService viewProvider;
+        private readonly IViewProvider viewProvider;
 
         private ObservableCollection<string> _systemCameras;
         public ObservableCollection<string> SystemCameras
@@ -73,12 +73,12 @@ namespace ViewVisualization.ViewModels
         {
 #if DEBUG
             //TODO remove - only for using without Unity to host the service
-            ViewProvision.ViewProvider provider = new ViewProvision.ViewProvider(true);
+            //ViewProvision.ViewProvider provider =
 #endif
 
             IoCManager.Initialize();
-            viewProvider = IoCManager.Get<IViewProviderService>();
-            (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{(e.ExceptionObject as Exception)?.Message}");
+            viewProvider = new ViewProvision.ViewProvider(false);
+            //(viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{(e.ExceptionObject as Exception)?.Message}");
 
             RefreshAvailableCameras();
             var captureDetails = viewProvider.GetCaptureDetails();
