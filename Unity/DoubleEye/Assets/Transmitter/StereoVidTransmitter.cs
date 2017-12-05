@@ -67,9 +67,9 @@ namespace Assets.Transmitter
                 _textureConverter.LoadFromImage(_currentView.LeftImage, _leftTexture);
 
             if (_rightTexture == null)
-                _rightTexture = _textureConverter.FromImage(_currentView.LeftImage);
+                _rightTexture = _textureConverter.FromImage(_currentView.RightImage);
             else
-                _textureConverter.LoadFromImage(_currentView.LeftImage, _rightTexture);
+                _textureConverter.LoadFromImage(_currentView.RightImage, _rightTexture);
         }
 
         private StereoView CreateStereoViewParallel()
