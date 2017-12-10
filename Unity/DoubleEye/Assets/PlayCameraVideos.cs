@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using ViewProvision;
+using ViewProvision.Contract;
 
 public class PlayCameraVideos : MonoBehaviour
 {
@@ -16,7 +17,11 @@ public class PlayCameraVideos : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        var viewProvider = new ViewProvider();
+        IViewProvider viewProvider = new ViewProvider();
+        viewProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
+        {
+            new GrayImageProcessor()
+        });
 
         /* 
          * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
