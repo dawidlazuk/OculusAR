@@ -5,6 +5,6 @@ namespace ViewProvision
 {
     public interface IImageProcessor
     {
-        void Process(Image<Bgr, byte> image);
+        void Process(ref Image<Bgr, byte> image);
     }
 }

@@ -1,19 +1,28 @@
-﻿using System.Xml;
-using Emgu.CV;
+﻿using Emgu.CV;
 using Emgu.CV.Structure;
+using Emgu.CV.Util;
+using System.Diagnostics;
 
 namespace ViewProvision
 {
     public class GrayImageProcessor : IImageProcessor
     {
-        public void Process(Image<Bgr, byte> image)
+        public void Process(ref Image<Bgr, byte> image)
         {
-            for(var i =0; i < image.Height; i++)
-            for (var j = 0; j < image.Width; j++)
+            try
             {
-                var pixel = image[i, j];
-                var avg = (pixel.Red + pixel.Blue + pixel.Green) / 3;
-                image[i, j] = new Bgr(avg, avg, avg);
+                //for (var i = 0; i < image.Height; i++)
+                //    for (var j = 0; j < image.Width; j++)
+                //    {
+                //        var pixel = image[i, j];
+                //        var avg = (pixel.Red + pixel.Blue + pixel.Green) / 3;
+                //        image[i, j] = new Bgr(avg, avg, avg);
+                //    }
+                image = image.Convert<Gray, byte>().Convert<Bgr,byte>();
+            }
+            catch(CvException ex)
+            {
+                Debug.WriteLine(ex.Message);
             }
         }
     }
