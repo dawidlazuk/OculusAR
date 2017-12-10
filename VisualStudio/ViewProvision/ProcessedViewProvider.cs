@@ -140,6 +140,6 @@ namespace ViewProvision
         public void UpdateFrames()
         {
             _originViewProvider.UpdateFrames();
-        }
+        }        
     }
 }

@@ -17,7 +17,7 @@ public class PlayCameraVideos : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        IViewProvider viewProvider = new ViewProvider();
+        IViewProvider viewProvider = new ViewProvider(true);
         viewProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
         {
             new GrayImageProcessor()
