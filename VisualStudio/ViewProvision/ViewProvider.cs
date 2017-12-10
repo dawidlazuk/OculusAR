@@ -264,13 +264,7 @@ namespace ViewProvision
             {
                 capture = new VideoCapture(index);
                 OpenedCaptures.Add(index, capture);
-            }
-            else if ((capture?.IsOpened ?? false) == false)
-            {
-                capture = new VideoCapture(index);
-                OpenedCaptures.Remove(index);
-                OpenedCaptures.Add(index, capture);
-            }
+            }           
             return capture;
         }
 

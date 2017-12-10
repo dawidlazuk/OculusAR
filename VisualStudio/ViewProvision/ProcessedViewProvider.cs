@@ -32,7 +32,6 @@ namespace ViewProvision
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
             _originViewProvider.SetCapture(captureSide, cameraIndex);
-            var image = new Image<Bgr, byte>(new byte[100,100,100]);
         }
 
         public CaptureDetails GetCaptureDetails()
