@@ -9,6 +9,8 @@ namespace ViewProvision
     {
         public void Process(ref Image<Bgr, byte> image)
         {
+            if (image == null)
+                return;
             try
             {
                 //for (var i = 0; i < image.Height; i++)

@@ -101,10 +101,9 @@ namespace ViewProvision
                     lock (leftImageMutex)
                     {
                         var image = currentFrames.LeftImage;
-                        foreach (var imageProcessor in _imageProcessors)
-                        {
-                            imageProcessor.Process(ref image);
-                        }
+                        if(image != null)
+                            foreach (var imageProcessor in _imageProcessors)
+                                imageProcessor.Process(ref image);
                         currentFrames.LeftImage = image;
                     }
 
@@ -125,10 +124,10 @@ namespace ViewProvision
                     lock (rightImageMutex)
                     {
                         var image = currentFrames.RightImage;
-                        foreach (var imageProcessor in _imageProcessors)
-                        {
-                            imageProcessor.Process(ref image);
-                        }
+                        if(image != null)
+                            foreach (var imageProcessor in _imageProcessors)
+                                imageProcessor.Process(ref image);
+
                         currentFrames.RightImage = image;
                     }
 
