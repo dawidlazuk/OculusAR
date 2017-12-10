@@ -32,9 +32,24 @@ namespace ViewVisualization.Controls
             set { SetValue(CameraNamesProperty, value);}
         }
 
+        public int Rotation
+        {
+            get { return (int)GetValue(RotationProperty); }
+            set { SetValue(RotationProperty, value); }
+        }
+
+        public ObservableCollection<string> Rotations
+        {
+            get { return (ObservableCollection<string>)GetValue(RotationsProperty); }
+            set { SetValue(RotationsProperty, value); }
+        }
+
         public static readonly DependencyProperty ImageProperty = DependencyProperty.Register("Image",typeof(Bitmap),typeof(ChannelControl));
         public static readonly DependencyProperty CameraIndexProperty = DependencyProperty.Register("CameraIndex",typeof(int),typeof(ChannelControl));
         public static readonly DependencyProperty CameraNamesProperty = DependencyProperty.Register("CameraNames",
+            typeof(ObservableCollection<string>), typeof(ChannelControl));
+        public static readonly DependencyProperty RotationProperty = DependencyProperty.Register("Rotation", typeof(int), typeof(ChannelControl));
+        public static readonly DependencyProperty RotationsProperty = DependencyProperty.Register("Rotations",
             typeof(ObservableCollection<string>), typeof(ChannelControl));
 
 
