@@ -293,7 +293,14 @@ namespace ViewProvision
 
         private void InitService(string port = "56719")
         {
-            ViewProviderService.Create(this, port);
+            ViewProviderService.Create(
+                new ProcessedViewProvider(
+                    this,
+                    new List<IImageProcessor>
+                    {
+                        new GrayImageProcessor()
+                    }),
+                port);
         }
 
     }

@@ -14,10 +14,10 @@ namespace ViewProvision
         private readonly List<IImageProcessor> _imageProcessors;
 
 
-        public ProcessedViewProvider(IViewProvider originViewProvider, List<IImageProcessor> imageProcessors)
+        public ProcessedViewProvider(IViewProvider originViewProvider, List<IImageProcessor> imageProcessors = null)
         {
             _originViewProvider = originViewProvider;
-            _imageProcessors = imageProcessors;
+            _imageProcessors = imageProcessors ?? new List<IImageProcessor>();
         }
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
@@ -37,7 +37,7 @@ namespace ViewProvision
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return _originViewProvider.GetCurrentViewAsBitmaps();
+            return GetCurrentView().Bitmaps;
         }
 
         public ViewDataImage GetCurrentView()
@@ -50,6 +50,11 @@ namespace ViewProvision
             }
 
             return data;
+        }
+
+        public void UpdateFrames()
+        {
+            _originViewProvider.UpdateFrames();
         }
     }
 }

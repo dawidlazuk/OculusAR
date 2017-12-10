@@ -8,8 +8,8 @@ namespace ViewProvision
     {
         public void Process(Image<Bgr, byte> image)
         {
-            for(var i =0; i < image.Width; i++)
-            for (var j = 0; j < image.Height; j++)
+            for(var i =0; i < image.Height; i++)
+            for (var j = 0; j < image.Width; j++)
             {
                 var pixel = image[i, j];
                 var avg = (pixel.Red + pixel.Blue + pixel.Green) / 3;
