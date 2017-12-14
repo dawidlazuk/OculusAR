@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using ConfigService.Contract;
+using IoCContainer;
+using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
@@ -52,12 +54,25 @@ namespace ViewVisualization.Controls
         public static readonly DependencyProperty RotationsProperty = DependencyProperty.Register("Rotations",
             typeof(ObservableCollection<string>), typeof(ChannelControl));
 
+        IViewProviderService viewProvider;
 
         public ChannelControl()
         {
             InitializeComponent();
 
             ChannelGrid.DataContext = this;
+            viewProvider = IoCManager.Get<IViewProviderService>();
+
+        }
+
+        private void RotateRight_Click(object sender, RoutedEventArgs e)
+        {
+            viewProvider.RotateImage(ViewProvision.Contract.CaptureSide.Left, ViewProvision.Contract.RotateSide.Right);
+        }
+
+        private void RotateLeft_Click(object sender, RoutedEventArgs e)
+        {
+            viewProvider.RotateImage(ViewProvision.Contract.CaptureSide.Left, ViewProvision.Contract.RotateSide.Left);
         }
     }
 }

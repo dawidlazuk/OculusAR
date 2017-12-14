@@ -12,19 +12,25 @@
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </UserControl.Resources>
     <Grid Name="ChannelGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <Image Grid.Column="0"
+        <Image Grid.Column="0" Grid.ColumnSpan="2"
                Source="{Binding Path=Image, Converter={StaticResource BitmapSourceConverter}}"/>
-        <ComboBox Grid.Row="1" Grid.Column="0"
+        <ComboBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                   ItemsSource="{Binding Path=CameraNames}"
                   SelectedIndex="{Binding Path=CameraIndex, Mode=TwoWay}"/>
-        <ComboBox Grid.Row="2" Grid.Column="0"
-                  ItemsSource="{Binding Path=Rotations}"
-                  SelectedIndex="{Binding Path=Rotation, Mode=TwoWay}"/>
+
+        <Button Grid.Row="2" Grid.Column="0"  Content="RotateLeft_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Click="RotateRight_Click" Content="Rotate right"/>
+
     </Grid>
 </UserControl>

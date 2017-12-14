@@ -52,25 +52,6 @@ namespace ViewVisualization.ViewModels
             }
         }
 
-        private int leftRotation;
-        public int LeftRotation
-        {
-            get { return leftRotation; }
-            set
-            {
-                leftRotation = RotationAvaibleValues[value];
-            }
-        }
-
-        private int rightRotation;
-        public int RightRotation
-        {
-            get { return rightRotation; }
-            set
-            {
-                rightRotation = RotationAvaibleValues[value];
-            }
-        }
 
         private ObservableCollection<string> _systemCameras;
 
@@ -121,7 +102,6 @@ namespace ViewVisualization.ViewModels
             ViewProviderService service = ViewProviderService.Create(provider);
 #endif
 
-            IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();
             (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{(e.ExceptionObject as Exception)?.Message}");
 
