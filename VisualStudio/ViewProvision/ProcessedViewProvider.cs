@@ -43,38 +43,27 @@ namespace ViewProvision
         {
             return GetCurrentView().Bitmaps;
         }
-
-        public void InvokeWithImagesLocked(Action action)
+        
+        public ViewDataImage GetCurrentView()
         {
+            if (_imageProcessors.Any() == false)
+                return _originViewProvider.GetCurrentView();
+
             lock (leftImageMutex)
             {
                 lock (rightImageMutex)
                 {
-                    action?.Invoke();
+                    currentFrames = _originViewProvider.GetCurrentView();
                 }
             }
-        }
-
-        public ViewDataImage GetCurrentView()
-        {
-            InvokeWithImagesLocked(() => { currentFrames = _originViewProvider.GetCurrentView(); });
 
             startLeftProcessingEvent.Set();
             startRightProcessingEvent.Set();
 
             finishLeftProcessingEvent.WaitOne();
-            finishRightProcessingEvent.WaitOne();
+            finishRightProcessingEvent.WaitOne();            
 
             return currentFrames;
-
-            //var data = _originViewProvider.GetCurrentView();
-            //foreach (var imageProcessor in _imageProcessors)
-            //{
-            //    imageProcessor.Process(data.LeftImage);
-            //    imageProcessor.Process(data.RightImage);
-            //}
-
-            //return data;
         }
 
         private AutoResetEvent startLeftProcessingEvent = new AutoResetEvent(false);

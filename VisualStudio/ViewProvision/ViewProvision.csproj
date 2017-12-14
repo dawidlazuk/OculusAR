@@ -49,10 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImageExtension.cs" />
-    <Compile Include="GrayImageProcessor.cs" />
+    <Compile Include="Processors\GrayImageProcessor.cs" />
     <Compile Include="IImageProcessor.cs" />
     <Compile Include="ProcessedViewProvider.cs" />
+    <Compile Include="Processors\SobelProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Processors\SmoothBilateralProcessor.cs" />
     <Compile Include="ViewProvider.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,14 +62,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConfigService.Contract\ConfigService.Contract.csproj">
-      <Project>{7C189916-7244-4791-998D-45593E386020}</Project>
-      <Name>ConfigService.Contract</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ConfigService.Server\ConfigService.Server.csproj">
-      <Project>{579b6b0d-7bac-4ad2-b637-4531e18c52df}</Project>
-      <Name>ConfigService.Server</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ViewProvision.Contract\ViewProvision.Contract.csproj">
       <Project>{18fe09c9-62dc-4bb2-9444-d5a30098f116}</Project>
       <Name>ViewProvision.Contract</Name>

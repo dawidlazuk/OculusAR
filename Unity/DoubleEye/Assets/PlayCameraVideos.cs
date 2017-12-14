@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using ViewProvision;
 using ViewProvision.Contract;
+using ViewProvision.Processors;
 
 public class PlayCameraVideos : MonoBehaviour
 {
@@ -20,16 +21,17 @@ public class PlayCameraVideos : MonoBehaviour
         IViewProvider viewProvider = new ViewProvider(true);
         viewProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
         {
-            new GrayImageProcessor()
+            new SobelProcessor()
         });
+        ConfigService.Server.ViewProviderService.Create(viewProvider);        
 
         /* 
          * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
          * Change the hardcoded indexes regard to needs.
          * TODO Delete / Review during future developement
          */
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 1);
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 0);
+        //viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 1);
+        //viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 0);
 
         var converter = new TextureConverter();
 

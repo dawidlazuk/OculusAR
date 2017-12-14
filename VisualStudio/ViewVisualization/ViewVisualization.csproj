@@ -124,6 +124,10 @@
       <Project>{7C189916-7244-4791-998D-45593E386020}</Project>
       <Name>ConfigService.Contract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConfigService.Server\ConfigService.Server.csproj">
+      <Project>{579B6B0D-7BAC-4AD2-B637-4531E18C52DF}</Project>
+      <Name>ConfigService.Server</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IoCContainer\IoCContainer.csproj">
       <Project>{51F683D8-1EFE-44A0-A4DD-B23701239766}</Project>
       <Name>IoCContainer</Name>

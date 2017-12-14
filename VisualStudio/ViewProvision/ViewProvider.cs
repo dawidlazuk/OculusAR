@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using ConfigService.Server;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using ViewProvision.Contract;
@@ -57,8 +56,8 @@ namespace ViewProvision
             SetCapture(CaptureSide.Left, 0);
             SetCapture(CaptureSide.Right, 1);
 
-            if(initService)
-                InitService();
+            //if(initService)
+            //    InitService();
         }
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
@@ -235,7 +234,7 @@ namespace ViewProvision
                     leftCapture = GetCapture(cameraIndex);
                     leftCaptureIndex = cameraIndex;
                     //TODO uncomment
-                    //SetCaptureResolution(leftCapture);
+                    SetCaptureResolution(leftCapture);
                     if (leftCaptureThread.IsAlive == false)
                         leftCaptureThread.Start();
                     break;
@@ -244,7 +243,7 @@ namespace ViewProvision
                     rightCapture = GetCapture(cameraIndex);
                     rightCaptureIndex = cameraIndex;
                     //TODO uncomment
-                    //SetCaptureResolution(rightCapture);
+                    SetCaptureResolution(rightCapture);
                     if (rightCaptureThread.IsAlive == false)
                         rightCaptureThread.Start();
                     break;
@@ -291,17 +290,18 @@ namespace ViewProvision
 
         #endregion
 
-        private void InitService(string port = "56719")
-        {
-            ViewProviderService.Create(
-                new ProcessedViewProvider(
-                    this,
-                    new List<IImageProcessor>
-                    {
-                        new GrayImageProcessor()
-                    }),
-                port);
-        }
+        //[Obsolete]
+        //private void InitService(string port = "56719")
+        //{
+        //    ViewProviderService.Create(
+        //        new ProcessedViewProvider(
+        //            this,
+        //            new List<IImageProcessor>
+        //            {
+        //                new GrayImageProcessor()
+        //            }),
+        //        port);
+        //}
 
     }
 }
