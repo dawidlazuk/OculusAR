@@ -8,24 +8,33 @@
         xmlns:controls="clr-namespace:ViewVisualization.Controls"
         xmlns:viewmodels="clr-namespace:ViewVisualization.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="600">
     <Window.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*" /> 
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
         <controls:ChannelControl Grid.Column="0"
                                  Image="{Binding Path=ViewData.LeftImage}" 
                                  CameraNames="{Binding Path=SystemCameras}"
-                                 CameraIndex="{Binding Path=LeftCameraIndex, Mode=TwoWay}"/>
+                                 CameraIndex="{Binding Path=LeftCameraIndex, Mode=TwoWay}"
+                                 Rotations="{Binding Path= RotationValues}"
+                                 Rotation="{Binding Path=LeftRotation, Mode=TwoWay}"/>
 
         <controls:ChannelControl Grid.Column="1"
                                  Image="{Binding Path=ViewData.RightImage}" 
                                  CameraNames="{Binding Path=SystemCameras}"
-                                 CameraIndex="{Binding Path=RightCameraIndex, Mode=TwoWay}"/>
+                                 CameraIndex="{Binding Path=RightCameraIndex, Mode=TwoWay}"
+                                 Rotations="{Binding Path= RotationValues}"
+                                 Rotation="{Binding Path=RightRotation, Mode=TwoWay}"/>
+        
+        <controls:SettingsControl Grid.Column="2">
+            
+        </controls:SettingsControl>
     </Grid>
 </Window>
