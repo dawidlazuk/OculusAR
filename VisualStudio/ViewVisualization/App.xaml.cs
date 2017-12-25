@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IoCContainer;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,9 @@ namespace ViewVisualization
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            IoCManager.Initialize();
+        }
     }
 }

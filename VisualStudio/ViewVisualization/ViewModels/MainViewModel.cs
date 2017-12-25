@@ -39,7 +39,22 @@ namespace ViewVisualization.ViewModels
 
         private readonly IViewProviderService viewProvider;
 
+
+        private ObservableCollection<string> _rotationValues;
+
+        public ObservableCollection<string> RotationValues
+        {
+            get { return _rotationValues; }
+            set
+            {
+                _rotationValues = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         private ObservableCollection<string> _systemCameras;
+
         public ObservableCollection<string> SystemCameras
         {
             get { return _systemCameras; }
@@ -72,6 +87,7 @@ namespace ViewVisualization.ViewModels
             }
         }
 
+        private  static readonly int[] RotationAvaibleValues = {0, 90, 180, 270};
         public MainViewModel()
         {
 #if DEBUG
@@ -86,7 +102,6 @@ namespace ViewVisualization.ViewModels
             ViewProviderService service = ViewProviderService.Create(provider);
 #endif
 
-            IoCManager.Initialize();
             viewProvider = IoCManager.Get<IViewProviderService>();
             (viewProvider as ViewProviderClient).OnException += (sender, e) => MessageBox.Show($"Exception:\n{(e.ExceptionObject as Exception)?.Message}");
 
@@ -95,6 +110,17 @@ namespace ViewVisualization.ViewModels
 
             leftCameraIndex = captureDetails?.LeftChannel.CaptureIndex ?? 0;
             rightCameraIndex = captureDetails?.RightChannel.CaptureIndex ?? 0;
+
+            var stringRotationValues = GetStringRotationValues();
+            RotationValues = stringRotationValues;
+        }
+
+        private static ObservableCollection<string> GetStringRotationValues()
+        {
+            var stringRotationValues = new ObservableCollection<string>();
+            foreach (var rotationAvaibleValue in RotationAvaibleValues)
+                stringRotationValues.Add(rotationAvaibleValue.ToString());
+            return stringRotationValues;
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()

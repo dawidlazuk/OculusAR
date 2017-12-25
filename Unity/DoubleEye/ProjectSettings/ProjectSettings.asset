@@ -674,7 +674,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.1
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: e1c769d0-0e60-471e-b1f4-3ed6bf09940c
   projectName: DoubleEye
   organizationId: piotr95piwowarski

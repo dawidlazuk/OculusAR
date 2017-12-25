@@ -21,7 +21,7 @@ public class PlayCameraVideos : MonoBehaviour
         IViewProvider viewProvider = new ViewProvider(true);
         viewProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
         {
-            new SobelProcessor()
+           //new SobelProcessor()
         });
         ConfigService.Server.ViewProviderService.Create(viewProvider);        
 
