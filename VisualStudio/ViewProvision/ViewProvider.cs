@@ -81,7 +81,22 @@ namespace ViewProvision
                 }
             }
         }
-        
+
+
+        public Image<Bgr, byte> GetLeftFrameSynchronously()
+        {
+            var image = GetFrame(leftCapture);
+            image = image.RotateImage(leftImageRotationTimes);
+            return image;
+        }
+
+        public Image<Bgr, byte> GetRightFrameSynchronously()
+        {
+            var image = GetFrame(rightCapture);
+            image = image.RotateImage(rightImageRotationTimes);
+            return image;
+        }
+
         public void UpdateFrames()
         {
             leftWaitEvent.Set();
@@ -287,6 +302,7 @@ namespace ViewProvision
                 }
             };
         }
+
 
         #endregion
 

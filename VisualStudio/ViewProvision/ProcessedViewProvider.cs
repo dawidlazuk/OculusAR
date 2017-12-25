@@ -48,15 +48,7 @@ namespace ViewProvision
         public ViewDataImage GetCurrentView()
         {
             if (_imageProcessors.Any() == false)
-                return _originViewProvider.GetCurrentView();
-
-          //  lock (leftImageMutex)
-            {
-          //      lock (rightImageMutex)
-                {
-                    currentFrames = _originViewProvider.GetCurrentView();
-                }
-            }
+                return _originViewProvider.GetCurrentView();               
 
             startLeftProcessingEvent.Set();
             startRightProcessingEvent.Set();
@@ -72,7 +64,7 @@ namespace ViewProvision
         private AutoResetEvent finishLeftProcessingEvent = new AutoResetEvent(false);
         private AutoResetEvent finishRightProcessingEvent = new AutoResetEvent(false);
 
-        private ViewDataImage currentFrames;
+        private ViewDataImage currentFrames = new ViewDataImage(null,null);
         
         private Thread leftProcessingThread;
         private Thread rightProcessingThread;
@@ -87,10 +79,9 @@ namespace ViewProvision
                 while (true)
                 {
                     startLeftProcessingEvent.WaitOne();
-                    //lock (leftImageMutex)
                     try
                     {
-                        var image = currentFrames.LeftImage;
+                        var image = (_originViewProvider as ViewProvider).GetLeftFrameSynchronously();
                         if (image != null)
                             foreach (var imageProcessor in _imageProcessors)
                                 imageProcessor.Process(ref image);
@@ -117,9 +108,8 @@ namespace ViewProvision
                 {
                     startRightProcessingEvent.WaitOne();
                     try
-                    //lock (rightImageMutex)
                     {
-                        var image = currentFrames.RightImage;
+                        var image = (_originViewProvider as ViewProvider).GetRightFrameSynchronously();
                         if (image != null)
                             foreach (var imageProcessor in _imageProcessors)
                                 imageProcessor.Process(ref image);

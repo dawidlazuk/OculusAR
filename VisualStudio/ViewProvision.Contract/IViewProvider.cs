@@ -1,4 +1,6 @@
-﻿using System.ServiceModel;
+﻿using Emgu.CV;
+using Emgu.CV.Structure;
+using System.ServiceModel;
 
 namespace ViewProvision.Contract
 {
@@ -17,7 +19,7 @@ namespace ViewProvision.Contract
     public interface IViewProvider : IViewCalibrator, ICaptureManager
     {      
         ViewDataBitmap GetCurrentViewAsBitmaps();
-
+                
         //not exposed by service
         ViewDataImage GetCurrentView();
         void UpdateFrames();

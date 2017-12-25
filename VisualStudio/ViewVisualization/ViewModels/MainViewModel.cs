@@ -95,9 +95,9 @@ namespace ViewVisualization.ViewModels
             IViewProvider provider = new ViewProvision.ViewProvider(true);
             provider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
             {
-                //new GrayImageProcessor()
+                new GrayImageProcessor()
                 //new SmoothBilateralProcessor(7,255,34)
-                new SobelProcessor()
+                //new SobelProcessor()
             });
             ViewProviderService service = ViewProviderService.Create(provider);
 #endif
