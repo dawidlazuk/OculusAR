@@ -6,6 +6,7 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using ViewProvision.Contract;
 using System.Threading;
+using System.Diagnostics;
 
 namespace ViewProvision
 {
@@ -49,9 +50,9 @@ namespace ViewProvision
             if (_imageProcessors.Any() == false)
                 return _originViewProvider.GetCurrentView();
 
-            lock (leftImageMutex)
+          //  lock (leftImageMutex)
             {
-                lock (rightImageMutex)
+          //      lock (rightImageMutex)
                 {
                     currentFrames = _originViewProvider.GetCurrentView();
                 }
@@ -61,7 +62,7 @@ namespace ViewProvision
             startRightProcessingEvent.Set();
 
             finishLeftProcessingEvent.WaitOne();
-            finishRightProcessingEvent.WaitOne();            
+            finishRightProcessingEvent.WaitOne();
 
             return currentFrames;
         }
@@ -86,16 +87,23 @@ namespace ViewProvision
                 while (true)
                 {
                     startLeftProcessingEvent.WaitOne();
-                    lock (leftImageMutex)
+                    //lock (leftImageMutex)
+                    try
                     {
                         var image = currentFrames.LeftImage;
-                        if(image != null)
+                        if (image != null)
                             foreach (var imageProcessor in _imageProcessors)
                                 imageProcessor.Process(ref image);
                         currentFrames.LeftImage = image;
                     }
-
-                    finishLeftProcessingEvent.Set();
+                    catch(Exception ex)
+                    {
+                        Debug.WriteLine("Left image processing" + ex.Message);
+                    }
+                    finally
+                    {
+                        finishLeftProcessingEvent.Set();
+                    }
                 }
             }));
             leftProcessingThread.Start();
@@ -108,18 +116,24 @@ namespace ViewProvision
                 while (true)
                 {
                     startRightProcessingEvent.WaitOne();
-
-                    lock (rightImageMutex)
+                    try
+                    //lock (rightImageMutex)
                     {
                         var image = currentFrames.RightImage;
-                        if(image != null)
+                        if (image != null)
                             foreach (var imageProcessor in _imageProcessors)
                                 imageProcessor.Process(ref image);
 
                         currentFrames.RightImage = image;
                     }
-
-                    finishRightProcessingEvent.Set();
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine("Right image processing" + ex.Message);
+                    }
+                    finally
+                    {
+                        finishRightProcessingEvent.Set();
+                    }
                 }
             }));
             rightProcessingThread.Start();
