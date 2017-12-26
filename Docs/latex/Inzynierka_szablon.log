@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500) (preloaded format=xelatex 2017.12.25)  26 DEC 2017 17:30
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500) (preloaded format=xelatex 2017.12.25)  26 DEC 2017 18:58
 entering extended mode
 **./Inzynierka_szablon.tex
 (Inzynierka_szablon.tex
@@ -981,4 +981,167 @@ LaTeX Font Info:    ... okay on input line 212.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 212.
 LaTeX Font Info:    ... okay on input line 212.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 212.
-LaTeX Font Info:    ... okay on input l
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 212.
+LaTeX Font Info:    ... okay on input line 212.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 212.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 212.
+
+
+("C:\Users\dawid.lazuk\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.
+fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 212.
+
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 28.45274pt
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 455.24413pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24413pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08826pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=103.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+[1
+
+] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+[1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 276.
+
+("C:\Users\dawid.lazuk\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ums
+a.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 276.
+
+("C:\Users\dawid.lazuk\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ums
+b.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 276.
+
+("C:\Users\dawid.lazuk\AppData\Local\Programs\MiKTeX 2.9\tex\latex\jknappen\urs
+fs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 276.
+
+("C:\Users\dawid.lazuk\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.f
+d"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [3] [4] (Inzynierka_szablon.toc)
+\tf@toc=\write3
+\openout3 = `Inzynierka_szablon.toc'.
+
+ [5
+
+] [6] [11
+
+]
+Rozdzia\l  1.
+[12
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+Rozdzia\l  2.
+[14
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (13.59999pt): 
+ Make it at least 14.02263pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+Rozdzia\l  3.
+[16
+
+] [17]
+File: politechnika.png Graphic file (type bmp)
+<politechnika.png>
+ [18]
+Rozdzia\l  4.
+[19
+
+] [20
+
+] [21
+
+] (Inzynierka_szablon.lof)
+\tf@lof=\write4
+\openout4 = `Inzynierka_szablon.lof'.
+
+ [22
+
+] (Inzynierka_szablon.lot)
+\tf@lot=\write5
+\openout5 = `Inzynierka_szablon.lot'.
+
+ [23
+
+]
+[24
+
+] [25] (Inzynierka_szablon.aux) ) 
+Here is how much of TeX's memory you used:
+ 19613 strings out of 427839
+ 358967 string characters out of 3147434
+ 415370 words of memory out of 3000000
+ 23344 multiletter control sequences out of 15000+200000
+ 535796 words of font info for 54 fonts, out of 3000000 for 9000
+ 1330 hyphenation exceptions out of 8191
+ 36i,12n,43p,10430b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on Inzynierka_szablon.pdf (23 pages).

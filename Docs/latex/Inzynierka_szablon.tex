@@ -300,15 +300,11 @@ Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym ży
 
 Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujacych rzeczywistość rozszerzoną.
 
-\chapter{Cel i założenia projektu} % Cel i założenia projektu
+\chapter{Wstęp teoretyczny}
 
-Celem pracy jest stworzenie systemu umożliwiającego przekazanie obrazu z dwóch kamer do gogli wirtualnej rzeczywistości), tworząc tym samym system rozszerzonej rzeczywistości. 
+W tym rozdziale wprowadzimy czytelnika w zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Omówimy też naturę wizji stereoskopowej człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
 
-System ma umożliwiać efekt widzenia stereoskopowego, aby użytkownik miał wrażenie normalnej wizji. Efekt ten zostanie osiągnięty poprzez umiejscowienie kamer tak, aby odległość między ich soczewkami odpowiadała odległości pomiędzy źrenicami ludzkich oczu. 
-
-System ma umożliwiać przetwarzanie przechwyconego obrazu zanim trafi on do oczu. Przetwarzanie to może być realizowane na przykład poprzez nałożenie prostych filtrów na obraz, lub też wykorzystania bardziej zaawansowanych algorytmów (na przykład wykrywania twarzy).
-
-\section{Wstęp teoretyczny}
+\section {Rodzaje rzeczywistości}
 
 \begin{definition}[Wirtualna rzeczywistość]
 \textit{Wirtualną rzeczywistością} (ang. VR - Virtual Reality) nazywamy wrażenie przebywania użytkownika w świecie stworzonym wirtualnie. Zwykle dotyczy to obrazu, dźwięku oraz interakcji z otoczeniem, ale podejmowane są próby wykorzystania zapachu i dotyku w aplikacjach VR.
@@ -324,17 +320,67 @@ System ma umożliwiać przetwarzanie przechwyconego obrazu zanim trafi on do ocz
 
 W niniejszej pracy zajmiemy się rozwiązaniami wirtualnej i rozszerzonej rzeczywistości. Definicja rzeczywistości mieszanej została zamieszczona w celu rozróżnienia jej od rozszerzonej, jednak to zagadnienie leży poza zakresem pracy dyplomowej.
 
+\section {Wizja stereoskopowa człowieka}
+
+Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane mniej więcej równolegle w ten sam punkt. Umożliwia to zebranie dwóch obrazów, które różnią się od siebie perspektywą obserwatora. Mózg przetwarzając te obrazy tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
+
+\subsection {Odległość między źrenicami}
+
+Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
+
+\begin{table}[!th]
+\centering
+\label{my-label}
+\begin{tabular}{lcccc}
+\textbf{Płeć} & \multicolumn{1}{l}{\textbf{Minimum}} & \multicolumn{1}{l}{\textbf{Maksimum}} & \multicolumn{1}{l}{\textbf{Średnia}} & \multicolumn{1}{l}{\textbf{Mediana}} \\
+Kobieta       & 51.0                                 & 74.5                                  & 61.7                                 & 62.0                                 \\
+Mężczyzna     & 53.0                                 & 77.0                                  & 64.0                                 & 64.0                                
+\end{tabular}
+\caption{Odległości między źrenicami}
+\end{table}
+
+Z powyższych danych jednoznacznie wynika, że odległość pomiędzy ludzkimi źrenicami zawiera się w przedziale od 51.0 milimetrów do 77.0 milimetrów.
+
+\textbf{(http://www.dtic.mil/docs/citations/ADA634277 - do przypisów)}
+
+\subsection {Akomodacja oka}
+
+Ludzkie oko dostosowuje się do odległości od oglądanego przedmiotu w celu zapewnienia ostrości obrazu. Kiedy człowiek zmienia punkt skupienia wzroku na obiekt położony w innej odległości niż poprzedni, kształt jego soczewki ulega zmianie. Tym samym zmienia się też jego ogniskowa. 
+
+Zakres akomodacji oka wynosi od 10 centymetrów (punkt bliży wzrokowej) do 6 metrów (punkt dali wzrokowej). Poza tym zakresem akomodacja nie wpływa na ostrość obrazu.
+
+\subsection {Odległość obserwowanego punktu, a zbieżność oczu}
+
+
+\chapter{Cel i założenia projektu} % Cel i założenia projektu
+
+Celem pracy jest stworzenie systemu umożliwiającego przekazanie obrazu z dwóch kamer do gogli wirtualnej rzeczywistości), tworząc tym samym system rozszerzonej rzeczywistości. 
+
+System ma umożliwiać efekt widzenia stereoskopowego, aby użytkownik miał wrażenie normalnej wizji. Efekt ten zostanie osiągnięty poprzez umiejscowienie kamer tak, aby odległość między ich soczewkami odpowiadała odległości pomiędzy źrenicami ludzkich oczu. 
+
+System ma umożliwiać przetwarzanie przechwyconego obrazu zanim trafi on do oczu. Przetwarzanie to może być realizowane na przykład poprzez nałożenie prostych filtrów na obraz, lub też wykorzystania bardziej zaawansowanych algorytmów (na przykład wykrywania twarzy).
+
+
 \section{Środowisko sprzętowe}
 
 W pracy wykorzystaliśmy posiadane przez wydział MiNI gogle wirtualnej rzeczywistości Oculus Rift oraz dwie kamery USB Logitech Webcam C910 Pro HD.
 
 \subsection{Gogle Oculus Rift}
 
-Tutaj opiszemy specyfikację gogli
+Oculus Rift to gogle wirtualnej rzeczywistości stworzone przez firmę Oculus VR, będącą obecnie własnością Facebook Inc. Zostały ujawnione światu w 2012 roku na platformie Kickstarter w celu zebrania funduszy na rozwój projektu. 
+
+Oculus Rift wykorzystuje dwa ekrany OLED, po jednym na każde oko. Ekrany te mają rozdzielczość 1080 pikseli na 1200 pikseli. Częstotliwość ich odświeżania wynosi 90 Hz. Pomiędzy ekranami, a oczami użytkownika znajdują się soczewki. Kąty widzenia gogli to 90\textdegree  pionowo i 80\textdegree  poziomo.
+
+-- tutaj można wstawić jakiś schemat oculusa --
 
 \subsection{Logitech Webcam C910 Pro HD}
 
-Tutaj opiszemy specyfikację kamerek. Wspomnimy o odległości soczewek kamer i problemach z tym związanymi.
+C910 Pro HD to kamera USB stworzona przez firmę Logitech. Umożliwia przechwytywanie obrazu o rozdzielczości 1920 pikseli na 1080 pikseli. Posiada wbudowany mikrofon, jednak nie będzie on wykorzystywany w naszej pracy.
+
+W związku z tym, że panoramiczny obraz nie pokrywa się z naturą ludzkiego oka ograniczymy się do obrazu 4:3. Zatem rozdzielczość obrazu w naszej pracy będzie wynosiła 1440 pikseli na 1080 pikseli na jedno oko.
+
+Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to problematyczne, ponieważ minimalna odległość między soczewkami, na jaką możemy umieścić kamery w tej pozycji, wynosi około 100 milimetrów. Jest to znacznie powyżej górnego ograniczenia odległości między ludzkimi źrenicami. W związku z tym konieczne będzie umieszczenie tych kamer w pozycji pionowej. Skutkuje to tym, że efektywna rozdzielczość przechwytywanego obrazu będzie wynosiła 1080 pikseli na 1440 pikseli.
+
 
 \section{Środowisko programowe}
 
@@ -354,8 +400,6 @@ TODO
 \chapter {Implementacja}
 
 
-
-\chapter {
 
 
 \begin{definition}[Definicja]
