@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500) (preloaded format=xelatex 2017.12.25)  26 DEC 2017 18:58
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6500) (preloaded format=xelatex 2017.12.25)  26 DEC 2017 19:45
 entering extended mode
 **./Inzynierka_szablon.tex
 (Inzynierka_szablon.tex
@@ -1087,61 +1087,68 @@ Rozdzia\l  1.
 [12
 
 ]
+File: zbieznosc.png Graphic file (type bmp)
+<zbieznosc.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[13] [14]
 Rozdzia\l  2.
-[14
+[15
+
+] [16] [17]
+Rozdzia\l  3.
+[18
 
 ]
+Underfull \vbox (badness 1354) has occurred while \output is active []
 
-Package Fancyhdr Warning: \headheight is too small (13.59999pt): 
- Make it at least 14.02263pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15]
-Rozdzia\l  3.
-[16
-
-] [17]
+ [19]
 File: politechnika.png Graphic file (type bmp)
 <politechnika.png>
- [18]
+
+[20]
 Rozdzia\l  4.
-[19
+[21
 
-] [20
+] [22
 
-] [21
+] [23
 
 ] (Inzynierka_szablon.lof)
 \tf@lof=\write4
 \openout4 = `Inzynierka_szablon.lof'.
 
- [22
+ [24
 
 ] (Inzynierka_szablon.lot)
 \tf@lot=\write5
 \openout5 = `Inzynierka_szablon.lot'.
 
- [23
+ [25
 
 ]
-[24
+[26
 
-] [25] (Inzynierka_szablon.aux) ) 
+] [27] (Inzynierka_szablon.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 19613 strings out of 427839
- 358967 string characters out of 3147434
+ 19617 strings out of 427839
+ 359032 string characters out of 3147434
  415370 words of memory out of 3000000
- 23344 multiletter control sequences out of 15000+200000
+ 23347 multiletter control sequences out of 15000+200000
  535796 words of font info for 54 fonts, out of 3000000 for 9000
  1330 hyphenation exceptions out of 8191
- 36i,12n,43p,10430b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,10430b,363s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Inzynierka_szablon.pdf (23 pages).
+Output written on Inzynierka_szablon.pdf (25 pages).

@@ -328,7 +328,7 @@ Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego ocz
 
 Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
 
-\begin{table}[!th]
+\begin{table}[h!]
 \centering
 \label{my-label}
 \begin{tabular}{lcccc}
@@ -349,8 +349,15 @@ Ludzkie oko dostosowuje się do odległości od oglądanego przedmiotu w celu za
 
 Zakres akomodacji oka wynosi od 10 centymetrów (punkt bliży wzrokowej) do 6 metrów (punkt dali wzrokowej). Poza tym zakresem akomodacja nie wpływa na ostrość obrazu.
 
-\subsection {Odległość obserwowanego punktu, a zbieżność oczu}
+\subsection {Zbieżność oczu}
 
+W sytuacji, kiedy człowiek patrzy na przedmiot położony daleko od niego, osie widzenia każdego z oczu są położone równolegle do siebie. Jednak kiedy człowiek obserwuje obiekt położony blisko, osie widzenia przecinają się w obserwowanym punkcie. To zjawisko, obrócenia oczu do środka, nazywane jest zbieżnością.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{zbieznosc}
+\caption[Zbieżność oczu (źródło: http://www.swiatlo.tak.pl/1/index.php/funkcje-wzroku-akomodacja-adaptacja-zbieznosc/)]{Zbieżność oczu}
+\end{figure}
 
 \chapter{Cel i założenia projektu} % Cel i założenia projektu
 
@@ -384,22 +391,31 @@ Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to p
 
 \section{Środowisko programowe}
 
-\subsection{.NET}
+\subsection{.NET Framework}
 
-Krótki opis .NETu i do czego zostanie przez nas wykorzystany.
+System zostanie wykonany z wykorzystaniem .NET Framework. Językiem programowania będzie C\#. Zdecydowaliśmy się na tą technologię, ponieważ mamy w niej największe doświadczenie. Również silnik Unity3D, który wykorzystaliśmy wspiera .NET co sugerowało nam uniknięcie przyszlych problemów integracją modułów. W pracy .NET Framework zostanie wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
 
-\subsection{Unity}
+\subsection{EmguCV}
 
-Krótki opis Unity i do czego zostanie wykorzystane
+Przechwytywanie obrazu z kamer oraz przetwarzanie go zostało zaimplementowane z wykorzystaniem biblioteki EmguCV, która opakowuje popularną bibliotekę OpenCV w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#.
 
+\subsection{Unity3D}
 
-\section {Schemat działania}
+-- Piotrek ty tutaj opisz co nie co bo wiesz to lepiej
 
-TODO
+\section {Schemat systemu}
+
+\subsection {Architektura aplikacji}
+
+-- schemat, opis modułów i wykorzystane technologie
+
+\subsection {Droga obrazu}
+
+-- też może schemat (chyba w prezentacji na seminarium był), opis słowny
 
 \chapter {Implementacja}
 
-
+-- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
 
 
 \begin{definition}[Definicja]
