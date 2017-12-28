@@ -1,4 +1,5 @@
-﻿using Emgu.CV;
+﻿using System.Collections.Generic;
+using Emgu.CV;
 using Emgu.CV.Structure;
 using System.ServiceModel;
 
@@ -16,7 +17,13 @@ namespace ViewProvision.Contract
         CaptureDetails GetCaptureDetails();
     }
 
-    public interface IViewProvider : IViewCalibrator, ICaptureManager
+    public interface IImageProcessing
+    {
+        List<string> GetAllImageProcessors();
+        void ToggleImageProcessor(string name);
+    }
+
+    public interface IViewProvider : IViewCalibrator, ICaptureManager, IImageProcessing
     {      
         ViewDataBitmap GetCurrentViewAsBitmaps();
                 

@@ -25,5 +25,8 @@ namespace ViewProvision.Processors
                 Debug.WriteLine(ex.Message);
             }
         }
+
+        public string Name { get; } = "Sobel";
+        public bool Active { get; set; }
     }
 }

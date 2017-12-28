@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 using System.Diagnostics;
 
@@ -90,5 +91,15 @@ namespace ConfigService.Server
         #endregion
 
         #endregion
+
+        public List<string> GetAllImageProcessors()
+        {
+            return null;
+        }
+
+        public void ToggleImageProcessor(string processorName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

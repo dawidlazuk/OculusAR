@@ -207,6 +207,8 @@ namespace ViewProvision
             }
         }
 
+
+
         #region IViewCalibrator implementation
 
         private short leftImageRotationTimes;
@@ -319,5 +321,14 @@ namespace ViewProvision
         //        port);
         //}
 
+        public List<string> GetAllImageProcessors()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ToggleImageProcessor(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

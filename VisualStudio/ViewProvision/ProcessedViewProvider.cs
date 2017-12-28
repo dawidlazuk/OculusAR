@@ -112,6 +112,7 @@ namespace ViewProvision
                         var image = (_originViewProvider as ViewProvider).GetRightFrameSynchronously();
                         if (image != null)
                             foreach (var imageProcessor in _imageProcessors)
+                                if(imageProcessor.Active)
                                 imageProcessor.Process(ref image);
 
                         currentFrames.RightImage = image;
@@ -132,6 +133,17 @@ namespace ViewProvision
         public void UpdateFrames()
         {
             _originViewProvider.UpdateFrames();
-        }        
+        }
+
+        public List<string> GetAllImageProcessors()
+        {
+            return _imageProcessors.Select(x => x.Name).ToList();
+        }
+
+        public void ToggleImageProcessor(string name)
+        {
+            var imageProcessor = _imageProcessors.Single(x => x.Name == name);
+            imageProcessor.Active = !imageProcessor.Active;
+        }
     }
 }

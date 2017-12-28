@@ -4,6 +4,7 @@ using ViewProvision.Contract;
 
 using ConfigService.Contract;
 using System;
+using System.Collections.Generic;
 
 namespace ConfigService.Client
 {
@@ -93,5 +94,14 @@ namespace ConfigService.Client
             }
         }
 
+        public List<string> GetAllImageProcessors()
+        {
+           return Call(() => channel.GetAllImageProcessors());
+        }
+
+        public void ToggleImageProcessor(string processorName)
+        {
+            Call(() => channel.ToggleImageProcessor(processorName));
+        }
     }
 }

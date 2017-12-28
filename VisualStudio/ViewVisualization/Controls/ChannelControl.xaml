@@ -29,7 +29,7 @@
                   ItemsSource="{Binding Path=CameraNames}"
                   SelectedIndex="{Binding Path=CameraIndex, Mode=TwoWay}"/>
 
-        <Button Grid.Row="2" Grid.Column="0"  Content="RotateLeft_Click"/>
+        <Button Grid.Row="2" Grid.Column="0" Click ="RotateLeft_Click"  Content="Rotate left"/>
         <Button Grid.Row="2" Grid.Column="1" Click="RotateRight_Click" Content="Rotate right"/>
 
     </Grid>

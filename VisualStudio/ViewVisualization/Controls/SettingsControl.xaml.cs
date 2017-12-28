@@ -25,6 +25,9 @@ namespace ViewVisualization.Controls
         private void CustomInitialize()
         {
             SettingsGrid.DataContext = this;
+            _libraries.Add(new ProcessingLibrary() { Name = "Gray filter" });
+            _libraries.Add(new ProcessingLibrary() { Name = "Sobel filter" });
+            _libraries.Add(new ProcessingLibrary() { Name = "Edge detection"});
         }
 
         private void LoadLibraries_OnClick(object sender, RoutedEventArgs e)
@@ -40,8 +43,8 @@ namespace ViewVisualization.Controls
                 var files = openFileDialog.SafeFileNames;
                 foreach (var file in files)
                 {
-                    var methods = new  ObservableCollection<ProcessingMethod>() { new ProcessingMethod() {Name = file}};
-                    var library = new ProcessingLibrary() {Name = file, Methods = methods};
+                    var methods = new ObservableCollection<ProcessingMethod>() { new ProcessingMethod() { Name = file } };
+                    var library = new ProcessingLibrary() { Name = file, Methods = methods };
                     _libraries.Add(library);
                 }
             }

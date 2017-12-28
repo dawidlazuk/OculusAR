@@ -20,6 +20,9 @@ namespace ViewProvision.Processors
                 Debug.WriteLine(ex.Message);
             }
         }
+
+        public string Name { get; } = "Gray";
+        public bool Active { get; set; } = false;
     }
 
 }
