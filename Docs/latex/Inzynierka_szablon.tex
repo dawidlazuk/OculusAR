@@ -299,23 +299,53 @@ Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowani
 
 \chapter{Wstęp teoretyczny}
 
-W tym rozdziale wprowadzimy czytelnika w zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Omówimy też naturę wizji stereoskopowej człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
+W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Poruszone zostaną problemy, jakie wiążą się z zastosowaniem tych technologii. Przedstawiona zostanie też natura wizji stereoskopowej człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
 
-\section {Rodzaje rzeczywistości}
+\section {Wirtualna i rozszerzona rzeczywistość}
+
+\subsection {Definicje i zastosowanie VR/AR}
 
 \begin{definition}[Wirtualna rzeczywistość]
 \textit{Wirtualną rzeczywistością} (ang. VR - Virtual Reality) nazywamy wrażenie przebywania użytkownika w świecie stworzonym wirtualnie. Zwykle dotyczy to obrazu, dźwięku oraz interakcji z otoczeniem, ale podejmowane są próby wykorzystania zapachu i dotyku w aplikacjach VR.
 \end{definition}
 
+Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii. Nawet w przypadku telewizji trójwymiarowej.
+
+Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na wirtualnych poligonach.
+
+\textbf {źródło: http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx }
+
 \begin{definition}[Rozszerzona rzeczywistość]
 \textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałoźenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy. Systemy AR nie zapewniają interakcji z częścią wirtualną świata.
 \end{definition}
+
+Rozwiązania rozszerzonej rzeczywistości wzbogacają zmysły człowieka poprzez przekazanie im dodatkowych informacji. O ile w przypadku wirtualnej rzeczywistości użytkownik, w pewnym sensie, odcinał się od świata rzeczywistego, tak w przypadku rzeczywistości rozszerzonej ten kontakt z rzeczywistością pozostaje. Istnieją samochody oraz myśliwce wyposażone w HUD - przezroczysty ekran wyświetlający informacje takie jak na przykład prędkość, z jaką porusza się samochód, nie zasłaniając tego co za nim się znajduje. Dość znanym zastosowaniem rozszerzonej rzeczywistości jest, wydana w 2016 roku, gra Pokemon GO. Użytkownik przy pomocy swojego smartphone'a spacerując po mieście zbiera pokemony, które wyświetlają się na ekranie telefonu jako obraz nałożony na  świat rzeczywisty, widziany przez kamerę urządzenia.
+
+Przykładami urządzeń AR obecnymi na rynku są Google Glass i Microsoft HoloLens. W odróźnieniu od wirtualnej rzeczywistości, oczy użytkownika nie zostają zasłonięte całkowicie. Urządzenia mają formę okularów, przez które człowiek widzi to co przed nim się znajduje, a obraz wirtualny jest wyświetlany na okularach bądź aplikowany bezpośrednio do oka.
 
 \begin{definition}[Mieszana rzeczywistość]
 \textit{Mieszaną rzeczywistością} (ang. MR - Mixed Reality) nazywamy rozszerzenie klasy rozwiązań AR o interakcję użytkownika z wirtualną częścią świata.
 \end{definition}
 
-W niniejszej pracy zajmiemy się rozwiązaniami wirtualnej i rozszerzonej rzeczywistości. Definicja rzeczywistości mieszanej została zamieszczona w celu rozróżnienia jej od rozszerzonej, jednak to zagadnienie leży poza zakresem pracy dyplomowej.
+Zagadnienie mieszanej rzeczywistości leży poza zakresem niniejszej pracy. Definicja została zamieszczona w celu rozróżnienia tej klasy rozwiązań od rozwiązań rozszerzonej rzeczywistości.
+
+\subsection { Problemy użytkowe VR/AR }
+
+Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za sobą szereg wyzwań stawianych deweloperom, oraz konsekwencji, których użytkownicy muszą być świadomi.
+
+\begin{description}
+\item [Wymogi wydajnościowe] \hfill \\
+W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki jest przystosowany do częstotliwości zmian obrazu występującej w naturze. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$.
+\item [Wpływ na wzrok] \hfill \\
+Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
+\item [Choroba symulacyjna] \hfill \\
+Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce co skutkuje objawami podobnymi do choroby lokomocyjnej.
+\item [Zbyt wysoka immersja] \hfill \\
+Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od wirtualnej rozgrywki mają problem z rozróżnianiem świata rzeczywistego od wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że rozrywka VR jest znacznie bardziej wymagająca dla organizmu od tradycyjnej, co już zostało wcześniej opisane. 
+Kolejny problem dotyczący immersji jest związany z osobami mającymi problemy kardiologiczne. Realistyczne wrażenia z gier typu horror mogą doprowadzić takie osoby nawet do zawału serca.
+\end{description}
+
+\textbf {źródło: http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/niebezpieczenstwa-i-wady-vr.aspx }
 
 \section {Wizja stereoskopowa człowieka}
 
@@ -342,13 +372,25 @@ Z powyższych danych jednoznacznie wynika, że odległość pomiędzy ludzkimi �
 
 \subsection {Akomodacja oka}
 
-Ludzkie oko dostosowuje się do odległości od oglądanego przedmiotu w celu zapewnienia ostrości obrazu. Kiedy człowiek zmienia punkt skupienia wzroku na obiekt położony w innej odległości niż poprzedni, kształt jego soczewki ulega zmianie. Tym samym zmienia się też jego ogniskowa. 
+\begin{definition}[Akomodacja oka]
+\textit{Akomodacją oka} nazywamy zjawisko dostosowania się soczewki oka do odległości od oglądanego przedmiotu, w celu zapewnienia ostrości obrazu.
+\end{definition}
 
-Zakres akomodacji oka wynosi od 10 centymetrów (punkt bliży wzrokowej) do 6 metrów (punkt dali wzrokowej). Poza tym zakresem akomodacja nie wpływa na ostrość obrazu.
+U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki, co skutkuje zmianą jej ogniskowej (zdolności skupiającej).
+
+\begin{definition}[Punkt bliży wzrokowej]
+\textit{Punktem bliży wzrokowej} nazywamy minimalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt bliży wzrokowej leży w odległości $10 cm$ od oka.
+\end{definition}
+
+\begin{definition}[Punkt dali wzrokowej]
+\textit{Punktem dali wzrokowej} nazywamy maksymalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt dali wzrokowej leży w odległości $6 m$ od oka.
+\end{definition}
 
 \subsection {Zbieżność oczu}
 
-W sytuacji, kiedy człowiek patrzy na przedmiot położony daleko od niego, osie widzenia każdego z oczu są położone równolegle do siebie. Jednak kiedy człowiek obserwuje obiekt położony blisko, osie widzenia przecinają się w obserwowanym punkcie. To zjawisko, obrócenia oczu do środka, nazywane jest zbieżnością.
+\begin{definition}[Zbieżność oczu]
+\textit{Zbieżnością oczu} nazywamy zjawisko obrócenia oczu do środka w sytuacji, kiedy obserwowany punkt leży w niewielkiej odległości od obserwatora. W takim przypadku osie widzenia obu oczu przecinają się w jednym punkcie. Jeżeli natomiast obserwowany punkt leży daleko od obserwatora, osie widzenia są równoległe do siebie.
+\end{definition}
 
 \begin{figure}[h]
 \centering
@@ -389,7 +431,7 @@ Wydział MiNI zapewnił dwa egzemplarze tych kamer na rzecz niniejszej pracy. W 
 
 Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to problematyczne, ponieważ minimalna odległość między soczewkami, na jaką możemy umieścić kamery w tej pozycji, wynosi około 100 milimetrów. Jest to znacznie powyżej górnego ograniczenia odległości między ludzkimi źrenicami. W związku z tym konieczne będzie umieszczenie tych kamer w pozycji pionowej. Skutkuje to tym, że efektywna rozdzielczość przechwytywanego obrazu będzie wynosiła 1080 pikseli na 1440 pikseli.
 
-\section{Środowisko programowe}
+\section{Środowisko programistyczne}
 
 W tym podrozdziale krótko przedstawimy technologie i oprogramowanie, które zostały wykorzystane w celu zrealizowania pracy. Omówimy języki programowania, biblioteki oraz silnik grafiki wybrane przez nas i powody tych wyborów.
 
@@ -405,15 +447,18 @@ Przechwytywanie obrazu z kamer oraz przetwarzanie go zostało zaimplementowane z
 
 -- Piotrek ty tutaj opisz co nie co bo wiesz to lepiej
 
-\section {Schemat systemu}
+\section {Schemat systemu} % nie jestem pewien czy tego co poniżej nie wywalić już do rozdziału ``co zostało zrobione''
 
 \subsection {Architektura aplikacji}
 
 -- schemat, opis modułów i wykorzystane technologie
 
+
+-- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
+
 \subsection {Droga obrazu}
 
-Przechwycony obraz przez kamery pokonuje kilka warstw przetwarzania, zanim trafi go oczu użytkownika. Te warstwy to:
+Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia go przez kamery do przekazania go do oka użytkownika, została podzielona na trzy warstwy. Są to:
 
 \begin{description}
 \item [Warstwa przechwytywania obrazu] \hfill \\ Jest odpowiedzialna za pobieranie obrazów z kamer i przygotowanie ich do dalszego przetwarzania - rotację obrazu w zależności od położenia kamery.
@@ -425,7 +470,10 @@ Przechwycony obraz przez kamery pokonuje kilka warstw przetwarzania, zanim trafi
 
 \chapter {Implementacja}
 
--- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
+
+\section{Architektura systemu}
+
+\section{Droga obrazu}
 
 \section {Opis modułów}
 
@@ -451,6 +499,8 @@ Przechwycony obraz przez kamery pokonuje kilka warstw przetwarzania, zanim trafi
 \begin{tabular}{cl}
 nzw. & nadzwyczajny \\
 * & operator gwiazdka \\
+HUD & head-up display \\
+FPS & frames per second \\
 $\widetilde{}$ & tylda
 \end{tabular}
 \thispagestyle{empty}
