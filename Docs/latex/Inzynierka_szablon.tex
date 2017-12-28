@@ -447,14 +447,31 @@ Przechwytywanie obrazu z kamer oraz przetwarzanie go zostało zaimplementowane z
 
 -- Piotrek ty tutaj opisz co nie co bo wiesz to lepiej
 
-\section {Schemat systemu} % nie jestem pewien czy tego co poniżej nie wywalić już do rozdziału ``co zostało zrobione''
+\section{Odwzorowanie wizji stereoskopowej}
 
-\subsection {Architektura aplikacji}
+W podrozdziale \textit{Wizja stereoskopowa człowieka} zostały przedstawione cechy ludzkiej wizji, które mają wpływ na przebieg niniejszej pracy. W tym podrozdziale omówione zostaną założenia, jakie zostały podjęte podczas realizacji projektu w celu spełnienia tych wymagań, oraz uzasadnienie w przypadku braku możliwości spełnienia danego wymagania.
 
--- schemat, opis modułów i wykorzystane technologie
+\subsection{Odległość między źrenicami}
 
+W celu zapewnienia komfortowego korzystania z systemu jak największej grupie użytkowników konieczne jest opracowanie sposobu umieszczenia kamer zapewniającego:
+\begin{itemize}
+\item Umieszczenie kamer w stałej odległości od siebie podczas użytkowania systemu
+\item Regulację odległości kamer od siebie
+\end{itemize}
 
--- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
+Kamery docelowo miały zostać umieszczone na goglach, ale przewidziana jest możliwość mocowania ich na czym innym, jednak z zachowaniem punktów wymienionych powyżej.
+
+\subsection {Akomodacja oka}
+
+Zjawisko akomodacji oka w niniejszej pracy jest nie do odwzorowania z wykorzystaniem dostępnego sprzętu. Wymaga ono śledzenia gałki ocznej w celu wyznaczenia punktu, który jest obserwowany przez użytkownika, a następnie wyostrzenie obrazu w danym punkcie. Gogle Oculus Rift nie mają obecnie takiej możliwości.
+
+\subsection {Zbieżność oczu}
+
+Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odzworowania z takich samych powodów co zjawisko \textit{akomodacji oka}. Należałoby wyznaczyć punkt obserwowany przez użytkownika, a następnie skierować kamery w dany punkt. Wykracza to poza zakres pracy inżynierskiej.
+
+\chapter {Implementacja}
+
+\section {Schemat systemu}
 
 \subsection {Droga obrazu}
 
@@ -468,15 +485,11 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 
 -- też może schemat (chyba w prezentacji na seminarium był), opis słowny
 
-\chapter {Implementacja}
-
-
-\section{Architektura systemu}
-
-\section{Droga obrazu}
+\subsection{Architektura systemu}
 
 \section {Opis modułów}
 
+-- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
 
 % -------------------- 6. Bibliografia -----------------------
 % Bibliografia leksykograficznie wg nazwisk autorów
