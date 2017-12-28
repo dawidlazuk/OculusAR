@@ -20,6 +20,8 @@
 \usepackage{array}
 \usepackage{pstricks}
 \usepackage{textcomp}
+\usepackage{listings}
+\usepackage{xcolor}
 
 % ---------------- Marginesy, akapity, interlinia ------------------
 
@@ -205,6 +207,8 @@
 \newcommand{\album}{268791,000000}
 \newcommand{\type}{inżyniers} % magisters, licencjac (Master or Engineer in English)
 \newcommand{\supervisor}{dr inż. Krzysztof Kaczmarski}
+
+\lstdefinestyle{sharpc}{language=[Sharp]C, rulecolor=\color{blue!80!black}}
 
 \begin{document}
 \sloppy
@@ -433,7 +437,7 @@ Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to p
 
 \section{Odwzorowanie wizji stereoskopowej}
 
-W tym podrozdziale omówione zostaną cechy wizji stereoskopowej w kontekście niniejszej pracy.
+Uzyskanie efektu wizji trójwymiarowej podczas używania gogli z zaimplementowanym rozwiązaniem jest jednym z najważniejszych celów tego projektu. W tym podrozdziale znajduje się odniesienie do cech wizji stereoskopowej, opisanych w poprzednim rozdziale, pod kątem tego, jak wpływają na tworzone rozwiązanie w ramach niniejszej pracy.
 
 \subsection {Parametryzacja wizji}
 
@@ -468,7 +472,7 @@ Kamery docelowo miały zostać umieszczone na goglach, ale przewidziana jest mo�
 Zjawisko akomodacji oka w niniejszej pracy jest nie do odwzorowania z wykorzystaniem dostępnego sprzętu. Wymaga ono śledzenia gałki ocznej w celu wyznaczenia punktu, który jest obserwowany przez użytkownika, a następnie wyostrzenie obrazu w danym punkcie. Gogle Oculus Rift nie mają obecnie takiej możliwości.
 
 \item[Zbieżność oczu] \hfill \\
-Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odzworowania z takich samych powodów co zjawisko \textit{akomodacji oka}. Należałoby wyznaczyć punkt obserwowany przez użytkownika, a następnie skierować kamery w dany punkt. Wykracza to poza zakres pracy inżynierskiej.
+Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odzworowania z takich samych powodów co zjawisko \textit{akomodacji oka}. Należałoby wyznaczyć punkt obserwowany przez użytkownika, a następnie skierować kamery w dany punkt. Wymagałoby to też stworzenia urządzenia, które poruszałoby kamerami w zależności od obserwowanego punktu. Wykracza to znacznie poza zakres tej pracy.
 
 \end{description}
 
@@ -482,10 +486,10 @@ W tym rozdziale przedstawione zostaną efekty pracy. Omówione szczegóły techn
 
 \begin{description}
 \item [Język programowania C\# ] \hfill \\
-System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Zdecydowaliśmy się na tą technologię, ponieważ mamy w niej największe doświadczenie. Również silnik Unity3D, który wykorzystaliśmy wspiera .NET co sugerowało nam uniknięcie przyszlych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
+System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszlych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
 
 \item [EmguCV] \hfill \\
-Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu.
+Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki.
 
 \item [Silnik Unity3D] \hfill \\
 opis - piotrek
@@ -523,13 +527,43 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 \subsection{Architektura systemu}
 TODO 
 
+\subsection{Funkcjonalność przetwarzania obrazu}
+TODO
+
 \section {Opis modułów}
 
 -- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
 
 \subsection {Moduł przechwytywania obrazu}
 
-W tym module zaimplementowane są wszystkie operacje powiązane z kamerami. Te operacje to między innymi:
+W tym module zaimplementowane są wszystkie operacje powiązane z kamerami. Kontrakt tego modułu przedstawia się następująco:
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+    public interface IViewCalibrator
+    {
+        void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
+    }
+
+    public interface ICaptureManager
+    {
+        void SetCapture(CaptureSide captureSide, int cameraIndex);
+        CaptureDetails GetCaptureDetails();
+    }
+
+    public interface IViewProvider : IViewCalibrator, ICaptureManager
+    {      
+        ViewDataBitmap GetCurrentViewAsBitmaps();               
+        ViewDataImage GetCurrentView();
+        void UpdateFrames();
+    }
+\end{lstlisting}
+
+Interfejs \textit{IViewCalibrator} jest odpowiedzialny za operacje związane z kalibracją obrazu. W tym projekcie jedyną taką operacją jest obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery (metoda \textit{RotateImage}).
+Interfejs \textit{ICaptureManager} odpowiada za wszystko co jest związane z przechwytywaniem obrazu. Metoda \textit{SetCapture} ustawia dany kanał na kamerę o danym indeksie w systemie, a metoda \textit{GetCaptureDetails} pobiera informacje o przechwytywanym obrazie, na przykład rozdzielczość obrazu, jego rotację czy indeks kamery, z której pochodzi.
+Interfejs \textit{IViewProvider} jest głównym interfejsem, który jest implementowany przez moduł. Obejmuje sobą funkcjonalności interfejsów poprzednio wymienionych oraz udostępnia metody bezpośrednio związane z pobieraniem obrazu. Metoda \textit{UpdateFrames} wysyła sygnał do wątków pobierających obraz, aby pobrały kolejną klatkę. Pozostałe dwie metody - \textit{GetCurrentView} i \textit{GetCurrentViewAsBitmaps} pobierają obecne klatki w różnych formatach. Pierwsza z nich, wykorzystywana przez proces główny, pobiera obraz jako klasy Image biblioteki EmguCV. Druga jest wykorzystywana przez aplikację konfiguracyjną, a obraz pobrany z jej wykorzystaniem jest postaci klas System.Drawing.Bitmap.
+
+Z powyższego opisu wynika, że najważniejsze operacje modułu to:
 \begin{itemize}
 \item Wybór kamery dla danego kanału.
 \item Pobranie obrazu z wybranych kamer dla obu kanałów
@@ -547,10 +581,18 @@ Operacja jest zrealizowana wielowątkowo. Każdy z dwóch kanałów ma swój wą
 Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji) tej wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
 \end{description}
 
+Funkcjonalności modułu są współdzielone przez aplikację główną oraz konfiguracyjną. Ta część kontraktu, która jest wykorzystywana przez aplikację konfiguracyjną, jest wydzielona jako kontrakt serwisu udostępnionego tej aplikacji, zgodnie ze wzorcem projektowym \textit{fasada}. Dzięki temu ukryte zostały zbędne funkcjonalności modułu z punktu widzenia aplikacji konfiguracyjnej upraszczając jego interfejs.
+
 \subsection {Moduł przetwarzania obrazu}
-TODO
+TODO - piotrek
 
 \subsection {Moduł przekazywania obrazu do gogli}
+TODO - piotrek
+
+\subsection {Aplikacja konfiguracyjna}
+TODO
+
+\subsection {Serwis komunikacji międzyprocesowej}
 TODO
 
 \chapter {Rezultat pracy}
@@ -568,10 +610,10 @@ TODO Czytanie książki. Łapanie przedmiotu, itp kreatywne pomysły
 \section {Wnioski}
 TODO 
 
-\section {Co wyszło dobrze}
+\subsection {Co wyszło dobrze}
 TODO
 
-\section {Co nie wyszło dobrze}
+\subsection {Co nie wyszło dobrze}
 TODO
 
 \chapter {Przyszłość rozwiązania}
@@ -601,6 +643,7 @@ nzw. & nadzwyczajny \\
 HUD & head-up display \\
 FPS & frames per second \\
 IDE & Integrated Development Environment \\
+HTTP & Hypertext Transfer Protocol \\
 $\widetilde{}$ & tylda
 \end{tabular}
 \thispagestyle{empty}
