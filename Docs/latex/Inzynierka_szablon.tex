@@ -316,7 +316,7 @@ Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wyko
 \textbf {źródło: http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx }
 
 \begin{definition}[Rozszerzona rzeczywistość]
-\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałoźenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy. Systemy AR nie zapewniają interakcji z częścią wirtualną świata.
+\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy. Systemy AR nie zapewniają interakcji z częścią wirtualną świata.
 \end{definition}
 
 Rozwiązania rozszerzonej rzeczywistości wzbogacają zmysły człowieka poprzez przekazanie im dodatkowych informacji. O ile w przypadku wirtualnej rzeczywistości użytkownik, w pewnym sensie, odcinał się od świata rzeczywistego, tak w przypadku rzeczywistości rozszerzonej ten kontakt z rzeczywistością pozostaje. Istnieją samochody oraz myśliwce wyposażone w HUD - przezroczysty ekran wyświetlający informacje takie jak na przykład prędkość, z jaką porusza się samochód, nie zasłaniając tego co za nim się znajduje. Dość znanym zastosowaniem rozszerzonej rzeczywistości jest, wydana w 2016 roku, gra Pokemon GO. Użytkownik przy pomocy swojego smartphone'a spacerując po mieście zbiera pokemony, które wyświetlają się na ekranie telefonu jako obraz nałożony na  świat rzeczywisty, widziany przez kamerę urządzenia.
@@ -431,28 +431,31 @@ Wydział MiNI zapewnił dwa egzemplarze tych kamer na rzecz niniejszej pracy. W 
 
 Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to problematyczne, ponieważ minimalna odległość między soczewkami, na jaką możemy umieścić kamery w tej pozycji, wynosi około 100 milimetrów. Jest to znacznie powyżej górnego ograniczenia odległości między ludzkimi źrenicami. W związku z tym konieczne będzie umieszczenie tych kamer w pozycji pionowej. Skutkuje to tym, że efektywna rozdzielczość przechwytywanego obrazu będzie wynosiła 1080 pikseli na 1440 pikseli.
 
-\section{Środowisko programistyczne}
-
-W tym podrozdziale krótko przedstawimy technologie i oprogramowanie, które zostały wykorzystane w celu zrealizowania pracy. Omówimy języki programowania, biblioteki oraz silnik grafiki wybrane przez nas i powody tych wyborów.
-
-\subsection{.NET Framework}
-
-System zostanie wykonany z wykorzystaniem .NET Framework. Językiem programowania będzie C\#. Zdecydowaliśmy się na tą technologię, ponieważ mamy w niej największe doświadczenie. Również silnik Unity3D, który wykorzystaliśmy wspiera .NET co sugerowało nam uniknięcie przyszlych problemów integracją modułów. W pracy .NET Framework zostanie wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
-
-\subsection{EmguCV}
-
-Przechwytywanie obrazu z kamer oraz przetwarzanie go zostało zaimplementowane z wykorzystaniem biblioteki EmguCV, która opakowuje popularną bibliotekę OpenCV w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#.
-
-\subsection{Unity3D}
-
--- Piotrek ty tutaj opisz co nie co bo wiesz to lepiej
-
 \section{Odwzorowanie wizji stereoskopowej}
+
+W tym podrozdziale omówione zostaną cechy wizji stereoskopowej w kontekście niniejszej pracy.
+
+\subsection {Parametryzacja wizji}
+
+Wizję stereoskopową można opisać trzema parametrami:
+
+\begin{itemize}
+\item Kąt widzenia kamer
+\item Odległość między obiektywami kamer
+\item Kąt odchylenia osi widzenia
+\end{itemize}
+
+Pierwszy z tych parametrów - kąt widzenia kamer, jest zależny bezpośrednio od modelu kamery zastosowanego w projekcie. Jedyna możliwa jego regulacja polega na obcięciu brzegów obrazu, zmniejszając tym samym kąt widzenia. W niniejszej pracy istotnym jest, aby kąt widzenia kamer był zbliżony do kąta widzenia zapewnianego przez gogle Oculus Rift.
+
+Dwa kolejne - odległość między kamerami i odchylenie osi widzenia, są istotne przy uzyskaniu efektu głębi podczas patrzenia przez gogle. Przy założeniu, że obserwujemy jeden punkt, istnieje korelacja między tymi parametrami pozwalająca uzyskać efekt głębi patrząc na przedmioty w okolicy obserwowanego punktu nawet w syttuacji, gdy odległość, bądź odchylenie odbiegają od idealnego ustawienia dla danego użytkownika. Przykładem będzie odchylenie osi widzenia do środka w przypadku, gdy odległości między obiektywami są większe, niż między oczami użytkownika. Jednakże efekt w ten sposób uzyskany jest tylko punktowy, a obiekty położone w innej odległości od punktu odniesienia nie będą widziane jako trójwymiarowe.
+
+\subsection{Cechy ludzkiej wizji w projekcie}
 
 W podrozdziale \textit{Wizja stereoskopowa człowieka} zostały przedstawione cechy ludzkiej wizji, które mają wpływ na przebieg niniejszej pracy. W tym podrozdziale omówione zostaną założenia, jakie zostały podjęte podczas realizacji projektu w celu spełnienia tych wymagań, oraz uzasadnienie w przypadku braku możliwości spełnienia danego wymagania.
 
-\subsection{Odległość między źrenicami}
+\begin{description}
 
+\item[Odległość między źrenicami] \hfill \\
 W celu zapewnienia komfortowego korzystania z systemu jak największej grupie użytkowników konieczne jest opracowanie sposobu umieszczenia kamer zapewniającego:
 \begin{itemize}
 \item Umieszczenie kamer w stałej odległości od siebie podczas użytkowania systemu
@@ -461,15 +464,47 @@ W celu zapewnienia komfortowego korzystania z systemu jak największej grupie u�
 
 Kamery docelowo miały zostać umieszczone na goglach, ale przewidziana jest możliwość mocowania ich na czym innym, jednak z zachowaniem punktów wymienionych powyżej.
 
-\subsection {Akomodacja oka}
-
+\item [Akomodacja oka] \hfill \\
 Zjawisko akomodacji oka w niniejszej pracy jest nie do odwzorowania z wykorzystaniem dostępnego sprzętu. Wymaga ono śledzenia gałki ocznej w celu wyznaczenia punktu, który jest obserwowany przez użytkownika, a następnie wyostrzenie obrazu w danym punkcie. Gogle Oculus Rift nie mają obecnie takiej możliwości.
 
-\subsection {Zbieżność oczu}
-
+\item[Zbieżność oczu] \hfill \\
 Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odzworowania z takich samych powodów co zjawisko \textit{akomodacji oka}. Należałoby wyznaczyć punkt obserwowany przez użytkownika, a następnie skierować kamery w dany punkt. Wykracza to poza zakres pracy inżynierskiej.
 
-\chapter {Implementacja}
+\end{description}
+
+\chapter {Implementacja projektu}
+
+W tym rozdziale przedstawione zostaną efekty pracy. Omówione szczegóły techniczne zaimplementowanego rozwiązania.
+
+\section {Wybrane technologie i oprogramowanie}
+
+\subsection {Języki i technologie }
+
+\begin{description}
+\item [Język programowania C\# ] \hfill \\
+System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Zdecydowaliśmy się na tą technologię, ponieważ mamy w niej największe doświadczenie. Również silnik Unity3D, który wykorzystaliśmy wspiera .NET co sugerowało nam uniknięcie przyszlych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
+
+\item [EmguCV] \hfill \\
+Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu.
+
+\item [Silnik Unity3D] \hfill \\
+opis - piotrek
+
+\item [Windows Presentation Foundation] \hfill \\
+Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
+
+\item [Windows Communication Foundation] \hfill \\
+Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o .NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
+\end{description}
+
+\subsection {Oprogramowanie}
+
+\begin{description}
+\item [Microsoft Visual Studio] \hfill \\
+Zintegrowane środowisko programistyczne firmy Microsoft. Jest to najpopularniejsze IDE wykorzystywane w tworzeniu aplikacji opartych o .NET Framework.
+\item [SoapUI] \hfill \\
+Aplikacja służąca do testów serwisów webowych. Wykorzystana przez nas do testów połączenia pomiędzy procesem głównym, a aplikacją konfiguracyjną.
+\end{description}
 
 \section {Schemat systemu}
 
@@ -486,10 +521,61 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 -- też może schemat (chyba w prezentacji na seminarium był), opis słowny
 
 \subsection{Architektura systemu}
+TODO 
 
 \section {Opis modułów}
 
 -- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
+
+\subsection {Moduł przechwytywania obrazu}
+
+W tym module zaimplementowane są wszystkie operacje powiązane z kamerami. Te operacje to między innymi:
+\begin{itemize}
+\item Wybór kamery dla danego kanału.
+\item Pobranie obrazu z wybranych kamer dla obu kanałów
+\item Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery.
+\end{itemize}
+
+Poniżej są przedstawione zasady działania każdej z tych operacji:
+
+\begin{description}
+\item [Wybór kamery dla danego kanału] \hfill \\
+Dla każdego kanału w module jest pole, w którym jest przechowywany obiekt odpowiedzialny za komunikację z daną kamerą. Do tych pól odwołują się pozostałe funkcjonalności, pobierające obraz. W przypadku zmiany kamery w danym kanale, wartość odpowiedniego pola jest podmieniana na obiekt odpowiadający kamerze docelowej. Zmiana ta jest transparentna dla pozostałych funkcjonalności.
+\item [Pobranie obrazu z wybranych kamer dla obu kanałów] \hfill \\
+Operacja jest zrealizowana wielowątkowo. Każdy z dwóch kanałów ma swój wątek, czeka na sygnał pobrania klatki, pobiera klatkę wykonując jednocześnie jej obrót, wysyła sygnał informujący o zakończeniu pobierania klatki. Operacje te wykonują się w pętli dopóki wątek nie zostanie przerwany.
+\item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\
+Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji) tej wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
+\end{description}
+
+\subsection {Moduł przetwarzania obrazu}
+TODO
+
+\subsection {Moduł przekazywania obrazu do gogli}
+TODO
+
+\chapter {Rezultat pracy}
+
+Ten rozdział jest poświęcony zbadaniu, czy wdrożone rozwiązanie jest tym, co zostało wyspecyfikowane w rozdziale \textit{Cel i założenia projektu}. Przedstawione zostaną wyniki testów użytkowych i wydajnościowych.
+\section {Testy rozwiązania}
+TODO
+
+\subsection {Testy twarde, liczbowe, itp.}
+TODO wyniki testów opóźnień, klatek na sekundę
+
+\subsection {Testy subiektywne}
+TODO Czytanie książki. Łapanie przedmiotu, itp kreatywne pomysły
+
+\section {Wnioski}
+TODO 
+
+\section {Co wyszło dobrze}
+TODO
+
+\section {Co nie wyszło dobrze}
+TODO
+
+\chapter {Przyszłość rozwiązania}
+TODO
 
 % -------------------- 6. Bibliografia -----------------------
 % Bibliografia leksykograficznie wg nazwisk autorów
@@ -514,6 +600,7 @@ nzw. & nadzwyczajny \\
 * & operator gwiazdka \\
 HUD & head-up display \\
 FPS & frames per second \\
+IDE & Integrated Development Environment \\
 $\widetilde{}$ & tylda
 \end{tabular}
 \thispagestyle{empty}
