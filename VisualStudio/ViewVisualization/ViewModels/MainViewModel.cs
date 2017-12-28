@@ -11,14 +11,17 @@ using System.Windows;
 using System.Collections.Generic;
 using DirectShowLib;
 using System.Linq;
+using System.Windows.Input;
 using ConfigService.Contract;
 using ConfigService.Client;
 using ViewProvision;
 using ConfigService.Server;
+using Prism.Commands;
 using ViewProvision.Processors;
 
 namespace ViewVisualization.ViewModels
 {
+
     class MainViewModel : INotifyPropertyChanged
     {
         private ViewDataBitmap viewData;
@@ -87,7 +90,13 @@ namespace ViewVisualization.ViewModels
             }
         }
 
-        private  static readonly int[] RotationAvaibleValues = {0, 90, 180, 270};
+        public ICommand LeftRotateLeftCommand { get; set; }
+        public ICommand LeftRotateRightCommand { get; set; }
+        public ICommand RightRotateLeftCommand { get; set; }
+        public ICommand RightRotateRightCommand { get; set; }
+
+
+        private static readonly int[] RotationAvaibleValues = {0, 90, 180, 270};
         public MainViewModel()
         {
 #if DEBUG
@@ -113,6 +122,17 @@ namespace ViewVisualization.ViewModels
 
             var stringRotationValues = GetStringRotationValues();
             RotationValues = stringRotationValues;
+
+            LeftRotateLeftCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Left,  RotateSide.Left));
+            LeftRotateRightCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Left, RotateSide.Right));
+            RightRotateLeftCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Right, RotateSide.Left));
+            RightRotateRightCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Right, RotateSide.Right));
+
+        }
+
+        private void ViewModelCommandExecute(CaptureSide side, RotateSide direction)
+        {
+            viewProvider.RotateImage(side, direction);
         }
 
         private static ObservableCollection<string> GetStringRotationValues()

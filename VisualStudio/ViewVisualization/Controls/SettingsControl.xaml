@@ -26,10 +26,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" 
-                    VerticalAlignment="Stretch">
-            <Button Name="LoadLibraries" Height="30" Content="Import DLL" VerticalAlignment="Center" Margin="15"
-                    Click="LoadLibraries_OnClick"/>
-        </StackPanel>
+                    VerticalAlignment="Stretch"/>
 
         <Label Grid.Column="0" Grid.Row="1" Content="Image Processing Libraries"/>
 

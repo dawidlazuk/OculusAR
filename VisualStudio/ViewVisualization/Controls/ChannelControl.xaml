@@ -29,8 +29,8 @@
                   ItemsSource="{Binding Path=CameraNames}"
                   SelectedIndex="{Binding Path=CameraIndex, Mode=TwoWay}"/>
 
-        <Button Grid.Row="2" Grid.Column="0" Click ="RotateLeft_Click"  Content="Rotate left"/>
-        <Button Grid.Row="2" Grid.Column="1" Click="RotateRight_Click" Content="Rotate right"/>
+        <Button x:Name="RotateLeftButton" Grid.Row="2" Grid.Column="0"  Content="Rotate left" Click="RotateLeftButton_Click" />
+        <Button x:Name="RotateRightButton" Grid.Row="2" Grid.Column="1" Content="Rotate right" Click="RotateRightButton_Click"/>
 
     </Grid>
 </UserControl>
