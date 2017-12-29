@@ -4,6 +4,7 @@ using ViewProvision.Contract;
 
 using ConfigService.Contract;
 using System;
+using System.Collections.Generic;
 
 namespace ConfigService.Client
 {
@@ -93,5 +94,19 @@ namespace ConfigService.Client
             }
         }
 
+        public List<Tuple<string,bool>> GetAllImageProcessors()
+        {
+           return Call(() => channel.GetAllImageProcessors());
+        }
+
+        public void SetProcessorState(string processorName, bool state)
+        {
+            Call(() => channel.SetProcessorState(processorName, state));
+        }
+
+        public void ChangeProcessorPriority(string processorName, bool increase)
+        {
+            Call(() => channel.ChangeProcessorPriority(processorName, increase));
+        }
     }
 }

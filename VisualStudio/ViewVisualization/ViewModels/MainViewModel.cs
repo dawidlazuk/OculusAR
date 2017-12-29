@@ -11,14 +11,18 @@ using System.Windows;
 using System.Collections.Generic;
 using DirectShowLib;
 using System.Linq;
+using System.Windows.Input;
 using ConfigService.Contract;
 using ConfigService.Client;
 using ViewProvision;
 using ConfigService.Server;
+using Prism.Commands;
 using ViewProvision.Processors;
+using ViewVisualization.Controls;
 
 namespace ViewVisualization.ViewModels
 {
+
     class MainViewModel : INotifyPropertyChanged
     {
         private ViewDataBitmap viewData;
@@ -40,19 +44,6 @@ namespace ViewVisualization.ViewModels
         private readonly IViewProviderService viewProvider;
 
 
-        private ObservableCollection<string> _rotationValues;
-
-        public ObservableCollection<string> RotationValues
-        {
-            get { return _rotationValues; }
-            set
-            {
-                _rotationValues = value;
-                OnPropertyChanged();
-            }
-        }
-
-
         private ObservableCollection<string> _systemCameras;
 
         public ObservableCollection<string> SystemCameras
@@ -64,6 +55,7 @@ namespace ViewVisualization.ViewModels
                 OnPropertyChanged();
             }
         }
+
 
         private int leftCameraIndex;
         public int LeftCameraIndex
@@ -87,7 +79,15 @@ namespace ViewVisualization.ViewModels
             }
         }
 
-        private  static readonly int[] RotationAvaibleValues = {0, 90, 180, 270};
+
+
+        public ICommand LeftRotateLeftCommand { get; set; }
+        public ICommand LeftRotateRightCommand { get; set; }
+        public ICommand RightRotateLeftCommand { get; set; }
+        public ICommand RightRotateRightCommand { get; set; }
+
+
+        private static readonly int[] RotationAvaibleValues = {0, 90, 180, 270};
         public MainViewModel()
         {
 #if DEBUG
@@ -111,16 +111,10 @@ namespace ViewVisualization.ViewModels
             leftCameraIndex = captureDetails?.LeftChannel.CaptureIndex ?? 0;
             rightCameraIndex = captureDetails?.RightChannel.CaptureIndex ?? 0;
 
-            var stringRotationValues = GetStringRotationValues();
-            RotationValues = stringRotationValues;
-        }
-
-        private static ObservableCollection<string> GetStringRotationValues()
-        {
-            var stringRotationValues = new ObservableCollection<string>();
-            foreach (var rotationAvaibleValue in RotationAvaibleValues)
-                stringRotationValues.Add(rotationAvaibleValue.ToString());
-            return stringRotationValues;
+            LeftRotateLeftCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Left,  RotateSide.Left));
+            LeftRotateRightCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Left, RotateSide.Right));
+            RightRotateLeftCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Right, RotateSide.Left));
+            RightRotateRightCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Right, RotateSide.Right));
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()

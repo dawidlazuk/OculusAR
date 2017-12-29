@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 using System.Diagnostics;
 
@@ -90,5 +91,20 @@ namespace ConfigService.Server
         #endregion
 
         #endregion
+
+        public List<Tuple<string,bool>> GetAllImageProcessors()
+        {
+            return viewProvider.GetAllImageProcessors();
+        }
+
+        public void SetProcessorState(string processorName, bool state)
+        {
+            viewProvider.SetProcessorState(processorName, state);
+        }
+
+        public void ChangeProcessorPriority(string processorName, bool increase)
+        {
+            viewProvider.ChangeProcessorPriority(processorName, increase);
+        }
     }
 }

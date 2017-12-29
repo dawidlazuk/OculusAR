@@ -1,4 +1,6 @@
-﻿using System.ServiceModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ServiceModel;
 
 using ViewProvision.Contract;
 
@@ -22,7 +24,21 @@ namespace ConfigService.Contract
     }
 
     [ServiceContract]
-    public interface IViewProviderService : IViewCalibratorService, ICaptureManagerService
+    public interface IImageProcessingService
+    {
+        [OperationContract]
+        List<Tuple<string, bool>> GetAllImageProcessors();
+
+        [OperationContract]
+        void SetProcessorState(string processorName, bool state);
+
+        [OperationContract]
+        void ChangeProcessorPriority(string selectedProcessorName, bool increase);
+
+    }
+
+    [ServiceContract]
+    public interface IViewProviderService : IViewCalibratorService, ICaptureManagerService, IImageProcessingService
     {
         [OperationContract]
         ViewDataBitmap GetCurrentViewAsBitmaps();

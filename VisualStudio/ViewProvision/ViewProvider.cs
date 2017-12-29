@@ -103,6 +103,11 @@ namespace ViewProvision
             rightWaitEvent.Set();
         }
 
+        public void ChangeProcessorPriority(string processorName, bool increase)
+        {
+            throw new NotImplementedException();
+        }
+
         private void InitLeftCaptureThread()
         {
             leftCaptureThread = new Thread(new ThreadStart(() =>
@@ -206,6 +211,8 @@ namespace ViewProvision
                 return null;
             }
         }
+
+
 
         #region IViewCalibrator implementation
 
@@ -319,5 +326,14 @@ namespace ViewProvision
         //        port);
         //}
 
+        public List<Tuple<string,bool>> GetAllImageProcessors()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetProcessorState(string name, bool state)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

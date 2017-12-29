@@ -32,5 +32,8 @@ namespace ViewProvision.Processors
                 Debug.WriteLine(ex.Message);
             }
         }
+
+        public string Name { get; } = "SmoothBiratelar";
+        public bool Active { get; set; }
     }
 }
