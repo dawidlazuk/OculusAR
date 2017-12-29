@@ -94,14 +94,19 @@ namespace ConfigService.Client
             }
         }
 
-        public List<string> GetAllImageProcessors()
+        public List<Tuple<string,bool>> GetAllImageProcessors()
         {
            return Call(() => channel.GetAllImageProcessors());
         }
 
-        public void ToggleImageProcessor(string processorName)
+        public void SetProcessorState(string processorName, bool state)
         {
-            Call(() => channel.ToggleImageProcessor(processorName));
+            Call(() => channel.SetProcessorState(processorName, state));
+        }
+
+        public void ChangeProcessorPriority(string processorName, bool increase)
+        {
+            Call(() => channel.ChangeProcessorPriority(processorName, increase));
         }
     }
 }

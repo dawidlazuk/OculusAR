@@ -18,6 +18,7 @@ using ViewProvision;
 using ConfigService.Server;
 using Prism.Commands;
 using ViewProvision.Processors;
+using ViewVisualization.Controls;
 
 namespace ViewVisualization.ViewModels
 {
@@ -43,19 +44,6 @@ namespace ViewVisualization.ViewModels
         private readonly IViewProviderService viewProvider;
 
 
-        private ObservableCollection<string> _rotationValues;
-
-        public ObservableCollection<string> RotationValues
-        {
-            get { return _rotationValues; }
-            set
-            {
-                _rotationValues = value;
-                OnPropertyChanged();
-            }
-        }
-
-
         private ObservableCollection<string> _systemCameras;
 
         public ObservableCollection<string> SystemCameras
@@ -67,6 +55,7 @@ namespace ViewVisualization.ViewModels
                 OnPropertyChanged();
             }
         }
+
 
         private int leftCameraIndex;
         public int LeftCameraIndex
@@ -89,6 +78,8 @@ namespace ViewVisualization.ViewModels
                 viewProvider.SetCapture(CaptureSide.Right, rightCameraIndex);
             }
         }
+
+
 
         public ICommand LeftRotateLeftCommand { get; set; }
         public ICommand LeftRotateRightCommand { get; set; }
@@ -120,27 +111,10 @@ namespace ViewVisualization.ViewModels
             leftCameraIndex = captureDetails?.LeftChannel.CaptureIndex ?? 0;
             rightCameraIndex = captureDetails?.RightChannel.CaptureIndex ?? 0;
 
-            var stringRotationValues = GetStringRotationValues();
-            RotationValues = stringRotationValues;
-
-            LeftRotateLeftCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Left,  RotateSide.Left));
-            LeftRotateRightCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Left, RotateSide.Right));
-            RightRotateLeftCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Right, RotateSide.Left));
-            RightRotateRightCommand = new DelegateCommand(() => ViewModelCommandExecute(CaptureSide.Right, RotateSide.Right));
-
-        }
-
-        private void ViewModelCommandExecute(CaptureSide side, RotateSide direction)
-        {
-            viewProvider.RotateImage(side, direction);
-        }
-
-        private static ObservableCollection<string> GetStringRotationValues()
-        {
-            var stringRotationValues = new ObservableCollection<string>();
-            foreach (var rotationAvaibleValue in RotationAvaibleValues)
-                stringRotationValues.Add(rotationAvaibleValue.ToString());
-            return stringRotationValues;
+            LeftRotateLeftCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Left,  RotateSide.Left));
+            LeftRotateRightCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Left, RotateSide.Right));
+            RightRotateLeftCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Right, RotateSide.Left));
+            RightRotateRightCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Right, RotateSide.Right));
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()

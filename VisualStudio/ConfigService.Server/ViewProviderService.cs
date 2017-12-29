@@ -92,14 +92,19 @@ namespace ConfigService.Server
 
         #endregion
 
-        public List<string> GetAllImageProcessors()
+        public List<Tuple<string,bool>> GetAllImageProcessors()
         {
-            return null;
+            return viewProvider.GetAllImageProcessors();
         }
 
-        public void ToggleImageProcessor(string processorName)
+        public void SetProcessorState(string processorName, bool state)
         {
-            throw new NotImplementedException();
+            viewProvider.SetProcessorState(processorName, state);
+        }
+
+        public void ChangeProcessorPriority(string processorName, bool increase)
+        {
+            viewProvider.ChangeProcessorPriority(processorName, increase);
         }
     }
 }

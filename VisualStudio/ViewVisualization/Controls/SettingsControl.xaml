@@ -8,8 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="200"
              Name="SettingsPanel"
-             Background="Azure"
-             DataContext="{Binding RelativeSource={RelativeSource Self}}">
+             Background="Azure">
 
     <UserControl.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
@@ -28,16 +27,18 @@
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" 
                     VerticalAlignment="Stretch"/>
 
-        <Label Grid.Column="0" Grid.Row="1" Content="Image Processing Libraries"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Image Processors"/>
 
-        <ListView x:Name="AllMethodsView"  Grid.Row="2" Grid.Column="0" 
-                  ItemsSource="{Binding Libraries}">
+        <ListView x:Name="ImageProcessorsList"  Grid.Row="2" Grid.Column="0" 
+                  ItemsSource="{Binding ImageProcessors}">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>
-                        <TextBlock Text="{Binding Name}"/>
-                        <CheckBox IsChecked="{Binding Active}" HorizontalAlignment="Right"></CheckBox>
+                        <TextBlock Text="{Binding Name}" FontSize="16" Margin="5px"/>
+                        <CheckBox Click="ActiveCheckBoxOnClick"  IsChecked="{Binding Active, Mode=TwoWay}" Margin="5px"></CheckBox>
+                        <Button Click="MoveDownButtonOnClick" Content="Down"  Width="45px" Margin="5px"></Button>
+                        <Button Click="MoveUpButtonOnClick" Content="Up" Width="45px" Margin="5px" ></Button>
                     </DockPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

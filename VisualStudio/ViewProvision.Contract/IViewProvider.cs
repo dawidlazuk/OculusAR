@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using System.ServiceModel;
@@ -19,8 +20,8 @@ namespace ViewProvision.Contract
 
     public interface IImageProcessing
     {
-        List<string> GetAllImageProcessors();
-        void ToggleImageProcessor(string name);
+        List<Tuple<string,bool>> GetAllImageProcessors();
+        void SetProcessorState(string name, bool state);
     }
 
     public interface IViewProvider : IViewCalibrator, ICaptureManager, IImageProcessing
@@ -30,5 +31,6 @@ namespace ViewProvision.Contract
         //not exposed by service
         ViewDataImage GetCurrentView();
         void UpdateFrames();
+        void ChangeProcessorPriority(string processorName, bool increase);
     }
 }

@@ -8,7 +8,7 @@
         xmlns:controls="clr-namespace:ViewVisualization.Controls"
         xmlns:viewmodels="clr-namespace:ViewVisualization.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="600">
+        Title="OculusAR Configuration App" Height="350" Width="600">
     <Window.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </Window.Resources>
@@ -32,9 +32,9 @@
                                  CameraIndex="{Binding Path=RightCameraIndex, Mode=TwoWay}"
                                  LeftRotateCommand="{Binding RightRotateLeftCommand}"
                                  RightRotateCommand="{Binding RightRotateRightCommand}"/>
-        
+
         <controls:SettingsControl Grid.Column="2">
-            
+
         </controls:SettingsControl>
     </Grid>
 </Window>

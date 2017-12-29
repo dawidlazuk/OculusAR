@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
 
 using ViewProvision.Contract;
@@ -26,10 +27,14 @@ namespace ConfigService.Contract
     public interface IImageProcessingService
     {
         [OperationContract]
-        List<string> GetAllImageProcessors();
+        List<Tuple<string, bool>> GetAllImageProcessors();
 
         [OperationContract]
-        void ToggleImageProcessor(string processorName);
+        void SetProcessorState(string processorName, bool state);
+
+        [OperationContract]
+        void ChangeProcessorPriority(string selectedProcessorName, bool increase);
+
     }
 
     [ServiceContract]

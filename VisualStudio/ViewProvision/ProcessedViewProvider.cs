@@ -84,7 +84,8 @@ namespace ViewProvision
                         var image = (_originViewProvider as ViewProvider).GetLeftFrameSynchronously();
                         if (image != null)
                             foreach (var imageProcessor in _imageProcessors)
-                                imageProcessor.Process(ref image);
+                                if (imageProcessor.Active)
+                                    imageProcessor.Process(ref image);
                         currentFrames.LeftImage = image;
                     }
                     catch(Exception ex)
@@ -135,15 +136,37 @@ namespace ViewProvision
             _originViewProvider.UpdateFrames();
         }
 
-        public List<string> GetAllImageProcessors()
+        public void ChangeProcessorPriority(string processorName, bool increase)
         {
-            return _imageProcessors.Select(x => x.Name).ToList();
+            var imageProcessor = _imageProcessors.Single(x => x.Name == processorName);
+            var index = _imageProcessors.IndexOf(imageProcessor);
+
+            if (increase)
+            {
+                if (index == 0) return;
+                _imageProcessors.Remove(imageProcessor);
+
+                --index;
+                _imageProcessors.Insert(index, imageProcessor);
+                return;
+            }
+
+            if (index == _imageProcessors.Count - 1) return;
+            _imageProcessors.Remove(imageProcessor);
+
+            ++index;
+            _imageProcessors.Insert(index, imageProcessor);
         }
 
-        public void ToggleImageProcessor(string name)
+        public List<Tuple<string,bool>> GetAllImageProcessors()
+        {
+            return _imageProcessors.Select(x => new Tuple<string,bool>(x.Name, x.Active)).ToList();
+        }
+
+        public void SetProcessorState(string name, bool state)
         {
             var imageProcessor = _imageProcessors.Single(x => x.Name == name);
-            imageProcessor.Active = !imageProcessor.Active;
+            imageProcessor.Active = state;
         }
     }
 }
