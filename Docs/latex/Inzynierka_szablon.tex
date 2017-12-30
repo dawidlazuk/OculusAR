@@ -583,6 +583,10 @@ Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla daneg
 
 Funkcjonalności modułu są współdzielone przez aplikację główną oraz konfiguracyjną. Ta część kontraktu, która jest wykorzystywana przez aplikację konfiguracyjną, jest wydzielona jako kontrakt serwisu udostępnionego tej aplikacji, zgodnie ze wzorcem projektowym \textit{fasada}. Dzięki temu ukryte zostały zbędne funkcjonalności modułu z punktu widzenia aplikacji konfiguracyjnej upraszczając jego interfejs.
 
+
+Podczas testów modułu wystąpiły sytuacje, gdzie aplikacja zawieszała się na wywołaniu metody z biblioteki EmguCV pobierającej kolejną klatkę z kamery. Występowało to w sytuacji, kiedy obiekt odpowiedzialny za pobieranie obrazu był ustawiony na kamerę, która nie istniała w systemie (jej indeksowi nie odpowiadało żadne urządzenie). Moduł zawiera rozwiązanie zapobiegające tego typu sytuacjom. Przy każdym pobraniu klatki do odpowiedniego pola jest zapisany czas jej pobrania. Podczas tworzenia instancji modułu tworzony i uruchamiany jest wątek, który co jakiś czas sprawdza czas od odstatniego pobrania klatki dla kanału. Jeżeli jest on większy od ustalonego dopuszczalnego maksimum, to wątek tego kanału jest przerywany, a w jego miejsce tworzony nowy. 
+W zaimplementowanym rozwiązaniu maksymalna dopuszczalna przerwa między klatkami i czas co jaki jest ona sprawdzana wynosi 10 sekund.
+
 \subsection {Moduł przetwarzania obrazu}
 TODO - piotrek
 
