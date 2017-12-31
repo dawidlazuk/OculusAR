@@ -588,10 +588,105 @@ Podczas testów modułu wystąpiły sytuacje, gdzie aplikacja zawieszała się n
 W zaimplementowanym rozwiązaniu maksymalna dopuszczalna przerwa między klatkami i czas co jaki jest ona sprawdzana wynosi 10 sekund.
 
 \subsection {Moduł przetwarzania obrazu}
-TODO - piotrek
+
+Moduł ten odpowiedzialny jest za realizację warstwy posredniej w naszym systemie, czyli przetwarzania obrazów po przechwyceniu ich z obu kamer, ale przed przekazaniem do gogli.  Do realizacji przekształceń na obrazie zostały wykorzystane specjalne obiekty wykonujące pojedyńcze przekształcenia. Obiekty znajdują sie na liscie, z której są wywoływane w kolejnosci występowania na niej w celu wykonania przekształcenia na podanym obrazie. Programista korzystający z naszej biblioteki może dodawać własne implementacje klas przetwarzających obraz i dodawać ich instancje do tej listy, przez co możliwa jest pełna kontrola procesu przetwarzania obrazu odbywającego się w tej częsci systemu. 
+
+Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obrazu w cały proces przekazywania obrazu od kamery do gogli. Dodatkowo stworzony został kontrakt definiujący metody, które muszą posiadać klasy zajmujące się pojedyńczymi przekształceniami obrazu.
+
+\begin{description}
+
+\item [Dodanie funkcjonalnosci przetwarzania obrazu] \hfill \\
+Klasą bazową odpowiedzialną za pobieranie obrazu jest \textit{ViewProvider}, implementująca interfejs \textit{IViewProvider}  który został wykorzystanu w częsciach systemu związanych z tworzeniem serwisu do komunikacji się z aplikacją konfiguracyjną oraz przy przekazywaniu obrazu do gogli. W celu zachowania łatwej wymienialnosci kodu, wykorzystany został fakt, że warstwa przetwarzania obrazu jest rozszerzeniem warstwy pobierania obrazu o zastosowanie odpowiednich przekształceń na obrazie pobranym z kamery. Dlatego też zastosowalimy wzorzec projektowy \textit{Dekorator} i stworzylismy nowa klase \textit{ProcessedViewProvider} implementujaca również interfejs \textit{IViewProvider}, będącą rozszerzeniem klasy \textit{ViewProvider}
+
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+    public class ProcessedViewProvider : IViewProvider
+    {
+        private readonly IViewProvider _originViewProvider;
+        private readonly List<IImageProcessor> _imageProcessors;
+
+        public ProcessedViewProvider(IViewProvider originViewProvider,
+			 List<IImageProcessor> imageProcessors = null);
+
+        public void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
+        public void SetCapture(CaptureSide captureSide, int cameraIndex);
+        public CaptureDetails GetCaptureDetails()
+        public ViewDataBitmap GetCurrentViewAsBitmaps();
+        public ViewDataImage GetCurrentView();
+        public void UpdateFrames();
+    }
+\end{lstlisting}
+
+W konstruktorze jako argument przyjmowany jest obiekt implementujący interfejs \textit{IViewProvider}. Wzorzec adapter realizowany jest poprzez wywoływanie w każdej metodzie metody o tej samej nazwie z bazowego obiektu przechowywanego w polu \textit{\textunderscore originViewProvider} oraz ewentualnym wykonaniu dodatkowych funkcji przed końcem metody. 
+
+Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implementujących interfejs \textit{IImageProcessor}. W metodach \textit{GetCurrentView} oraz \textit{GetCurrentViewAsBitmaps} po pobraniu obrazów z pierwotnego obiektu klasy \textit{ViewProvider} wykonanywana jest seria przekształceń za pomocą obiektów znajdujących się na wspomnianej liscie. W kolejnosci ich występowania, wywoływana jest metoda \textit{Process} której jako argument przekazywana jest referencja do obiektu przechowujacego obraz. W ten sposób obrazy zwracane w tych metodach przechodzą przez warstwę przetwarzania obrazów.
+
+
+\item [Interfejs łączący implementacje przekształceń obrazu] \hfill \\
+\lstset{style=sharpc}
+\begin{lstlisting}
+    public interface IImageProcessor
+    {
+        void Process(ref Image<Bgr, byte> image);
+        string Name { get; }
+        bool Active { get; set; }
+    }
+\end{lstlisting}
+
+Metoda \textit{Process} jako argument przyjmuje referencje do obrazu reprezentowanego za pomocą typu Image<Bgr, byte> pochodzącego z biblioteki EmguCV. Zdecydowalimy się na takie rozwiązanie ponieważ operując na tym typie można wykorzystać różne metody pochodzące z biblioteki, które pozwalają na szybszą konwersje obrazu przeprowadzając częsć operacji przy wykorzystaniu karty graficznej oraz w celu uniknięcia dodatkowych konwersji na typy podstawowe języka C\#(np. tablica bajtów). Metoda nie zwraca żadnej wartosci lecz operuje na przekazanym obrazie stosując dla niego odpowiednie przekształcenia.  \\
+Dodatkowo interfejs wymaga posiadania przez klasy następujących własciwosci:
+\begin{itemize}
+\item  \textit{Name}, typu tekstowego - zawierająca nazwę przekształcenia.
+\item \textit{Active}, typu logicznego -  decydująca o tym czy przekształcenie będzie wykonane czy pominięte.
+\end{itemize}
+
+\end{description}
 
 \subsection {Moduł przekazywania obrazu do gogli}
-TODO - piotrek
+
+W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Ponieważ poprzednie moduły zostały zaimplementowane przy użyciu języka C\# oraz w technologii .NET, do przekazywania obrazu do gogli OculusRift skorzystalismy z silnika Unity3d umożliwiającego importowanie bibliotek stworzonych w tych technologiach.
+
+Samo Unity3d jest jedynie silnikiem grafiki 3D i nie współpracuje bezposrednio z urządzeniami VR. Jednak producenci gogli zapewniają dedykowane biblioteki dla swoich urządzeń działające w tym silniku, pozwalające na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity nosi nazwę \textit{OVR plugin}.  \\
+
+Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena  w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwosc o nazwie \textit{TargetEye} która pozwala decydowac czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na kazdej z tekstur rowniez wyswietlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w całym polu widzenia kamer, zamiast bezposrednio jako obiekt standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie musi być poddawana żadnym przekształceniom zwiąnych z grafiką 3D  co wpływa na wydajnoć systemu. W celu wyswietlenia obrazu na teksturze potrzebna jest jego odpowiednia konwersja, dlatego ważną częcią modułu oprócz samego wyswietlania obrazu na goglach jest również konwersja obrazu z modułu przetwarzania obrazu do formy umożliwiającej wyswietlenie go na scenie w silniku Unity3D.
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+    public interface IStereoVidTransmitter
+    {
+        StereoView GetStereoView();
+    }
+
+    public interface ITextureConverter
+    {
+        Texture FromBitmap(Bitmap source);
+        Texture FromImage(Image<Bgr, byte> source);
+        byte[] DataFromImage(Image<Bgr, byte> image);
+        void LoadFromImage(Image<Bgr, byte> sourceImage, 
+		Texture targetTexture);
+    }
+
+\end{lstlisting}
+
+Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obrazów w odpowiednim formacie, gotowych do wywietlenia na scenie Unity3d. Metoda \textit{GetStereoView} zwraca obiekt zawierający dwie tekstury, dla lewego i prawego oka. 
+Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje potrzebne przy konwersji obrazu do tekstury. W naszym systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury utworzony na podstawie przekazanego obrazu za pomocą typu \textit{System.Drawing.Bitmap}.\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz w postaci typu pochodzącego z biblioteki EmguCV.
+ Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje obraz z przekaznego obrazu do już istniejącej tekstury, co wykorzystywane jest w celu poprawnienia wydajnosci i uniknięcia niepotrzebnego tworzenia tesktur za każdym razem od nowa przy każdej konwersji obrazu.
+
+Z powyższego opisu wynika, że najważniejsze operacje modułu to:
+\begin{itemize}
+\item Przekazanie i wyswietlanie obrazu
+\item Konwersja obrazu
+\end{itemize}
+
+Poniżej są przedstawione zasady działania każdej z tych operacji:
+
+\begin{description}
+\item [Przekazanie i wyswietlanie obrazu] \hfill \\
+Po uruchomieniu aplikacji Unity, wraz ze stworzeniem sceny ładowany jest skrypt działający przez cały czas życia aplikacji. W skrypcie tym inicjowane  są klasy odpowiadające za pobieranie obrazu z kamer i poddanie go odpowiednim przekształceniom. Za każdym razem, gdy silnik Unity próbuje odswiezyc obraz, pobierane są dwie klatki obrazu ze wspomnianych klas - dla lewego i prawego oka. Następnie poddawane sa one konwersji do formatu tekstury silnika Unity.  Po przygotowaniu tekstur zawierających ostatnio pobrane obrazy z kamery, tekstury na scenie są aktualizowane i do kamer, a później do gogli trafia odwieżony obraz.
+\item [Konwersja obrazu] \hfill \\
+Konwersja nie odbywa się w pełni wielowątkowo, ponieważ operacje na obiektach silnika Unity mogą być realizowane tylko w głównym wątku (dzieje się tak ponieważ Unity automatycznie wykonuje częsć operacji na karcie graficznej i synchronizacja takich operacji odbywających się w w wielu wątkach byłaby bardzo problematyczna). Jednak w celu maksymalnego poprawienia wydajnosci, w osobnych wątkach z obrazy konwertowane są do danych w postaci tablicy bajtów, a dopiero sam proces ładowania danych z tych tablic do tekstury będącej obiektem silnika Unity3d następuje synchronicznie w głównym wątku. 
+\end{description}
 
 \subsection {Aplikacja konfiguracyjna}
 TODO
