@@ -647,9 +647,17 @@ Dodatkowo interfejs wymaga posiadania przez klasy następujących własciwosci:
 
 W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Ponieważ poprzednie moduły zostały zaimplementowane przy użyciu języka C\# oraz w technologii .NET, do przekazywania obrazu do gogli OculusRift skorzystalismy z silnika Unity3d umożliwiającego importowanie bibliotek stworzonych w tych technologiach.
 
-Samo Unity3d jest jedynie silnikiem grafiki 3D i nie współpracuje bezposrednio z urządzeniami VR. Jednak producenci gogli zapewniają dedykowane biblioteki dla swoich urządzeń działające w tym silniku, pozwalające na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity nosi nazwę \textit{OVR plugin}.  \\
+Unity3d jest jedynie silnikiem grafiki 3D i nie współpracuje bezposrednio z urządzeniami VR. Jednak producenci gogli zapewniają dedykowane biblioteki dla swoich urządzeń działające w tym silniku, pozwalające na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity nosi nazwę \textit{OVR plugin}.  \hfill \\
 
 Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena  w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwosc o nazwie \textit{TargetEye} która pozwala decydowac czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na kazdej z tekstur rowniez wyswietlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w całym polu widzenia kamer, zamiast bezposrednio jako obiekt standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie musi być poddawana żadnym przekształceniom zwiąnych z grafiką 3D  co wpływa na wydajnoć systemu. W celu wyswietlenia obrazu na teksturze potrzebna jest jego odpowiednia konwersja, dlatego ważną częcią modułu oprócz samego wyswietlania obrazu na goglach jest również konwersja obrazu z modułu przetwarzania obrazu do formy umożliwiającej wyswietlenie go na scenie w silniku Unity3D.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{unityscene}
+\caption[Scena Unity]{Scena w programie Unity Editor}
+\end{figure}
+
+W module zostały przewidziane następujące interfejsy, zapewniające metody do realizacji kluczowych jego elementów.
 
 \lstset{style=sharpc}
 \begin{lstlisting}
