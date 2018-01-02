@@ -492,7 +492,7 @@ System został wykonany z wykorzystaniem języka programowania C\# oraz platform
 Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki.
 
 \item [Silnik Unity3D] \hfill \\
-opis - piotrek
+Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli OculusRift.
 
 \item [Windows Presentation Foundation] \hfill \\
 Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
@@ -589,38 +589,16 @@ W zaimplementowanym rozwiązaniu maksymalna dopuszczalna przerwa między klatkam
 
 \subsection {Moduł przetwarzania obrazu}
 
-Moduł ten odpowiedzialny jest za realizację warstwy posredniej w naszym systemie, czyli przetwarzania obrazów po przechwyceniu ich z obu kamer, ale przed przekazaniem do gogli.  Do realizacji przekształceń na obrazie zostały wykorzystane specjalne obiekty wykonujące pojedyńcze przekształcenia. Obiekty znajdują sie na liscie, z której są wywoływane w kolejnosci występowania na niej w celu wykonania przekształcenia na podanym obrazie. Programista korzystający z naszej biblioteki może dodawać własne implementacje klas przetwarzających obraz i dodawać ich instancje do tej listy, przez co możliwa jest pełna kontrola procesu przetwarzania obrazu odbywającego się w tej częsci systemu. 
+Moduł ten odpowiedzialny jest za realizację warstwy pośredniej w  systemie, czyli przetwarzania obrazów po przechwyceniu ich z kamer. Za pojedyńcze przekształcenia obrazu odpowiedzialne są klasy implementujące odpowiedni interfejs. Obiekty tych klas znajdują sie na liscie, z której są wywoływane w kolejności występowania. Programista korzystający z biblioteki może dodawać własne implementacje klas przetwarzających obraz i dodawać ich instancje do listy, co umożliwia kontrolę procesu przetwarzania obrazu odbywającego się w tej części systemu. 
 
-Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obrazu w cały proces przekazywania obrazu od kamery do gogli. Dodatkowo stworzony został kontrakt definiujący metody, które muszą posiadać klasy zajmujące się pojedyńczymi przekształceniami obrazu.
+Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obrazu w proces przekazywania obrazu od kamery do gogli. Dodatkowo stworzony został kontrakt definiujący metody, które muszą posiadać klasy realizujące operacje przekształceń obrazu.
 
 \begin{description}
 
-\item [Dodanie funkcjonalnosci przetwarzania obrazu] \hfill \\
-Klasą bazową odpowiedzialną za pobieranie obrazu jest \textit{ViewProvider}, implementująca interfejs \textit{IViewProvider}  który został wykorzystanu w częsciach systemu związanych z tworzeniem serwisu do komunikacji się z aplikacją konfiguracyjną oraz przy przekazywaniu obrazu do gogli. W celu zachowania łatwej wymienialnosci kodu, wykorzystany został fakt, że warstwa przetwarzania obrazu jest rozszerzeniem warstwy pobierania obrazu o zastosowanie odpowiednich przekształceń na obrazie pobranym z kamery. Dlatego też zastosowalimy wzorzec projektowy \textit{Dekorator} i stworzylismy nowa klase \textit{ProcessedViewProvider} implementujaca również interfejs \textit{IViewProvider}, będącą rozszerzeniem klasy \textit{ViewProvider}
+\item [Funkcjonalność przetwarzania obrazu] \hfill \\
+Klasą bazową odpowiedzialną za pobieranie obrazu jest \textit{ViewProvider}, implementująca interfejs \textit{IViewProvider}. Została ona wykorzystana w częściach systemu związanych z tworzeniem serwisu do komunikacji z aplikacją konfiguracyjną oraz przy przekazywaniu obrazu do gogli. W celu zachowania łatwej wymienialności kodu, wykorzystany został fakt, że warstwa przetwarzania obrazu jest rozszerzeniem warstwy pobierania obrazu o zastosowanie odpowiednich przekształceń na obrazie pobranym z kamery. Dlatego też został zastosowany wzorzec projektowy \textit{Dekorator} poprzez utworzenie nowej klasy \textit{ProcessedViewProvider} implementującej interfejs \textit{IViewProvider}, będącej rozszerzeniem klasy \textit{ViewProvider}.
 
-
-\lstset{style=sharpc}
-\begin{lstlisting}
-    public class ProcessedViewProvider : IViewProvider
-    {
-        private readonly IViewProvider _originViewProvider;
-        private readonly List<IImageProcessor> _imageProcessors;
-
-        public ProcessedViewProvider(IViewProvider originViewProvider,
-			 List<IImageProcessor> imageProcessors = null);
-
-        public void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
-        public void SetCapture(CaptureSide captureSide, int cameraIndex);
-        public CaptureDetails GetCaptureDetails()
-        public ViewDataBitmap GetCurrentViewAsBitmaps();
-        public ViewDataImage GetCurrentView();
-        public void UpdateFrames();
-    }
-\end{lstlisting}
-
-W konstruktorze jako argument przyjmowany jest obiekt implementujący interfejs \textit{IViewProvider}. Wzorzec adapter realizowany jest poprzez wywoływanie w każdej metodzie metody o tej samej nazwie z bazowego obiektu przechowywanego w polu \textit{\textunderscore originViewProvider} oraz ewentualnym wykonaniu dodatkowych funkcji przed końcem metody. 
-
-Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implementujących interfejs \textit{IImageProcessor}. W metodach \textit{GetCurrentView} oraz \textit{GetCurrentViewAsBitmaps} po pobraniu obrazów z pierwotnego obiektu klasy \textit{ViewProvider} wykonanywana jest seria przekształceń za pomocą obiektów znajdujących się na wspomnianej liscie. W kolejnosci ich występowania, wywoływana jest metoda \textit{Process} której jako argument przekazywana jest referencja do obiektu przechowujacego obraz. W ten sposób obrazy zwracane w tych metodach przechodzą przez warstwę przetwarzania obrazów.
+Klasa ta w konstruktorze jako argument przyjmuje obiekt implementujący interfejs \textit{IViewProvider}. Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implementujących interfejs \textit{IImageProcessor}. W metodach \textit{GetCurrentView} oraz \textit{GetCurrentViewAsBitmaps} po pobraniu obrazów z pierwotnego obiektu klasy \textit{ViewProvider} wykonanywana jest seria przekształceń za pomocą obiektów znajdujących się na wspomnianej liscie. W kolejnosci ich występowania, wywoływana jest metoda \textit{Process} której jako argument przekazywana jest referencja do obiektu reprezentującego obraz. W ten sposób obrazy zwracane w tych metodach przechodzą przez warstwę przetwarzania obrazów.
 
 
 \item [Interfejs łączący implementacje przekształceń obrazu] \hfill \\
@@ -634,22 +612,22 @@ Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implement
     }
 \end{lstlisting}
 
-Metoda \textit{Process} jako argument przyjmuje referencje do obrazu reprezentowanego za pomocą typu Image<Bgr, byte> pochodzącego z biblioteki EmguCV. Zdecydowalimy się na takie rozwiązanie ponieważ operując na tym typie można wykorzystać różne metody pochodzące z biblioteki, które pozwalają na szybszą konwersje obrazu przeprowadzając częsć operacji przy wykorzystaniu karty graficznej oraz w celu uniknięcia dodatkowych konwersji na typy podstawowe języka C\#(np. tablica bajtów). Metoda nie zwraca żadnej wartosci lecz operuje na przekazanym obrazie stosując dla niego odpowiednie przekształcenia.  \\
+Metoda \textit{Process} jako argument przyjmuje referencje do obrazu reprezentowanego za pomocą typu Image<Bgr, byte> pochodzącego z biblioteki EmguCV. Operowanie na tym typie pozwala wykorzystać metody pochodzące ze wspomnianej biblioteki, co pozwalaja na szybszą konwersję obrazu przeprowadzając część operacji przy wykorzystaniu karty graficznej. Metoda nie zwraca żadnej wartosci lecz operuje na przekazanym obrazie stosując dla niego zaimplementowane przekształcenia.  \\
 Dodatkowo interfejs wymaga posiadania przez klasy następujących własciwosci:
 \begin{itemize}
 \item  \textit{Name}, typu tekstowego - zawierająca nazwę przekształcenia.
-\item \textit{Active}, typu logicznego -  decydująca o tym czy przekształcenie będzie wykonane czy pominięte.
+\item \textit{Active}, typu logicznego -  decydująca o tym czy przekształcenie będzie wykonane.
 \end{itemize}
 
 \end{description}
 
 \subsection {Moduł przekazywania obrazu do gogli}
 
-W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Ponieważ poprzednie moduły zostały zaimplementowane przy użyciu języka C\# oraz w technologii .NET, do przekazywania obrazu do gogli OculusRift skorzystalismy z silnika Unity3d umożliwiającego importowanie bibliotek stworzonych w tych technologiach.
+W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Poprzednie moduły zaimplementowano przy użyciu języka C\# oraz  technologii .NET. Dlatego do przekazywania obrazu do gogli OculusRift został wykorzystany silnik Unity3d umożliwiający importowanie zewnętrznych bibliotek stworzonych w tych technologiach.
 
-Unity3d jest jedynie silnikiem grafiki 3D i nie współpracuje bezposrednio z urządzeniami VR. Jednak producenci gogli zapewniają dedykowane biblioteki dla swoich urządzeń działające w tym silniku, pozwalające na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity nosi nazwę \textit{OVR plugin}.  \hfill \\
+Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity fukncjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
-Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena  w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwosc o nazwie \textit{TargetEye} która pozwala decydowac czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na kazdej z tekstur rowniez wyswietlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w całym polu widzenia kamer, zamiast bezposrednio jako obiekt standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie musi być poddawana żadnym przekształceniom zwiąnych z grafiką 3D  co wpływa na wydajnoć systemu. W celu wyswietlenia obrazu na teksturze potrzebna jest jego odpowiednia konwersja, dlatego ważną częcią modułu oprócz samego wyswietlania obrazu na goglach jest również konwersja obrazu z modułu przetwarzania obrazu do formy umożliwiającej wyswietlenie go na scenie w silniku Unity3D.
+Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwość o nazwie \textit{TargetEye} która pozwala decydować czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom zwiąnym z grafiką 3D  co wpływa na wydajnoć systemu. W celu wyświetlenia obrazu jako tekstury potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
 
 \begin{figure}[h]
 \centering
@@ -677,30 +655,162 @@ W module zostały przewidziane następujące interfejsy, zapewniające metody do
 
 \end{lstlisting}
 
-Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obrazów w odpowiednim formacie, gotowych do wywietlenia na scenie Unity3d. Metoda \textit{GetStereoView} zwraca obiekt zawierający dwie tekstury, dla lewego i prawego oka. 
-Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje potrzebne przy konwersji obrazu do tekstury. W naszym systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury utworzony na podstawie przekazanego obrazu za pomocą typu \textit{System.Drawing.Bitmap}.\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz w postaci typu pochodzącego z biblioteki EmguCV.
- Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje obraz z przekaznego obrazu do już istniejącej tekstury, co wykorzystywane jest w celu poprawnienia wydajnosci i uniknięcia niepotrzebnego tworzenia tesktur za każdym razem od nowa przy każdej konwersji obrazu.
+Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obrazów w odpowiednim formacie, gotowych do wyświetlenia na scenie Unity3d. Metoda \textit{GetStereoView} zwraca obiekt zawierający dwie tekstury - dla lewego i prawego oka. 
+Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje potrzebne przy konwersji obrazu do tekstury. W systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury utworzony na podstawie przekazanego obrazu za pomocą typu \textit{System.Drawing.Bitmap}. Metoda\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz reprezentowany za pomocą typu z biblioteki EmguCV.
+Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje przekazany obraz do wskazanej, istniejącej tekstury. Jest wykorzystywana jest w celu poprawy wydajności i uniknięcia niepotrzebnego tworzenia tesktur przy każdej konwersji obrazu.
 
 Z powyższego opisu wynika, że najważniejsze operacje modułu to:
 \begin{itemize}
-\item Przekazanie i wyswietlanie obrazu
+\item Przekazanie i wyświetlanie obrazu
 \item Konwersja obrazu
 \end{itemize}
 
 Poniżej są przedstawione zasady działania każdej z tych operacji:
 
 \begin{description}
-\item [Przekazanie i wyswietlanie obrazu] \hfill \\
-Po uruchomieniu aplikacji Unity, wraz ze stworzeniem sceny ładowany jest skrypt działający przez cały czas życia aplikacji. W skrypcie tym inicjowane  są klasy odpowiadające za pobieranie obrazu z kamer i poddanie go odpowiednim przekształceniom. Za każdym razem, gdy silnik Unity próbuje odswiezyc obraz, pobierane są dwie klatki obrazu ze wspomnianych klas - dla lewego i prawego oka. Następnie poddawane sa one konwersji do formatu tekstury silnika Unity.  Po przygotowaniu tekstur zawierających ostatnio pobrane obrazy z kamery, tekstury na scenie są aktualizowane i do kamer, a później do gogli trafia odwieżony obraz.
+\item [Przekazanie i wyświetlanie obrazu] \hfill \\
+Po uruchomieniu aplikacji Unity, wraz ze stworzeniem sceny ładowany jest skrypt działający przez cały czas działania aplikacji. W skrypcie tym inicjowane  są klasy odpowiadające za pobieranie obrazu z kamer i poddanie go odpowiednim przekształceniom. Za każdym razem, gdy silnik Unity próbuje odświeżyć obraz, pobierane są dwie klatki obrazu ze wspomnianych klas - dla lewego i prawego oka. Następnie obrazy konwetowane są do postaci tekstury silnika Unity. Po ich przygotowaniu, tekstury na scenie są aktualizowane i do kamer, a później do gogli trafia odwieżony obraz.
 \item [Konwersja obrazu] \hfill \\
-Konwersja nie odbywa się w pełni wielowątkowo, ponieważ operacje na obiektach silnika Unity mogą być realizowane tylko w głównym wątku (dzieje się tak ponieważ Unity automatycznie wykonuje częsć operacji na karcie graficznej i synchronizacja takich operacji odbywających się w w wielu wątkach byłaby bardzo problematyczna). Jednak w celu maksymalnego poprawienia wydajnosci, w osobnych wątkach z obrazy konwertowane są do danych w postaci tablicy bajtów, a dopiero sam proces ładowania danych z tych tablic do tekstury będącej obiektem silnika Unity3d następuje synchronicznie w głównym wątku. 
+Konwersja nie odbywa się w pełni wielowątkowo. Wszystkie peracje na obiektach silnika Unity mogą być realizowane tylko w głównym wątku (dzieje się tak ponieważ Unity automatycznie wykonuje częsć operacji na karcie graficznej i ich synchronizacja z wielu wątków jest trudna do zrealizowania). Jednak w celu maksymalnego poprawienia wydajności, w osobnych wątkach, obrazy zamieniane są na reprezentujące je tablice bajtów. Dopiero sam proces ładowania danych z tych tablic do tekstury następuje synchronicznie w głównym wątku. 
 \end{description}
 
 \subsection {Aplikacja konfiguracyjna}
-TODO
+
+Moduł ten zrealizowany został w projekcie \textit{ViewVisualization}. W jego ramach została stworzona aplikacja umożliwiająca sterowaniem obrazem trafiającym do gogli.
+
+Do wykonania aplikacji został użyty framework \textit{WPF} (Windows Presentation Foundation). Umożliwia w wygodny sposób pogląd obrazu trafiającego do gogli oraz zmianę określonych parametrów sterujących nim. Aplikacja działa jako osobny proces, który komunikuje się z procesem aplikacji silnika Unity i może działać na innnym komputerze. Komunikacja jest możliwa ponieważ w aplikacji Unity tworzony jest serwis, który umożliwia wywoływanie odpowiednich metod z klasy zajmującej się pobieraniem i przetwarzaniem obrazu (implementacja interfejsu \textit{IViewProvider}). Szczegółowy opis tego serwisu, którego kontrakt został zdefiniowany przy pomocy interfejsu \textit{IViewProviderService} znajduje się w oddzielnym, poświęconym mu rozdziale. Całość aplikacji zrealizowana jest w jednym głównym widoku \textit{MainWindow}, który pojawia się po uruchomieniu aplikacji. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{mainwindow_screen}
+\caption[Widok aplikacji]{Główny widok aplikacji}
+\end{figure}
+
+Widok ten można podzielić na dwie części ze względu na spełniane funkcjonalności. 
+
+\begin{itemize}
+\item Wybór źródła i rotacji obrazu
+\item Kontrola przetwarzania obrazu
+\end{itemize}
+
+W celu większej przejrzystości dla wymienionych części zostały stworzone specjalne kontrolki \textit{ChannelControl} oraz \textit{SettingsControl}. Każda zawiera interfejs graficzny, który pozwala na realizację określonych dla nich zadań, jednak korzystając ze wzorca \textit{MVVM} logika aplikacji zarządzająca nimi znajduje się w klasie \textit{MainViewModel}. 
+
+\begin{description}
+\item [Wybór źródła i rotacji obrazu] \hfill \\
+Źródło obrazu oraz jego rotacja mogą być ustawione dla każdej kamery osobno dlatego w aplikacji znajdują się dwie kontrolki \textit{ChannelControl} zapewniające te funkcjonalności. Każda z nich zawiera  następujące elementy:
+
+\begin{itemize}
+\item \textit{System.Windows.Control.Image} do wyświetlanie obrazu trafiającego go gogli.
+\item \textit{System.Windows.Control.ComboBox} prezentująca listę dostępnych źródeł obrazu.
+\item \textit{System.Windows.Control.Button} do obrotu obrazu o $90^\circ$ w lewo.
+\item \textit{System.Windows.Control.Button} do obrotu obrazu o $90^\circ$ w prawo.
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{channelcontrol_screen}
+\caption[Widok aplikacji]{Kontrolka \textit{ChannelControl}.}
+\end{figure}
+
+Aplikacja w trakcie działania, za pomoca oddzielnego wątku wywołuje metodę \textit{UpdateFrames} w serwisie {IViewProviderService}, która wywołuje pobranie obrazu z kamery. Następnie za pomocą metody \textit{GetCurrentViewAsBitmaps} z tego samego serwisu otrzymuje obrazy z obu kamer w formacie \textit{System.Drawing.Bitmap} i ładuje je do kontrolek wyświetlających obrazy, odświeżając widok całej aplikacji. \\
+Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji z listy ze wszystkimi dostępnymi źródłami. Wtedy za pomocą metody \textit{SetCapture} z serwisu ustawiamy wybrane źródło dla lewego lub prawego oka. \\
+Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$ we wskazaną stronę dla odpowiedniego oka.
+
+\item [Kontrola przetwarzania obrazu] \hfill \\
+Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu jednocześnie. Dlatego w głównym widoku umieszczona została jedna kontrolka \textit{SettingsControl}. Zawiera ona listę w postaci kontrolki \textit{System.Windonws.Control.ListBox} na której umieszczone zostały wszystkie dostępne w systemie obiekty do przetwarzania obrazu. W celu zarządzania tymi obiektami został stworzony szablon wyświetalny dla każdej pozycji z listy składający się z następujących elementów:
+
+\begin{itemize}
+\item \textit{System.Windows.Control.TextBlock} wyświetlający nazwę przekształcenia realizowanego przez obiekt.
+\item \textit{System.Windows.Control.CheckBox} do aktywowania lub dezaktywowania wybranego przekształcenia.
+\item \textit{System.Windows.Control.Button} do przesunięcia na wcześniejsze miejsce na liście.
+\item \textit{System.Windows.Control.Button} do przesunięcia na kolejne miejsce na liście.
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{settingscontrol_screen}
+\caption[Widok aplikacji]{Kontrolka \textit{SettingsControl}.}
+\end{figure}
+
+Lista dostępnych przekształceń obrazu wraz z informacją o ich aktywności otrzymywana jest po wywołaniu metody \textit{GetAllImageProcessors} z serwisu \textit{IViewProviderService}. \\
+Za pomocą dwóch stanów (zaznaczenie lub brak zaznaczenia) kontrolki \textit{System.Windows.Control.CheckBox} możliwe jest włączanie lub wyłączanie pojedyńczych przekształceń. Po zmianie stanu kontrolki wywoływana jest metoda \textit{SetProcessorState}, która ustawia aktywność wybranego obiekty na wskazany stan. \\
+Prezentowana lista odpowiada kolejnością liście obiektów przekształcających obraz.  Przekształcenia wykonywane są zaczynając od tego znajdującego się na górze listy. Zarządzanie tą kolejnością możliwe jest za pomocą przycisków, które przesuwają obiekt w dół lub w górę listy wywołując metodę serwisu o nazwie \textit{ChangeProcessorPriority}.
+
+\end{description}
 
 \subsection {Serwis komunikacji międzyprocesowej}
-TODO
+
+Ta część systemu odpowiada za komunikację pomiędzy procesem aplikacji Unity oraz procesem aplikacji konfiguracyjnej.  Do tego celu została wykorzystana technologia \textit{WCF}  (Windows Communication Foundation) stworzona przez firmę Microsoft. W założeniu, pierwszą uruchomioną aplikacją powinna być aplikacja Unity, która w momencie startu wystawia serwis w sieci lokalnej pod adresem \textit{http://localhost:{port}/OculusAR} gdzie port jest wartością pochodzącą z pliku konfiguracyjnego aplikacji. Aplikacja konfiguracyjna podczas uruchomienia próbuje się podłączyć do serwisu znajdującego się pod tym adresem, jeśli wystąpi błąd z połączeniem, użytkownik dostaje stosowny komunikat informujący o przyczynie błędu. 
+
+Technologia \textit{WCF} wymaga, aby zdefiniować metody będące kontraktem dostępnych operacji, przez klasę, która obsługuje dany serwis. Kontrakt ten zdefiniowany został następująco:
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+    [ServiceContract]
+    public interface IViewCalibratorService
+    {
+        [OperationContract]
+        void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
+    }
+
+    [ServiceContract]
+    public interface ICaptureManagerService
+    {
+        [OperationContract]
+        void SetCapture(CaptureSide captureSide, int cameraIndex);
+
+        [OperationContract]
+        CaptureDetails GetCaptureDetails();
+    }
+
+    [ServiceContract]
+    public interface IImageProcessingService
+    {
+        [OperationContract]
+        List<Tuple<string, bool>> GetAllImageProcessors();
+
+        [OperationContract]
+        void SetProcessorState(string processorName, bool state);
+
+        [OperationContract]
+        void ChangeProcessorPriority(string processorName, bool increase);
+
+    }
+
+    [ServiceContract]
+    public interface IViewProviderService : IViewCalibratorService, 
+	ICaptureManagerService, 
+	IImageProcessingService
+    {
+        [OperationContract]
+        ViewDataBitmap GetCurrentViewAsBitmaps();
+
+        [OperationContract]
+        void UpdateFrames();
+    }
+\end{lstlisting}
+ 
+Opis interfejsów zawartych w kontrakcie:
+\begin{itemize}
+\item \textit{IViewCalibratorService} - część serwisu odpowiadająca za rotację obrazu.
+\item \textit{ICaptureManagerService} - część serwisu odpowiadająca za wybór źródła obrazu dla poszczególnych kanałów.
+\item \textit{IImageProcessingService} - część serwisu odpowiadająca za zarządzanie przetwarzaniem obrazu.
+tem \textit{IViewProviderService} - serwis składający się ze wcześniej wymienionych części oraz metod związanych z pobieraniem obrazu.
+\end{itemize}
+
+Szczegółowy opis metod zawartych w wymienionych interfejsach może zostać pominięty, ponieważ polegają one na wywołaniu metod o tych samych nazwach z klas implementujących interfejs \textit{IViewProvider}, którego opis znajduje się w poprzedniej części dokumentu.
+
+Interfejs \textit{IViewProviderService} impelmentowany jest przez następujące klasy:
+
+\begin{itemize}
+\item \textit{ViewProviderService}
+\item \textit{ViewProviderClient}
+\end{itemize}
+
+Pierwsza z nich odpowiada za utworzenie serwisu pod wspomnianym wcześniej adresem i wykorzystywana jest przez aplikację Unity, która tworzy serwis w momencie startu.
+Natomiast druga klasa jest klientem, który podłącza się do istniejącego serwisu. Metody klienta polegają na wywołaniu metod serwisu o tej samej nazwie. Klasa ta wykorzystywana jest w aplikacji konfiguracyjnej , która za jej pomocą  może sterować procesem pobierania i przetwarzania obrazu w procesie aplikacji Unity.
+
+ 
 
 \chapter {Rezultat pracy}
 
