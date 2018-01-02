@@ -522,13 +522,23 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 \item [Warstwa przekazywania obrazu do gogli] \hfill \\ Odpowiada za konwersję obrazu do postaci przyjmowanej przez gogle VR.
 \end{description}
 
--- też może schemat (chyba w prezentacji na seminarium był), opis słowny
-
 \subsection{Architektura systemu}
-TODO 
+
+System składa się z modułów realizujących ściśle określone zadania, dlatego też łatwo wydzielić je do osobnych projektów. Poniższy schemat przedstawia architekturę rozwiązania wraz z zaznaczonym kierunkiem przekazywania obrazu pomiędzy warstwami. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{architecture_schema}
+\caption[Architektura systemu]{Architektura systemu}
+\end{figure}
+
+Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warstwy. Najpierw przy użyciu biblioteki CV obraz jest pobierany z kamer, następnie przy użyciu stworzonych na potrzeby systemu klas stosowane są dla niego odpowiednie przekształcenia. Końcowy efekt osiągany jest poprzez przesłanie przetworzonego obrazu do gogli VR za pomocą aplikacji działającej przy użyciu silnika Unity. Aplikacja konfiguracyjna zrealizowana w technologii WPF modyfikuje parametry w warstwach przechwytywania i przetwarzania obrazu w trakcie działania systemu. 
+
+W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Podobnie jest z aplikacją konfiguracyjną, która zapewnia graficzny interfejs do sterowania działaniem systemu. Jednak aplikacja działa równolegle do pozostałych warstw i może być całkowicie pominięta, zachowując pełną funkcjonalność systemu, ponieważ wszystke parametry działania mogą być zmieniane ręcznie przed startem systemu, wykorzystując przygotowane biblioteki programistyczne.  
 
 \subsection{Funkcjonalność przetwarzania obrazu}
-TODO
+
+Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytownika. System przewiduje możliwość dodawania własnych przekształceń obrazu po odpowiednim ich utworzeniu według kontraktu ustalonego w dostarczonej biltiotece programistycznej. Przekształcenia realizowane są w pewnej ustalonej kolejności. Sterowanie procesem przetwarzania obrazu możliwe realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich.
 
 \section {Opis modułów}
 
