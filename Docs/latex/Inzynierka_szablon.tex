@@ -542,7 +542,6 @@ Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń 
 
 \section {Opis modułów}
 
--- Tutaj wrzucimy szczegółowy techniczny opis modułów. Jako szczegółowy opis mam na myśli jego kluczowe funkcjonalności, jak wielowątkowe pobieranie obrazu itp.
 
 \subsection {Moduł przechwytywania obrazu}
 
@@ -617,7 +616,7 @@ Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obraz
     }
 \end{lstlisting}
 
-Metoda \textit{GetAllImageProcessors} zwraca listę nazw wszytkich dostępnych obiektów przekształcających obraz.
+Metoda \textit{GetAllImageProcessors} zwraca listę nazw wszytkich dostępnych obiektów przekształcających obraz wraz z informacją o ich aktywności.
 Metoda \textit{SetProcessorState} pozwala zmienić stan wskazanego procesora na nieaktywny lub aktywny.
 Natomiast metoda \textit{ChangeProcessorPriority} pozwala zmienić kolejność wskazanego procesora podczas procesu przetwarzania obrazu. 
 
@@ -629,9 +628,7 @@ Klasą bazową odpowiedzialną za pobieranie obrazu jest \textit{ViewProvider}, 
 	IImageProcessing
 \end{lstlisting}
 
-Klasa ta w konstruktorze jako argument przyjmuje obiekt implementujący interfejs \textit{IViewProvider}. Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implementujących interfejs \textit{IImageProcessor}. W metodach \textit{GetCurrentView} oraz \textit{GetCurrentViewAsBitmaps} po pobraniu obrazów z pierwotnego obiektu klasy \textit{ViewProvider} wykonanywana jest seria przekształceń za pomocą obiektów znajdujących się na wspomnianej liscie. W kolejnosci ich występowania, wywoływana jest metoda \textit{Process} której jako argument przekazywana jest referencja do obiektu reprezentującego obraz. W ten sposób obrazy zwracane w tych metodach przechodzą przez warstwę przetwarzania obrazów.
-
-
+Klasa ta w konstruktorze jako argument przyjmuje obiekt implementujący interfejs \textit{IViewProvider}. Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implementujących interfejs \textit{IImageProcessor}. W metodach \textit{GetCurrentView} oraz \textit{GetCurrentViewAsBitmaps} po pobraniu obrazów z pierwotnego obiektu klasy \textit{ViewProvider} wykonywana jest seria przekształceń za pomocą obiektów znajdujących się na wspomnianej liście. W kolejności ich występowania, wywoływana jest metoda \textit{Process} której jako argument przekazywana jest referencja do obiektu reprezentującego obraz. W ten sposób obrazy zwracane w tych metodach przechodzą przez warstwę przetwarzania obrazów.
 
 \item [Interfejs łączący implementacje przekształceń obrazu] \hfill \\
 \lstset{style=sharpc}
@@ -659,7 +656,7 @@ W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechw
 
 Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity fukncjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
-Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwość o nazwie \textit{TargetEye} która pozwala decydować czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom zwiąnym z grafiką 3D  co wpływa na wydajnoć systemu. W celu wyświetlenia obrazu jako tekstury potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
+Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwość o nazwie \textit{TargetEye} która pozwala decydować czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom związanym z grafiką 3D  co wpływa na wydajność systemu. W celu wyświetlenia obrazu jako tekstury potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
 
 \begin{figure}[h]
 \centering
@@ -687,7 +684,7 @@ W module zostały przewidziane następujące interfejsy, zapewniające metody do
 
 \end{lstlisting}
 
-Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obrazów w odpowiednim formacie, gotowych do wyświetlenia na scenie Unity3d. Metoda \textit{GetStereoView} zwraca obiekt zawierający dwie tekstury - dla lewego i prawego oka. 
+Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obrazów w odpowiednim formacie, gotowych do wyświetlenia na scenie programu Unity. Metoda \textit{GetStereoView} zwraca obiekt zawierający dwie tekstury - dla lewego i prawego oka. 
 Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje potrzebne przy konwersji obrazu do tekstury. W systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury utworzony na podstawie przekazanego obrazu za pomocą typu \textit{System.Drawing.Bitmap}. Metoda\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz reprezentowany za pomocą typu z biblioteki EmguCV.
 Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje przekazany obraz do wskazanej, istniejącej tekstury. Jest wykorzystywana jest w celu poprawy wydajności i uniknięcia niepotrzebnego tworzenia tesktur przy każdej konwersji obrazu.
 
@@ -710,7 +707,7 @@ Konwersja nie odbywa się w pełni wielowątkowo. Wszystkie peracje na obiektach
 
 Moduł ten zrealizowany został w projekcie \textit{ViewVisualization}. W jego ramach została stworzona aplikacja umożliwiająca sterowaniem obrazem trafiającym do gogli.
 
-Do wykonania aplikacji został użyty framework \textit{WPF} (Windows Presentation Foundation). Umożliwia w wygodny sposób pogląd obrazu trafiającego do gogli oraz zmianę określonych parametrów sterujących nim. Aplikacja działa jako osobny proces, który komunikuje się z procesem aplikacji silnika Unity i może działać na innnym komputerze. Komunikacja jest możliwa ponieważ w aplikacji Unity tworzony jest serwis, który umożliwia wywoływanie odpowiednich metod z klasy zajmującej się pobieraniem i przetwarzaniem obrazu (implementacja interfejsu \textit{IViewProvider}). Szczegółowy opis tego serwisu, którego kontrakt został zdefiniowany przy pomocy interfejsu \textit{IViewProviderService} znajduje się w oddzielnym, poświęconym mu rozdziale. Całość aplikacji zrealizowana jest w jednym głównym widoku \textit{MainWindow}, który pojawia się po uruchomieniu aplikacji. 
+Do wykonania aplikacji został użyty framework \textit{WPF} (Windows Presentation Foundation). Umożliwia w wygodny sposób pogląd obrazu trafiającego do gogli oraz zmianę określonych parametrów sterujących nim. Aplikacja działa jako osobny proces, który komunikuje się z procesem aplikacji silnika Unity i może działać na innym komputerze. Komunikacja jest możliwa ponieważ w aplikacji Unity tworzony jest serwis, który umożliwia wywoływanie odpowiednich metod z klasy zajmującej się pobieraniem i przetwarzaniem obrazu (implementacja interfejsu \textit{IViewProvider}). Szczegółowy opis tego serwisu, którego kontrakt został zdefiniowany przy pomocy interfejsu \textit{IViewProviderService} znajduje się w oddzielnym, poświęconym mu rozdziale. Całość aplikacji zrealizowana jest w jednym głównym widoku \textit{MainWindow}, który pojawia się po uruchomieniu aplikacji. 
 
 \begin{figure}[h]
 \centering
@@ -765,7 +762,7 @@ Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu je
 \end{figure}
 
 Lista dostępnych przekształceń obrazu wraz z informacją o ich aktywności otrzymywana jest po wywołaniu metody \textit{GetAllImageProcessors} z serwisu \textit{IViewProviderService}. \\
-Za pomocą dwóch stanów (zaznaczenie lub brak zaznaczenia) kontrolki \textit{System.Windows.Control.CheckBox} możliwe jest włączanie lub wyłączanie pojedyńczych przekształceń. Po zmianie stanu kontrolki wywoływana jest metoda \textit{SetProcessorState}, która ustawia aktywność wybranego obiekty na wskazany stan. \\
+Za pomocą dwóch stanów (zaznaczenie lub brak zaznaczenia) kontrolki \textit{System.Windows.Control.CheckBox} możliwe jest włączanie lub wyłączanie pojedynczych przekształceń. Po zmianie stanu kontrolki wywoływana jest metoda \textit{SetProcessorState}, która ustawia aktywność wybranego obiekty na wskazany stan. \\
 Prezentowana lista odpowiada kolejnością liście obiektów przekształcających obraz.  Przekształcenia wykonywane są zaczynając od tego znajdującego się na górze listy. Zarządzanie tą kolejnością możliwe jest za pomocą przycisków, które przesuwają obiekt w dół lub w górę listy wywołując metodę serwisu o nazwie \textit{ChangeProcessorPriority}.
 
 \end{description}
