@@ -93,13 +93,13 @@ namespace ViewVisualization.ViewModels
 #if DEBUG
             //TODO remove - only for using without Unity to host the service
             IViewProvider provider = new ViewProvision.ViewProvider(true);
-            provider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
+            IProcessedViewProvider processedProvider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
             {
                 new GrayImageProcessor()
                 //new SmoothBilateralProcessor(7,255,34)
                 //new SobelProcessor()
             });
-            ViewProviderService service = ViewProviderService.Create(provider);
+            ViewProviderService service = ViewProviderService.Create(processedProvider);
 #endif
 
             viewProvider = IoCManager.Get<IViewProviderService>();

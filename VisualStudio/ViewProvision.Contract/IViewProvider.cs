@@ -22,15 +22,20 @@ namespace ViewProvision.Contract
     {
         List<Tuple<string,bool>> GetAllImageProcessors();
         void SetProcessorState(string name, bool state);
+        void ChangeProcessorPriority(string processorName, bool increase);
     }
 
-    public interface IViewProvider : IViewCalibrator, ICaptureManager, IImageProcessing
+    public interface IViewProvider : IViewCalibrator, ICaptureManager
     {      
         ViewDataBitmap GetCurrentViewAsBitmaps();
                 
         //not exposed by service
         ViewDataImage GetCurrentView();
         void UpdateFrames();
-        void ChangeProcessorPriority(string processorName, bool increase);
+    }
+
+    public interface IProcessedViewProvider : IViewProvider, IImageProcessing
+    {
+        
     }
 }

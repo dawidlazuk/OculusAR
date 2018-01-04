@@ -14,9 +14,9 @@ namespace ConfigService.Server
     {
         private static readonly string EndpointName = "Config";
 
-        private readonly IViewProvider viewProvider;
+        private readonly IProcessedViewProvider processedViewProvider;
 
-        public static ViewProviderService Create(IViewProvider provider, string port = "56719")
+        public static ViewProviderService Create(IProcessedViewProvider provider, string port = "56719")
         {
             ServiceHost host = null;
 
@@ -47,23 +47,23 @@ namespace ConfigService.Server
         }
 
 
-        public ViewProviderService(IViewProvider viewProvider)
+        public ViewProviderService(IProcessedViewProvider processedViewProvider)
         {
-            this.viewProvider = viewProvider;
+            this.processedViewProvider = processedViewProvider;
         }
         
         #region IViewProviderService implementation
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
         {
-            return viewProvider.GetCurrentViewAsBitmaps();
+            return processedViewProvider.GetCurrentViewAsBitmaps();
         }
 
 #if DEBUG
         //TODO remove - only for development
         public void UpdateFrames()
         {
-            viewProvider.UpdateFrames();
+            processedViewProvider.UpdateFrames();
         }
 #endif
 
@@ -71,7 +71,7 @@ namespace ConfigService.Server
 
         public void RotateImage(CaptureSide captureSide, RotateSide rotateSide)
         {
-            viewProvider.RotateImage(captureSide, rotateSide);
+            processedViewProvider.RotateImage(captureSide, rotateSide);
         }
 
         #endregion
@@ -80,12 +80,12 @@ namespace ConfigService.Server
 
         public void SetCapture(CaptureSide captureSide, int cameraIndex)
         {
-            viewProvider.SetCapture(captureSide, cameraIndex);
+            processedViewProvider.SetCapture(captureSide, cameraIndex);
         }
 
         public CaptureDetails GetCaptureDetails()
         {
-            return viewProvider.GetCaptureDetails();
+            return processedViewProvider.GetCaptureDetails();
         }
 
         #endregion
@@ -94,17 +94,17 @@ namespace ConfigService.Server
 
         public List<Tuple<string,bool>> GetAllImageProcessors()
         {
-            return viewProvider.GetAllImageProcessors();
+            return processedViewProvider.GetAllImageProcessors();
         }
 
         public void SetProcessorState(string processorName, bool state)
         {
-            viewProvider.SetProcessorState(processorName, state);
+            processedViewProvider.SetProcessorState(processorName, state);
         }
 
         public void ChangeProcessorPriority(string processorName, bool increase)
         {
-            viewProvider.ChangeProcessorPriority(processorName, increase);
+            processedViewProvider.ChangeProcessorPriority(processorName, increase);
         }
     }
 }

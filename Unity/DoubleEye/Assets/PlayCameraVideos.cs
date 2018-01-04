@@ -19,11 +19,11 @@ public class PlayCameraVideos : MonoBehaviour
     void Start()
     {
         IViewProvider viewProvider = new ViewProvider(true);
-        viewProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
+        IProcessedViewProvider processedProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
         {
            //new SobelProcessor()
         });
-        ConfigService.Server.ViewProviderService.Create(viewProvider);        
+        ConfigService.Server.ViewProviderService.Create(processedProvider);        
 
         /* 
          * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.

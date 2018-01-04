@@ -10,7 +10,7 @@ using System.Diagnostics;
 
 namespace ViewProvision
 {
-    public class ProcessedViewProvider : IViewProvider
+    public class ProcessedViewProvider : IProcessedViewProvider
     {
         private readonly IViewProvider _originViewProvider;
         private readonly List<IImageProcessor> _imageProcessors;

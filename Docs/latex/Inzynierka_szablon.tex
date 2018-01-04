@@ -606,9 +606,31 @@ Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obraz
 \begin{description}
 
 \item [Funkcjonalność przetwarzania obrazu] \hfill \\
-Klasą bazową odpowiedzialną za pobieranie obrazu jest \textit{ViewProvider}, implementująca interfejs \textit{IViewProvider}. Została ona wykorzystana w częściach systemu związanych z tworzeniem serwisu do komunikacji z aplikacją konfiguracyjną oraz przy przekazywaniu obrazu do gogli. W celu zachowania łatwej wymienialności kodu, wykorzystany został fakt, że warstwa przetwarzania obrazu jest rozszerzeniem warstwy pobierania obrazu o zastosowanie odpowiednich przekształceń na obrazie pobranym z kamery. Dlatego też został zastosowany wzorzec projektowy \textit{Dekorator} poprzez utworzenie nowej klasy \textit{ProcessedViewProvider} implementującej interfejs \textit{IViewProvider}, będącej rozszerzeniem klasy \textit{ViewProvider}.
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+    public interface IImageProcessing
+    {
+        List<Tuple<string,bool>> GetAllImageProcessors();
+        void SetProcessorState(string name, bool state);
+        void ChangeProcessorPriority(string processorName, bool increase);
+    }
+\end{lstlisting}
+
+Metoda \textit{GetAllImageProcessors} zwraca listę nazw wszytkich dostępnych obiektów przekształcających obraz.
+Metoda \textit{SetProcessorState} pozwala zmienić stan wskazanego procesora na nieaktywny lub aktywny.
+Natomiast metoda \textit{ChangeProcessorPriority} pozwala zmienić kolejność wskazanego procesora podczas procesu przetwarzania obrazu. 
+
+Klasą bazową odpowiedzialną za pobieranie obrazu jest \textit{ViewProvider}, implementująca interfejs \textit{IViewProvider}. W celu wprowadzenia nowej warstwy aplikacji odpowiedzialnej za przetwarzanie obrazu, został stworzony interfejs \textit{IProcessedViewProvider} będący rozszerzeniem poprzedniego o dodatkowe metody związane z zarządzaniem przekształceniami obrazu, które znalazły się w interfejsie \textit{IImageProcessing}. Dodatkowo został zastosowany wzorzec projektowy \textit{Dekorator} poprzez utworzenie nowej klasy \textit{ProcessedViewProvider} implementującej interfejs \textit{IProcessedViewProvider}, będącej rozszerzeniem klasy \textit{ViewProvider} i jej interfejsu, lecz zachowującą część tych samych metod lecz o zmienionym działaniu.
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+   public interface IProcessedViewProvider : IViewProvider, 
+	IImageProcessing
+\end{lstlisting}
 
 Klasa ta w konstruktorze jako argument przyjmuje obiekt implementujący interfejs \textit{IViewProvider}. Kolejnym argumentem przekazywanym w konstruktorze jest lista obiektów implementujących interfejs \textit{IImageProcessor}. W metodach \textit{GetCurrentView} oraz \textit{GetCurrentViewAsBitmaps} po pobraniu obrazów z pierwotnego obiektu klasy \textit{ViewProvider} wykonanywana jest seria przekształceń za pomocą obiektów znajdujących się na wspomnianej liscie. W kolejnosci ich występowania, wywoływana jest metoda \textit{Process} której jako argument przekazywana jest referencja do obiektu reprezentującego obraz. W ten sposób obrazy zwracane w tych metodach przechodzą przez warstwę przetwarzania obrazów.
+
 
 
 \item [Interfejs łączący implementacje przekształceń obrazu] \hfill \\
