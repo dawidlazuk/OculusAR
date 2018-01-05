@@ -544,7 +544,7 @@ W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechw
 
 \subsection{Funkcjonalność przetwarzania obrazu}
 
-Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytownika. System przewiduje możliwość dodawania własnych przekształceń obrazu po odpowiednim ich utworzeniu według kontraktu ustalonego w dostarczonej biltiotece programistycznej. Przekształcenia realizowane są w pewnej ustalonej kolejności. Sterowanie procesem przetwarzania obrazu możliwe realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich.
+Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytownika. System przewiduje możliwość dodawania własnych przekształceń obrazu po odpowiednim ich utworzeniu według kontraktu ustalonego w dostarczonej biltiotece programistycznej. Przekształcenia realizowane są w pewnej ustalonej kolejności. Sterowanie procesem przetwarzania obrazu realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich.
 
 \section {Opis modułów}
 
@@ -586,18 +586,15 @@ Z powyższego opisu wynika, że najważniejsze operacje modułu to:
 \end{itemize}
 
 Poniżej są przedstawione zasady działania każdej z tych operacji:
-
 \begin{description}
 \item [Wybór kamery dla danego kanału] \hfill \\
 Dla każdego kanału w module jest pole, w którym jest przechowywany obiekt odpowiedzialny za komunikację z daną kamerą. Do tych pól odwołują się pozostałe funkcjonalności, pobierające obraz. W przypadku zmiany kamery w danym kanale, wartość odpowiedniego pola jest podmieniana na obiekt odpowiadający kamerze docelowej. Zmiana ta jest transparentna dla pozostałych funkcjonalności.
 \item [Pobranie obrazu z wybranych kamer dla obu kanałów] \hfill \\
 Operacja jest zrealizowana wielowątkowo. Każdy z dwóch kanałów ma swój wątek, czeka na sygnał pobrania klatki, pobiera klatkę wykonując jednocześnie jej obrót, wysyła sygnał informujący o zakończeniu pobierania klatki. Operacje te wykonują się w pętli dopóki wątek nie zostanie przerwany.
 
-\item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\ \\
-
-\begin{minipage}{\linewidth}
+\pagebreak
+\item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\
 Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji) tej wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
-\end{minipage}
 \end{description}
 
 Funkcjonalności modułu są współdzielone przez aplikację główną oraz konfiguracyjną. Ta część kontraktu, która jest wykorzystywana przez aplikację konfiguracyjną, jest wydzielona jako kontrakt serwisu udostępnionego tej aplikacji, zgodnie ze wzorcem projektowym \textit{fasada}. Dzięki temu ukryte zostały zbędne funkcjonalności modułu z punktu widzenia aplikacji konfiguracyjnej upraszczając jego interfejs.
@@ -668,7 +665,9 @@ W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechw
 
 Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity fukncjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
-\begin{figure}[ht!]
+\pagebreak
+
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{unityscene}
 \caption[Scena Unity]{Scena w programie Unity Editor}
