@@ -540,7 +540,7 @@ System składa się z modułów realizujących ściśle określone zadania, dlat
 
 Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warstwy. Najpierw przy użyciu biblioteki EmguCV obraz jest pobierany z kamer. Następnie przy użyciu stworzonych na potrzeby systemu klas stosowane są dla niego odpowiednie przekształcenia. Końcowy efekt osiągany jest poprzez przesłanie przetworzonego obrazu do gogli VR za pomocą aplikacji działającej przy użyciu silnika Unity. Aplikacja konfiguracyjna stworzona z wykorzystaniem technologii WPF umożliwia modyfikację parametrów w warstwach przechwytywania i przetwarzania obrazu podczas działania systemu. 
 
-W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Podobnie jest z aplikacją konfiguracyjną, która zapewnia graficzny interfejs do sterowania działaniem systemu. Aplikacja działa w osobnym procesie, komunikując się z głównym procesem za pomocą WCF i może być wyłączona, zachowując pełną funkcjonalność systemu, ponieważ wszystke parametry działania mogą być zmieniane ręcznie przed startem systemu, wykorzystując przygotowane biblioteki programistyczne.  
+W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Równolegle do pozostałych warstw (nie bierze bezpośredniego udziału w drodze obrazu od kamer do oczu) działa  aplikacja konfiguracyjna, która zapewnia graficzny interfejs do sterowania działaniem systemu. Aplikacja działa w osobnym procesie, komunikując się z głównym procesem za pomocą WCF.
 
 \subsection{Funkcjonalność przetwarzania obrazu}
 
@@ -592,8 +592,10 @@ Poniżej są przedstawione zasady działania każdej z tych operacji:
 Dla każdego kanału w module jest pole, w którym jest przechowywany obiekt odpowiedzialny za komunikację z daną kamerą. Do tych pól odwołują się pozostałe funkcjonalności, pobierające obraz. W przypadku zmiany kamery w danym kanale, wartość odpowiedniego pola jest podmieniana na obiekt odpowiadający kamerze docelowej. Zmiana ta jest transparentna dla pozostałych funkcjonalności.
 \item [Pobranie obrazu z wybranych kamer dla obu kanałów] \hfill \\
 Operacja jest zrealizowana wielowątkowo. Każdy z dwóch kanałów ma swój wątek, czeka na sygnał pobrania klatki, pobiera klatkę wykonując jednocześnie jej obrót, wysyła sygnał informujący o zakończeniu pobierania klatki. Operacje te wykonują się w pętli dopóki wątek nie zostanie przerwany.
+
+\item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\ \\
+
 \begin{minipage}{\linewidth}
-\item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\
 Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji) tej wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
 \end{minipage}
 \end{description}
@@ -666,13 +668,14 @@ W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechw
 
 Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity fukncjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
-Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwość o nazwie \textit{TargetEye} która pozwala decydować czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom związanym z grafiką 3D  co wpływa na wydajność systemu. W celu wyświetlenia obrazu jako tekstury potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
-
-\begin{figure}[h]
+\begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.5]{unityscene}
 \caption[Scena Unity]{Scena w programie Unity Editor}
 \end{figure}
+
+Wykorzystując funkcjonalnosci tego pakietu, stworzona została scena w silniku Unity zawierająca dwie kamery i dwie tekstury. Kamery posiadają właciwość o nazwie \textit{TargetEye} która pozwala decydować czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka) w urządzeniu OculusRift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom związanym z grafiką 3D  co wpływa na wydajność systemu. W celu wyświetlenia obrazu jako tekstury potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
+
 
 W module zostały przewidziane następujące interfejsy, zapewniające metody do realizacji kluczowych jego elementów.
 
@@ -736,6 +739,7 @@ W celu większej przejrzystości dla wymienionych części zostały stworzone sp
 
 \begin{description}
 \item [Wybór źródła i rotacji obrazu] \hfill \\
+
 Źródło obrazu oraz jego rotacja mogą być ustawione dla każdej kamery osobno dlatego w aplikacji znajdują się dwie kontrolki \textit{ChannelControl} zapewniające te funkcjonalności. Każda z nich zawiera  następujące elementy:
 
 \begin{itemize}
@@ -786,46 +790,29 @@ Technologia \textit{WCF} wymaga, aby zdefiniować metody będące kontraktem dos
 
 \lstset{style=sharpc}
 \begin{lstlisting}
-    [ServiceContract]
     public interface IViewCalibratorService
     {
-        [OperationContract]
         void RotateImage(CaptureSide captureSide, RotateSide rotateSide);
     }
 
-    [ServiceContract]
     public interface ICaptureManagerService
     {
-        [OperationContract]
         void SetCapture(CaptureSide captureSide, int cameraIndex);
-
-        [OperationContract]
         CaptureDetails GetCaptureDetails();
     }
 
-    [ServiceContract]
     public interface IImageProcessingService
     {
-        [OperationContract]
         List<Tuple<string, bool>> GetAllImageProcessors();
-
-        [OperationContract]
         void SetProcessorState(string processorName, bool state);
-
-        [OperationContract]
         void ChangeProcessorPriority(string processorName, bool increase);
-
     }
 
-    [ServiceContract]
     public interface IViewProviderService : IViewCalibratorService, 
 	ICaptureManagerService, 
 	IImageProcessingService
     {
-        [OperationContract]
         ViewDataBitmap GetCurrentViewAsBitmaps();
-
-        [OperationContract]
         void UpdateFrames();
     }
 \end{lstlisting}
