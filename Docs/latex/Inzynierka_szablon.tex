@@ -297,9 +297,9 @@ samodzielnie, co poświadczam własnoręcznym podpisem.
 \markboth{}{Wstęp}
 \addcontentsline{toc}{chapter}{Wstęp}
 
-Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
+Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
 
-Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujacych rzeczywistość rozszerzoną.
+Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujacych rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
 
 \chapter{Wstęp teoretyczny}
 
@@ -404,18 +404,19 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 
 \chapter{Cel i założenia projektu} % Cel i założenia projektu
 
-Celem pracy jest stworzenie systemu umożliwiającego przekazanie obrazu z dwóch kamer do gogli wirtualnej rzeczywistości), tworząc tym samym system rozszerzonej rzeczywistości. 
+Rozdział poświęcony jest opisaniu celu projektu, który powstaje w ramach niniejszej pracy inżynierskiej. Wyspecyfikowane zostaną wymagania, jakie tworzony system musi spełniać.
 
-System ma umożliwiać efekt widzenia stereoskopowego, aby użytkownik miał wrażenie normalnej wizji. Efekt ten zostanie osiągnięty poprzez umiejscowienie kamer tak, aby odległość między ich soczewkami odpowiadała odległości pomiędzy źrenicami ludzkich oczu. 
+\section{Funkcjonalność systemu}
+
+System ma umożliwiać przekazanie obrazu z dwóch kamer do gogli wirtualnej rzeczywistości, tworząc tym samym gogle rozszerzonej rzeczywistości. Takie gogle następnie będą mogły posłużyć do wykorzystywania aplikacji przeznaczonych na rozwiązania AR. 
+
+System ma umożliwiać efekt widzenia stereoskopowego, aby użytkownik miał wrażenie wizji zbliżonej do naturalnej, trójwymiarowej wizji człowieka. Efekt ten zostanie osiągnięty poprzez umiejscowienie kamer tak, aby odległość między ich soczewkami odpowiadała odległości pomiędzy źrenicami ludzkich oczu. 
 
 System ma umożliwiać przetwarzanie przechwyconego obrazu zanim trafi on do oczu. Przetwarzanie to może być realizowane na przykład poprzez nałożenie prostych filtrów na obraz, lub też wykorzystania bardziej zaawansowanych algorytmów (na przykład wykrywania twarzy).
 
-
 \section{Środowisko sprzętowe}
 
-
 W tym podrozdziale omówione zostaną urządzenia wykorzystane w pracy. Przedstawiona zostanie specyfikacja sprzętu zapewnionego przez Wydział Matematyki i Nauk Informacyjnych Politechniki Warszawskiej. Omówimy także problemy wynikające z wykorzystania danego rodzaju sprzętu oraz propozycje ich rozwiązania.
-
 
 \subsection{Gogle Oculus Rift}
 
@@ -478,7 +479,7 @@ Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odzworowania
 
 \chapter {Implementacja projektu}
 
-W tym rozdziale przedstawione zostaną efekty pracy. Omówione szczegóły techniczne zaimplementowanego rozwiązania.
+W tym rozdziale przedstawione zostaną efekty pracy. Omówione zostaną decyzje architektoniczne oraz szczegóły techniczne zaimplementowanego rozwiązania.
 
 \section {Wybrane technologie i oprogramowanie}
 
@@ -532,9 +533,9 @@ System składa się z modułów realizujących ściśle określone zadania, dlat
 \caption[Architektura systemu]{Architektura systemu}
 \end{figure}
 
-Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warstwy. Najpierw przy użyciu biblioteki CV obraz jest pobierany z kamer, następnie przy użyciu stworzonych na potrzeby systemu klas stosowane są dla niego odpowiednie przekształcenia. Końcowy efekt osiągany jest poprzez przesłanie przetworzonego obrazu do gogli VR za pomocą aplikacji działającej przy użyciu silnika Unity. Aplikacja konfiguracyjna zrealizowana w technologii WPF modyfikuje parametry w warstwach przechwytywania i przetwarzania obrazu w trakcie działania systemu. 
+Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warstwy. Najpierw przy użyciu biblioteki EmguCV obraz jest pobierany z kamer. Następnie przy użyciu stworzonych na potrzeby systemu klas stosowane są dla niego odpowiednie przekształcenia. Końcowy efekt osiągany jest poprzez przesłanie przetworzonego obrazu do gogli VR za pomocą aplikacji działającej przy użyciu silnika Unity. Aplikacja konfiguracyjna stworzona z wykorzystaniem technologii WPF umożliwia modyfikację parametrów w warstwach przechwytywania i przetwarzania obrazu podczas działania systemu. 
 
-W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Podobnie jest z aplikacją konfiguracyjną, która zapewnia graficzny interfejs do sterowania działaniem systemu. Jednak aplikacja działa równolegle do pozostałych warstw i może być całkowicie pominięta, zachowując pełną funkcjonalność systemu, ponieważ wszystke parametry działania mogą być zmieniane ręcznie przed startem systemu, wykorzystując przygotowane biblioteki programistyczne.  
+W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Podobnie jest z aplikacją konfiguracyjną, która zapewnia graficzny interfejs do sterowania działaniem systemu. Aplikacja działa w osobnym procesie, komunikując się z głównym procesem za pomocą WCF i może być wyłączona, zachowując pełną funkcjonalność systemu, ponieważ wszystke parametry działania mogą być zmieniane ręcznie przed startem systemu, wykorzystując przygotowane biblioteki programistyczne.  
 
 \subsection{Funkcjonalność przetwarzania obrazu}
 
@@ -652,7 +653,7 @@ Dodatkowo interfejs wymaga posiadania przez klasy następujących własciwosci:
 
 \subsection {Moduł przekazywania obrazu do gogli}
 
-W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Poprzednie moduły zaimplementowano przy użyciu języka C\# oraz  technologii .NET. Dlatego do przekazywania obrazu do gogli OculusRift został wykorzystany silnik Unity3d umożliwiający importowanie zewnętrznych bibliotek stworzonych w tych technologiach.
+W tym module znajdują sie wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Poprzednie moduły zaimplementowano przy użyciu języka C\# oraz  platformy .NET. Dlatego do przekazywania obrazu do gogli OculusRift został wykorzystany silnik Unity3d umożliwiający importowanie zewnętrznych bibliotek stworzonych w tych technologiach.
 
 Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli OculusRift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity fukncjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
@@ -851,7 +852,7 @@ TODO
 TODO wyniki testów opóźnień, klatek na sekundę
 
 \subsection {Testy subiektywne}
-TODO Czytanie książki. Łapanie przedmiotu, itp kreatywne pomysły
+TODO np. Czytanie książki. Łapanie przedmiotu, itp.
 
 \section {Wnioski}
 TODO 
