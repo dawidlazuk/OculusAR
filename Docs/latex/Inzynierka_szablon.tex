@@ -316,7 +316,7 @@ W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzec
 
 Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii. Nawet w przypadku telewizji trójwymiarowej.
 
-Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na wirtualnych poligonach.
+Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.
 
 \textbf {źródło: http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx }
 
@@ -338,6 +338,7 @@ Zagadnienie mieszanej rzeczywistości leży poza zakresem niniejszej pracy. Defi
 
 Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za sobą szereg wyzwań stawianych deweloperom, oraz konsekwencji, których użytkownicy muszą być świadomi.
 
+\pagebreak
 \begin{description}
 \item [Wymogi wydajnościowe] \hfill \\
 W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki jest przystosowany do częstotliwości zmian obrazu występującej w naturze. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$.
@@ -387,9 +388,11 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 \textit{Punktem bliży wzrokowej} nazywamy minimalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt bliży wzrokowej leży w odległości $10 cm$ od oka.
 \end{definition}
 
+\begin{minipage}{\linewidth}
 \begin{definition}[Punkt dali wzrokowej]
 \textit{Punktem dali wzrokowej} nazywamy maksymalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt dali wzrokowej leży w odległości $6 m$ od oka.
 \end{definition}
+\end{minipage}
 
 \subsection {Zbieżność oczu}
 
@@ -427,8 +430,6 @@ Oculus Rift wykorzystuje dwa ekrany OLED, po jednym na każde oko. Ekrany te maj
 
 Gogle zostaną wykorzystane do wyświetlania obrazu przechwyconego przez kamery.
 
--- tutaj można wstawić jakiś schemat oculusa --
-
 \subsection{Logitech Webcam C910 Pro HD}
 
 C910 Pro HD to kamera USB stworzona przez firmę Logitech. Umożliwia przechwytywanie obrazu o rozdzielczości 1920 pikseli na 1080 pikseli. Posiada wbudowany mikrofon, jednak nie będzie on wykorzystywany w naszej pracy.
@@ -439,8 +440,9 @@ Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to p
 
 \section{Odwzorowanie wizji stereoskopowej}
 
-Uzyskanie efektu wizji trójwymiarowej podczas używania gogli z zaimplementowanym rozwiązaniem jest jednym z najważniejszych celów tego projektu. W tym podrozdziale znajduje się odniesienie do cech wizji stereoskopowej, opisanych w poprzednim rozdziale, pod kątem tego, jak wpływają na tworzone rozwiązanie w ramach niniejszej pracy.
+Uzyskanie efektu wizji trójwymiarowej podczas używania gogli z zaimplementowanym rozwiązaniem jest jednym z najważniejszych celów tego projektu. W tym podrozdziale znajduje się odniesienie do cech wizji stereoskopowej, opisanych w poprzednim rozdziale, pod kątem tego, jak wpływają na tworzone rozwiązanie w ramach niniejszej pracy. 
 
+\pagebreak
 \subsection {Parametryzacja wizji}
 
 Wizję stereoskopową można opisać trzema parametrami:
@@ -496,8 +498,10 @@ Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenC
 \item [Silnik Unity3D] \hfill \\
 Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli OculusRift.
 
+\begin{minipage}{\linewidth}
 \item [Windows Presentation Foundation] \hfill \\
 Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
+\end{minipage}\\
 
 \item [Windows Communication Foundation] \hfill \\
 Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o .NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
@@ -588,12 +592,13 @@ Poniżej są przedstawione zasady działania każdej z tych operacji:
 Dla każdego kanału w module jest pole, w którym jest przechowywany obiekt odpowiedzialny za komunikację z daną kamerą. Do tych pól odwołują się pozostałe funkcjonalności, pobierające obraz. W przypadku zmiany kamery w danym kanale, wartość odpowiedniego pola jest podmieniana na obiekt odpowiadający kamerze docelowej. Zmiana ta jest transparentna dla pozostałych funkcjonalności.
 \item [Pobranie obrazu z wybranych kamer dla obu kanałów] \hfill \\
 Operacja jest zrealizowana wielowątkowo. Każdy z dwóch kanałów ma swój wątek, czeka na sygnał pobrania klatki, pobiera klatkę wykonując jednocześnie jej obrót, wysyła sygnał informujący o zakończeniu pobierania klatki. Operacje te wykonują się w pętli dopóki wątek nie zostanie przerwany.
+\begin{minipage}{\linewidth}
 \item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\
 Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji) tej wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
+\end{minipage}
 \end{description}
 
 Funkcjonalności modułu są współdzielone przez aplikację główną oraz konfiguracyjną. Ta część kontraktu, która jest wykorzystywana przez aplikację konfiguracyjną, jest wydzielona jako kontrakt serwisu udostępnionego tej aplikacji, zgodnie ze wzorcem projektowym \textit{fasada}. Dzięki temu ukryte zostały zbędne funkcjonalności modułu z punktu widzenia aplikacji konfiguracyjnej upraszczając jego interfejs.
-
 
 Podczas testów modułu wystąpiły sytuacje, gdzie aplikacja zawieszała się na wywołaniu metody z biblioteki EmguCV pobierającej kolejną klatkę z kamery. Występowało to w sytuacji, kiedy obiekt odpowiedzialny za pobieranie obrazu był ustawiony na kamerę, która nie istniała w systemie (jej indeksowi nie odpowiadało żadne urządzenie). Moduł zawiera rozwiązanie zapobiegające tego typu sytuacjom. Przy każdym pobraniu klatki do odpowiedniego pola jest zapisany czas jej pobrania. Podczas tworzenia instancji modułu tworzony i uruchamiany jest wątek, który co jakiś czas sprawdza czas od odstatniego pobrania klatki dla kanału. Jeżeli jest on większy od ustalonego dopuszczalnego maksimum, to wątek tego kanału jest przerywany, a w jego miejsce tworzony nowy. 
 W zaimplementowanym rozwiązaniu maksymalna dopuszczalna przerwa między klatkami i czas co jaki jest ona sprawdzana wynosi 10 sekund.
@@ -606,6 +611,8 @@ Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obraz
 
 \begin{description}
 
+
+\begin{minipage}{\linewidth}
 \item [Funkcjonalność przetwarzania obrazu] \hfill \\
 
 \lstset{style=sharpc}
@@ -617,6 +624,7 @@ Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obraz
         void ChangeProcessorPriority(string processorName, bool increase);
     }
 \end{lstlisting}
+\end{minipage}
 
 Metoda \textit{GetAllImageProcessors} zwraca listę nazw wszytkich dostępnych obiektów przekształcających obraz wraz z informacją o ich aktywności.
 Metoda \textit{SetProcessorState} pozwala zmienić stan wskazanego procesora na nieaktywny lub aktywny.
@@ -747,6 +755,7 @@ Aplikacja w trakcie działania, za pomoca oddzielnego wątku wywołuje metodę \
 Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji z listy ze wszystkimi dostępnymi źródłami. Wtedy za pomocą metody \textit{SetCapture} z serwisu ustawiamy wybrane źródło dla lewego lub prawego oka. \\
 Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$ we wskazaną stronę dla odpowiedniego oka.
 
+\pagebreak
 \item [Kontrola przetwarzania obrazu] \hfill \\
 Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu jednocześnie. Dlatego w głównym widoku umieszczona została jedna kontrolka \textit{SettingsControl}. Zawiera ona listę w postaci kontrolki \textit{System.Windonws.Control.ListBox} na której umieszczone zostały wszystkie dostępne w systemie obiekty do przetwarzania obrazu. W celu zarządzania tymi obiektami został stworzony szablon wyświetalny dla każdej pozycji z listy składający się z następujących elementów:
 
