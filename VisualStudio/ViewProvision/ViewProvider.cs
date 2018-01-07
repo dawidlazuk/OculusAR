@@ -4,7 +4,7 @@ using System.Threading;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using ViewProvision.Contract;
-
+using System.Diagnostics;
 
 namespace ViewProvision
 {
@@ -16,7 +16,7 @@ namespace ViewProvision
         /// <summary>
         /// Capture timeout in miliseconds
         /// </summary>
-        private static double CaptureTimeout = 10000;
+        internal static double CaptureTimeout = 10000;
 
         private VideoCapture leftCapture;
         private VideoCapture rightCapture;
@@ -200,7 +200,7 @@ namespace ViewProvision
             try
             {
                 return capture.QueryFrame()?.ToImage<Bgr, byte>();
-            }
+            }         
             catch
             {
                 return null;
@@ -250,7 +250,6 @@ namespace ViewProvision
                 case (int)CaptureSide.Left:
                     leftCapture = GetCapture(cameraIndex);
                     leftCaptureIndex = cameraIndex;
-                    //TODO uncomment
                     SetCaptureResolution(leftCapture);
                     if (leftCaptureThread.IsAlive == false)
                         leftCaptureThread.Start();
@@ -259,7 +258,6 @@ namespace ViewProvision
                 case (int)CaptureSide.Right:
                     rightCapture = GetCapture(cameraIndex);
                     rightCaptureIndex = cameraIndex;
-                    //TODO uncomment
                     SetCaptureResolution(rightCapture);
                     if (rightCaptureThread.IsAlive == false)
                         rightCaptureThread.Start();
@@ -275,13 +273,20 @@ namespace ViewProvision
 
         private VideoCapture GetCapture(int index)
         {
+            return new VideoCapture(index);
             VideoCapture capture;
             if (OpenedCaptures.TryGetValue(index, out capture) == false)
             {
                 capture = new VideoCapture(index);
                 OpenedCaptures.Add(index, capture);
-            }           
-            return capture;
+            }
+            if(capture.IsOpened == false)
+            {
+                capture.Dispose();
+                capture = new VideoCapture();
+                OpenedCaptures[index] = capture;
+            }
+            return capture;            
         }
 
         public CaptureDetails GetCaptureDetails()

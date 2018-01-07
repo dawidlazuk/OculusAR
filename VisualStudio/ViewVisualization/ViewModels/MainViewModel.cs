@@ -64,7 +64,8 @@ namespace ViewVisualization.ViewModels
             set
             {
                 leftCameraIndex = value;
-                viewProvider.SetCapture(CaptureSide.Left, leftCameraIndex);
+                if(value != -1)
+                    viewProvider.SetCapture(CaptureSide.Left, leftCameraIndex);
             }
         }
 
@@ -75,7 +76,8 @@ namespace ViewVisualization.ViewModels
             set
             {
                 rightCameraIndex = value;
-                viewProvider.SetCapture(CaptureSide.Right, rightCameraIndex);
+                if(value != -1)
+                    viewProvider.SetCapture(CaptureSide.Right, rightCameraIndex);
             }
         }
 
