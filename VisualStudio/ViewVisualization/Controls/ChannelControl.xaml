@@ -16,7 +16,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="40"/>
@@ -29,8 +29,18 @@
                   ItemsSource="{Binding Path=CameraNames}"
                   SelectedIndex="{Binding Path=CameraIndex, Mode=TwoWay}"/>
 
-        <Button x:Name="RotateLeftButton" Grid.Row="2" Grid.Column="0"  Content="Rotate left" Click="RotateLeftButton_Click" />
-        <Button x:Name="RotateRightButton" Grid.Row="2" Grid.Column="1" Content="Rotate right" Click="RotateRightButton_Click"/>
 
+        <Button x:Name="RotateLeftButton" Grid.Row="2" Grid.Column="0"  Click="RotateLeftButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Resources/appbar.arrow.corner.up.left.png" Stretch="Uniform"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="RotateRightButton" Grid.Row="2" Grid.Column="1"  Click="RotateRightButton_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../Resources/appbar.arrow.corner.up.right.png" Stretch="Uniform"/>
+            </StackPanel>
+        </Button>
     </Grid>
+    
 </UserControl>

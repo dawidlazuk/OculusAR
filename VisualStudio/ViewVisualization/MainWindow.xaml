@@ -8,7 +8,8 @@
         xmlns:controls="clr-namespace:ViewVisualization.Controls"
         xmlns:viewmodels="clr-namespace:ViewVisualization.ViewModels"
         mc:Ignorable="d"
-        Title="OculusAR Configuration App" Height="350" Width="600">
+        Title="OculusAR Configuration App" Height="400" Width="700"
+        Icon="Resources/oculusar_logo.png">
     <Window.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </Window.Resources>
