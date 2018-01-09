@@ -275,19 +275,14 @@ namespace ViewProvision
 
         private VideoCapture GetCapture(int index)
         {
-            return new VideoCapture(index);
             VideoCapture capture;
-            if (OpenedCaptures.TryGetValue(index, out capture) == false)
+            if (OpenedCaptures.TryGetValue(index, out capture) == true)
             {
-                capture = new VideoCapture(index);
-                OpenedCaptures.Add(index, capture);
-            }
-            if(capture.IsOpened == false)
-            {
+                OpenedCaptures.Remove(index);
                 capture.Dispose();
-                capture = new VideoCapture();
-                OpenedCaptures[index] = capture;
             }
+            capture = new VideoCapture(index);
+            OpenedCaptures.Add(index,capture);
             return capture;            
         }
 
