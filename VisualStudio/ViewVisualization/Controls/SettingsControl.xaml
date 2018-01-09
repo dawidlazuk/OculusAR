@@ -13,7 +13,7 @@
     <UserControl.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </UserControl.Resources>
-    <Grid Name="SettingsGrid">
+    <Grid Name="SettingsGrid" Background="DarkGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
@@ -24,25 +24,74 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" 
-                    VerticalAlignment="Stretch"/>
+        <Button Grid.Column="0" Width="150px" Height="50px"  Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image HorizontalAlignment="Left" Source="../Resources/unity_logo.png" Stretch="Uniform" Height="33" Width="47"/>
+                <Label VerticalAlignment="Center" FontSize="20"  Padding="0" Content="Start Unity"/>
+            </StackPanel>
+        </Button>
 
         <Label Grid.Column="0" Grid.Row="1" Content="Image Processors"/>
 
         <ListView x:Name="ImageProcessorsList"  Grid.Row="2" Grid.Column="0" 
                   ItemsSource="{Binding ImageProcessors}">
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <DockPanel>
-                        <TextBlock Text="{Binding Name}" FontSize="16" Margin="5px"/>
-                        <CheckBox Click="ActiveCheckBoxOnClick"  IsChecked="{Binding Active, Mode=TwoWay}" Margin="5px"></CheckBox>
-                        <Button Click="MoveDownButtonOnClick" Content="Down"  Width="45px" Margin="5px"></Button>
-                        <Button Click="MoveUpButtonOnClick" Content="Up" Width="45px" Margin="5px" ></Button>
-                    </DockPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Name"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox Click="ActiveCheckBoxOnClick"  IsChecked="{Binding Active, Mode=TwoWay}" Margin="5px"></CheckBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Active"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Click="MoveDownButtonOnClick" Background="Transparent" BorderThickness="0">
+                                        <DockPanel Width="50px" Height="25px">
+                                            <Image HorizontalAlignment="Center" Source="../Resources/appbar.arrow.down.png" Stretch="Uniform"/>
+                                        </DockPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Move down"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Click="MoveUpButtonOnClick" Background="Transparent" BorderThickness="0">
+                                        <DockPanel Width="50px" Height="25px">
+                                            <Image HorizontalAlignment="Center" Source="../Resources/appbar.arrow.up.png" Stretch="Uniform"/>
+                                        </DockPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Move up"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
         </ListView>
 
     </Grid>
 </UserControl>
+

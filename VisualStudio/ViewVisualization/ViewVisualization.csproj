@@ -165,5 +165,21 @@
       <Name>ViewProvision</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\oculusar_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\appbar.arrow.corner.up.right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\appbar.arrow.corner.up.left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\appbar.arrow.down.png" />
+    <Resource Include="Resources\appbar.arrow.up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\unity_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
