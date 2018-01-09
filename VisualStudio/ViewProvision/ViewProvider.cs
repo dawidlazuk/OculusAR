@@ -278,6 +278,9 @@ namespace ViewProvision
             VideoCapture capture;
             if (OpenedCaptures.TryGetValue(index, out capture) == true)
             {
+                if (leftCapture == capture || rightCapture == capture)
+                    return capture;
+
                 OpenedCaptures.Remove(index);
                 capture.Dispose();
             }
