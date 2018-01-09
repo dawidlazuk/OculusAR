@@ -55,9 +55,6 @@ namespace ViewProvision
 
             SetCapture(CaptureSide.Left, 0);
             SetCapture(CaptureSide.Right, 1);
-
-            //if(initService)
-            //    InitService();
         }
 
         public ViewDataBitmap GetCurrentViewAsBitmaps()
@@ -209,8 +206,6 @@ namespace ViewProvision
             }
         }
 
-
-
         #region IViewCalibrator implementation
 
         private short leftImageRotationTimes;
@@ -253,16 +248,12 @@ namespace ViewProvision
                     leftCapture = GetCapture(cameraIndex);
                     leftCaptureIndex = cameraIndex;
                     SetCaptureResolution(leftCapture);
-                    //if (leftCaptureThread.IsAlive == false)
-                    //    leftCaptureThread.Start();
                     break;
 
                 case (int)CaptureSide.Right:
                     rightCapture = GetCapture(cameraIndex);
                     rightCaptureIndex = cameraIndex;
                     SetCaptureResolution(rightCapture);
-                    //if (rightCaptureThread.IsAlive == false)
-                    //    rightCaptureThread.Start();
                     break;
             }
         }
@@ -309,21 +300,6 @@ namespace ViewProvision
                 }
             };
         }
-
-
-        #endregion
-
-        //[Obsolete]
-        //private void InitService(string port = "56719")
-        //{
-        //    ViewProviderService.Create(
-        //        new ProcessedViewProvider(
-        //            this,
-        //            new List<IImageProcessor>
-        //            {
-        //                new GrayImageProcessor()
-        //            }),
-        //        port);
-        //}
+        #endregion    
     }
 }

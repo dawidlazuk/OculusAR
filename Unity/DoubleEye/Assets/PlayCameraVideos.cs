@@ -21,15 +21,15 @@ public class PlayCameraVideos : MonoBehaviour
         IViewProvider viewProvider = new ViewProvider(true);
         IProcessedViewProvider processedProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
         {
-           //new SobelProcessor()
-           //new GrayImageProcessor()
+           new SmoothBilateralProcessor(7,255,34),
+           new SobelProcessor(),
+           new GrayImageProcessor()
         });
         ConfigService.Server.ViewProviderService.Create(processedProvider);        
 
         /* 
          * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
          * Change the hardcoded indexes regard to needs.
-         * TODO Delete / Review during future developement
          */
        //viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 0);
        // viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 1);
@@ -42,15 +42,6 @@ public class PlayCameraVideos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           // VideoPlayer.Pause();
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //VideoPlayer.Play();
-        }
-
         var view = _stereoVidTransmitter.GetStereoView();
         RightImage.texture = view.RightEye;
         LeftImage.texture = view.LeftEye;

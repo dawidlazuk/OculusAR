@@ -9,11 +9,6 @@ namespace ViewProvision.Contract
         public ChannelDetails LeftChannel { get; set; }
         [DataMember]
         public ChannelDetails RightChannel { get; set; }
-
-        //[DataMember]
-        //public int LeftIndex { get; set; }
-        //[DataMember]
-        //public int RightIndex { get; set; }
     }
 
     [DataContract]

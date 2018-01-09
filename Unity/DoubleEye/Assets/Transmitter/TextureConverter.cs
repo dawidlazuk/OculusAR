@@ -99,7 +99,6 @@ namespace Assets.Transmitter
             return texture;
         }
 
-
         public byte[] ImageToByteArray(System.Drawing.Image imageIn)
         {
             int t1 = Environment.TickCount;

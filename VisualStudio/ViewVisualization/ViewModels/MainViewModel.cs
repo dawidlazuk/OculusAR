@@ -93,13 +93,13 @@ namespace ViewVisualization.ViewModels
         public MainViewModel()
         {
 #if DEBUG
-            //TODO remove - only for using without Unity to host the service
+            //Only for using without Unity to host the service
             IViewProvider provider = new ViewProvision.ViewProvider(true);
             IProcessedViewProvider processedProvider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
             {
-                new GrayImageProcessor()
-                //new SmoothBilateralProcessor(7,255,34)
-                //new SobelProcessor()
+                new GrayImageProcessor(),
+                new SmoothBilateralProcessor(7,255,34),
+                new SobelProcessor()
             });
             ViewProviderService service = ViewProviderService.Create(processedProvider);
 #endif
@@ -142,7 +142,7 @@ namespace ViewVisualization.ViewModels
         private void ProcessNextFrames()
         {
 #if DEBUG
-            //TODO remove, only for developement & testing
+            //only for developement & testing
             viewProvider.UpdateFrames();
 #endif
 

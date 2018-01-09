@@ -200,7 +200,6 @@ namespace ViewProvision
                     Thread.Sleep((int)ViewProvider.CaptureTimeout);
                 }
             }));
-
             timestampCheckThread.Start();
         }
 
@@ -218,8 +217,6 @@ namespace ViewProvision
                     InitRightProcessingThread();
                     break;
             }
-        }
-
-      
+        }      
     }
 }

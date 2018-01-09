@@ -20,6 +20,5 @@ namespace ViewProvision
         {
             return (rotationTimes % 4) * StraightAngle;
         }
-
     }
 }
