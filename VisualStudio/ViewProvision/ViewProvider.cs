@@ -122,7 +122,8 @@ namespace ViewProvision
                     }
                     leftWaitEvent.WaitOne();
                 }
-            }));            
+            }));
+            leftCaptureThread.Start();
         }
 
         private void InitRightCaptureThread()
@@ -145,6 +146,7 @@ namespace ViewProvision
                     rightWaitEvent.WaitOne();
                 }
             }));
+            rightCaptureThread.Start();
         }
 
         private void StartCaptureThreads()
@@ -251,16 +253,16 @@ namespace ViewProvision
                     leftCapture = GetCapture(cameraIndex);
                     leftCaptureIndex = cameraIndex;
                     SetCaptureResolution(leftCapture);
-                    if (leftCaptureThread.IsAlive == false)
-                        leftCaptureThread.Start();
+                    //if (leftCaptureThread.IsAlive == false)
+                    //    leftCaptureThread.Start();
                     break;
 
                 case (int)CaptureSide.Right:
                     rightCapture = GetCapture(cameraIndex);
                     rightCaptureIndex = cameraIndex;
                     SetCaptureResolution(rightCapture);
-                    if (rightCaptureThread.IsAlive == false)
-                        rightCaptureThread.Start();
+                    //if (rightCaptureThread.IsAlive == false)
+                    //    rightCaptureThread.Start();
                     break;
             }
         }
