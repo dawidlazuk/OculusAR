@@ -22,6 +22,7 @@ public class PlayCameraVideos : MonoBehaviour
         IProcessedViewProvider processedProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
         {
            //new SobelProcessor()
+           //new GrayImageProcessor()
         });
         ConfigService.Server.ViewProviderService.Create(processedProvider);        
 
@@ -30,12 +31,12 @@ public class PlayCameraVideos : MonoBehaviour
          * Change the hardcoded indexes regard to needs.
          * TODO Delete / Review during future developement
          */
-       viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 2);
-        viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 2);
+       //viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Left, 0);
+       // viewProvider.SetCapture(ViewProvision.Contract.CaptureSide.Right, 1);
 
         var converter = new TextureConverter();
 
-        _stereoVidTransmitter = new StereoVidTransmitter(converter, viewProvider);
+        _stereoVidTransmitter = new StereoVidTransmitter(converter, processedProvider);
     }
 
     // Update is called once per frame
