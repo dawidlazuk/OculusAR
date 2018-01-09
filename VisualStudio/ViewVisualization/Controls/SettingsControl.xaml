@@ -24,7 +24,12 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="0"  Grid.Row="0" Content="Start Unity app" Margin="40px"/>
+        <Button Grid.Column="0" Width="150px" Height="50px"  Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image HorizontalAlignment="Left" Source="../Resources/unity_logo.png" Stretch="Uniform" Height="33" Width="47"/>
+                <Label VerticalAlignment="Center" FontSize="20"  Padding="0" Content="Start Unity"/>
+            </StackPanel>
+        </Button>
 
         <Label Grid.Column="0" Grid.Row="1" Content="Image Processors"/>
 
@@ -57,21 +62,29 @@
                         <GridViewColumn>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Click="MoveDownButtonOnClick" Content="Down"  Width="45px" Margin="5px"></Button>
+                                    <Button Click="MoveDownButtonOnClick" Background="Transparent" BorderThickness="0">
+                                        <DockPanel Width="50px" Height="25px">
+                                            <Image HorizontalAlignment="Center" Source="../Resources/appbar.arrow.down.png" Stretch="Uniform"/>
+                                        </DockPanel>
+                                    </Button>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                             <GridViewColumn.Header>
-                                <TextBlock Text="Down"></TextBlock>
+                                <TextBlock Text="Move down"></TextBlock>
                             </GridViewColumn.Header>
                         </GridViewColumn>
                         <GridViewColumn>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Click="MoveUpButtonOnClick" Content="Up"  Width="45px" Margin="5px"></Button>
+                                    <Button Click="MoveUpButtonOnClick" Background="Transparent" BorderThickness="0">
+                                        <DockPanel Width="50px" Height="25px">
+                                            <Image HorizontalAlignment="Center" Source="../Resources/appbar.arrow.up.png" Stretch="Uniform"/>
+                                        </DockPanel>
+                                    </Button>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                             <GridViewColumn.Header>
-                                <TextBlock Text="Up"></TextBlock>
+                                <TextBlock Text="Move up"></TextBlock>
                             </GridViewColumn.Header>
                         </GridViewColumn>
                     </GridView.Columns>
