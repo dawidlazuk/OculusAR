@@ -78,7 +78,6 @@
   </Target>
   <Import Project="..\packages\EMGU.CV.3.3.0.2824\build\Emgu.CV.targets" Condition="Exists('..\packages\EMGU.CV.3.3.0.2824\build\Emgu.CV.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)$(OutDir)*.*"  "$(SolutionDir)../Unity/DoubleEye/Assets/ExternalDll" /Y /I</PostBuildEvent>
   </PropertyGroup>
 </Project>
