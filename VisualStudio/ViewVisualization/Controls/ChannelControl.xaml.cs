@@ -14,9 +14,6 @@ namespace ViewVisualization.Controls
     /// </summary>
     public partial class ChannelControl : UserControl
     {
-        private ChannelViewModel viewModel;
-
-        //TODO Make belows as dependency property to set binding on them
         public Bitmap Image
         {
             get { return (Bitmap) GetValue(ImageProperty); }
