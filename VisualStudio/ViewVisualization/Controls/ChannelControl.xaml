@@ -11,6 +11,7 @@
     <UserControl.Resources>
         <converters:BitmapToBitmapSourceConverter x:Key="BitmapSourceConverter"/>
     </UserControl.Resources>
+    
     <Grid Name="ChannelGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

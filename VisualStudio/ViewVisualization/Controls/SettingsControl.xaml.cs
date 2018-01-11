@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using ConfigService.Contract;
 using ConfigService.Server;
 using IoCContainer;
@@ -12,6 +16,8 @@ using ViewProvision;
 using ViewProvision.Contract;
 using ViewProvision.Processors;
 using ViewVisualization.Annotations;
+using ViewVisualization.Converters;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using UserControl = System.Windows.Controls.UserControl;
 
 namespace ViewVisualization.Controls
@@ -24,11 +30,9 @@ namespace ViewVisualization.Controls
         /// <summary>
         /// Collection of Available image processors
         /// </summary>
-        public ObservableCollection<ProcessorInfo> ImageProcessors {
-            get
-            {
-                return _imageProcessorInfos;
-            }
+        public ObservableCollection<ProcessorInfo> ImageProcessors
+        {
+            get { return _imageProcessorInfos; }
             set
             {
                 _imageProcessorInfos = value;
@@ -37,6 +41,20 @@ namespace ViewVisualization.Controls
         }
 
         private ObservableCollection<ProcessorInfo> _imageProcessorInfos;
+
+        private bool _start = true;
+
+        public ICommand ToggleCaptureCommand
+        {
+            get { return (ICommand) GetValue(ToggleCaptureCommandProperty); }
+            set { SetValue(ToggleCaptureCommandProperty, value); }
+        }
+
+        public static readonly DependencyProperty ToggleCaptureCommandProperty =
+            DependencyProperty.Register(
+                "ToggleCaptureCommand",
+                typeof(ICommand),
+                typeof(SettingsControl));
 
         private IViewProviderService _viewProvider;
 
@@ -54,7 +72,7 @@ namespace ViewVisualization.Controls
             IProcessedViewProvider processedProvider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
             {
                 new GrayImageProcessor(),
-                //new SmoothBilateralProcessor(7,255,34)
+                new SmoothBilateralProcessor(7,255,34),
                 new SobelProcessor()
             });
             ViewProviderService service = ViewProviderService.Create(processedProvider);
@@ -75,7 +93,7 @@ namespace ViewVisualization.Controls
                     Active = x.Item2
                 })
                 .AsEnumerable());
-        }   
+        }
 
         private void ActiveCheckBoxOnClick(object sender, RoutedEventArgs e)
         {
@@ -84,13 +102,13 @@ namespace ViewVisualization.Controls
             if (index < 0) return;
 
             var selectedProcessor = ImageProcessors[index];
-            
+
             _viewProvider.SetProcessorState(selectedProcessor.Name, selectedProcessor.Active);
         }
 
         private void MoveDownButtonOnClick(object sender, RoutedEventArgs e)
         {
-            var button = (Button)sender;
+            var button = (Button) sender;
             var index = ImageProcessorsList.Items.IndexOf(button.DataContext);
             if (index < 0) return;
 
@@ -102,7 +120,7 @@ namespace ViewVisualization.Controls
 
         private void MoveUpButtonOnClick(object sender, RoutedEventArgs e)
         {
-            var button = (Button)sender;
+            var button = (Button) sender;
             var index = ImageProcessorsList.Items.IndexOf(button.DataContext);
             if (index < 0) return;
 
@@ -118,6 +136,24 @@ namespace ViewVisualization.Controls
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private void StartUnityButton_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CaptureVideoButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ICommand command = (ICommand) GetValue(ToggleCaptureCommandProperty);
+            command.Execute(null);
+
+            CaptureButtonLabel.Content = _start ? "Stop capturing" : "Start capturing";
+
+            CaptureButtonImagePlay.Visibility = _start ? Visibility.Collapsed : Visibility.Visible;
+            CaptureButtonImageStop.Visibility = !_start ? Visibility.Collapsed : Visibility.Visible;
+
+            _start = !_start;
         }
     }
 }
