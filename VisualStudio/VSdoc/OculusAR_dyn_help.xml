@@ -1,0 +1,2991 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="OculusAR" Title="SOLUTION-WIDE PROPERTIES Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessor.Active" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000101.html" LinkGroup="OculusAR">Active Property {ViewProvision.Contract.IImageProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.GrayImageProcessor.Active" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000010.html" LinkGroup="OculusAR">Active Property {ViewProvision.Processors.GrayImageProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SmoothBilateralProcessor.Active" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000015.html" LinkGroup="OculusAR">Active Property {ViewProvision.Processors.SmoothBilateralProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SobelProcessor.Active" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000019.html" LinkGroup="OculusAR">Active Property {ViewProvision.Processors.SobelProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ProcessorInfo.Active" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000036.html" LinkGroup="OculusAR">Active Property {ViewVisualization.Controls.ProcessorInfo}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcActionAttribute.AnonymousProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A0.html" LinkGroup="OculusAR">AnonymousProperty Property {ViewVisualization.Annotations.AspMvcActionAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaAttribute.AnonymousProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A4.html" LinkGroup="OculusAR">AnonymousProperty Property {ViewVisualization.Annotations.AspMvcAreaAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcControllerAttribute.AnonymousProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A8.html" LinkGroup="OculusAR">AnonymousProperty Property {ViewVisualization.Annotations.AspMvcControllerAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.App" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000025.html" LinkGroup="OculusAR">App Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.App.App" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000026.html" LinkGroup="OculusAR">App Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspChildControlTypeAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D3.html" LinkGroup="OculusAR">AspChildControlTypeAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspChildControlTypeAttribute.AspChildControlTypeAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D4.html" LinkGroup="OculusAR">AspChildControlTypeAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspDataFieldAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D7.html" LinkGroup="OculusAR">AspDataFieldAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspDataFieldsAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D8.html" LinkGroup="OculusAR">AspDataFieldsAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMethodPropertyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D9.html" LinkGroup="OculusAR">AspMethodPropertyAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcActionAttribute.AspMvcActionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000009E_overloads--.html" LinkGroup="OculusAR">AspMvcActionAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcActionAttribute.AspMvcActionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000009F_overloads--.html" LinkGroup="OculusAR">AspMvcActionAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcActionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000009D.html" LinkGroup="OculusAR">AspMvcActionAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcActionSelectorAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B3.html" LinkGroup="OculusAR">AspMvcActionSelectorAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaAttribute.AspMvcAreaAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A2_overloads--.html" LinkGroup="OculusAR">AspMvcAreaAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaAttribute.AspMvcAreaAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A3_overloads--.html" LinkGroup="OculusAR">AspMvcAreaAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A1.html" LinkGroup="OculusAR">AspMvcAreaAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaMasterLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000008B.html" LinkGroup="OculusAR">AspMvcAreaMasterLocationFormatAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaMasterLocationFormatAttribute.AspMvcAreaMasterLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000008C.html" LinkGroup="OculusAR">AspMvcAreaMasterLocationFormatAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaPartialViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000008E.html" LinkGroup="OculusAR">AspMvcAreaPartialViewLocationFormatAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaPartialViewLocationFormatAttribute.AspMvcAreaPartialViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000008F.html" LinkGroup="OculusAR">AspMvcAreaPartialViewLocationFormatAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000091.html" LinkGroup="OculusAR">AspMvcAreaViewLocationFormatAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaViewLocationFormatAttribute.AspMvcAreaViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000092.html" LinkGroup="OculusAR">AspMvcAreaViewLocationFormatAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcControllerAttribute.AspMvcControllerAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A6_overloads--.html" LinkGroup="OculusAR">AspMvcControllerAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcControllerAttribute.AspMvcControllerAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A7_overloads--.html" LinkGroup="OculusAR">AspMvcControllerAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcControllerAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A5.html" LinkGroup="OculusAR">AspMvcControllerAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcDisplayTemplateAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000AD.html" LinkGroup="OculusAR">AspMvcDisplayTemplateAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcEditorTemplateAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000AE.html" LinkGroup="OculusAR">AspMvcEditorTemplateAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcMasterAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000A9.html" LinkGroup="OculusAR">AspMvcMasterAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcMasterLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000094.html" LinkGroup="OculusAR">AspMvcMasterLocationFormatAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcMasterLocationFormatAttribute.AspMvcMasterLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000095.html" LinkGroup="OculusAR">AspMvcMasterLocationFormatAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcModelTypeAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000AA.html" LinkGroup="OculusAR">AspMvcModelTypeAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcPartialViewAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000AB.html" LinkGroup="OculusAR">AspMvcPartialViewAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcPartialViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000097.html" LinkGroup="OculusAR">AspMvcPartialViewLocationFormatAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcPartialViewLocationFormatAttribute.AspMvcPartialViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000098.html" LinkGroup="OculusAR">AspMvcPartialViewLocationFormatAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcSuppressViewErrorAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000AC.html" LinkGroup="OculusAR">AspMvcSuppressViewErrorAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcTemplateAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000AF.html" LinkGroup="OculusAR">AspMvcTemplateAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcViewAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B0.html" LinkGroup="OculusAR">AspMvcViewAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcViewComponentAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B1.html" LinkGroup="OculusAR">AspMvcViewComponentAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcViewComponentViewAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B2.html" LinkGroup="OculusAR">AspMvcViewComponentViewAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000009A.html" LinkGroup="OculusAR">AspMvcViewLocationFormatAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcViewLocationFormatAttribute.AspMvcViewLocationFormatAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000009B.html" LinkGroup="OculusAR">AspMvcViewLocationFormatAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspRequiredAttributeAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000DA.html" LinkGroup="OculusAR">AspRequiredAttributeAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspRequiredAttributeAttribute.AspRequiredAttributeAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000DB.html" LinkGroup="OculusAR">AspRequiredAttributeAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspTypePropertyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000DD.html" LinkGroup="OculusAR">AspTypePropertyAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspTypePropertyAttribute.AspTypePropertyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000DF.html" LinkGroup="OculusAR">AspTypePropertyAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AssertionConditionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000C5.html" LinkGroup="OculusAR">AssertionConditionAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AssertionConditionAttribute.AssertionConditionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000C6.html" LinkGroup="OculusAR">AssertionConditionAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AssertionConditionType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000C8.html" LinkGroup="OculusAR">AssertionConditionType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AssertionMethodAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000C4.html" LinkGroup="OculusAR">AssertionMethodAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspRequiredAttributeAttribute.Attribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000DC.html" LinkGroup="OculusAR">Attribute Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PathReferenceAttribute.BasePath" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000085.html" LinkGroup="OculusAR">BasePath Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.BaseTypeRequiredAttribute.BaseType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000005D.html" LinkGroup="OculusAR">BaseType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.BaseTypeRequiredAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000005B.html" LinkGroup="OculusAR">BaseTypeRequiredAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.BaseTypeRequiredAttribute.BaseTypeRequiredAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000005C.html" LinkGroup="OculusAR">BaseTypeRequiredAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataImage.Bitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000011B.html" LinkGroup="OculusAR">Bitmaps Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.CameraIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000002A.html" LinkGroup="OculusAR">CameraIndex Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.CameraIndexProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000002F.html" LinkGroup="OculusAR">CameraIndexProperty Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.CameraNames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000002B.html" LinkGroup="OculusAR">CameraNames Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.CameraNamesProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000030.html" LinkGroup="OculusAR">CameraNamesProperty Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.CanBeNullAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000041.html" LinkGroup="OculusAR">CanBeNullAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.CannotApplyEqualityOperatorAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000005A.html" LinkGroup="OculusAR">CannotApplyEqualityOperatorAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.CaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F3.html" LinkGroup="OculusAR">CaptureDetails Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ChannelDetails.CaptureIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F7.html" LinkGroup="OculusAR">CaptureIndex Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.CaptureSide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000FB.html" LinkGroup="OculusAR">CaptureSide Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.ChangeProcessorPriority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000143.html" LinkGroup="OculusAR">ChangeProcessorPriority Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IImageProcessingService.ChangeProcessorPriority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000136.html" LinkGroup="OculusAR">ChangeProcessorPriority Method {ConfigService.Contract.IImageProcessingService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.ChangeProcessorPriority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000012B.html" LinkGroup="OculusAR">ChangeProcessorPriority Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessing.ChangeProcessorPriority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000010A.html" LinkGroup="OculusAR">ChangeProcessorPriority Method {ViewProvision.Contract.IImageProcessing}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.ChangeProcessorPriority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000009.html" LinkGroup="OculusAR">ChangeProcessorPriority Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000028.html" LinkGroup="OculusAR">ChannelControl Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.ChannelControl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000033.html" LinkGroup="OculusAR">ChannelControl Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ChannelDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F6.html" LinkGroup="OculusAR">ChannelDetails Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.CollectionAccessAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000BC.html" LinkGroup="OculusAR">CollectionAccessAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.CollectionAccessAttribute.CollectionAccessAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000BD.html" LinkGroup="OculusAR">CollectionAccessAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.CollectionAccessType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000BF.html" LinkGroup="OculusAR">CollectionAccessType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.CollectionAccessAttribute.CollectionAccessType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000BE.html" LinkGroup="OculusAR">CollectionAccessType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PublicAPIAttribute.Comment" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000007A.html" LinkGroup="OculusAR">Comment Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AssertionConditionAttribute.ConditionType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000C7.html" LinkGroup="OculusAR">ConditionType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000139.html" LinkGroup="OculusAR">ConfigService.Client Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000012D.html" LinkGroup="OculusAR">ConfigService.Contract Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000121.html" LinkGroup="OculusAR">ConfigService.Server Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="IoCContainer.IoCManager.Container" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000011E.html" LinkGroup="OculusAR">Container Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ContractAnnotationAttribute.Contract" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000054.html" LinkGroup="OculusAR">Contract Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ContractAnnotationAttribute.ContractAnnotationAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000052_overloads--.html" LinkGroup="OculusAR">ContractAnnotationAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ContractAnnotationAttribute.ContractAnnotationAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000053_overloads--.html" LinkGroup="OculusAR">ContractAnnotationAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ContractAnnotationAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000051.html" LinkGroup="OculusAR">ContractAnnotationAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspChildControlTypeAttribute.ControlType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D6.html" LinkGroup="OculusAR">ControlType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000123.html" LinkGroup="OculusAR">Create Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspTypePropertyAttribute.CreateConstructorReferences" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000DE.html" LinkGroup="OculusAR">CreateConstructorReferences Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorDirectiveAttribute.Directive" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E9.html" LinkGroup="OculusAR">Directive Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000012C.html" LinkGroup="OculusAR">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MacroAttribute.Editable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000089.html" LinkGroup="OculusAR">Editable Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MacroAttribute.Expression" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000088.html" LinkGroup="OculusAR">Expression Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorInjectionAttribute.FieldName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E6.html" LinkGroup="OculusAR">FieldName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ContractAnnotationAttribute.ForceFullStates" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000055.html" LinkGroup="OculusAR">ForceFullStates Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaMasterLocationFormatAttribute.Format" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000008D.html" LinkGroup="OculusAR">Format Property {ViewVisualization.Annotations.AspMvcAreaMasterLocationFormatAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaPartialViewLocationFormatAttribute.Format" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000090.html" LinkGroup="OculusAR">Format Property {ViewVisualization.Annotations.AspMvcAreaPartialViewLocationFormatAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcAreaViewLocationFormatAttribute.Format" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000093.html" LinkGroup="OculusAR">Format Property {ViewVisualization.Annotations.AspMvcAreaViewLocationFormatAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcMasterLocationFormatAttribute.Format" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000096.html" LinkGroup="OculusAR">Format Property {ViewVisualization.Annotations.AspMvcMasterLocationFormatAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcPartialViewLocationFormatAttribute.Format" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000099.html" LinkGroup="OculusAR">Format Property {ViewVisualization.Annotations.AspMvcPartialViewLocationFormatAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspMvcViewLocationFormatAttribute.Format" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000009C.html" LinkGroup="OculusAR">Format Property {ViewVisualization.Annotations.AspMvcViewLocationFormatAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.StringFormatMethodAttribute.FormatParameterName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000048.html" LinkGroup="OculusAR">FormatParameterName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ChannelDetails.FrameHeight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000FA.html" LinkGroup="OculusAR">FrameHeight Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ChannelDetails.FrameWidth" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F9.html" LinkGroup="OculusAR">FrameWidth Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="IoCContainer.IoCManager.Get<T>" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000120.html" LinkGroup="OculusAR">Get<T> Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.GetAllImageProcessors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000141.html" LinkGroup="OculusAR">GetAllImageProcessors Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IImageProcessingService.GetAllImageProcessors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000134.html" LinkGroup="OculusAR">GetAllImageProcessors Method {ConfigService.Contract.IImageProcessingService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.GetAllImageProcessors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000129.html" LinkGroup="OculusAR">GetAllImageProcessors Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessing.GetAllImageProcessors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000108.html" LinkGroup="OculusAR">GetAllImageProcessors Method {ViewProvision.Contract.IImageProcessing}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.GetAllImageProcessors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000000A.html" LinkGroup="OculusAR">GetAllImageProcessors Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.GetCaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000013F.html" LinkGroup="OculusAR">GetCaptureDetails Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.ICaptureManagerService.GetCaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000132.html" LinkGroup="OculusAR">GetCaptureDetails Method {ConfigService.Contract.ICaptureManagerService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.GetCaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000128.html" LinkGroup="OculusAR">GetCaptureDetails Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ICaptureManager.GetCaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000106.html" LinkGroup="OculusAR">GetCaptureDetails Method {ViewProvision.Contract.ICaptureManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.GetCaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000005.html" LinkGroup="OculusAR">GetCaptureDetails Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.GetCaptureDetails" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000023.html" LinkGroup="OculusAR">GetCaptureDetails Method {ViewProvision.ViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IViewProvider.GetCurrentView" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000010D.html" LinkGroup="OculusAR">GetCurrentView Method {ViewProvision.Contract.IViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.GetCurrentView" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000007.html" LinkGroup="OculusAR">GetCurrentView Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.GetCurrentView" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000001D.html" LinkGroup="OculusAR">GetCurrentView Method {ViewProvision.ViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.GetCurrentViewAsBitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000013D.html" LinkGroup="OculusAR">GetCurrentViewAsBitmaps Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IViewProviderService.GetCurrentViewAsBitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000138.html" LinkGroup="OculusAR">GetCurrentViewAsBitmaps Method {ConfigService.Contract.IViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.GetCurrentViewAsBitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000125.html" LinkGroup="OculusAR">GetCurrentViewAsBitmaps Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IViewProvider.GetCurrentViewAsBitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000010C.html" LinkGroup="OculusAR">GetCurrentViewAsBitmaps Method {ViewProvision.Contract.IViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.GetCurrentViewAsBitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000006.html" LinkGroup="OculusAR">GetCurrentViewAsBitmaps Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.GetCurrentViewAsBitmaps" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000001C.html" LinkGroup="OculusAR">GetCurrentViewAsBitmaps Method {ViewProvision.ViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.GetLeftFrameSynchronously" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000001E.html" LinkGroup="OculusAR">GetLeftFrameSynchronously Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.GetRightFrameSynchronously" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000001F.html" LinkGroup="OculusAR">GetRightFrameSynchronously Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.GrayImageProcessor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000000D.html" LinkGroup="OculusAR">GrayImageProcessor Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlAttributeValueAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B8.html" LinkGroup="OculusAR">HtmlAttributeValueAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlAttributeValueAttribute.HtmlAttributeValueAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B9.html" LinkGroup="OculusAR">HtmlAttributeValueAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlElementAttributesAttribute.HtmlElementAttributesAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B5_overloads--.html" LinkGroup="OculusAR">HtmlElementAttributesAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlElementAttributesAttribute.HtmlElementAttributesAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B6_overloads--.html" LinkGroup="OculusAR">HtmlElementAttributesAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlElementAttributesAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B4.html" LinkGroup="OculusAR">HtmlElementAttributesAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ICaptureManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000104.html" LinkGroup="OculusAR">ICaptureManager Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.ICaptureManagerService" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000130.html" LinkGroup="OculusAR">ICaptureManagerService Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessing" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000107.html" LinkGroup="OculusAR">IImageProcessing Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IImageProcessingService" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000133.html" LinkGroup="OculusAR">IImageProcessingService Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000FE.html" LinkGroup="OculusAR">IImageProcessor Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IProcessedViewProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000010F.html" LinkGroup="OculusAR">IProcessedViewProvider Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IViewCalibrator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000102.html" LinkGroup="OculusAR">IViewCalibrator Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IViewCalibratorService" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000012E.html" LinkGroup="OculusAR">IViewCalibratorService Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IViewProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000010B.html" LinkGroup="OculusAR">IViewProvider Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IViewProviderService" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000137.html" LinkGroup="OculusAR">IViewProviderService Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.Image" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000029.html" LinkGroup="OculusAR">Image Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.SettingsControl.ImageProcessors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000038.html" LinkGroup="OculusAR">ImageProcessors Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.ImageProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000002E.html" LinkGroup="OculusAR">ImageProperty Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ImplicitNotNullAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000045.html" LinkGroup="OculusAR">ImplicitNotNullAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ImplicitUseKindFlags" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000006C.html" LinkGroup="OculusAR">ImplicitUseKindFlags Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ImplicitUseTargetFlags" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000072.html" LinkGroup="OculusAR">ImplicitUseTargetFlags Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="IoCContainer.IoCManager.Initialize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000011F.html" LinkGroup="OculusAR">Initialize Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.InstantHandleAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000007B.html" LinkGroup="OculusAR">InstantHandleAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.InvokerParameterNameAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000004C.html" LinkGroup="OculusAR">InvokerParameterNameAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="IoCContainer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000011C.html" LinkGroup="OculusAR">IoCContainer Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="IoCContainer.IoCManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000011D.html" LinkGroup="OculusAR">IoCManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ItemCanBeNullAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000044.html" LinkGroup="OculusAR">ItemCanBeNullAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ItemNotNullAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000043.html" LinkGroup="OculusAR">ItemNotNullAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MustUseReturnValueAttribute.Justification" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000080.html" LinkGroup="OculusAR">Justification Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.CaptureDetails.LeftChannel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F4.html" LinkGroup="OculusAR">LeftChannel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataBitmap.LeftImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000114.html" LinkGroup="OculusAR">LeftImage Property {ViewProvision.Contract.ViewDataBitmap}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataImage.LeftImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000118.html" LinkGroup="OculusAR">LeftImage Property {ViewProvision.Contract.ViewDataImage}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.LeftRotateCommand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000002C.html" LinkGroup="OculusAR">LeftRotateCommand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.LeftRotateCommandProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000031.html" LinkGroup="OculusAR">LeftRotateCommandProperty Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.LinqTunnelAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000CE.html" LinkGroup="OculusAR">LinqTunnelAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.LocalizationRequiredAttribute.LocalizationRequiredAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000057_overloads--.html" LinkGroup="OculusAR">LocalizationRequiredAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.LocalizationRequiredAttribute.LocalizationRequiredAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000058_overloads--.html" LinkGroup="OculusAR">LocalizationRequiredAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.LocalizationRequiredAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000056.html" LinkGroup="OculusAR">LocalizationRequiredAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MacroAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000087.html" LinkGroup="OculusAR">MacroAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.MainWindow" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000003D.html" LinkGroup="OculusAR">MainWindow Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.MainWindow.MainWindow" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000003E.html" LinkGroup="OculusAR">MainWindow Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute.MeansImplicitUseAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000066_overloads--.html" LinkGroup="OculusAR">MeansImplicitUseAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute.MeansImplicitUseAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000067_overloads--.html" LinkGroup="OculusAR">MeansImplicitUseAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute.MeansImplicitUseAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000069_overloads--.html" LinkGroup="OculusAR">MeansImplicitUseAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute.MeansImplicitUseAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000068_overloads--.html" LinkGroup="OculusAR">MeansImplicitUseAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000065.html" LinkGroup="OculusAR">MeansImplicitUseAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MustUseReturnValueAttribute.MustUseReturnValueAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000007E_overloads--.html" LinkGroup="OculusAR">MustUseReturnValueAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MustUseReturnValueAttribute.MustUseReturnValueAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000007F_overloads--.html" LinkGroup="OculusAR">MustUseReturnValueAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MustUseReturnValueAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000007D.html" LinkGroup="OculusAR">MustUseReturnValueAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessor.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000100.html" LinkGroup="OculusAR">Name Property {ViewProvision.Contract.IImageProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.GrayImageProcessor.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000000F.html" LinkGroup="OculusAR">Name Property {ViewProvision.Processors.GrayImageProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SmoothBilateralProcessor.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000014.html" LinkGroup="OculusAR">Name Property {ViewProvision.Processors.SmoothBilateralProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SobelProcessor.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000018.html" LinkGroup="OculusAR">Name Property {ViewProvision.Processors.SobelProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlAttributeValueAttribute.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000BA.html" LinkGroup="OculusAR">Name Property {ViewVisualization.Annotations.HtmlAttributeValueAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.HtmlElementAttributesAttribute.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000B7.html" LinkGroup="OculusAR">Name Property {ViewVisualization.Annotations.HtmlElementAttributesAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorImportNamespaceAttribute.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E2.html" LinkGroup="OculusAR">Name Property {ViewVisualization.Annotations.RazorImportNamespaceAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ValueProviderAttribute.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000004B.html" LinkGroup="OculusAR">Name Property {ViewVisualization.Annotations.ValueProviderAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ProcessorInfo.Name" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000035.html" LinkGroup="OculusAR">Name Property {ViewVisualization.Controls.ProcessorInfo}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NoEnumerationAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000CF.html" LinkGroup="OculusAR">NoEnumerationAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NoReorder" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000EF.html" LinkGroup="OculusAR">NoReorder Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NotNullAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000042.html" LinkGroup="OculusAR">NotNullAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NotifyPropertyChangedInvocatorAttribute.NotifyPropertyChangedInvocatorAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000004E_overloads--.html" LinkGroup="OculusAR">NotifyPropertyChangedInvocatorAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NotifyPropertyChangedInvocatorAttribute.NotifyPropertyChangedInvocatorAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000004F_overloads--.html" LinkGroup="OculusAR">NotifyPropertyChangedInvocatorAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NotifyPropertyChangedInvocatorAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000004D.html" LinkGroup="OculusAR">NotifyPropertyChangedInvocatorAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.OnException" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000013B.html" LinkGroup="OculusAR">OnException Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.SettingsControl.OnPropertyChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000003B.html" LinkGroup="OculusAR">OnPropertyChanged Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.MainWindow.OnSourceInitialized" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000003F.html" LinkGroup="OculusAR">OnSourceInitialized Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.NotifyPropertyChangedInvocatorAttribute.ParameterName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000050.html" LinkGroup="OculusAR">ParameterName Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PathReferenceAttribute.PathReferenceAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000083_overloads--.html" LinkGroup="OculusAR">PathReferenceAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PathReferenceAttribute.PathReferenceAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000084_overloads--.html" LinkGroup="OculusAR">PathReferenceAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PathReferenceAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000082.html" LinkGroup="OculusAR">PathReferenceAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessor.Process" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000FF.html" LinkGroup="OculusAR">Process Method {ViewProvision.Contract.IImageProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.GrayImageProcessor.Process" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000000E.html" LinkGroup="OculusAR">Process Method {ViewProvision.Processors.GrayImageProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SmoothBilateralProcessor.Process" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000013.html" LinkGroup="OculusAR">Process Method {ViewProvision.Processors.SmoothBilateralProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SobelProcessor.Process" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000017.html" LinkGroup="OculusAR">Process Method {ViewProvision.Processors.SobelProcessor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000001.html" LinkGroup="OculusAR">ProcessedViewProvider Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.ProcessedViewProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000002.html" LinkGroup="OculusAR">ProcessedViewProvider Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ProcessorInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000034.html" LinkGroup="OculusAR">ProcessorInfo Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.SettingsControl.PropertyChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000003A.html" LinkGroup="OculusAR">PropertyChanged Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ProvidesContextAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000081.html" LinkGroup="OculusAR">ProvidesContextAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PublicAPIAttribute.PublicAPIAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000078_overloads--.html" LinkGroup="OculusAR">PublicAPIAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PublicAPIAttribute.PublicAPIAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000079_overloads--.html" LinkGroup="OculusAR">PublicAPIAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PublicAPIAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000077.html" LinkGroup="OculusAR">PublicAPIAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.PureAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000007C.html" LinkGroup="OculusAR">PureAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorDirectiveAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E7.html" LinkGroup="OculusAR">RazorDirectiveAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorDirectiveAttribute.RazorDirectiveAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E8.html" LinkGroup="OculusAR">RazorDirectiveAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorHelperCommonAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000EA.html" LinkGroup="OculusAR">RazorHelperCommonAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorImportNamespaceAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E0.html" LinkGroup="OculusAR">RazorImportNamespaceAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorImportNamespaceAttribute.RazorImportNamespaceAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E1.html" LinkGroup="OculusAR">RazorImportNamespaceAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorInjectionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E3.html" LinkGroup="OculusAR">RazorInjectionAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorInjectionAttribute.RazorInjectionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E4.html" LinkGroup="OculusAR">RazorInjectionAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorLayoutAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000EB.html" LinkGroup="OculusAR">RazorLayoutAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorSectionAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000BB.html" LinkGroup="OculusAR">RazorSectionAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorWriteLiteralMethodAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000EC.html" LinkGroup="OculusAR">RazorWriteLiteralMethodAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorWriteMethodAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000ED.html" LinkGroup="OculusAR">RazorWriteMethodAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorWriteMethodParameterAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000EE.html" LinkGroup="OculusAR">RazorWriteMethodParameterAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RegexPatternAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D0.html" LinkGroup="OculusAR">RegexPatternAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.LocalizationRequiredAttribute.Required" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000059.html" LinkGroup="OculusAR">Required Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.CaptureDetails.RightChannel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F5.html" LinkGroup="OculusAR">RightChannel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataBitmap.RightImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000115.html" LinkGroup="OculusAR">RightImage Property {ViewProvision.Contract.ViewDataBitmap}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataImage.RightImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000119.html" LinkGroup="OculusAR">RightImage Property {ViewProvision.Contract.ViewDataImage}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.RightRotateCommand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000002D.html" LinkGroup="OculusAR">RightRotateCommand Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.ChannelControl.RightRotateCommandProperty" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000032.html" LinkGroup="OculusAR">RightRotateCommandProperty Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.RotateImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000013E.html" LinkGroup="OculusAR">RotateImage Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IViewCalibratorService.RotateImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000012F.html" LinkGroup="OculusAR">RotateImage Method {ConfigService.Contract.IViewCalibratorService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.RotateImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000126.html" LinkGroup="OculusAR">RotateImage Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IViewCalibrator.RotateImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000103.html" LinkGroup="OculusAR">RotateImage Method {ViewProvision.Contract.IViewCalibrator}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.RotateImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000003.html" LinkGroup="OculusAR">RotateImage Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.RotateImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000021.html" LinkGroup="OculusAR">RotateImage Method {ViewProvision.ViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.RotateSide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000110.html" LinkGroup="OculusAR">RotateSide Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ChannelDetails.RotationAngle" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F8.html" LinkGroup="OculusAR">RotationAngle Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="SOLUTION-WIDE PROPERTIES Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000144.html" LinkGroup="OculusAR">SOLUTION-WIDE PROPERTIES Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.SetCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000140.html" LinkGroup="OculusAR">SetCapture Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.ICaptureManagerService.SetCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000131.html" LinkGroup="OculusAR">SetCapture Method {ConfigService.Contract.ICaptureManagerService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.SetCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000127.html" LinkGroup="OculusAR">SetCapture Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ICaptureManager.SetCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000105.html" LinkGroup="OculusAR">SetCapture Method {ViewProvision.Contract.ICaptureManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.SetCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000004.html" LinkGroup="OculusAR">SetCapture Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.SetCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000022.html" LinkGroup="OculusAR">SetCapture Method {ViewProvision.ViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.SetProcessorState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000142.html" LinkGroup="OculusAR">SetProcessorState Method {ConfigService.Client.ViewProviderClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Contract.IImageProcessingService.SetProcessorState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000135.html" LinkGroup="OculusAR">SetProcessorState Method {ConfigService.Contract.IImageProcessingService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.SetProcessorState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000012A.html" LinkGroup="OculusAR">SetProcessorState Method {ConfigService.Server.ViewProviderService}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IImageProcessing.SetProcessorState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000109.html" LinkGroup="OculusAR">SetProcessorState Method {ViewProvision.Contract.IImageProcessing}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.SetProcessorState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000000B.html" LinkGroup="OculusAR">SetProcessorState Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.SettingsControl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000037.html" LinkGroup="OculusAR">SettingsControl Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls.SettingsControl.SettingsControl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000039.html" LinkGroup="OculusAR">SettingsControl Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SmoothBilateralProcessor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000011.html" LinkGroup="OculusAR">SmoothBilateralProcessor Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SmoothBilateralProcessor.SmoothBilateralProcessor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000012.html" LinkGroup="OculusAR">SmoothBilateralProcessor Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors.SobelProcessor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000016.html" LinkGroup="OculusAR">SobelProcessor Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.SourceTemplateAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000086.html" LinkGroup="OculusAR">SourceTemplateAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.StringFormatMethodAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000046.html" LinkGroup="OculusAR">StringFormatMethodAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.StringFormatMethodAttribute.StringFormatMethodAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000047.html" LinkGroup="OculusAR">StringFormatMethodAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.AspChildControlTypeAttribute.TagName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D5.html" LinkGroup="OculusAR">TagName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MacroAttribute.Target" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000008A.html" LinkGroup="OculusAR">Target Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute.TargetFlags" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000006B.html" LinkGroup="OculusAR">TargetFlags Property {ViewVisualization.Annotations.MeansImplicitUseAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute.TargetFlags" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000064.html" LinkGroup="OculusAR">TargetFlags Property {ViewVisualization.Annotations.UsedImplicitlyAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.TerminatesProgramAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000CD.html" LinkGroup="OculusAR">TerminatesProgramAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.RazorInjectionAttribute.Type" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000E5.html" LinkGroup="OculusAR">Type Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.IViewProvider.UpdateFrames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000010E.html" LinkGroup="OculusAR">UpdateFrames Method {ViewProvision.Contract.IViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ProcessedViewProvider.UpdateFrames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000008.html" LinkGroup="OculusAR">UpdateFrames Method {ViewProvision.ProcessedViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.UpdateFrames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000020.html" LinkGroup="OculusAR">UpdateFrames Method {ViewProvision.ViewProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.MeansImplicitUseAttribute.UseKindFlags" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000006A.html" LinkGroup="OculusAR">UseKindFlags Property {ViewVisualization.Annotations.MeansImplicitUseAttribute}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute.UseKindFlags" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000063.html" LinkGroup="OculusAR">UseKindFlags Property {ViewVisualization.Annotations.UsedImplicitlyAttribute}</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute.UsedImplicitlyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000005F_overloads--.html" LinkGroup="OculusAR">UsedImplicitlyAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute.UsedImplicitlyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000060_overloads--.html" LinkGroup="OculusAR">UsedImplicitlyAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute.UsedImplicitlyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000062_overloads--.html" LinkGroup="OculusAR">UsedImplicitlyAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute.UsedImplicitlyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000061_overloads--.html" LinkGroup="OculusAR">UsedImplicitlyAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.UsedImplicitlyAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000005E.html" LinkGroup="OculusAR">UsedImplicitlyAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ValueProviderAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000049.html" LinkGroup="OculusAR">ValueProviderAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.ValueProviderAttribute.ValueProviderAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000004A.html" LinkGroup="OculusAR">ValueProviderAttribute Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataBitmap" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000113.html" LinkGroup="OculusAR">ViewDataBitmap Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataBitmap.ViewDataBitmap" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000116.html" LinkGroup="OculusAR">ViewDataBitmap Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000117.html" LinkGroup="OculusAR">ViewDataImage Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract.ViewDataImage.ViewDataImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000011A.html" LinkGroup="OculusAR">ViewDataImage Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000001A.html" LinkGroup="OculusAR">ViewProvider Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.ViewProvider.ViewProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000001B.html" LinkGroup="OculusAR">ViewProvider Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000013A.html" LinkGroup="OculusAR">ViewProviderClient Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Client.ViewProviderClient.ViewProviderClient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000013C.html" LinkGroup="OculusAR">ViewProviderClient Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000122.html" LinkGroup="OculusAR">ViewProviderService Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ConfigService.Server.ViewProviderService.ViewProviderService" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000124.html" LinkGroup="OculusAR">ViewProviderService Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000000.html" LinkGroup="OculusAR">ViewProvision Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Contract" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000F2.html" LinkGroup="OculusAR">ViewProvision.Contract Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvision.Processors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_000000000000000C.html" LinkGroup="OculusAR">ViewProvision.Processors Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000024.html" LinkGroup="OculusAR">ViewVisualization Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000040.html" LinkGroup="OculusAR">ViewVisualization.Annotations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Controls" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_0000000000000027.html" LinkGroup="OculusAR">ViewVisualization.Controls Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.XamlItemBindingOfItemsControlAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D2.html" LinkGroup="OculusAR">XamlItemBindingOfItemsControlAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewVisualization.Annotations.XamlItemsControlAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:OculusAR.chm::/topic_00000000000000D1.html" LinkGroup="OculusAR">XamlItemsControlAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+
