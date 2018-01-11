@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="DoubleEye.Editor" Title="DoubleEye.Editor Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000009.html" LinkGroup="DoubleEye.Editor"><default> Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="DoubleEye.Editor Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000008.html" LinkGroup="DoubleEye.Editor">DoubleEye.Editor Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TextureConverterTests.FromImage_GivenEmguImage_ShouldCreateUnityTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000001.html" LinkGroup="DoubleEye.Editor">FromImage_GivenEmguImage_ShouldCreateUnityTexture Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvisionTests.GetCurrentViewInternal_ShouldReturnNotNull" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000004.html" LinkGroup="DoubleEye.Editor">GetCurrentViewInternal_ShouldReturnNotNull Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvisionTests.GetCurrentView_ShouldReturnNotNull" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000003.html" LinkGroup="DoubleEye.Editor">GetCurrentView_ShouldReturnNotNull Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManagerEditor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000006.html" LinkGroup="DoubleEye.Editor">OVRManagerEditor Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPluginUpdaterStub" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000005.html" LinkGroup="DoubleEye.Editor">OVRPluginUpdaterStub Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManagerEditor.OnInspectorGUI" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000007.html" LinkGroup="DoubleEye.Editor">OnInspectorGUI Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="TextureConverterTests" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000000.html" LinkGroup="DoubleEye.Editor">TextureConverterTests Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="ViewProvisionTests" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.Editor.chm::/topic_0000000000000002.html" LinkGroup="DoubleEye.Editor">ViewProvisionTests Class</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

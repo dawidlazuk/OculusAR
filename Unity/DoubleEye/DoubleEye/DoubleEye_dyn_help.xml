@@ -1,0 +1,5762 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="DoubleEye" Title="DoubleEye Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F9.html" LinkGroup="DoubleEye"><default> Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.Acceleration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000296.html" LinkGroup="DoubleEye">Acceleration Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.AllowMovement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000007F.html" LinkGroup="DoubleEye">AllowMovement Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.AllowPitchLook" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000007A.html" LinkGroup="DoubleEye">AllowPitchLook Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.AllowYawLook" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000007B.html" LinkGroup="DoubleEye">AllowYawLook Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest.BoolMonitor.AppendToStringBuilder" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000023E.html" LinkGroup="DoubleEye">AppendToStringBuilder Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.ApplyTo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000028E.html" LinkGroup="DoubleEye">ApplyTo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C3.html" LinkGroup="DoubleEye">Assets.Transmitter Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.AudioInChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000019A.html" LinkGroup="DoubleEye">AudioInChanged Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.AudioOutChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000199.html" LinkGroup="DoubleEye">AudioOutChanged Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.Awake" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000026A.html" LinkGroup="DoubleEye">Awake Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Axis1D" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000126.html" LinkGroup="DoubleEye">Axis1D Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Axis2D" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000134.html" LinkGroup="DoubleEye">Axis2D Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.BackAndSideDampen" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000298.html" LinkGroup="DoubleEye">BackAndSideDampen Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest.BoolMonitor.BoolGenerator" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000023B.html" LinkGroup="DoubleEye">BoolGenerator Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest.BoolMonitor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000023A.html" LinkGroup="DoubleEye">BoolMonitor Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest.BoolMonitor.BoolMonitor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000023C.html" LinkGroup="DoubleEye">BoolMonitor Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryLookAndFeel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000004B.html" LinkGroup="DoubleEye">BoundaryLookAndFeel Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryTestResult" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000046.html" LinkGroup="DoubleEye">BoundaryTestResult Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000043.html" LinkGroup="DoubleEye">BoundaryType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Button" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B8.html" LinkGroup="DoubleEye">Button Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.CameraDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001B5.html" LinkGroup="DoubleEye">CameraDevice Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.CameraRig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000082.html" LinkGroup="DoubleEye">CameraRig Field {OVRDebugHeadController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.CameraRig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A1.html" LinkGroup="DoubleEye">CameraRig Field {OVRPlayerController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.Capacity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000AE.html" LinkGroup="DoubleEye">Capacity Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Channels" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000009A.html" LinkGroup="DoubleEye">Channels Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.CheckForGrabOrRelease" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000026C.html" LinkGroup="DoubleEye">CheckForGrabOrRelease Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.Cleanup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000006.html" LinkGroup="DoubleEye">Cleanup Method {OVRCameraComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition.Cleanup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000012.html" LinkGroup="DoubleEye">Cleanup Method {OVRComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.Cleanup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000001D.html" LinkGroup="DoubleEye">Cleanup Method {OVRDirectComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExternalComposition.Cleanup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000022.html" LinkGroup="DoubleEye">Cleanup Method {OVRExternalComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.Cleanup" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000036.html" LinkGroup="DoubleEye">Cleanup Method {OVRSandwichComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.OVRHapticsChannel.Clear" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000AA.html" LinkGroup="DoubleEye">Clear Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.Click" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F3.html" LinkGroup="DoubleEye">Click Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryTestResult.ClosestDistance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000048.html" LinkGroup="DoubleEye">ClosestDistance Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryTestResult.ClosestPoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000049.html" LinkGroup="DoubleEye">ClosestPoint Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryTestResult.ClosestPointNormal" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000004A.html" LinkGroup="DoubleEye">ClosestPointNormal Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryLookAndFeel.Color" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000004C.html" LinkGroup="DoubleEye">Color Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.CombineWithConfigurationFile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000290.html" LinkGroup="DoubleEye">CombineWithConfigurationFile Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.CompositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001AF.html" LinkGroup="DoubleEye">CompositionMethod Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition.CompositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000010.html" LinkGroup="DoubleEye">CompositionMethod Method {OVRComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.CompositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000001A.html" LinkGroup="DoubleEye">CompositionMethod Method {OVRDirectComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExternalComposition.CompositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000001F.html" LinkGroup="DoubleEye">CompositionMethod Method {OVRExternalComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.CompositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000033.html" LinkGroup="DoubleEye">CompositionMethod Method {OVRSandwichComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.ComputeTrackReferenceMatrix" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000064.html" LinkGroup="DoubleEye">ComputeTrackReferenceMatrix Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000009D.html" LinkGroup="DoubleEye">Config Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Controller" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000142.html" LinkGroup="DoubleEye">Controller Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.Controller" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A0.html" LinkGroup="DoubleEye">Controller Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.Count" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000AD.html" LinkGroup="DoubleEye">Count Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.Create" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000218.html" LinkGroup="DoubleEye">Create Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.CreateCameraFramePlaneObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000008.html" LinkGroup="DoubleEye">CreateCameraFramePlaneObject Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VREyeRaycaster.CurrentInteractible" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D8.html" LinkGroup="DoubleEye">CurrentInteractible Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.Damping" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000297.html" LinkGroup="DoubleEye">Damping Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.DepthQuality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C4.html" LinkGroup="DoubleEye">DepthQuality Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.DismissHSWDisplay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A5.html" LinkGroup="DoubleEye">DismissHSWDisplay Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRNativeBuffer.Dispose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000078.html" LinkGroup="DoubleEye">Dispose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.DoubleClick" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F4.html" LinkGroup="DoubleEye">DoubleClick Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.DoubleClickTime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E7.html" LinkGroup="DoubleEye">DoubleClickTime Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="DoubleEye Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F8.html" LinkGroup="DoubleEye">DoubleEye Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.Down" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F6.html" LinkGroup="DoubleEye">Down Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.EnsureGameObjectIntegrity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000063.html" LinkGroup="DoubleEye">EnsureGameObjectIntegrity Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.Equality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000006D.html" LinkGroup="DoubleEye">Equality Operator</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.Equals" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000006B.html" LinkGroup="DoubleEye">Equals Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.EyeRenderDesc" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000084.html" LinkGroup="DoubleEye">EyeRenderDesc Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.EyeTextureFormat" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000186.html" LinkGroup="DoubleEye">EyeTextureFormat Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixMethodDelegate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000178.html" LinkGroup="DoubleEye">FixMethodDelegate Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.FixRecord" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000180.html" LinkGroup="DoubleEye">FixRecord Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000179.html" LinkGroup="DoubleEye">FixRecord Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.FixedUpdate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000014F.html" LinkGroup="DoubleEye">FixedUpdate Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.ForceRelease" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000269.html" LinkGroup="DoubleEye">ForceRelease Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.ForwardSpeed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000080.html" LinkGroup="DoubleEye">ForwardSpeed Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.ITextureConverter.FromImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C7.html" LinkGroup="DoubleEye">FromImage Method {Assets.Transmitter.ITextureConverter}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.TextureConverter.FromImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D0.html" LinkGroup="DoubleEye">FromImage Method {Assets.Transmitter.TextureConverter}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.Frustum" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000021E.html" LinkGroup="DoubleEye">Frustum Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.GamePad_PitchDegreesPerSec" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000007D.html" LinkGroup="DoubleEye">GamePad_PitchDegreesPerSec Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.GamePad_YawDegreesPerSec" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000007E.html" LinkGroup="DoubleEye">GamePad_YawDegreesPerSec Field</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000016A_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000016C_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000158_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000164_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000016B_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000016D_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000159_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000165_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000015F_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Get" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000015E_overloads--.html" LinkGroup="DoubleEye">Get Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetActiveController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000170.html" LinkGroup="DoubleEye">GetActiveController Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRNativeBuffer.GetCapacity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000076.html" LinkGroup="DoubleEye">GetCapacity Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.GetConfigured" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000004D.html" LinkGroup="DoubleEye">GetConfigured Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetConnectedControllers" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000016E.html" LinkGroup="DoubleEye">GetConnectedControllers Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetControllerBatteryPercentRemaining" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000175.html" LinkGroup="DoubleEye">GetControllerBatteryPercentRemaining Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetControllerOrientationTracked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000150.html" LinkGroup="DoubleEye">GetControllerOrientationTracked Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetControllerPositionTracked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000151.html" LinkGroup="DoubleEye">GetControllerPositionTracked Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetControllerRecenterCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000174.html" LinkGroup="DoubleEye">GetControllerRecenterCount Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetControllerWasRecentered" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000173.html" LinkGroup="DoubleEye">GetControllerWasRecentered Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.GetDimensions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000053.html" LinkGroup="DoubleEye">GetDimensions Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000015A_overloads--.html" LinkGroup="DoubleEye">GetDown Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000166_overloads--.html" LinkGroup="DoubleEye">GetDown Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000015B_overloads--.html" LinkGroup="DoubleEye">GetDown Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000167_overloads--.html" LinkGroup="DoubleEye">GetDown Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000161_overloads--.html" LinkGroup="DoubleEye">GetDown Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000160_overloads--.html" LinkGroup="DoubleEye">GetDown Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.GetEyeRenderDesc" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000095.html" LinkGroup="DoubleEye">GetEyeRenderDesc Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.GetFrustum" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000226.html" LinkGroup="DoubleEye">GetFrustum Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.GetGeometry" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000052.html" LinkGroup="DoubleEye">GetGeometry Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.GetHaltUpdateMovement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002AD.html" LinkGroup="DoubleEye">GetHaltUpdateMovement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.GetHashCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000006C.html" LinkGroup="DoubleEye">GetHashCode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.GetHistoryRecordForComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000038.html" LinkGroup="DoubleEye">GetHistoryRecordForComposition Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetLocalControllerAcceleration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000154.html" LinkGroup="DoubleEye">GetLocalControllerAcceleration Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetLocalControllerAngularAcceleration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000157.html" LinkGroup="DoubleEye">GetLocalControllerAngularAcceleration Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetLocalControllerAngularVelocity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000156.html" LinkGroup="DoubleEye">GetLocalControllerAngularVelocity Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetLocalControllerPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000152.html" LinkGroup="DoubleEye">GetLocalControllerPosition Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetLocalControllerRotation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000155.html" LinkGroup="DoubleEye">GetLocalControllerRotation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetLocalControllerVelocity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000153.html" LinkGroup="DoubleEye">GetLocalControllerVelocity Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.GetMoveScaleMultiplier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A7.html" LinkGroup="DoubleEye">GetMoveScaleMultiplier Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRNativeBuffer.GetPointer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000077.html" LinkGroup="DoubleEye">GetPointer Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.GetPose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000227.html" LinkGroup="DoubleEye">GetPose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.GetPoseValid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000228.html" LinkGroup="DoubleEye">GetPoseValid Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.GetPresent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000229.html" LinkGroup="DoubleEye">GetPresent Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.GetRotationScaleMultiplier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A9.html" LinkGroup="DoubleEye">GetRotationScaleMultiplier Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.GetSkipMouseRotation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002AB.html" LinkGroup="DoubleEye">GetSkipMouseRotation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.IStereoVidTransmitter.GetStereoView" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C5.html" LinkGroup="DoubleEye">GetStereoView Method {Assets.Transmitter.IStereoVidTransmitter}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.StereoVidTransmitter.GetStereoView" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002CB.html" LinkGroup="DoubleEye">GetStereoView Method {Assets.Transmitter.StereoVidTransmitter}</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000015C_overloads--.html" LinkGroup="DoubleEye">GetUp Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000168_overloads--.html" LinkGroup="DoubleEye">GetUp Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000015D_overloads--.html" LinkGroup="DoubleEye">GetUp Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000169_overloads--.html" LinkGroup="DoubleEye">GetUp Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000163_overloads--.html" LinkGroup="DoubleEye">GetUp Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.GetUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000162_overloads--.html" LinkGroup="DoubleEye">GetUp Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.GetVisible" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000054.html" LinkGroup="DoubleEye">GetVisible Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.GrabBegin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000252.html" LinkGroup="DoubleEye">GrabBegin Method {OVRGrabbable}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.GrabBegin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000026D.html" LinkGroup="DoubleEye">GrabBegin Method {OVRGrabber}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.GrabEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000253.html" LinkGroup="DoubleEye">GrabEnd Method {OVRGrabbable}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.GrabEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000026F.html" LinkGroup="DoubleEye">GrabEnd Method {OVRGrabber}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.GrabVolumeEnable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000271.html" LinkGroup="DoubleEye">GrabVolumeEnable Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.GrabbableRelease" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000270.html" LinkGroup="DoubleEye">GrabbableRelease Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.GravityModifier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000029E.html" LinkGroup="DoubleEye">GravityModifier Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGridCube.GridKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000274.html" LinkGroup="DoubleEye">GridKey Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.HMDAcquired" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000018F.html" LinkGroup="DoubleEye">HMDAcquired Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.HMDLost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000190.html" LinkGroup="DoubleEye">HMDLost Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.HMDMounted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000191.html" LinkGroup="DoubleEye">HMDMounted Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.HMDUnmounted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000192.html" LinkGroup="DoubleEye">HMDUnmounted Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.HSWDismissed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000019D.html" LinkGroup="DoubleEye">HSWDismissed Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.HistoryRecord" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000027.html" LinkGroup="DoubleEye">HistoryRecord Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.HmdResetsY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000029C.html" LinkGroup="DoubleEye">HmdResetsY Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.HmdRotatesY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000029D.html" LinkGroup="DoubleEye">HmdRotatesY Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.IStereoVidTransmitter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C4.html" LinkGroup="DoubleEye">IStereoVidTransmitter Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.ITextureConverter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C6.html" LinkGroup="DoubleEye">ITextureConverter Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.TextureConverter.ImageToByteArray" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D2.html" LinkGroup="DoubleEye">ImageToByteArray Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.Inequality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000006E.html" LinkGroup="DoubleEye">Inequality Operator</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.InputFocusAcquired" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000195.html" LinkGroup="DoubleEye">InputFocusAcquired Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.InputFocusLost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000196.html" LinkGroup="DoubleEye">InputFocusLost Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRDeviceManager.Instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D5.html" LinkGroup="DoubleEye">Instance Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.Inverse" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000072.html" LinkGroup="DoubleEye">Inverse Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.InvertPitch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000007C.html" LinkGroup="DoubleEye">InvertPitch Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.IsControllerConnected" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000016F.html" LinkGroup="DoubleEye">IsControllerConnected Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.IsOver" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F0.html" LinkGroup="DoubleEye">IsOver Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.BoundaryTestResult.IsTriggering" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000047.html" LinkGroup="DoubleEye">IsTriggering Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.Jump" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A5.html" LinkGroup="DoubleEye">Jump Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.JumpForce" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000299.html" LinkGroup="DoubleEye">JumpForce Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.LatencyData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000087.html" LinkGroup="DoubleEye">LatencyData Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.LeftChannel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000009B.html" LinkGroup="DoubleEye">LeftChannel Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.StereoView.LeftEye" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002CD.html" LinkGroup="DoubleEye">LeftEye Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayCameraVideos.LeftImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C1.html" LinkGroup="DoubleEye">LeftImage Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.Load" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A4.html" LinkGroup="DoubleEye">Load Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.ITextureConverter.LoadFromImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C8.html" LinkGroup="DoubleEye">LoadFromImage Method {Assets.Transmitter.ITextureConverter}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.TextureConverter.LoadFromImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D1.html" LinkGroup="DoubleEye">LoadFromImage Method {Assets.Transmitter.TextureConverter}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.MaximumBufferSamplesCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A3.html" LinkGroup="DoubleEye">MaximumBufferSamplesCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.MinimumBufferSamplesCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A1.html" LinkGroup="DoubleEye">MinimumBufferSamplesCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.MinimumSafeSamplesQueued" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A0.html" LinkGroup="DoubleEye">MinimumSafeSamplesQueued Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.OVRHapticsChannel.Mix" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A9.html" LinkGroup="DoubleEye">Mix Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.MoveGrabbedObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000026E.html" LinkGroup="DoubleEye">MoveGrabbedObject Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.Multiply" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000071.html" LinkGroup="DoubleEye">Multiply Operator</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.NearTouch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000118.html" LinkGroup="DoubleEye">NearTouch Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.Node" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000003F.html" LinkGroup="DoubleEye">Node Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000003E.html" LinkGroup="DoubleEye">OVRBoundary Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000000.html" LinkGroup="DoubleEye">OVRCameraComposition Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.OVRCameraComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000005.html" LinkGroup="DoubleEye">OVRCameraComposition Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.OVRCameraFrameCompositionManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000000B.html" LinkGroup="DoubleEye">OVRCameraFrameCompositionManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000056.html" LinkGroup="DoubleEye">OVRCameraRig Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRChromaticAberration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000022A.html" LinkGroup="DoubleEye">OVRChromaticAberration Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000000F.html" LinkGroup="DoubleEye">OVRComposition Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000022C.html" LinkGroup="DoubleEye">OVRCubemapCapture Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000079.html" LinkGroup="DoubleEye">OVRDebugHeadController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000235.html" LinkGroup="DoubleEye">OVRDebugInfo Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000016.html" LinkGroup="DoubleEye">OVRDirectComposition Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.OVRDirectComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000001B.html" LinkGroup="DoubleEye">OVRDirectComposition Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000083.html" LinkGroup="DoubleEye">OVRDisplay Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.OVRDisplay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000008D.html" LinkGroup="DoubleEye">OVRDisplay Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExtensions" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000065.html" LinkGroup="DoubleEye">OVRExtensions Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExternalComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000001E.html" LinkGroup="DoubleEye">OVRExternalComposition Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExternalComposition.OVRExternalComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000020.html" LinkGroup="DoubleEye">OVRExternalComposition Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000236.html" LinkGroup="DoubleEye">OVRGearVrController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000239.html" LinkGroup="DoubleEye">OVRGearVrControllerTest Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000240.html" LinkGroup="DoubleEye">OVRGrabbable Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000255.html" LinkGroup="DoubleEye">OVRGrabber Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGridCube" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000273.html" LinkGroup="DoubleEye">OVRGridCube Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000099.html" LinkGroup="DoubleEye">OVRHaptics Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.OVRHapticsChannel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A5.html" LinkGroup="DoubleEye">OVRHapticsChannel Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.OVRHapticsChannel.OVRHapticsChannel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A6.html" LinkGroup="DoubleEye">OVRHapticsChannel Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.OVRHapticsClip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B0_overloads--.html" LinkGroup="DoubleEye">OVRHapticsClip Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.OVRHapticsClip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B4_overloads--.html" LinkGroup="DoubleEye">OVRHapticsClip Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.OVRHapticsClip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B2_overloads--.html" LinkGroup="DoubleEye">OVRHapticsClip Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.OVRHapticsClip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B1_overloads--.html" LinkGroup="DoubleEye">OVRHapticsClip Constructor</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.OVRHapticsClip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B3_overloads--.html" LinkGroup="DoubleEye">OVRHapticsClip Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000AC.html" LinkGroup="DoubleEye">OVRHapticsClip Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B7.html" LinkGroup="DoubleEye">OVRInput Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLayerAttribute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000176.html" LinkGroup="DoubleEye">OVRLayerAttribute Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000177.html" LinkGroup="DoubleEye">OVRLint Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000182.html" LinkGroup="DoubleEye">OVRManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000276.html" LinkGroup="DoubleEye">OVRMixedRealityCaptureSettings Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRModeParms" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000291.html" LinkGroup="DoubleEye">OVRModeParms Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMonoscopic" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000293.html" LinkGroup="DoubleEye">OVRMonoscopic Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRNativeBuffer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000073.html" LinkGroup="DoubleEye">OVRNativeBuffer Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRNativeBuffer.OVRNativeBuffer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000074.html" LinkGroup="DoubleEye">OVRNativeBuffer Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001EA.html" LinkGroup="DoubleEye">OVROverlay Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlatformMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F9.html" LinkGroup="DoubleEye">OVRPlatformMenu Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000295.html" LinkGroup="DoubleEye">OVRPlayerController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000069.html" LinkGroup="DoubleEye">OVRPose Structure</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000200.html" LinkGroup="DoubleEye">OVRProfile Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRRTOverlayConnector" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B2.html" LinkGroup="DoubleEye">OVRRTOverlayConnector Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRResetOrientation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B0.html" LinkGroup="DoubleEye">OVRResetOrientation Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000023.html" LinkGroup="DoubleEye">OVRSandwichComposition Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.OVRSandwichComposition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000034.html" LinkGroup="DoubleEye">OVRSandwichComposition Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.OVRSandwichCompositionManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000003A.html" LinkGroup="DoubleEye">OVRSandwichCompositionManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSceneSampleController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B6.html" LinkGroup="DoubleEye">OVRSceneSampleController Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRScreenFade" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002BB.html" LinkGroup="DoubleEye">OVRScreenFade Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000020E.html" LinkGroup="DoubleEye">OVRTouchpad Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpadHelper" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000021B.html" LinkGroup="DoubleEye">OVRTouchpadHelper Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000021D.html" LinkGroup="DoubleEye">OVRTracker Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRWaitCursor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002BE.html" LinkGroup="DoubleEye">OVRWaitCursor Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.OffhandGrabbed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000272.html" LinkGroup="DoubleEye">OffhandGrabbed Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.OnCancel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E6.html" LinkGroup="DoubleEye">OnCancel Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.OnClick" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E2.html" LinkGroup="DoubleEye">OnClick Event {VRStandardAssets.Utils.VRInput}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.OnClick" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002EB.html" LinkGroup="DoubleEye">OnClick Event {VRStandardAssets.Utils.VRInteractiveItem}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpadHelper.OnDisable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000021C.html" LinkGroup="DoubleEye">OnDisable Method {OVRTouchpadHelper}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.OnDisable" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000021A.html" LinkGroup="DoubleEye">OnDisable Method {OVRTouchpad}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.OnDoubleClick" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E5.html" LinkGroup="DoubleEye">OnDoubleClick Event {VRStandardAssets.Utils.VRInput}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.OnDoubleClick" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002EC.html" LinkGroup="DoubleEye">OnDoubleClick Event {VRStandardAssets.Utils.VRInteractiveItem}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.OnDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E3.html" LinkGroup="DoubleEye">OnDown Event {VRStandardAssets.Utils.VRInput}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.OnDown" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002EE.html" LinkGroup="DoubleEye">OnDown Event {VRStandardAssets.Utils.VRInteractiveItem}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.OnOut" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002EA.html" LinkGroup="DoubleEye">OnOut Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.OnOver" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E9.html" LinkGroup="DoubleEye">OnOver Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VREyeRaycaster.OnRaycasthit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D7.html" LinkGroup="DoubleEye">OnRaycasthit Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlatformMenu.OnShortPress" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001FF.html" LinkGroup="DoubleEye">OnShortPress Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.OnSwipe" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E1.html" LinkGroup="DoubleEye">OnSwipe Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.OnUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E4.html" LinkGroup="DoubleEye">OnUp Event {VRStandardAssets.Utils.VRInput}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.OnUp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002ED.html" LinkGroup="DoubleEye">OnUp Event {VRStandardAssets.Utils.VRInteractiveItem}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.OptimalBufferSamplesCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A2.html" LinkGroup="DoubleEye">OptimalBufferSamplesCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.Out" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F2.html" LinkGroup="DoubleEye">Out Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.Over" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F1.html" LinkGroup="DoubleEye">Over Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.OverlayShape" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001EB.html" LinkGroup="DoubleEye">OverlayShape Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.OverlayType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F0.html" LinkGroup="DoubleEye">OverlayType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.OverrideOverlayTextureInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F8.html" LinkGroup="DoubleEye">OverrideOverlayTextureInfo Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.PlatformUIConfirmQuit" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E8.html" LinkGroup="DoubleEye">PlatformUIConfirmQuit Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.PlatformUIGlobalMenu" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E9.html" LinkGroup="DoubleEye">PlatformUIGlobalMenu Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayCameraVideos" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C0.html" LinkGroup="DoubleEye">PlayCameraVideos Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.OVRHapticsChannel.Preempt" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A7.html" LinkGroup="DoubleEye">Preempt Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Process" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000AB.html" LinkGroup="DoubleEye">Process Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.OVRHapticsChannel.Queue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000A8.html" LinkGroup="DoubleEye">Queue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.RawAxis1D" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000012D.html" LinkGroup="DoubleEye">RawAxis1D Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.RawAxis2D" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000013B.html" LinkGroup="DoubleEye">RawAxis2D Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.RawButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000DB.html" LinkGroup="DoubleEye">RawButton Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.RawNearTouch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000011F.html" LinkGroup="DoubleEye">RawNearTouch Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.RawTouch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000109.html" LinkGroup="DoubleEye">RawTouch Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.ReadFrom" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000028D.html" LinkGroup="DoubleEye">ReadFrom Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.RecenterController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000172.html" LinkGroup="DoubleEye">RecenterController Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.RecenterPose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000007.html" LinkGroup="DoubleEye">RecenterPose Method {OVRCameraComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition.RecenterPose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000013.html" LinkGroup="DoubleEye">RecenterPose Method {OVRComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.RecenterPose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000090.html" LinkGroup="DoubleEye">RecenterPose Method {OVRDisplay}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.RecenteredPose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000008F.html" LinkGroup="DoubleEye">RecenteredPose Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.RefreshBoundaryMesh" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000000A.html" LinkGroup="DoubleEye">RefreshBoundaryMesh Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.RefreshCameraPoses" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000039.html" LinkGroup="DoubleEye">RefreshCameraPoses Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRRTOverlayConnector.RefreshRenderTextureChain" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B5.html" LinkGroup="DoubleEye">RefreshRenderTextureChain Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.RefreshRenderTextures" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000037.html" LinkGroup="DoubleEye">RefreshRenderTextures Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.RenderIntoCubemap" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000233.html" LinkGroup="DoubleEye">RenderIntoCubemap Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.Reset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B6.html" LinkGroup="DoubleEye">Reset Method {OVRHapticsClip}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRNativeBuffer.Reset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000075.html" LinkGroup="DoubleEye">Reset Method {OVRNativeBuffer}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.ResetLookAndFeel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000051.html" LinkGroup="DoubleEye">ResetLookAndFeel Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.ResetOrientation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002AF.html" LinkGroup="DoubleEye">ResetOrientation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.ReturnToLauncher" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E7.html" LinkGroup="DoubleEye">ReturnToLauncher Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.RightChannel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000009C.html" LinkGroup="DoubleEye">RightChannel Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.StereoView.RightEye" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002CE.html" LinkGroup="DoubleEye">RightEye Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="PlayCameraVideos.RightImage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C2.html" LinkGroup="DoubleEye">RightImage Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.RotationAmount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000029A.html" LinkGroup="DoubleEye">RotationAmount Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.RotationRatchet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000029B.html" LinkGroup="DoubleEye">RotationRatchet Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.SampleRateHz" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000009E.html" LinkGroup="DoubleEye">SampleRateHz Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHaptics.Config.SampleSizeInBytes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000009F.html" LinkGroup="DoubleEye">SampleSizeInBytes Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.Samples" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000AF.html" LinkGroup="DoubleEye">Samples Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.SaveCubemapCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000234.html" LinkGroup="DoubleEye">SaveCubemapCapture Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.SetControllerVibration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000171.html" LinkGroup="DoubleEye">SetControllerVibration Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.SetHaltUpdateMovement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002AE.html" LinkGroup="DoubleEye">SetHaltUpdateMovement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.SetLookAndFeel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000050.html" LinkGroup="DoubleEye">SetLookAndFeel Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.SetMoveScaleMultiplier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A8.html" LinkGroup="DoubleEye">SetMoveScaleMultiplier Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGridCube.SetOVRCameraController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000275.html" LinkGroup="DoubleEye">SetOVRCameraController Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.SetRotationScaleMultiplier" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002AA.html" LinkGroup="DoubleEye">SetRotationScaleMultiplier Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.SetSkipMouseRotation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002AC.html" LinkGroup="DoubleEye">SetSkipMouseRotation Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.SetTextureUseMips" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000181.html" LinkGroup="DoubleEye">SetTextureUseMips Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.SetVisible" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000055.html" LinkGroup="DoubleEye">SetVisible Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000254.html" LinkGroup="DoubleEye">Start Method {OVRGrabbable}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.Start" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000026B.html" LinkGroup="DoubleEye">Start Method {OVRGrabber}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.State" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000201.html" LinkGroup="DoubleEye">State Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.StereoVidTransmitter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002C9.html" LinkGroup="DoubleEye">StereoVidTransmitter Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.StereoVidTransmitter.StereoVidTransmitter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002CA.html" LinkGroup="DoubleEye">StereoVidTransmitter Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.StereoView" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002CC.html" LinkGroup="DoubleEye">StereoView Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.Stop" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A6.html" LinkGroup="DoubleEye">Stop Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDebugHeadController.StrafeSpeed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000081.html" LinkGroup="DoubleEye">StrafeSpeed Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput.SwipeDirection" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002DB.html" LinkGroup="DoubleEye">SwipeDirection Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.SystemOverlayHide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000198.html" LinkGroup="DoubleEye">SystemOverlayHide Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.SystemOverlayPresented" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000197.html" LinkGroup="DoubleEye">SystemOverlayPresented Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.TestNode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000004E.html" LinkGroup="DoubleEye">TestNode Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRBoundary.TestPoint" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000004F.html" LinkGroup="DoubleEye">TestPoint Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Assets.Transmitter.TextureConverter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002CF.html" LinkGroup="DoubleEye">TextureConverter Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExtensions.ToHeadSpacePose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000068.html" LinkGroup="DoubleEye">ToHeadSpacePose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExtensions.ToTrackingSpacePose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000066.html" LinkGroup="DoubleEye">ToTrackingSpacePose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExtensions.ToWorldSpacePose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000067.html" LinkGroup="DoubleEye">ToWorldSpacePose Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Touch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000FA.html" LinkGroup="DoubleEye">Touch Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.TouchArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000215.html" LinkGroup="DoubleEye">TouchArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.TouchEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000020F.html" LinkGroup="DoubleEye">TouchEvent Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.TouchHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000217.html" LinkGroup="DoubleEye">TouchHandler Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.TouchArgs.TouchType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000216.html" LinkGroup="DoubleEye">TouchType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.TrackingAcquired" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000019B.html" LinkGroup="DoubleEye">TrackingAcquired Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.TrackingLost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000019C.html" LinkGroup="DoubleEye">TrackingLost Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.TrackingOrigin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000183.html" LinkGroup="DoubleEye">TrackingOrigin Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.TriggerCubemapCapture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000232.html" LinkGroup="DoubleEye">TriggerCubemapCapture Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.Up" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F5.html" LinkGroup="DoubleEye">Up Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000011.html" LinkGroup="DoubleEye">Update Method {OVRComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000001C.html" LinkGroup="DoubleEye">Update Method {OVRDirectComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000008E.html" LinkGroup="DoubleEye">Update Method {OVRDisplay}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRExternalComposition.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000021.html" LinkGroup="DoubleEye">Update Method {OVRExternalComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest.BoolMonitor.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000023D.html" LinkGroup="DoubleEye">Update Method {OVRGearVrControllerTest.BoolMonitor}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRInput.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000014E.html" LinkGroup="DoubleEye">Update Method {OVRInput}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000035.html" LinkGroup="DoubleEye">Update Method {OVRSandwichComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTouchpad.Update" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000219.html" LinkGroup="DoubleEye">Update Method {OVRTouchpad}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.UpdateCameraFramePlaneObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000009.html" LinkGroup="DoubleEye">UpdateCameraFramePlaneObject Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.UpdateController" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A2.html" LinkGroup="DoubleEye">UpdateController Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.UpdateMovement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A3.html" LinkGroup="DoubleEye">UpdateMovement Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.UpdateTransform" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002A4.html" LinkGroup="DoubleEye">UpdateTransform Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.UpdatedAnchors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000060.html" LinkGroup="DoubleEye">UpdatedAnchors Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRDeviceManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D4.html" LinkGroup="DoubleEye">VRDeviceManager Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VREyeRaycaster" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D6.html" LinkGroup="DoubleEye">VREyeRaycaster Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRFPSCounter" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D9.html" LinkGroup="DoubleEye">VRFPSCounter Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInput" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002DA.html" LinkGroup="DoubleEye">VRInput Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002E8.html" LinkGroup="DoubleEye">VRInteractiveItem Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002D3.html" LinkGroup="DoubleEye">VRStandardAssets.Utils Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRTrackingReset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002F7.html" LinkGroup="DoubleEye">VRTrackingReset Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.VirtualGreenScreenType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001CB.html" LinkGroup="DoubleEye">VirtualGreenScreenType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.VrFocusAcquired" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000193.html" LinkGroup="DoubleEye">VrFocusAcquired Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.VrFocusLost" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000194.html" LinkGroup="DoubleEye">VrFocusLost Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRHapticsClip.WriteSample" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000000B5.html" LinkGroup="DoubleEye">WriteSample Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.WriteToConfigurationFile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000028F.html" LinkGroup="DoubleEye">WriteToConfigurationFile Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.acceleration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000091.html" LinkGroup="DoubleEye">acceleration Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.allowOffhandGrab" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000249.html" LinkGroup="DoubleEye">allowOffhandGrab Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.OVRSandwichCompositionManager.alphaBlendMaterial" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000003D.html" LinkGroup="DoubleEye">alphaBlendMaterial Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRRTOverlayConnector.alphaBorderSizePixels" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B3.html" LinkGroup="DoubleEye">alphaBorderSizePixels Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.angularAcceleration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000092.html" LinkGroup="DoubleEye">angularAcceleration Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.angularVelocity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000094.html" LinkGroup="DoubleEye">angularVelocity Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.appFramerate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000097.html" LinkGroup="DoubleEye">appFramerate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.audioInId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A0.html" LinkGroup="DoubleEye">audioInId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.audioOutId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000019F.html" LinkGroup="DoubleEye">audioOutId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.autoTriggerAfterLaunch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000022D.html" LinkGroup="DoubleEye">autoTriggerAfterLaunch Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.autoTriggerDelay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000022E.html" LinkGroup="DoubleEye">autoTriggerDelay Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.batteryLevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D5.html" LinkGroup="DoubleEye">batteryLevel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.batteryStatus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D7.html" LinkGroup="DoubleEye">batteryStatus Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.batteryTemperature" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D6.html" LinkGroup="DoubleEye">batteryTemperature Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.bgCamera" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000026.html" LinkGroup="DoubleEye">bgCamera Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.HistoryRecord.bgRenderTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000002A.html" LinkGroup="DoubleEye">bgRenderTexture Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.OVRSandwichCompositionManager.bgTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000003C.html" LinkGroup="DoubleEye">bgTexture Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.boundary" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000018D.html" LinkGroup="DoubleEye">boundary Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.OVRCameraFrameCompositionManager.boundaryMeshMaskTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000000E.html" LinkGroup="DoubleEye">boundaryMeshMaskTexture Field {OVRCameraComposition.OVRCameraFrameCompositionManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.boundaryMeshMaskTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000019.html" LinkGroup="DoubleEye">boundaryMeshMaskTexture Field {OVRDirectComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.HistoryRecord.boundaryMeshMaskTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000002B.html" LinkGroup="DoubleEye">boundaryMeshMaskTexture Field {OVRSandwichComposition.HistoryRecord}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.buttonNames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000017E.html" LinkGroup="DoubleEye">buttonNames Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.OVRCameraFrameCompositionManager.cameraFrameGameObj" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000000C.html" LinkGroup="DoubleEye">cameraFrameGameObj Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.cameraFramePlaneDistance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000002.html" LinkGroup="DoubleEye">cameraFramePlaneDistance Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.cameraFramePlaneLayer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000032.html" LinkGroup="DoubleEye">cameraFramePlaneLayer Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.cameraFramePlaneObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000001.html" LinkGroup="DoubleEye">cameraFramePlaneObject Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.cameraProxyPlane" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000002F.html" LinkGroup="DoubleEye">cameraProxyPlane Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.capturingCameraDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001B9.html" LinkGroup="DoubleEye">capturingCameraDevice Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.capturingCameraDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000027A.html" LinkGroup="DoubleEye">capturingCameraDevice Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.category" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000017A.html" LinkGroup="DoubleEye">category Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.centerEyeAnchor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000005B.html" LinkGroup="DoubleEye">centerEyeAnchor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.chromaKeyColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001BF.html" LinkGroup="DoubleEye">chromaKeyColor Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.chromaKeyColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000280.html" LinkGroup="DoubleEye">chromaKeyColor Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.chromaKeySimilarity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C0.html" LinkGroup="DoubleEye">chromaKeySimilarity Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.chromaKeySimilarity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000281.html" LinkGroup="DoubleEye">chromaKeySimilarity Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.chromaKeySmoothRange" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C1.html" LinkGroup="DoubleEye">chromaKeySmoothRange Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.chromaKeySmoothRange" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000282.html" LinkGroup="DoubleEye">chromaKeySmoothRange Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.chromaKeySpillRange" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C2.html" LinkGroup="DoubleEye">chromaKeySpillRange Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.chromaKeySpillRange" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000283.html" LinkGroup="DoubleEye">chromaKeySpillRange Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.chromatic" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A6.html" LinkGroup="DoubleEye">chromatic Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.complete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000017F.html" LinkGroup="DoubleEye">complete Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.OVRCameraFrameCompositionManager.composition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000000D.html" LinkGroup="DoubleEye">composition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.compositionCamera" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000030.html" LinkGroup="DoubleEye">compositionCamera Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.compositionManager" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000031.html" LinkGroup="DoubleEye">compositionManager Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.compositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001B3.html" LinkGroup="DoubleEye">compositionMethod Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.compositionMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000279.html" LinkGroup="DoubleEye">compositionMethod Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.count" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000225.html" LinkGroup="DoubleEye">count Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.cpuLevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D9.html" LinkGroup="DoubleEye">cpuLevel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.cubemapSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000231.html" LinkGroup="DoubleEye">cubemapSize Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.currentOverlayShape" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F6.html" LinkGroup="DoubleEye">currentOverlayShape Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.currentOverlayType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F4.html" LinkGroup="DoubleEye">currentOverlayType Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.depthQuality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C8.html" LinkGroup="DoubleEye">depthQuality Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.depthQuality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000285.html" LinkGroup="DoubleEye">depthQuality Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.directCompositionCamera" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000018.html" LinkGroup="DoubleEye">directCompositionCamera Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDirectComposition.directCompositionCameraGameObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000017.html" LinkGroup="DoubleEye">directCompositionCameraGameObject Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.display" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000018B.html" LinkGroup="DoubleEye">display Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.dynamicLightingDepthVariationClampingValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001CA.html" LinkGroup="DoubleEye">dynamicLightingDepthVariationClampingValue Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.dynamicLightingDepthVariationClampingValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000287.html" LinkGroup="DoubleEye">dynamicLightingDepthVariationClampingValue Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.dynamicLightingSmoothFactor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C9.html" LinkGroup="DoubleEye">dynamicLightingSmoothFactor Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.dynamicLightingSmoothFactor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000286.html" LinkGroup="DoubleEye">dynamicLightingSmoothFactor Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlatformMenu.eHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001FB.html" LinkGroup="DoubleEye">eHandler Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.enableAdaptiveResolution" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001AA.html" LinkGroup="DoubleEye">enableAdaptiveResolution Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.enableMixedReality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001AE.html" LinkGroup="DoubleEye">enableMixedReality Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.enableMixedReality" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000277.html" LinkGroup="DoubleEye">enableMixedReality Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.expandMixedRealityCapturePropertySheet" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001AD.html" LinkGroup="DoubleEye">expandMixedRealityCapturePropertySheet Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.extraHiddenLayers" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001B4.html" LinkGroup="DoubleEye">extraHiddenLayers Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.extraHiddenLayers" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000278.html" LinkGroup="DoubleEye">extraHiddenLayers Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.eyeDepth" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000020B.html" LinkGroup="DoubleEye">eyeDepth Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.eyeHeight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000020A.html" LinkGroup="DoubleEye">eyeHeight Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.eyeTextureFormat" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001DC.html" LinkGroup="DoubleEye">eyeTextureFormat Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRScreenFade.fadeColor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002BD.html" LinkGroup="DoubleEye">fadeColor Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSceneSampleController.fadeInTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B8.html" LinkGroup="DoubleEye">fadeInTexture Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRScreenFade.fadeTime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002BC.html" LinkGroup="DoubleEye">fadeTime Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.Frustum.farZ" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000220.html" LinkGroup="DoubleEye">farZ Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.fgCamera" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000025.html" LinkGroup="DoubleEye">fgCamera Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.HistoryRecord.fgRenderTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000029.html" LinkGroup="DoubleEye">fgRenderTexture Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.OVRSandwichCompositionManager.fgTexture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000003B.html" LinkGroup="DoubleEye">fgTexture Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.fixMethod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000017C.html" LinkGroup="DoubleEye">fixMethod Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.flipCameraFrameHorizontally" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001BA.html" LinkGroup="DoubleEye">flipCameraFrameHorizontally Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.flipCameraFrameHorizontally" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000027B.html" LinkGroup="DoubleEye">flipCameraFrameHorizontally Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.flipCameraFrameVertically" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001BB.html" LinkGroup="DoubleEye">flipCameraFrameVertically Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.flipCameraFrameVertically" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000027C.html" LinkGroup="DoubleEye">flipCameraFrameVertically Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.EyeRenderDesc.fov" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000086.html" LinkGroup="DoubleEye">fov Field {OVRDisplay.EyeRenderDesc}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.Frustum.fov" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000221.html" LinkGroup="DoubleEye">fov Field {OVRTracker.Frustum}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.frameRealtime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000024.html" LinkGroup="DoubleEye">frameRealtime Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.gpuLevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001DA.html" LinkGroup="DoubleEye">gpuLevel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.grabBegin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000256.html" LinkGroup="DoubleEye">grabBegin Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.grabEnd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000257.html" LinkGroup="DoubleEye">grabEnd Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.grabPoints" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000251.html" LinkGroup="DoubleEye">grabPoints Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.grabbedBy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000024E.html" LinkGroup="DoubleEye">grabbedBy Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.grabbedObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000268.html" LinkGroup="DoubleEye">grabbedObject Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.grabbedRigidbody" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000250.html" LinkGroup="DoubleEye">grabbedRigidbody Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.grabbedTransform" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000024F.html" LinkGroup="DoubleEye">grabbedTransform Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.handPoseStateLatency" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001BC.html" LinkGroup="DoubleEye">handPoseStateLatency Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.handPoseStateLatency" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000027D.html" LinkGroup="DoubleEye">handPoseStateLatency Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.hasCameraDeviceOpened" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000003.html" LinkGroup="DoubleEye">hasCameraDeviceOpened Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.hasInputFocus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A2.html" LinkGroup="DoubleEye">hasInputFocus Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.hasSystemOverlayPresent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A3.html" LinkGroup="DoubleEye">hasSystemOverlayPresent Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.hasVrFocus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A1.html" LinkGroup="DoubleEye">hasVrFocus Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.historyRecordArray" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000002D.html" LinkGroup="DoubleEye">historyRecordArray Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.historyRecordCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000002C.html" LinkGroup="DoubleEye">historyRecordCount Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.historyRecordCursorIndex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000002E.html" LinkGroup="DoubleEye">historyRecordCursorIndex Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000206.html" LinkGroup="DoubleEye">id Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.identity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000006A.html" LinkGroup="DoubleEye">identity Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.instance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000018A.html" LinkGroup="DoubleEye">instance Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.ipd" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000209.html" LinkGroup="DoubleEye">ipd Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.isDynamic" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F5.html" LinkGroup="DoubleEye">isDynamic Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.isEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000224.html" LinkGroup="DoubleEye">isEnabled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.isGrabbed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000024A.html" LinkGroup="DoubleEye">isGrabbed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.isHSWDisplayed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A4.html" LinkGroup="DoubleEye">isHSWDisplayed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.isHmdPresent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000019E.html" LinkGroup="DoubleEye">isHmdPresent Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.isPositionTracked" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000223.html" LinkGroup="DoubleEye">isPositionTracked Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.isPowerSavingActive" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001DB.html" LinkGroup="DoubleEye">isPowerSavingActive Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.isPresent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000222.html" LinkGroup="DoubleEye">isPresent Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.isSupportedPlatform" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E2.html" LinkGroup="DoubleEye">isSupportedPlatform Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.isUserPresent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E3.html" LinkGroup="DoubleEye">isUserPresent Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlatformMenu.keyCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001FA.html" LinkGroup="DoubleEye">keyCode Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition.lastAttachedNodePose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000015.html" LinkGroup="DoubleEye">lastAttachedNodePose Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.latency" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000096.html" LinkGroup="DoubleEye">latency Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSceneSampleController.layerName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002BA.html" LinkGroup="DoubleEye">layerName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.leftEyeAnchor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000005A.html" LinkGroup="DoubleEye">leftEyeAnchor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.leftEyeCamera" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000057.html" LinkGroup="DoubleEye">leftEyeCamera Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.leftHandAnchor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000005D.html" LinkGroup="DoubleEye">leftHandAnchor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.locale" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000208.html" LinkGroup="DoubleEye">locale Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VRStandardAssets.Utils.VRInteractiveItem.m_IsOver" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002EF.html" LinkGroup="DoubleEye">m_IsOver Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_allowOffhandGrab" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000241.html" LinkGroup="DoubleEye">m_allowOffhandGrab Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_anchorOffsetPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000261.html" LinkGroup="DoubleEye">m_anchorOffsetPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_anchorOffsetRotation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000260.html" LinkGroup="DoubleEye">m_anchorOffsetRotation Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrController.m_controller" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000238.html" LinkGroup="DoubleEye">m_controller Field {OVRGearVrController}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_controller" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000025B.html" LinkGroup="DoubleEye">m_controller Field {OVRGrabber}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_grabCandidates" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000266.html" LinkGroup="DoubleEye">m_grabCandidates Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_grabPoints" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000245.html" LinkGroup="DoubleEye">m_grabPoints Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_grabVolumeEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000025D.html" LinkGroup="DoubleEye">m_grabVolumeEnabled Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_grabVolumes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000025A.html" LinkGroup="DoubleEye">m_grabVolumes Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_grabbedBy" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000248.html" LinkGroup="DoubleEye">m_grabbedBy Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_grabbedCollider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000247.html" LinkGroup="DoubleEye">m_grabbedCollider Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_grabbedKinematic" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000246.html" LinkGroup="DoubleEye">m_grabbedKinematic Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_grabbedObj" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000263.html" LinkGroup="DoubleEye">m_grabbedObj Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_grabbedObjectPosOff" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000264.html" LinkGroup="DoubleEye">m_grabbedObjectPosOff Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_grabbedObjectRotOff" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000265.html" LinkGroup="DoubleEye">m_grabbedObjectRotOff Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_gripTransform" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000259.html" LinkGroup="DoubleEye">m_gripTransform Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_lastPos" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000025E.html" LinkGroup="DoubleEye">m_lastPos Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_lastRot" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000025F.html" LinkGroup="DoubleEye">m_lastRot Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrController.m_model" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000237.html" LinkGroup="DoubleEye">m_model Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_parentHeldObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000258.html" LinkGroup="DoubleEye">m_parentHeldObject Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_parentTransform" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000025C.html" LinkGroup="DoubleEye">m_parentTransform Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.m_prevFlex" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000262.html" LinkGroup="DoubleEye">m_prevFlex Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_snapOffset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000244.html" LinkGroup="DoubleEye">m_snapOffset Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_snapOrientation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000243.html" LinkGroup="DoubleEye">m_snapOrientation Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.m_snapPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000242.html" LinkGroup="DoubleEye">m_snapPosition Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.maxRenderScale" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001AC.html" LinkGroup="DoubleEye">maxRenderScale Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.message" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000017B.html" LinkGroup="DoubleEye">message Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.minRenderScale" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001AB.html" LinkGroup="DoubleEye">minRenderScale Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.monoscopic" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A7.html" LinkGroup="DoubleEye">monoscopic Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRTracker.Frustum.nearZ" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000021F.html" LinkGroup="DoubleEye">nearZ Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.neckHeight" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000020C.html" LinkGroup="DoubleEye">neckHeight Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabber.operatingWithoutOVRCameraRig" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000267.html" LinkGroup="DoubleEye">operatingWithoutOVRCameraRig Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.orientation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000070.html" LinkGroup="DoubleEye">orientation Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRRTOverlayConnector.ovrOverlayObj" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B4.html" LinkGroup="DoubleEye">ovrOverlayObj Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.pathName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000230.html" LinkGroup="DoubleEye">pathName Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.pluginVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E5.html" LinkGroup="DoubleEye">pluginVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPose.position" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000006F.html" LinkGroup="DoubleEye">position Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.LatencyData.postPresent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000008A.html" LinkGroup="DoubleEye">postPresent Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.profile" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000018E.html" LinkGroup="DoubleEye">profile Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.queueAhead" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A8.html" LinkGroup="DoubleEye">queueAhead Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSceneSampleController.quitKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B7.html" LinkGroup="DoubleEye">quitKey Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.recommendedMSAALevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000098.html" LinkGroup="DoubleEye">recommendedMSAALevel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.LatencyData.render" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000088.html" LinkGroup="DoubleEye">render Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.LatencyData.renderError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000008B.html" LinkGroup="DoubleEye">renderError Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRModeParms.resetButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000292.html" LinkGroup="DoubleEye">resetButton Field {OVRModeParms}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRResetOrientation.resetButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B1.html" LinkGroup="DoubleEye">resetButton Field {OVRResetOrientation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.resetTrackerOnLoad" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E1.html" LinkGroup="DoubleEye">resetTrackerOnLoad Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.EyeRenderDesc.resolution" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000085.html" LinkGroup="DoubleEye">resolution Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.rightEyeAnchor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000005C.html" LinkGroup="DoubleEye">rightEyeAnchor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.rightEyeCamera" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000058.html" LinkGroup="DoubleEye">rightEyeCamera Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.rightHandAnchor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000005E.html" LinkGroup="DoubleEye">rightHandAnchor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRWaitCursor.rotateSpeeds" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002BF.html" LinkGroup="DoubleEye">rotateSpeeds Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.sandwichCompositionBufferedFrames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001BE.html" LinkGroup="DoubleEye">sandwichCompositionBufferedFrames Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.sandwichCompositionBufferedFrames" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000027F.html" LinkGroup="DoubleEye">sandwichCompositionBufferedFrames Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.sandwichCompositionRenderLatency" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001BD.html" LinkGroup="DoubleEye">sandwichCompositionRenderLatency Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.sandwichCompositionRenderLatency" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000027E.html" LinkGroup="DoubleEye">sandwichCompositionRenderLatency Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.sdkVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E6.html" LinkGroup="DoubleEye">sdkVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlatformMenu.shortPressHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001FE.html" LinkGroup="DoubleEye">shortPressHandler Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.snapOffset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000024D.html" LinkGroup="DoubleEye">snapOffset Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.snapOrientation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000024C.html" LinkGroup="DoubleEye">snapOrientation Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGrabbable.snapPosition" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000024B.html" LinkGroup="DoubleEye">snapPosition Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSceneSampleController.speedRotationIncrement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000002B9.html" LinkGroup="DoubleEye">speedRotationIncrement Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.state" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000020D.html" LinkGroup="DoubleEye">state Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRLint.FixRecord.targetObject" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000017D.html" LinkGroup="DoubleEye">targetObject Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVROverlay.textures" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001F7.html" LinkGroup="DoubleEye">textures Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.LatencyData.timeWarp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000089.html" LinkGroup="DoubleEye">timeWarp Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.LatencyData.timeWarpError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000008C.html" LinkGroup="DoubleEye">timeWarpError Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRSandwichComposition.HistoryRecord.timestamp" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000028.html" LinkGroup="DoubleEye">timestamp Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRChromaticAberration.toggleButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000022B.html" LinkGroup="DoubleEye">toggleButton Field {OVRChromaticAberration}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMonoscopic.toggleButton" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000294.html" LinkGroup="DoubleEye">toggleButton Field {OVRMonoscopic}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.tracker" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000018C.html" LinkGroup="DoubleEye">tracker Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.trackerAnchor" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000005F.html" LinkGroup="DoubleEye">trackerAnchor Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.trackingOriginType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001DD.html" LinkGroup="DoubleEye">trackingOriginType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.trackingSpace" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000059.html" LinkGroup="DoubleEye">trackingSpace Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCubemapCapture.triggeredByKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000022F.html" LinkGroup="DoubleEye">triggeredByKey Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRGearVrControllerTest.uiText" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000023F.html" LinkGroup="DoubleEye">uiText Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraComposition.useDynamicLighting" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000004.html" LinkGroup="DoubleEye">useDynamicLighting Field {OVRCameraComposition}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.useDynamicLighting" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001C3.html" LinkGroup="DoubleEye">useDynamicLighting Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.useDynamicLighting" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000284.html" LinkGroup="DoubleEye">useDynamicLighting Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.useFixedUpdateForTracking" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000062.html" LinkGroup="DoubleEye">useFixedUpdateForTracking Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.useIPDInPositionTracking" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E0.html" LinkGroup="DoubleEye">useIPDInPositionTracking Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRCameraRig.usePerEyeCameras" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000061.html" LinkGroup="DoubleEye">usePerEyeCameras Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.usePositionTracking" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001DE.html" LinkGroup="DoubleEye">usePositionTracking Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRPlayerController.useProfileData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000029F.html" LinkGroup="DoubleEye">useProfileData Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.useRecommendedMSAALevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001A9.html" LinkGroup="DoubleEye">useRecommendedMSAALevel Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.useRotationTracking" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001DF.html" LinkGroup="DoubleEye">useRotationTracking Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRProfile.userName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000207.html" LinkGroup="DoubleEye">userName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRComposition.usingLastAttachedNodePose" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000014.html" LinkGroup="DoubleEye">usingLastAttachedNodePose Field</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.utilitiesVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001E4.html" LinkGroup="DoubleEye">utilitiesVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRDisplay.velocity" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000093.html" LinkGroup="DoubleEye">velocity Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.virtualGreenScreenApplyDepthCulling" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D2.html" LinkGroup="DoubleEye">virtualGreenScreenApplyDepthCulling Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.virtualGreenScreenApplyDepthCulling" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000028B.html" LinkGroup="DoubleEye">virtualGreenScreenApplyDepthCulling Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.virtualGreenScreenBottomY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D1.html" LinkGroup="DoubleEye">virtualGreenScreenBottomY Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.virtualGreenScreenBottomY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000028A.html" LinkGroup="DoubleEye">virtualGreenScreenBottomY Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.virtualGreenScreenDepthTolerance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D3.html" LinkGroup="DoubleEye">virtualGreenScreenDepthTolerance Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.virtualGreenScreenDepthTolerance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_000000000000028C.html" LinkGroup="DoubleEye">virtualGreenScreenDepthTolerance Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.virtualGreenScreenTopY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D0.html" LinkGroup="DoubleEye">virtualGreenScreenTopY Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.virtualGreenScreenTopY" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000289.html" LinkGroup="DoubleEye">virtualGreenScreenTopY Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.virtualGreenScreenType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001CF.html" LinkGroup="DoubleEye">virtualGreenScreenType Field {OVRManager}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRMixedRealityCaptureSettings.virtualGreenScreenType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_0000000000000288.html" LinkGroup="DoubleEye">virtualGreenScreenType Field {OVRMixedRealityCaptureSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.volumeLevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D8.html" LinkGroup="DoubleEye">volumeLevel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="OVRManager.vsyncCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:DoubleEye.chm::/topic_00000000000001D4.html" LinkGroup="DoubleEye">vsyncCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

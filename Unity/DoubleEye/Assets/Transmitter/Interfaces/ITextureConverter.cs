@@ -5,11 +5,22 @@ using UnityEngine;
 
 namespace Assets.Transmitter
 {
+    /// <summary>
+    /// Responsible for converting EmguCV image into texture
+    /// </summary>
     public interface ITextureConverter
     {
-        Texture FromBitmap(Bitmap source);
+        /// <summary>
+        ///Creates new texture object from given image
+        /// </summary>
+        /// <param name="source">Image to convert</param>
         Texture FromImage(Image<Bgr, byte> source);
-        byte[] DataFromImage(Image<Bgr, byte> image);
+
+        /// <summary>
+        /// Loads image into existing texture
+        /// </summary>
+        /// <param name="sourceImage">Image to convert</param>
+        /// <param name="targetTexture">Existing texture for image loading</param>
         void LoadFromImage(Image<Bgr, byte> sourceImage, Texture targetTexture);
     }
 }

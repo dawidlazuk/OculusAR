@@ -10,22 +10,10 @@ namespace Assets.Transmitter
 {
     public class TextureConverter : ITextureConverter
     {
-        public Texture FromBitmap(Bitmap source)
-        {
-            var texture = new Texture2D(source.Width, source.Height, TextureFormat.RGB24, false);
-            var bytes = ImageToByteArray(source);
-            texture.LoadImage(bytes);
-            return texture;
-        }
 
         public Texture FromImage(Image<Bgr, byte> source)
         {
             return ImageToTexture2D(source, true);
-        }
-
-        public byte[] DataFromImage(Image<Bgr, byte> image)
-        {
-            return ImageToBytesForTexture(image, true);
         }
 
         public void LoadFromImage(Image<Bgr, byte> image, Texture text)
