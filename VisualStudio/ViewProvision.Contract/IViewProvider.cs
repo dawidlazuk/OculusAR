@@ -74,7 +74,7 @@ namespace ViewProvision.Contract
         /// </summary>
         /// <returns>Frames as Bitmap objects.</returns>
         ViewDataBitmap GetCurrentViewAsBitmaps();
-                
+
         //not exposed by service
         /// <summary>
         /// Returns the last captured frames as EmguCV Image objects.
@@ -86,6 +86,11 @@ namespace ViewProvision.Contract
         /// Refresh the last captured frames.
         /// </summary>
         void UpdateFrames();
+
+        ///// <summary>
+        ///// Use per each frames retrieving to prevent disposing capture objects in case of not using multi-threading capture frame way.
+        ///// </summary>
+        //void UpdateTimestamp();
     }
 
     /// <summary>

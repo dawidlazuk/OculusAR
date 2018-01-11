@@ -5,6 +5,7 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using ViewProvision.Contract;
 using System.Diagnostics;
+using System.Runtime.ExceptionServices;
 
 namespace ViewProvision
 {
@@ -21,8 +22,8 @@ namespace ViewProvision
         private VideoCapture leftCapture;
         private VideoCapture rightCapture;
 
-        private int leftCaptureIndex;
-        private int rightCaptureIndex;
+        private int leftCaptureIndex = -1;
+        private int rightCaptureIndex = -1;
 
         private DateTime leftImageUpdateTime;
         private DateTime rightImageUpdateTime;
@@ -100,12 +101,19 @@ namespace ViewProvision
             rightWaitEvent.Set();
         }
 
+        public void UpdateTimestamp()
+        {
+            leftImageUpdateTime = DateTime.Now;
+            rightImageUpdateTime = DateTime.Now;
+        }
+
         private void InitLeftCaptureThread()
         {
             leftCaptureThread = new Thread(new ThreadStart(() =>
             {
                 while (true)
                 {
+                    leftWaitEvent.WaitOne();
                     var image = GetFrame(leftCapture);
                     if (image != null)
                     {
@@ -117,7 +125,6 @@ namespace ViewProvision
                         }
                         leftImageUpdateTime = DateTime.Now;
                     }
-                    leftWaitEvent.WaitOne();
                 }
             }));
             leftCaptureThread.Start();
@@ -129,6 +136,7 @@ namespace ViewProvision
             {
                 while (true)
                 {
+                    rightWaitEvent.WaitOne();
                     var image = GetFrame(rightCapture);
                     if (image != null)
                     {
@@ -140,7 +148,6 @@ namespace ViewProvision
                         }
                         rightImageUpdateTime = DateTime.Now;
                     }
-                    rightWaitEvent.WaitOne();
                 }
             }));
             rightCaptureThread.Start();
@@ -154,22 +161,29 @@ namespace ViewProvision
 
         private void StartTimestampsChecking()
         {
+            leftImageUpdateTime = DateTime.Now;
+            rightImageUpdateTime = DateTime.Now;
+
             Thread timestampCheckThread = new Thread(new ThreadStart(() =>
             {                
                 while (true)
                 {
                     if (leftCaptureThread.IsAlive)
                         if ((DateTime.Now - leftImageUpdateTime).TotalMilliseconds > CaptureTimeout)
-                        {
-                            leftCapture = null;
+                        {                        
                             KillAndCreateCaptureThread(CaptureSide.Left);
+                            leftCapture = null;
+                            if (leftCaptureIndex != -1)
+                                SetCapture(CaptureSide.Left, leftCaptureIndex);
                         }
 
                     if (rightCaptureThread.IsAlive)
                         if ((DateTime.Now - rightImageUpdateTime).TotalMilliseconds > CaptureTimeout)
                         {
-                            rightCapture = null;
                             KillAndCreateCaptureThread(CaptureSide.Right);
+                            rightCapture = null;
+                            if (rightCaptureIndex != -1)
+                                SetCapture(CaptureSide.Right, rightCaptureIndex);
                         }
                     Thread.Sleep((int)CaptureTimeout);
                 }
@@ -194,6 +208,7 @@ namespace ViewProvision
             }
         }
 
+        [HandleProcessCorruptedStateExceptions]
         private Image<Bgr, byte> GetFrame(ICapture capture)
         {
             try
@@ -258,10 +273,18 @@ namespace ViewProvision
             }
         }
 
+        [HandleProcessCorruptedStateExceptions]
         private void SetCaptureResolution(VideoCapture capture)
         {
-            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, ResolutionWidth);
-            capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, ResolutionHeight);
+            try
+            {
+                capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, ResolutionWidth);
+                capture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, ResolutionHeight);
+            }
+            catch(AccessViolationException ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
 
         private VideoCapture GetCapture(int index)

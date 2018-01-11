@@ -52,7 +52,6 @@
   <ItemGroup>
     <Compile Include="ImageExtension.cs" />
     <Compile Include="Processors\GrayImageProcessor.cs" />
-    <Compile Include="IImageProcessor.cs" />
     <Compile Include="ProcessedViewProvider.cs" />
     <Compile Include="Processors\SobelProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

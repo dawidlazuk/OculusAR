@@ -6,6 +6,7 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.Util;
 using System.Diagnostics;
+using ViewProvision.Contract;
 
 namespace ViewProvision.Processors
 {

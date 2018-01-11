@@ -14,6 +14,10 @@ using System.Windows.Media.Imaging;
 
 namespace ViewVisualization.Converters
 {
+
+    /// <summary>
+    /// Used to convert Bitmap into BitmapSource to show it in the WPF application
+    /// </summary>
     class BitmapToBitmapSourceConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

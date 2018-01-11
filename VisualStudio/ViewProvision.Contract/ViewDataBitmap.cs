@@ -3,6 +3,10 @@ using System.Runtime.Serialization;
 
 namespace ViewProvision.Contract
 {
+
+    /// <summary>
+    /// Frames class with use of the System.Drawing.Bitmap as image type
+    /// </summary>
     [DataContract]
     public class ViewDataBitmap
     {

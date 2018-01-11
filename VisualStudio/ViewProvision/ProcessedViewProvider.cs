@@ -12,7 +12,7 @@ namespace ViewProvision
 {
     public class ProcessedViewProvider : IProcessedViewProvider
     {
-        private readonly IViewProvider _originViewProvider;
+        private readonly ViewProvider _originViewProvider;
         private readonly List<IImageProcessor> _imageProcessors;
 
         private AutoResetEvent startLeftProcessingEvent = new AutoResetEvent(false);
@@ -31,11 +31,11 @@ namespace ViewProvision
         private DateTime leftImageUpdateTime;
         private DateTime rightImageUpdateTime;
         
-        public ProcessedViewProvider(IViewProvider originViewProvider, List<IImageProcessor> imageProcessors = null)
+        public ProcessedViewProvider(ViewProvider originViewProvider, List<IImageProcessor> imageProcessors = null)
         {
             _originViewProvider = originViewProvider;
             _imageProcessors = imageProcessors ?? new List<IImageProcessor>();
-            
+
             InitLeftProcessingThread();
             InitRightProcessingThread();
 
@@ -66,12 +66,6 @@ namespace ViewProvision
         
         public ViewDataImage GetCurrentView()
         {
-            if (_imageProcessors.Any() == false)
-                return _originViewProvider.GetCurrentView();               
-
-            startLeftProcessingEvent.Set();
-            startRightProcessingEvent.Set();
-
             finishLeftProcessingEvent.WaitOne();
             finishRightProcessingEvent.WaitOne();
 
@@ -81,7 +75,9 @@ namespace ViewProvision
 
         public void UpdateFrames()
         {
-            _originViewProvider.UpdateFrames();
+            _originViewProvider.UpdateTimestamp();
+            startLeftProcessingEvent.Set();
+            startRightProcessingEvent.Set();
         }
 
         public void ChangeProcessorPriority(string processorName, bool increase)
@@ -114,6 +110,9 @@ namespace ViewProvision
         public void SetProcessorState(string name, bool state)
         {
             var imageProcessor = _imageProcessors.Single(x => x.Name == name);
+
+            //anyProcessorActive = state || _imageProcessors.Any(p => p.Active);
+
             imageProcessor.Active = state;
         }
 
@@ -217,6 +216,11 @@ namespace ViewProvision
                     InitRightProcessingThread();
                     break;
             }
-        }      
+        }
+
+        public void UpdateTimestamp()
+        {
+            _originViewProvider.UpdateTimestamp();
+        }
     }
 }

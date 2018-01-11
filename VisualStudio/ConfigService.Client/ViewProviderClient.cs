@@ -8,6 +8,9 @@ using System.Collections.Generic;
 
 namespace ConfigService.Client
 {
+    /// <summary>
+    /// Calls methods of the IViewProviderService on the remote side of the service
+    /// </summary>
     public class ViewProviderClient : IViewProviderService
     {
         private readonly IViewProviderService channel;

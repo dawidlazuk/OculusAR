@@ -4,6 +4,10 @@ using Emgu.CV.Structure;
 
 namespace ViewProvision.Contract
 {
+
+    /// <summary>
+    /// Frames class with use of the Emgu.CV.Image as image type
+    /// </summary>
     public class ViewDataImage
     {
         const double StraightAngle = 90.0;
@@ -15,41 +19,11 @@ namespace ViewProvision.Contract
         {
             this.LeftImage = leftImage;
             this.RightImage = rightImage;
-        }
-
+        }              
+       
         /// <summary>
-        /// Swap left and right images of the object.
+        /// Get ViewDataBitmap with the same frames
         /// </summary>
-        public void SwapImages()
-        {
-            var left = LeftImage;
-            LeftImage = RightImage;
-            RightImage = left;
-        }
-
-        /// <summary>
-        /// Create new object with swapped image's sides.
-        /// </summary>
-        /// <returns>Swapped ViewData</returns>
-        public ViewDataImage GetSwapedImages()
-        {
-            return new ViewDataImage(leftImage: RightImage, rightImage: LeftImage);
-        }
-
-        public ViewDataImage RotateImages(short leftImageRotationTimes, short rightImageRotationTimes)
-        {
-            if (leftImageRotationTimes % 4 != 0)
-                LeftImage = LeftImage.Rotate(GetRotatonAngle(leftImageRotationTimes), new Bgr(0, 0, 0), true);
-            if(rightImageRotationTimes % 4 != 0)
-                RightImage = RightImage.Rotate(GetRotatonAngle(rightImageRotationTimes), new Bgr(0, 0, 0), true);
-            return this;
-        }
-
-        private static double GetRotatonAngle(short rotationTimes)
-        {
-            return (rotationTimes % 4) * StraightAngle;
-        }
-
         public ViewDataBitmap Bitmaps
         {
             get

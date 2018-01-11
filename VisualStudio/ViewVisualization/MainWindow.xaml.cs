@@ -40,6 +40,7 @@ namespace ViewVisualization
         {
             if(msg == UsbNotification.WmDevicechange)
             {
+                //Code responsible for USB device insert/remove events
                 switch ((int)wparam)
                 {
                     case UsbNotification.DbtDevicearrival:

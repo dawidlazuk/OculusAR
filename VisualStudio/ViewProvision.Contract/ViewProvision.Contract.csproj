@@ -54,6 +54,7 @@
     <Compile Include="BitmapDTO.cs" />
     <Compile Include="CaptureDetails.cs" />
     <Compile Include="CaptureSide.cs" />
+    <Compile Include="IImageProcessor.cs" />
     <Compile Include="IViewProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotateSide.cs" />

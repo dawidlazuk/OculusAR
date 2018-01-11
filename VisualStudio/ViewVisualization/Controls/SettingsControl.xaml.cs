@@ -12,7 +12,6 @@ using ViewProvision;
 using ViewProvision.Contract;
 using ViewProvision.Processors;
 using ViewVisualization.Annotations;
-using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using UserControl = System.Windows.Controls.UserControl;
 
 namespace ViewVisualization.Controls
@@ -22,7 +21,9 @@ namespace ViewVisualization.Controls
     /// </summary>
     public partial class SettingsControl : UserControl, INotifyPropertyChanged
     {
-
+        /// <summary>
+        /// Collection of Available image processors
+        /// </summary>
         public ObservableCollection<ProcessorInfo> ImageProcessors {
             get
             {
@@ -38,6 +39,7 @@ namespace ViewVisualization.Controls
         private ObservableCollection<ProcessorInfo> _imageProcessorInfos;
 
         private IViewProviderService _viewProvider;
+
         public SettingsControl()
         {
             InitializeComponent();
@@ -46,11 +48,9 @@ namespace ViewVisualization.Controls
 
         private void CustomInitialize()
         {
-
-
 #if DEBUG
             //TODO remove - only for using without Unity to host the service
-            IViewProvider provider = new ViewProvision.ViewProvider(true);
+            ViewProvider provider = new ViewProvision.ViewProvider(true);
             IProcessedViewProvider processedProvider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
             {
                 new GrayImageProcessor(),

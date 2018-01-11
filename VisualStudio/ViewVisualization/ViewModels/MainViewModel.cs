@@ -22,10 +22,16 @@ using ViewVisualization.Controls;
 
 namespace ViewVisualization.ViewModels
 {
-
+    /// <summary>
+    /// Viewmodel of whole configuration application
+    /// </summary>
     class MainViewModel : INotifyPropertyChanged
     {
         private ViewDataBitmap viewData;
+
+        /// <summary>
+        /// Images currently shown by application
+        /// </summary>
         public ViewDataBitmap ViewData { get
             {return viewData;}
             set
@@ -43,9 +49,11 @@ namespace ViewVisualization.ViewModels
 
         private readonly IViewProviderService viewProvider;
 
-
         private ObservableCollection<string> _systemCameras;
 
+        /// <summary>
+        /// Cameras available in the system
+        /// </summary>
         public ObservableCollection<string> SystemCameras
         {
             get { return _systemCameras; }
@@ -58,6 +66,10 @@ namespace ViewVisualization.ViewModels
 
 
         private int leftCameraIndex;
+
+        /// <summary>
+        /// Index of the camera assigned to the left channel
+        /// </summary>
         public int LeftCameraIndex
         {
             get { return leftCameraIndex;}
@@ -70,6 +82,10 @@ namespace ViewVisualization.ViewModels
         }
 
         private int rightCameraIndex;
+
+        /// <summary>
+        /// Index of the camera assigned to the right channel
+        /// </summary>
         public int RightCameraIndex
         {
             get { return rightCameraIndex; }
@@ -80,21 +96,18 @@ namespace ViewVisualization.ViewModels
                     viewProvider.SetCapture(CaptureSide.Right, rightCameraIndex);
             }
         }
-
-
-
+        
         public ICommand LeftRotateLeftCommand { get; set; }
         public ICommand LeftRotateRightCommand { get; set; }
         public ICommand RightRotateLeftCommand { get; set; }
         public ICommand RightRotateRightCommand { get; set; }
+                
 
-
-        private static readonly int[] RotationAvaibleValues = {0, 90, 180, 270};
         public MainViewModel()
         {
 #if DEBUG
             //Only for using without Unity to host the service
-            IViewProvider provider = new ViewProvision.ViewProvider(true);
+            ViewProvider provider = new ViewProvision.ViewProvider(true);
             IProcessedViewProvider processedProvider = new ProcessedViewProvider(provider, new List<IImageProcessor>()
             {
                 new GrayImageProcessor(),
@@ -125,6 +138,9 @@ namespace ViewVisualization.ViewModels
             return systemCameras.Select(cam => cam.Name);
         }
 
+        /// <summary>
+        /// Update info about cameras available in the system.
+        /// </summary>
         internal void RefreshAvailableCameras()
         {
             SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());

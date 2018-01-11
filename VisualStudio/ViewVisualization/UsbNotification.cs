@@ -3,6 +3,9 @@ using System.Runtime.InteropServices;
 
 namespace ViewVisualization
 {
+    /// <summary>
+    /// Provides interface for USB Insert/Remove system events 
+    /// </summary>
     internal static class UsbNotification
     {
         public const int DbtDevicearrival = 0x8000; // system detected a new device        
