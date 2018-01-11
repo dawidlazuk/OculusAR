@@ -101,7 +101,7 @@ namespace ViewVisualization.ViewModels
         public ICommand LeftRotateRightCommand { get; set; }
         public ICommand RightRotateLeftCommand { get; set; }
         public ICommand RightRotateRightCommand { get; set; }
-                
+        public ICommand StartCaptureCommand { get; set; }
 
         public MainViewModel()
         {
@@ -130,6 +130,25 @@ namespace ViewVisualization.ViewModels
             LeftRotateRightCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Left, RotateSide.Right));
             RightRotateLeftCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Right, RotateSide.Left));
             RightRotateRightCommand = new DelegateCommand(() => viewProvider.RotateImage(CaptureSide.Right, RotateSide.Right));
+
+            StartCaptureCommand = new DelegateCommand(StartCapture);
+        }
+
+        private CancellationTokenSource _cancelSource;
+        private bool _activeProcessing = false;
+        private void StartCapture()
+        {
+            if (!_activeProcessing)
+            {
+                _cancelSource = new CancellationTokenSource();
+                StartProcessingFrames();
+            }
+            else
+            {
+                _cancelSource.Cancel();
+            }
+
+            _activeProcessing = !_activeProcessing;
         }
 
         private IEnumerable<string> GetAvailableCaptureIndexes()
@@ -146,12 +165,17 @@ namespace ViewVisualization.ViewModels
             SystemCameras = new ObservableCollection<string>(GetAvailableCaptureIndexes());
         }
         
-        internal void StartProcessingFrames(object sender, EventArgs e)
+        internal void StartProcessingFrames()
         {
             Task.Run(() =>
             {
                 while (true)
+                {
+                    if (_cancelSource.Token.IsCancellationRequested)
+                        return;
+
                     ProcessNextFrames();
+                }
             });
         }
         

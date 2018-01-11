@@ -34,7 +34,8 @@
                                  LeftRotateCommand="{Binding RightRotateLeftCommand}"
                                  RightRotateCommand="{Binding RightRotateRightCommand}"/>
 
-        <controls:SettingsControl Grid.Column="2">
+        <controls:SettingsControl Grid.Column="2"
+                                  ToggleCaptureCommand="{Binding StartCaptureCommand}">
 
         </controls:SettingsControl>
     </Grid>
