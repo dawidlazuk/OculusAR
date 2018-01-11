@@ -10,7 +10,7 @@ using ViewVisualization.ViewModels;
 namespace ViewVisualization.Controls
 {
     /// <summary>
-    /// Interaction logic for ChannelControl.xaml
+    /// Control for the image channel control interface.
     /// </summary>
     public partial class ChannelControl : UserControl
     {

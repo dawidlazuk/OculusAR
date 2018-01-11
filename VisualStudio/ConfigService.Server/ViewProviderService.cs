@@ -10,37 +10,43 @@ using System.ServiceModel.Description;
 namespace ConfigService.Server
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, UseSynchronizationContext = false, IncludeExceptionDetailInFaults = true)]
-    public class ViewProviderService : IViewProviderService
+    public class ViewProviderService : IViewProviderService, IDisposable
     {
         private static readonly string EndpointName = "Config";
 
         private readonly IProcessedViewProvider processedViewProvider;
 
-        public static ViewProviderService Create(IProcessedViewProvider provider, string port = "56719")
-        {
-            ServiceHost host = null;
+        private ServiceHost host = null;
 
+        /// <summary>
+        /// Create an instance of the service with provided IProcessedViewProvider instance.
+        /// </summary>
+        /// <param name="provider">IProcessedViewProvider instance to handle service calls</param>
+        /// <param name="port">Service port</param>
+        /// <returns></returns>
+        public static ViewProviderService Create(IProcessedViewProvider provider, string port = "56719")
+        {           
             ViewProviderService serviceInstance = new ViewProviderService(provider);
             try
             {
                 Uri uri = new Uri($"http://localhost:{port}/OculusAR");
-                host = new ServiceHost(serviceInstance, uri);
+                serviceInstance.host = new ServiceHost(serviceInstance, uri);
 
                 var binding = new BasicHttpBinding();              
 
-                host.AddServiceEndpoint(
+                serviceInstance.host.AddServiceEndpoint(
                     typeof(IViewProviderService),
                     binding,
                     EndpointName);
 
-                host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
+                serviceInstance.host.Description.Behaviors.Add(new ServiceMetadataBehavior { HttpGetEnabled = true });
 
-                host.Open();
+                serviceInstance.host.Open();
                 return serviceInstance;
             }
             catch (Exception ex)
             {
-                host = null;
+                serviceInstance.host = null;
                 Debug.WriteLine("Error hosting config service: " + ex.Message);
                 return null;
             }
@@ -105,6 +111,11 @@ namespace ConfigService.Server
         public void ChangeProcessorPriority(string processorName, bool increase)
         {
             processedViewProvider.ChangeProcessorPriority(processorName, increase);
+        }
+
+        public void Dispose()
+        {
+            host.Close();
         }
     }
 }

@@ -17,7 +17,7 @@ using UserControl = System.Windows.Controls.UserControl;
 namespace ViewVisualization.Controls
 {
     /// <summary>
-    /// Interaction logic for SettingsControl.xaml
+    /// Control for the image processing settings interface.
     /// </summary>
     public partial class SettingsControl : UserControl, INotifyPropertyChanged
     {

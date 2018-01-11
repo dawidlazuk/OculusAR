@@ -8,6 +8,7 @@ using ViewProvision;
 using ViewProvision.Contract;
 using ViewProvision.Processors;
 using System;
+using ConfigService.Server;
 
 public class PlayCameraVideos : MonoBehaviour
 {
@@ -16,18 +17,14 @@ public class PlayCameraVideos : MonoBehaviour
 
 	private IStereoVidTransmitter _stereoVidTransmitter;
 
+    ViewProviderService configServiceInstance;
+
 	// Use this for initialization
 	void Start()
 	{
-		frameCounter = 1000;
 		ViewProvider viewProvider = new ViewProvider(true);
-        var processedProvider = new ProcessedViewProvider(viewProvider, new List<IImageProcessor>
-        {
-           new SmoothBilateralProcessor(7,255,34),
-           new SobelProcessor(),
-           new GrayImageProcessor()
-        });
-		ConfigService.Server.ViewProviderService.Create(processedProvider);        
+        var processedProvider = new ProcessedViewProvider(viewProvider, GetImageProcessors());
+        configServiceInstance = ViewProviderService.Create(processedProvider);        
 
 		/* 
 		 * Below part is used for setting proper camera for each channel before we'll develop the proper connection with the config app.
@@ -40,21 +37,35 @@ public class PlayCameraVideos : MonoBehaviour
 
 		_stereoVidTransmitter = new StereoVidTransmitter(converter, processedProvider);
 	}
-
-	int frameCounter;
-
+    
 	// Update is called once per frame
 	void Update()
 	{
-		if (frameCounter == 1000) {
-			Debug.Log (DateTime.Now);
-			frameCounter = 0;
-		}
-
 		var view = _stereoVidTransmitter.GetStereoView();
 		RightImage.texture = view.RightEye;
 		LeftImage.texture = view.LeftEye;
-
-		frameCounter++;
 	}
+
+    private List<IImageProcessor> GetImageProcessors()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            OnApplicationQuit();
+        }
+
+        var result = new List<IImageProcessor>
+        { 
+            //Register image processors here
+            new SmoothBilateralProcessor(7, 255, 34),
+            new SobelProcessor(),
+            new GrayImageProcessor()
+        };
+        return result;
+    }
+
+    void OnApplicationQuit()
+    {
+        configServiceInstance.Dispose();
+        Application.Quit();
+    }
 }

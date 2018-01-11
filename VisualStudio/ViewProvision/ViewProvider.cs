@@ -101,7 +101,7 @@ namespace ViewProvision
             rightWaitEvent.Set();
         }
 
-        public void UpdateTimestamp()
+        internal void UpdateTimestamp()
         {
             leftImageUpdateTime = DateTime.Now;
             rightImageUpdateTime = DateTime.Now;

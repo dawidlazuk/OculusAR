@@ -217,10 +217,5 @@ namespace ViewProvision
                     break;
             }
         }
-
-        public void UpdateTimestamp()
-        {
-            _originViewProvider.UpdateTimestamp();
-        }
     }
 }

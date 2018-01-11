@@ -15,7 +15,9 @@ namespace ConfigService.Client
     {
         private readonly IViewProviderService channel;
 
-
+        /// <summary>
+        /// Is fired when an exception occurs during the service call
+        /// </summary>
         public event UnhandledExceptionEventHandler OnException;
 
         public ViewProviderClient(string port = "56719")
@@ -40,11 +42,6 @@ namespace ConfigService.Client
                
         
         public ViewDataBitmap GetCurrentViewAsBitmaps()
-        {
-            return Call(channel.GetCurrentViewAsBitmaps);
-        }
-
-        public ViewDataBitmap GetCurrentViewInternal()
         {
             return Call(channel.GetCurrentViewAsBitmaps);
         }
