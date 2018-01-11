@@ -20,8 +20,6 @@ namespace ViewVisualization
 
             viewModel = new MainViewModel();
             this.DataContext = viewModel;
-
-            this.Loaded += viewModel.StartProcessingFrames;
         }
 
         protected override void OnSourceInitialized(EventArgs e)

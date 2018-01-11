@@ -59,6 +59,7 @@ namespace ConfigService.Server
             return processedViewProvider.GetCurrentViewAsBitmaps();
         }
 
+
 #if DEBUG
         //TODO remove - only for development
         public void UpdateFrames()

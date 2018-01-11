@@ -41,6 +41,7 @@ namespace ConfigService.Client
             return Call(channel.GetCurrentViewAsBitmaps);
         }
 
+
         public ViewDataBitmap GetCurrentViewInternal()
         {
             return Call(channel.GetCurrentViewAsBitmaps);
