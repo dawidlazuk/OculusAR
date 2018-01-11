@@ -23,13 +23,34 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
+        
+        <Grid Name="ButtonsGrid" Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="0" Width="150px" Height="50px"  Grid.Row="0">
-            <StackPanel Orientation="Horizontal">
-                <Image HorizontalAlignment="Left" Source="../Resources/unity_logo.png" Stretch="Uniform" Height="33" Width="47"/>
-                <Label VerticalAlignment="Center" FontSize="20"  Padding="0" Content="Start Unity"/>
-            </StackPanel>
-        </Button>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Margin="5" Grid.Row="0" Name="StartUnityButton" Click="StartUnityButton_OnClick">
+                <StackPanel Orientation="Horizontal">
+                    <Image HorizontalAlignment="Left" Source="../Resources/unity_logo.png" Stretch="Uniform" Height="33" Width="47"/>
+                    <Label VerticalAlignment="Center" FontSize="16"  Padding="0" Content="Start Unity"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="0" Margin="5" Grid.Row="1" Name="CaptureVideoButton" Click="CaptureVideoButton_OnClick">
+                <StackPanel Orientation="Horizontal">
+                    <Image Name="CaptureButtonImagePlay" HorizontalAlignment="Left" Source="../Resources/appbar.control.play.png" Stretch="Uniform" Height="33" Width="47"/>
+                    <Image Name="CaptureButtonImageStop" Visibility="Collapsed" HorizontalAlignment="Left" Source="../Resources/appbar.control.stop.png" Stretch="Uniform" Height="33" Width="47"/>
+                    <Label VerticalAlignment="Center" Name="CaptureButtonLabel" FontSize="16"  Padding="0" Content="Start capturing"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+
 
         <Label Grid.Column="0" Grid.Row="1" Content="Image Processors"/>
 

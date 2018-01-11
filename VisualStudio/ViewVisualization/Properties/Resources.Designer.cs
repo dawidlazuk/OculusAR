@@ -63,6 +63,26 @@ namespace ViewVisualization.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap appbar_control_play {
+            get {
+                object obj = ResourceManager.GetObject("appbar_control_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap appbar_control_stop {
+            get {
+                object obj = ResourceManager.GetObject("appbar_control_stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap oculusar_logo {
             get {
                 object obj = ResourceManager.GetObject("oculusar_logo", resourceCulture);
