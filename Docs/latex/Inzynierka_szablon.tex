@@ -300,9 +300,10 @@ samodzielnie, co poświadczam własnoręcznym podpisem.
 
 Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
 
-Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujacych rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
+Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
+Drugim celem pracy, po stworzeniu takiego systemu, było zbadanie czy i jak bardzo wizja uzyskana przez gogle wirtualnej rzeczywistości w połączeniu z kamerami różni się od naturalnej wizji człowieka. Czy osiągnięty efekt będzie akceptowalny dla użytkownika.
 
-\chapter{Wstęp teoretyczny}
+\chapter{Technologia VR/AR. Wizja ludzka.}
 
 W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Poruszone zostaną problemy, jakie wiążą się z zastosowaniem tych technologii. Przedstawiona zostanie też natura wizji stereoskopowej człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
 
@@ -314,7 +315,7 @@ W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzec
 \textit{Wirtualną rzeczywistością} (ang. VR - Virtual Reality) nazywamy wrażenie przebywania użytkownika w świecie stworzonym wirtualnie. Zwykle dotyczy to obrazu, dźwięku oraz interakcji z otoczeniem, ale podejmowane są próby wykorzystania zapachu i dotyku w aplikacjach VR.
 \end{definition}
 
-Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii. Nawet w przypadku telewizji trójwymiarowej.
+Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii, nawet takich jak telewizja trójwymiarowa.
 
 Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.
 
@@ -341,7 +342,7 @@ Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za so
 \pagebreak
 \begin{description}
 \item [Wymogi wydajnościowe] \hfill \\
-W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki jest przystosowany do częstotliwości zmian obrazu występującej w naturze. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$.
+W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$.
 \item [Wpływ na wzrok] \hfill \\
 Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
 \item [Choroba symulacyjna] \hfill \\
@@ -355,7 +356,7 @@ Kolejny problem dotyczący immersji jest związany z osobami mającymi problemy 
 
 \section {Wizja stereoskopowa człowieka}
 
-Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane mniej więcej równolegle w ten sam punkt. Umożliwia to zebranie dwóch obrazów, które różnią się od siebie perspektywą obserwatora. Mózg przetwarzając te obrazy tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
+Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane mniej więcej równolegle w ten sam punkt. Umożliwia to zebranie dwóch podobnych do siebie obrazów. Różnica między nimi polega na przesunięciu oczu (kamer) względem siebie, przez co każdy obiekt jest widziany na jednym obrazie z nieco innej perspektywy, niż na drugim. Mózg nakładając na siebie te obrazy, dzięki tej różnicy, tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
 
 \subsection {Odległość między źrenicami}
 
@@ -840,12 +841,48 @@ Natomiast druga klasa jest klientem, który podłącza się do istniejącego ser
 
 \chapter {Rezultat pracy}
 
-Ten rozdział jest poświęcony zbadaniu, czy wdrożone rozwiązanie jest tym, co zostało wyspecyfikowane w rozdziale \textit{Cel i założenia projektu}. Przedstawione zostaną wyniki testów użytkowych i wydajnościowych.
+Ten rozdział jest poświęcony przedstawieniu rezultatów pracy nad omawianym systemem. Omówione zostaną testy, które zostały przeprowadzone w celu zbadania, czy stworzone rozwiązanie odpowiada założeniom, przedstawionym w rozdziale \textit{Cel i założenia projektu}. Rozdział obejmuje także omówienie wniosków wyciągniętych podczas pracy nad tworzonym systemem. 
+
 \section {Testy rozwiązania}
+
+Przeprowadzone testy można podzielić na dwie kategorie. Pierwszą z nich będą testy obiektywne, czyli takie, które można przedstawić w formie danych liczbowych. Tego typu testy będą związane bezpośrednio z wydajnością systemu i jej wpływem na wrażenia użytkownika. Drugą kategorią będą testy subiektywne, opierające się na indywidualnych odczuciach związanych z korzystaniem z kostruowanych gogli AR. 
+
+
+\subsection {Testy wydajności}
+TODO wyniki testów opóźnień, klatek na sekundę
+
+Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że tego typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli.
+
+\begin{description}
+\item[Opóźnienie przesyłanego obrazu] \hfill \\
+Pierwszą z kwestii, która została poruszona jest opóźnienie przesyłania obrazu na linii kamery - gogle. Jest to prawdopodobnie najważniejszy problem, od rozwiązania którego zależy to, czy system będzie nadawał się do użytku. Zbyt duże opóźnienia spowodują, że użytkownik nie będzie w stanie zareagować w odpowiednim czasie na zmiany w otoczeniu, ponieważ informacja o nich dotrze do niego za późno. W ramach testów zmierzono różnicę między czasem wyświetlanej klatki, a czasem rzeczywistym.
+
+\textit{Sposób wykonania testu}
+
+Założenia:
+\begin{enumerate}
+\item Różnicę czasu między wyświetleniem obrazu w aplikacji Unity, a w goglach VR przyjmujemy jako 0 ms. Nie mamy wpływu na zmianę tego opóźnienia bez ingerencji w kod biblioteki zewnętrznej, zatem nie obejmujemy testami tego opóźnienia.
+\item Pomiary wykonywane są przy dwóch podłączonych kamerach. Obie pobierają obraz z taką samą rozdzielczością.
+\end{enumerate}
+
+Do wykonania testu potrzebne są: kamera, ekran, stoper. Kamerę, która będzie wykorzystywana przez aplikację do pobierania obrazu, kierujemy w stronę ekranu. Stoper opieramy o ekran tak, aby był widziany przez kamerę. Jeżeli wszystko jest ustawione poprawnie, to na ekranie stoper powinien być widoczny dwukrotnie. Widziany bezpośrednio przez kamerę oraz wyświetlany na ekranie. Oba obrazy stopera powinny być na tyle czytelne, aby zatrzymując obraz można było odczytać z niego czas.
+Różnica pomiędzy czasem, wyświetlanym na bezpośrednim obrazie stopera, a czasem z jego obrazu ekranowego, jest opóźnieniem danej klatki.
+Należy wykonać kilka pomiarów, a następnie na ich podstawie wyznaczyć opóźnienie obrazu (i niepewności pomiarowe?)
+
+\textit{Wyniki}
 TODO
 
-\subsection {Testy twarde, liczbowe, itp.}
-TODO wyniki testów opóźnień, klatek na sekundę
+\item[Ilość klatek na sekundę] \hfill \\
+TODO - wstęp, wpływ na user-experience
+
+\textit{Sposób wykonania testu}
+TODO
+
+\textit{Wyniki}
+TODO
+
+\end{description}
+
 
 \subsection {Testy subiektywne}
 TODO np. Czytanie książki. Łapanie przedmiotu, itp.
