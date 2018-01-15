@@ -23,6 +23,8 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage[none]{hyphenat}
+\usepackage{float}
+\usepackage{flafter}
 
 % ---------------- Marginesy, akapity, interlinia ------------------
 
@@ -403,7 +405,7 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{zbieznosc}
+\includegraphics[scale=0.5]{images/zbieznosc}
 \caption[Zbieżność oczu (źródło: http://www.swiatlo.tak.pl/1/index.php/funkcje-wzroku-akomodacja-adaptacja-zbieznosc/)]{Zbieżność oczu}
 \end{figure}
 
@@ -535,7 +537,7 @@ System składa się z modułów realizujących ściśle określone zadania, dlat
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{architecture_schema}
+\includegraphics[scale=0.4]{images/architecture_schema}
 \caption[Architektura systemu]{Architektura systemu}
 \end{figure}
 
@@ -556,7 +558,7 @@ W tym module zaimplementowane są wszystkie operacje powiązane z kamerami. Kont
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{IViewProvider}
+\includegraphics[scale=0.9]{images/IViewProvider}
 \caption[Przechwytywanie diagram]{Interfejsy przechwytywania obrazów}
 \end{figure}
 
@@ -594,16 +596,14 @@ Moduł ten odpowiedzialny jest za realizację warstwy pośredniej w  systemie, c
 
 Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obrazu w proces przekazywania obrazu od kamery do gogli. Dodatkowo stworzony został kontrakt definiujący metody, które muszą posiadać klasy realizujące operacje przekształceń obrazu.
 
+\pagebreak
+
 \begin{description}
 
-
-\begin{minipage}{\linewidth}
 \item [Funkcjonalność przetwarzania obrazu] \hfill \\
-\end{minipage}
-
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{IProcessedViewProvider}
+\includegraphics[scale=0.9]{images/IProcessedViewProvider}
 \caption[Przetwarzanie diagram]{Interfejsy przetwarzania obrazów}
 \end{figure}
 
@@ -619,7 +619,7 @@ Klasa ta w konstruktorze jako argument przyjmuje obiekt implementujący interfej
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{IImageProcessor}
+\includegraphics[scale=0.9]{images/IImageProcessor}
 \caption[Przekształcenie diagram diagram]{Interfejs obiektu przekształcającego obraz}
 \end{figure}
 
@@ -642,7 +642,7 @@ Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi ur
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{unityscene}
+\includegraphics[scale=0.5]{images/unityscene}
 \caption[Scena Unity]{Scena w programie Unity Editor}
 \end{figure}
 
@@ -653,7 +653,7 @@ W module zostały przewidziane następujące interfejsy, zapewniające metody do
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{IStereoVidTransmitter}
+\includegraphics[scale=0.9]{images/IStereoVidTransmitter}
 \caption[Przekazywanie diagram]{Interfejs zwracający tekstury do wyświetlenia}
 \end{figure}
 
@@ -661,7 +661,7 @@ Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obr
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{ITextureConverter}
+\includegraphics[scale=0.9]{images/ITextureConverter}
 \caption[Konwersja diagram]{Interfejs dokonujący konwersji obrazu do tekstury}
 \end{figure}
 
@@ -693,11 +693,12 @@ Do wykonania aplikacji został użyty framework \textit{WPF} (Windows Presentati
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{mainwindow_screen}
-\caption[Widok aplikacji]{Główny widok aplikacji konfiguracyjnej}
+\includegraphics[scale=0.4]{images/mainwindow_screen}
+\caption[Widok aplikacji]{Widok aplikacji konfiguracyjnej}
 \end{figure}
 
-Widok ten można podzielić na dwie części ze względu na spełniane funkcjonalności. 
+\pagebreak
+Widok ten można podzielić na dwie części ze względu na spełniane funkcjonalności:
 
 \begin{itemize}
 \item Wybór źródła i rotacji obrazu
@@ -720,7 +721,7 @@ W celu większej przejrzystości dla wymienionych części zostały stworzone sp
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{channelcontrol_screen}
+\includegraphics[scale=0.5]{images/channelcontrol_screen}
 \caption[Widok aplikacji]{Kontrolki \textit{ChannelControl}.}
 \end{figure}
 
@@ -741,7 +742,7 @@ Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu je
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{settingscontrol_screen}
+\includegraphics[scale=0.5]{images/settingscontrol_screen}
 \caption[Widok aplikacji]{Kontrolka \textit{SettingsControl}.}
 \end{figure}
 
@@ -758,7 +759,7 @@ Ta część systemu odpowiada za komunikację pomiędzy procesem aplikacji Unity
 Technologia \textit{WCF} wymaga, aby zdefiniować metody będące kontraktem dostępnych operacji, przez klasę, która obsługuje dany serwis. Kontrakt ten zdefiniowany został następująco:
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.9]{IViewProviderService}
+\includegraphics[scale=0.9]{images/IViewProviderService}
 \caption[Serwisy diagram]{Interfejsy serwisów}
 \end{figure}
  
@@ -790,19 +791,23 @@ Ten rozdział jest poświęcony przedstawieniu rezultatów pracy nad omawianym s
 \section{Konstrukcja gogli}
 W celu zapewnienia wrażenia rozszerzonej rzeczywistości niezbędne było zamontowanie kamer na goglach wirtualnej rzeczywistości. Dzięki odpowiedniemu montażowi, uwzględniającemu cechy ludzkiej wizji stereoskopowej uzyskuje się gogle, które wyświetlają użytkownikowi obraz stereoskopowy oraz reagują na ruch głowy, poprzez ruch kamer.
 Sposób montażu musiał spełniać dwa wymagania:
-\begin{enumerate}
+\begin{itemize}
 \item Niedozwolone są jakiekolwiek stałe modyfikacje gogli.
 \item Montaż musi umożliwiać łatwą zmianę odległości między kamerami.
-\end{enumerate}
+\end{itemize}
 W związku z tymi wymaganiami, wykorzystano już zamontowany do gogli uchwyt kontrolera Leap Motion. Kamery zostały przymocowane do uchwytu, składającego się z trzech części:
-\begin{enumerate}
+\begin{itemize}
 \item Dwa komponenty, bezpośrednio przymocowane do kamer.
 \item Prowadnica, kształtem odpowiadająca kontrolerowi Leap Motion, do której te komponenty zostały przymocowane.
-\end{enumerate}
+\end{itemize}
 
--- projekt uchwytu
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{images/cameraHolder}
+\caption[Projekt uchwytu]{Projekt uchwytu}
+\end{figure}
 
-Uchwyt umożliwia przesuwanie kamer po prowadnicy w celu regulacji odległości między kamerami.
+Części te są połączone ze sobą śrubami. Konstrukcja uchwytu umożliwia przesuwanie kamer po prowadnicy w celu regulacji odległości między kamerami.
 
 Projekt uchwytu wykonał <imię nazwisko> - członek Koła Naukowego Wirtualnej Rzeczywistości, absolwent wydziału MiNI. -- nie jestem pewien, czy to umieszczać w pracy, ale jednak warto o nim wspomnieć bo on to zaprojektował, do konsultacji.
 
@@ -821,10 +826,10 @@ Pierwszą z kwestii, która została poruszona jest opóźnienie przesyłania ob
 \textit{Sposób wykonania testu}
 
 Założenia:
-\begin{enumerate}
+\begin{itemize}
 \item Różnicę czasu między wyświetleniem obrazu w aplikacji Unity, a w goglach VR przyjmujemy jako 0 ms. Nie mamy wpływu na zmianę tego opóźnienia bez ingerencji w kod biblioteki zewnętrznej, zatem nie obejmujemy testami tego opóźnienia.
 \item Pomiary wykonywane są przy dwóch podłączonych kamerach. Obie pobierają obraz z taką samą rozdzielczością.
-\end{enumerate}
+\end{itemize}
 
 Do wykonania testu potrzebne są: kamera, ekran, stoper. Kamerę, która będzie wykorzystywana przez aplikację do pobierania obrazu, kierujemy w stronę ekranu. Stoper opieramy o ekran tak, aby był widziany przez kamerę. Jeżeli wszystko jest ustawione poprawnie, to na ekranie stoper powinien być widoczny dwukrotnie. Widziany bezpośrednio przez kamerę oraz wyświetlany na ekranie. Oba obrazy stopera powinny być na tyle czytelne, aby zatrzymując obraz można było odczytać z niego czas.
 Różnica pomiędzy czasem, wyświetlanym na bezpośrednim obrazie stopera, a czasem z jego obrazu ekranowego, jest opóźnieniem danej klatki.
@@ -853,14 +858,27 @@ TODO - powpisywać pomysły testów
 \begin{description}
 \item[Czytanie książki] \hfill \\
 TODO Opis
+
 \item[Odbijanie piłeczki pingpongowej] \hfill \\
-TODO Opis
+TODO Opis, rezultat
+
 \item[Gra w łapki] \hfill \\
-TODO Opis
-\item[Chwytanie poruszającego się przedmiotu] \hfill \\
-TODO Opis
+\textit{Opis} \\
+Popularna zabawa, w której największe znaczenie ma czas reakcji. Dwie osoby stają naprzeciwko siebie z wystawionymi dłońmi z przodu tak, aby dłonie jednej osoby były nad dłońmi drugiej. Zadaniem gracza, którego dłonie są niżej, jest uderzenie dłoni drugiego gracza z góry. Drugi gracz broni się poprzez zabranie rąk. Celem testu jest zbadanie jak użytkownik gogli poradzi sobie przeciwko graczowi bez gogli. \\
+\textit{Rezultat}\\
+TODO
+
+\item[Chwytanie przedmiotu] \hfill \\
+\textit{Opis} \\
+Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i porównać go z czasem, kiedy gogli nie używa. \\
+\textit{Rezultat} \\
+TODO
+
 \item[Celowanie laserem w punkt (statyczny lub dynamiczny)] \hfill \\
 TODO Opis
+
+\item[Chodzenie po linii prostej]
+TODO
 \end{description}
 
 \section{Wnioski}
@@ -880,27 +898,27 @@ TODO
 
 \subsection{Usprawnienia}
 TODO
-\begin{enumerate}
-\item Zwiększenie wydajności
-\item Ograniczenie przewodów
-\item Powiększenie pola widzenia
-\end{enumerate}
+\begin{description}
+\item [Zwiększenie wydajności]
+\item [Ograniczenie przewodów]
+\item [Powiększenie pola widzenia]
+\end{description}
 
 \subsection{Dodatkowe funkcjonalności}
 TODO
-\begin{enumerate}
-\item Wykrywanie ruchu gałki ocznej
-\item Pobieranie informacji o ruchu głowy
-\item Opracowanie szybkiego przesyłu obrazu na odległość
-\end{enumerate}
+\begin{description}
+\item [Wykrywanie ruchu gałki ocznej]
+\item [Pobieranie informacji o ruchu głowy]
+\item [Opracowanie szybkiego przesyłu obrazu na odległość]
+\end{description}
 
 \section{Potencjalne zastosowania}
 TODO
-\begin{enumerate}
-\item Zdalnie sterowane roboty
-\item Zdalnie pilotowane drony
-\item Zdalne oglądanie np. mieszkań
-\end{enumerate}
+\begin{description}
+\item [Zdalnie sterowane roboty]
+\item [Zdalnie pilotowane drony]
+\item [Zdalne oglądanie np. mieszkań]
+\end{description}
 
 % -------------------- 6. Bibliografia -----------------------
 % Bibliografia leksykograficznie wg nazwisk autorów
