@@ -833,10 +833,44 @@ Założenia:
 
 Do wykonania testu potrzebne są: kamera, ekran, stoper. Kamerę, która będzie wykorzystywana przez aplikację do pobierania obrazu, kierujemy w stronę ekranu. Stoper opieramy o ekran tak, aby był widziany przez kamerę. Jeżeli wszystko jest ustawione poprawnie, to na ekranie stoper powinien być widoczny dwukrotnie. Widziany bezpośrednio przez kamerę oraz wyświetlany na ekranie. Oba obrazy stopera powinny być na tyle czytelne, aby zatrzymując obraz można było odczytać z niego czas.
 Różnica pomiędzy czasem, wyświetlanym na bezpośrednim obrazie stopera, a czasem z jego obrazu ekranowego, jest opóźnieniem danej klatki.
-Należy wykonać kilka pomiarów, a następnie na ich podstawie wyznaczyć opóźnienie obrazu (i niepewności pomiarowe?)
+Należy wykonać kilka pomiarów, a następnie na ich podstawie wyznaczyć opóźnienie obrazu.
 
 \textit{Wyniki}
-TODO
+
+Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadków:
+\begin{itemize}
+\item przekazywanie obrazu bez przetwarzania
+\item przekazywanie obrazu z konwersją do skali szarości
+\item przekazywanie obrazu obróconego o 90\textdegree
+\end{itemize}
+
+W poniższej tabeli przedstawione są pomiary:
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót o 90\textdegree {[}ms{]} \\ \hline
+1  & 230                        & 220                                  & 290                            \\
+2  & 220                        & 200                                  & 190                            \\
+3  & 220                        & 220                                  & 260                            \\
+4  & 220                        & 190                                  & 230                            \\
+5  & 210                        & 260                                  & 280                            \\
+6  & 220                        & 230                                  & 260                            \\
+7  & 190                        & 160                                  & 300                            \\
+8  & 140                        & 240                                  & 220                            \\
+9  & 230                        & 210                                  & 220                            \\
+10 & 200                        & 180                                  & 270                            
+\end{tabular}
+\caption{Pomiary opóźnień (rozdzielczość 1440x1080)}
+\end{table}
+
+Na podstawie powyższych pomiarów wyznaczono średnie opóźnienia dla każdego z tych trzech przypadków:
+
+\begin{itemize}
+\item 208 ms - przekazywanie obrazu bez przetwarzania 
+\item 211 ms - przekazywanie obrazu z konwersją do skali szarości
+\item 252 ms - przekazywanie obrazu obróconego o 90\textdegree
+\end{itemize}
+
 
 \item[Ilość klatek na sekundę] \hfill \\
 TODO - wstęp, wpływ na user-experience
@@ -846,6 +880,32 @@ TODO
 
 \textit{Wyniki}
 TODO
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obrót o 90\textdegree {[}FPS{]} \\ \hline
+1  & 14,08                       & 14,29                                 & 14,29                           \\
+2  & 14,29                       & 14,29                                 & 13,89                           \\
+3  & 14,29                       & 14,29                                 & 14,08                           \\
+4  & 14,29                       & 14,29                                 & 14,29                           \\
+5  & 14,29                       & 14,29                                 & 14,29                           \\
+6  & 14,29                       & 14,29                                 & 14,29                           \\
+7  & 13,89                       & 14,29                                 & 14,29                           \\
+8  & 14,29                       & 14,29                                 & 14,08                           \\
+9  & 14,29                       & 14,29                                 & 14,29                           \\
+10 & 14,29                       & 14,29                                 & 14,29                           
+\end{tabular}
+\caption{Pomiary ilości FPS (rozdzielczość 1440x1080)}
+\end{table}
+
+Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego z tych trzech przypadków:
+
+\begin{itemize}
+\item 14.23 FPS - przekazywanie obrazu bez przetwarzania 
+\item 14.29 FPS - przekazywanie obrazu z konwersją do skali szarości
+\item 14.21 FPS - przekazywanie obrazu obróconego o 90\textdegree
+\end{itemize}
 
 \end{description}
 
