@@ -899,8 +899,12 @@ TODO
 \subsection{Usprawnienia}
 TODO
 \begin{description}
-\item [Zwiększenie wydajności]
-\item [Ograniczenie przewodów]
+\item [Zwiększenie wydajności] \hfill \\
+Wydajność zaimplementowanego systemu nie jest wystarczająca, aby móc komfortowo korzystać z gogli przez większą ilość czasu. Pierwszym krokiem, jaki powinien być podjęty w celu rozwinięcia systemu, powinno być poprawienie procesu przekazywania obrazu z kamer do gogli. W celu zmaksymalizowania wydajności zalecane jest przepisanie modułu na natywny język programowania, na przykład C/C++. Ponadto warto zwrócić uwagę na sposoby przekazywania obrazu i synchronizacji odpowiedzialnych za to wątków, gdyż prawdopodobnie można je jeszcze zoptymalizować.
+
+\item [Dedykowany układ kamer] \hfill \\
+Opisany projekt gogli przewiduje dwie kamery USB podłączone do komputera (lub HUB'u USB). Powoduje to trudności z montażem kamer na goglach, zwiększenie ilości przewodów pomiędzy komputerem, a użytkownikiem oraz konieczność odpowiedniego ustawiania kamer. Proponowanym rozwiązaniem na dalszy rozwój projektu jest stworzenie dedykowanego układu dwóch kamer, zamkniętego w obudowie, umożliwiającego łatwy montaż na goglach VR. Z takiej obudowy można poprowadzić jeden przewód, który obsługiwałby obie kamery. Taki układ zapewniałby odpowiednie ustawienia kamer oraz umożliwiałby wygodną kalibrację kamer, tak jak jest to zrealizowane w przypadku soczewek gogli VR.
+
 \item [Powiększenie pola widzenia]
 \end{description}
 
