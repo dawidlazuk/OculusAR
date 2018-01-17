@@ -537,7 +537,7 @@ System składa się z modułów realizujących ściśle określone zadania, dlat
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{images/architecture_schema}
+\includegraphics[scale=0.3]{images/architecture_schema}
 \caption[Architektura systemu]{Architektura systemu}
 \end{figure}
 
@@ -914,41 +914,62 @@ Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego
 
 W tym podrozdziale omówione zostaną testy, które zostały wykonane pod kątem zbadania ogólnego wrażenia użytkownika, który korzysta z konstruowanych gogli AR. Podczas testów uwaga była skierowana w stronę uzyskania jak najlepszego odwzorowania naturalnej wizji ludzkiej. W tym celu sprawdzono czy człowiek, patrząc przez gogle, jest w stanie radzić sobie z czynnościami, które wymagają korzystania ze zmysłu wzroku, a które w normalnych warunkach nie stanowią problemu. Wykonując te testy sprawdzono w jaki sposób wydajność systemu, omówiona w poprzednim podrozdziale, wpływa na koordynację wzrokowo-ruchową człowieka wykorzystującego stworzony system.
 
-TODO - powpisywać pomysły testów
+Ogólnym wrażeniem, które towarzyszyło podczas wykonywania wszystkich poniżej wymienionych testów było znaczne przybliżenie obrazu. Użytkownik ma wrażenie obserwowania otaczającej go rzeczywistości podobnie jak w przypadku lornetki. Spowodowane jest to kilkoma czynnikami. Kamery z powodu gogli na których się znajduja i samej konstrukcji uchwytu, znajdują się o <ile> centymetrów bliżej celu na który się patrzy niż oczy.  To powoduje problemy jeśli chodzi o kordynacje ruchową użytkownika. Człowiek wiele rzeczy wykonuje odruchowo, polegając na wyrobionych przez lat przyzwyczajeniach w kwestii oceny odległości. Wykonując ruch ręką, często nie musi kontrolować tego ruchu przez cały czas jego trwania. Zazwyczaj patrząc na cel, na podstawie doświadczeń manulanych z całego życia, wiadomo dokładnie jaki ruch ręką trzeba wykonać, żeby dotarła ona do celu. Jednak przeprowadzając testy w goglach, okazuje się że z powodu odmiennych sygnałów wzrokowych i odczucia głębi, użytkownik musi od nowa nauczyć się pewnych odruchów i oceniać odległość w jakiej znajdują się przedmioty. \\
+
+Dodatkowo z powodu bliższego ustawienia kamer, pewne pole widzenia  (znajdujące się najbliżej ciała) jest wyłączone. Powoduje to również wolniejszą reakcje użytkownika, ponieważ w normalnych warunkach użytkownik widzi swoją rękę już od bardzo wczesnego etapu ruchu. Przy wyłączonym najbliższym polu widzenia, często okazuje się, że ręka po wejściu w pole widzenia jest w innym miejscu niż było to oczekiwane, dlatego  potrzebna jest późniejsza, dodatkowa koretka ruchu co powoduje częściową dezorientację u użytkownika i opóźnia jego czas reakcji.
+
 \begin{description}
 \item[Czytanie książki] \hfill \\
-TODO Opis
+\textit{Opis} \\
+Czytanie książki o standardowym rozmiarze czcionki. \\
+\textit{Rezultat} \\
+Czytanie tekstu było możliwe jednak wymagało większego stopnia skupienia niż bez użycia gogli. Spowodowane jest to gorszą ostrością obrazu niż w rzeczywistości, co powoduje potrzebę większej koncentracji na rozpoznawaniu liter i śledzenia aktualnie czytanej linii tekstu. Z powodu wspomnianego przybliżenia obrazu, może okazać się, że czytanie książki trzymając ją w rękach jest niemożliwe. Książka znajduje się wtedy zbyt blisko na niekomfortowej odległości oraz ostrość kamer w tym punkcie może nie być wystarczająco dobra. Dlatego najlepsze wrażenie zostało uzyskane oddalając książkę na odległość wyprostowanych rąk lub umieszając ją na stole i oddaleniu się na odległość która zapewniała wystarczającą ostrość obrazu.    
 
-\item[Odbijanie piłeczki pingpongowej] \hfill \\
-TODO Opis, rezultat
+\item[Odbijanie piłki do tenisa stołowego] \hfill \\
+\textit{Opis} \\
+ Za pomocą paletki do tenisa stołowego użytkownik musi podbić piłkę jak największą liczbę razy zanim spadnie ona na ziemię. \\
+\textit{Rezultat}\\
+Użytkownik gogli miał duże problemy z wielokrotnym podbijaniem piłki. Pierwszą niedogodnością była konieczność trzymania paletki na mocno wyciągniętej do przodu ręce. W przypadku gdy trzeba było odbić piłkę która znalazła się blisko ciała, zazwyczaj niemożliwe było odpowiednie szybkie jej zlokalizowanie ponieważ przez powiększony i przybliżony obraz pole widzenia było zawężone. W przypadku gdy piłka znajdowała się odpowiednio daleko, najlepsze wyniki udało się osiągnąć przy mniejszej częstotliwości odbić, a więc wtedy kiedy lot piłki w powietrzu trwał dłużej. Użytkownik miał wtedy więcej czasu na ustalenie miejsca w którym spadnie piłka i musiał starać się je przewidzieć. Ze względu na opóźnienie obrazu, błyskawiczna reakcja nie była możliwa dlatego każde odbicie wymagało odpowiedniego wcześniej przewidzenia toru lotu piłki  i przygotowania paletki na jej spadek. Jednakże, przy mniejszej częstotliwości piłka spadała z większą prędkością przez co ustawienie paletki pod złym kątem powodowało znaczną zmianę kierunku lotu piłki po odbiciu, co wraz ze znacznym jej oddaleniem się uniemożliwiało kolejne podbicie. Przy większych częstotliwościach błędy złego ustawienia paletki są mniej kosztowne, jednak wymagają szybszego czasu reakcji, który jest niemożliwy do osiągnięcia ze względu na opóźnienie obrazu. W takich przypadkach użytkownik odruchowo zamiast skupiać się na przesyłanym obrazie, próbował odbijać piłkę opierając się na własnym wyczuciu i w znacznym stopniu ignorując sygnały wzrokowe, które były rozpraszające i niezgodne z przeczuciami po odebraniu fizycznych bodźców w ręce. 
 
 \item[Gra w łapki] \hfill \\
 \textit{Opis} \\
 Popularna zabawa, w której największe znaczenie ma czas reakcji. Dwie osoby stają naprzeciwko siebie z wystawionymi dłońmi z przodu tak, aby dłonie jednej osoby były nad dłońmi drugiej. Zadaniem gracza, którego dłonie są niżej, jest uderzenie dłoni drugiego gracza z góry. Drugi gracz broni się poprzez zabranie rąk. Celem testu jest zbadanie jak użytkownik gogli poradzi sobie przeciwko graczowi bez gogli. \\
 \textit{Rezultat}\\
-TODO
+Użytkownik gogli nie miał problemu jeśli jego rolą było uderzenie rąk przeciwnika. Jednak w tym przypadku opóźnienie obrazu docierającego do oka mialo niewielkie znaczenie ponieważ nie wpływało ono na odruchowo wykonywane uderzenie, które można przeprowadzić równie skutecznie z zamkniętymi oczami. Test wykazał trudności gdy użytkownik gogli musiał bronić się unikając uderzenia drugiej osoby. Opóźnienie obrazu było na tyle duże, że uniknięcie uderzenia było niemożliwe ponieważ uczucie uderzenie dochodziło do mózgu w podobnym czasie co zauważenie ruchu ręki drugiej osoby.
 
 \item[Chwytanie przedmiotu] \hfill \\
 \textit{Opis} \\
 Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i porównać go z czasem, kiedy gogli nie używa. \\
 \textit{Rezultat} \\
-TODO
+Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot nie trafia w niego przy pierwszej próbie i musi korygowac swój ruch powtarzając próbę złapania przedmiotu na wyczucie kilkukrotnie. Jeśli jednak użytkownik chce być dokładny podczas pierwszego ruchu, musi on wykonać go znacznie wolniej próbując kontrolować rękę w trakcie jej ruchu, co wymaga porównania jej pozycji z obrazem docierającym do mózgu. Dlatego też precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i przy większym skupieniu niż bez założonych gogli.
 
 \item[Celowanie laserem w punkt (statyczny lub dynamiczny)] \hfill \\
-TODO Opis
+\textit{Opis} \\
+Za pomocą wskaźnika laserowego użytkownik musi wskazać wyświetlony na ekranie punkt. Ekran znajduje się w znacznej odległości od użytkownika, która pozwala na to aby punkt był dobrze widoczny jednak musi zapewniać stabilną ostrość obrazu.
+\textit{Rezultat} \\
+Celując w statyczny punkt, użytkownik nie miał problemu w trafienie go za pomocą wskaźnika. Dobry efekt udało się osiągnąć ponieważ ruchy ręką ze wskaźnikiem wykonywane są odruchowo. Znaczna odległość od celu powoduje, że zachowana jest wysoka ostrość obrazu. Pierwsze wykonywane ruchy wymagają większej koncentracji i obserwacji reakcji wskaźnika na ruch ręką, jednak użytkownik bardzo szybko zyskuje świadomość efektu swoich ruchów przez co jest w stanie bardzo szybko zbliżyć wskaźnik do wyświetlanego punktu, a następnie dokonać tylko drobnej korekty jego położenia w celu dokładnego trafienia. Gorszy rezultat został osiągnięty podczas testów z dynamicznym, poruszającym się po ekranie punktem. Podobnie jak w pozostałych testach opóźnienie przesyłu obrazu miało bardzo duże znaczenie. Przy odpowiednio szybko zmieniającym się (płynnie) położeniu punktu, użytkownik nie był w stanie nadążyć za punktem i jego zmianami kierunku ruchu. Podczas tych prób trafienie w punkt było rezultatem czysto przypadkowym lub próbą odganięcia przez użytkownika gdzie pojawi się punkt w następnej chwili, jednak śledzenie punktu  za pomocą wskaźnika nie było możliwe.
 
-\item[Chodzenie po linii prostej]
-TODO
+\item[Chodzenie po linii prostej] \hfill \\
+\textit{Opis} \\
+Zadaniem jest przejście po rozciągniętej linii prostej możliwie długiego odcinka, będącego w zasięgu kabli podłączonych do gogli.
+\textit{Rezultat} \\
+Użytkownik przy spokojnym, spacerowym tempie był w stanie bez żadnego problemu przejść po linii prostej. Niewielkie odchylenia od linii pojawiły się przy próbie przejścia po niej w możliwie szybkim tempie. Przy większej prędkości z powodu opóźnienia obrazu użytkownik miał problemy z szybką reakcją na zmianę toru ruchu i poprawnym balansem ciała. W takim przypadku użytkownik próbował opierać się na innych zmysłach niż wzrok w większym stopniu niż w rzeczywistości. Testy przy większej prędkości były mniej miarodajne z powodu niedużego zasięgu kabli łączących gogle z komputerem.
 \end{description}
 
 \section{Wnioski}
-TODO 
+
+W czasie w którym była pisana ta praca, tematyka rozszerzonej rzeczywistości była popularna i prowadzone były nad nią liczne prace, jednak większość z nich dopiero w trakcie rozwoju. Powodowało to, że wiele dostępnych bibliotek nie było dostępna w stabilnych i w pełni przetestowanych wersjach. Dodatkowo bardzo częste aktualizacje bibliotek i środowisk do tworzenia aplikacji w wirtualnej i rozszerzonej rzeczywistości spowodowaly problemy z kompatybilnością ich pomiędzy sobą. \\
+Istotnym zagadnieniem dotyczącym wydajności systemu jest konieczność przechwycenia i przetworzenia obrazu z dwóch, a nie jednej kamery. Wymaga to znacznie większej mocy obliczeniowej i może powodować  problemy w zrównolegleniu obliczeń, wykorzystywany silnik graficzny odpowiadający za przekazywanie obrazu do oczu pozwala na wykonywanie obliczeń na karcie graficznej tylko w jednym, głównym wątku. \\
+Ważnym wnioskiem jest waga wyboru technologii w której wykonywany jest projekt dotyczący  przetwarzania obrazu w czasie rzeczywistym. W stworzonym systemie wybór wykorzystywanych technologi  spowodował duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo nie pozwoliło to na pełną optymalizację systemu, ponieważ używane biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co niemożliwa jest chociażby dokładna kontrola rozdziału wykonywanych obliczeń pomiędzy procesorem a kartą graficzną.
+
 
 \subsection{Co wyszło dobrze}
-TODO
+
+Udało się zrealizować zakładaną funkcjonalność systemu. Dzięki wykorzystaniu dwóch kamer obraz trafiający do oczu daje pożądany efekt uczucia głębi obrazu. Było to jednym z głównych powodów dla których został zrealizowany temat pracy. Większość istniejących już projektów dotyczących rozszerzonej rzeczywistości wykorzystuje tylko jedną kamerę, dzięki czemu łatwiej jest uzyskać dobrą wydajność i sterować obrazem, ale obraz nie zachowuje głębi właściwej dla rzeczywistego postrzegania przez człowieka. Jednak celem tej pracy było zbadanie możliwości rozszerzonej rzeczywistości w oparciu o widzenie stereoskopowe co udało się zrealizować. Dodatkowo mając na uwadze dalsze rozwijanie stworzonego systemu, została utworzona warstwa przetwarzania obrazów która może być łatwo rozszerzona o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych filtrów obrazu lub wykorzystania sztucznej inteleigencji do ich przetwarzania. Udało się również stworzyć komunikację procesową pomiędzy aplikacją konfiguracyjną a aplikacją zajmującą się przekazywaniem obrazu. W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści do systemu. Takie rozwiązanie nie wymaga, aby proces sterowania parametrami obrazu odbywał się na tym samym komputerze co jego pobieranie i przekazywanie do gogli. Przygotowując pracę został także stworzony łatwy do wydrukowania uchwyt pozwalający na łatwy i stabilny montaż kamer do gogli. Element ten może zostać wykorzystany przy dalszym rozwijaniu systemu lub przy innych projektach o podobnej tematyce.
 
 \subsection{Co nie wyszło dobrze}
-TODO
+
+W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu pozwalającej na bezproblemowe wykonywanie podstawowych manualnych czynności. Istniejące opóźnienie nie pozwala na wykonywanie precyzyjnych ruchów ciała w oparciu o bodźce wzrokowe.  Ze względu na techniczne ograniczenia gogli niemożliwe jest śledzenie ruchu gałek ocznych. Powoduje to również rozbieżności w odczuciach dotyczących obrazu prównując do rzeczywistego widzenia. Ludzkie oczy poruszają się dostosowując się do odległości obiektu na który patrzą. W naszym rozwiązaniu oddanie tego efektu polegało by na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak nie było to możliwe do wykonania w ramach tej pracy. Działanie systemu bywa niestabilne, związane jest to z dwoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu, te mogą być różne w zależności od wykorzystywanych kamer lub komputera, dlatego warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, które wciąż są w fazie rozwoju i powodują wewnętrzne, czasami niemożliwe do obsłużenia błędy.
 
 \chapter{Przyszłość rozwiązania}
 TODO
