@@ -303,7 +303,7 @@ samodzielnie, co poświadczam własnoręcznym podpisem.
 Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
 
 Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
-Drugim celem pracy, po stworzeniu takiego systemu, było zbadanie czy i jak bardzo wizja uzyskana przez gogle wirtualnej rzeczywistości w połączeniu z kamerami różni się od naturalnej wizji człowieka. Czy osiągnięty efekt będzie akceptowalny dla użytkownika.
+Po stworzeniu tego systemu, zbadano czy i jak bardzo wizja uzyskana przez gogle wirtualnej rzeczywistości w połączeniu z kamerami różni się od naturalnej wizji człowieka. Sprawdzono czy osiągnięty rezultat jest wystarczająco dobry, aby użytkownik czuł się komfortowo korzystając z gogli.
 
 \chapter{Technologia VR/AR. Wizja ludzka.}
 
@@ -319,12 +319,10 @@ W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzec
 
 Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii, nawet takich jak telewizja trójwymiarowa.
 
-Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.
-
-\textbf {źródło: http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx }
+Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.\cite{VRdefinition}
 
 \begin{definition}[Rozszerzona rzeczywistość]
-\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy. Systemy AR nie zapewniają interakcji z częścią wirtualną świata.
+\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy.
 \end{definition}
 
 Rozwiązania rozszerzonej rzeczywistości wzbogacają zmysły człowieka poprzez przekazanie im dodatkowych informacji. O ile w przypadku wirtualnej rzeczywistości użytkownik, w pewnym sensie, odcinał się od świata rzeczywistego, tak w przypadku rzeczywistości rozszerzonej ten kontakt z rzeczywistością pozostaje. Istnieją samochody oraz myśliwce wyposażone w HUD - przezroczysty ekran wyświetlający informacje takie jak na przykład prędkość, z jaką porusza się samochód, nie zasłaniając tego co za nim się znajduje. Dość znanym zastosowaniem rozszerzonej rzeczywistości jest, wydana w 2016 roku, gra Pokemon GO. Użytkownik przy pomocy swojego smartphone'a spacerując po mieście zbiera pokemony, które wyświetlają się na ekranie telefonu jako obraz nałożony na  świat rzeczywisty, widziany przez kamerę urządzenia.
@@ -335,20 +333,19 @@ Przykładami urządzeń AR obecnymi na rynku są Google Glass i Microsoft HoloLe
 \textit{Mieszaną rzeczywistością} (ang. MR - Mixed Reality) nazywamy rozszerzenie klasy rozwiązań AR o interakcję użytkownika z wirtualną częścią świata.
 \end{definition}
 
-Zagadnienie mieszanej rzeczywistości leży poza zakresem niniejszej pracy. Definicja została zamieszczona w celu rozróżnienia tej klasy rozwiązań od rozwiązań rozszerzonej rzeczywistości.
+Niektóre źródła rozróżniają rozszerzoną rzeczywistość od mieszanej rzeczywistości utrzymując, że rozwiązania AR nie zapewniają interakcji z wirtualną częścią rzeczywistości. W związku z rozróżnieniem tych dwóch zagadnień, definicja rzeczywistości została zamieszczona w niniejszej pracy. Zagadnienie mieszanej rzeczywistości leży jednak poza zakresem niniejszej pracy, dlatego nie jest szerzej opisane. 
 
-\subsection{ Problemy użytkowe VR/AR }
+\subsection{Problemy użytkowe VR/AR }
 
 Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za sobą szereg wyzwań stawianych deweloperom, oraz konsekwencji, których użytkownicy muszą być świadomi.
 
-\pagebreak
 \begin{description}
 \item [Wymogi wydajnościowe] \hfill \\
-W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$.
+W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$\cite{VRlatency}.
 \item [Wpływ na wzrok] \hfill \\
 Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
 \item [Choroba symulacyjna] \hfill \\
-Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce co skutkuje objawami podobnymi do choroby lokomocyjnej.
+Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce co skutkuje objawami podobnymi do choroby lokomocyjnej, mimo braku jakiegokolwiek ruchu.\cite{VRsickness}
 \item [Zbyt wysoka immersja] \hfill \\
 Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od wirtualnej rozgrywki mają problem z rozróżnianiem świata rzeczywistego od wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że rozrywka VR jest znacznie bardziej wymagająca dla organizmu od tradycyjnej, co już zostało wcześniej opisane. 
 Kolejny problem dotyczący immersji jest związany z osobami mającymi problemy kardiologiczne. Realistyczne wrażenia z gier typu horror mogą doprowadzić takie osoby nawet do zawału serca.
@@ -362,7 +359,7 @@ Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego ocz
 
 \subsection{Odległość między źrenicami}
 
-Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
+Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku\cite{IPdistance} objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
 
 \begin{table}[h!]
 \centering
@@ -377,8 +374,6 @@ Mężczyzna     & 53.0                                 & 77.0                   
 
 Z powyższych danych jednoznacznie wynika, że odległość pomiędzy ludzkimi źrenicami zawiera się w przedziale od 51.0 milimetrów do 77.0 milimetrów.
 
-\textbf{(http://www.dtic.mil/docs/citations/ADA634277 - do przypisów)}
-
 \subsection{Akomodacja oka}
 
 \begin{definition}[Akomodacja oka]
@@ -391,11 +386,9 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 \textit{Punktem bliży wzrokowej} nazywamy minimalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt bliży wzrokowej leży w odległości $10 cm$ od oka.
 \end{definition}
 
-\begin{minipage}{\linewidth}
 \begin{definition}[Punkt dali wzrokowej]
 \textit{Punktem dali wzrokowej} nazywamy maksymalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt dali wzrokowej leży w odległości $6 m$ od oka.
 \end{definition}
-\end{minipage}
 
 \subsection{Zbieżność oczu}
 
@@ -480,38 +473,6 @@ Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odwzorowania
 
 W tym rozdziale przedstawione zostaną efekty pracy. Omówione zostaną decyzje architektoniczne oraz szczegóły techniczne zaimplementowanego rozwiązania.
 
-\section{Wybrane technologie i oprogramowanie}
-
-\subsection{Języki i technologie }
-
-\begin{description}
-\item [Język programowania C\# ] \hfill \\
-System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszłych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
-
-\item [EmguCV] \hfill \\
-Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki.
-
-\item [Silnik Unity3D] \hfill \\
-Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli Oculus Rift.
-
-\begin{minipage}{\linewidth}
-\item [Windows Presentation Foundation] \hfill \\
-Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
-\end{minipage}\\
-
-\item [Windows Communication Foundation] \hfill \\
-Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o .NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
-\end{description}
-
-\subsection{Oprogramowanie}
-
-\begin{description}
-\item [Microsoft Visual Studio] \hfill \\
-Zintegrowane środowisko programistyczne firmy Microsoft. Jest to najpopularniejsze IDE wykorzystywane w tworzeniu aplikacji opartych o .NET Framework.
-\item [SoapUI] \hfill \\
-Aplikacja służąca do testów serwisów webowych. Wykorzystana przez nas do testów połączenia pomiędzy procesem głównym, a aplikacją konfiguracyjną.
-\end{description}
-
 \section{Schemat systemu}
 
 \subsection{Droga obrazu}
@@ -539,11 +500,40 @@ Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warst
 W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Równolegle do pozostałych warstw (nie bierze bezpośredniego udziału w drodze obrazu od kamer do oczu) działa  aplikacja konfiguracyjna, która zapewnia graficzny interfejs do sterowania działaniem systemu. Aplikacja działa w osobnym procesie, komunikując się z głównym procesem za pomocą WCF.
 
 \subsection{Funkcjonalność przetwarzania obrazu}
+Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytkownika. System przewiduje możliwość dodawania nowych przekształceń obrazu. Obiekty, realizujące te przekształcenia muszą być utworzone według kontraktu zdefiniowanego w dostarczonej bibliotece programistycznej. Przekształcenia realizowane są w ustalonej kolejności. Sterowanie procesem przetwarzania obrazu realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich z poziomu aplikacji konfiguracyjnej.
 
-Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytkownika. System przewiduje możliwość dodawania własnych przekształceń obrazu po odpowiednim ich utworzeniu według kontraktu ustalonego w dostarczonej bibliotece programistycznej. Przekształcenia realizowane są w pewnej ustalonej kolejności. Sterowanie procesem przetwarzania obrazu realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich.
+\section{Wybrane technologie i oprogramowanie}
+\subsection{Języki i technologie }
+\begin{description}
+\item [Język programowania C\# ] \hfill \\
+System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszłych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
+
+\item [EmguCV] \hfill \\
+Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki. 
+
+\item [Silnik Unity3D] \hfill \\
+Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli Oculus Rift.
+
+\begin{minipage}{\linewidth}
+\item [Windows Presentation Foundation] \hfill \\
+Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
+\end{minipage}\\
+
+\item [Windows Communication Foundation] \hfill \\
+Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o .NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
+\end{description}
+
+Wszystkie te technologie zostały wybrane do realizacji pracy, ponieważ zespół, który nad nią pracował, miał doświadczenie w pracy z nimi wyniesione z poprzednich projektów realizowanych w ramach studiów i pracy zawodowej.
+
+\subsection{Oprogramowanie}
+\begin{description}
+\item [Microsoft Visual Studio] \hfill \\
+Zintegrowane środowisko programistyczne firmy Microsoft. Jest to najpopularniejsze IDE wykorzystywane w tworzeniu aplikacji opartych o .NET Framework.
+\item [SoapUI] \hfill \\
+Aplikacja służąca do testów serwisów webowych. Wykorzystana przez nas do testów połączenia pomiędzy procesem głównym, a aplikacją konfiguracyjną.
+\end{description}
 
 \section{Opis modułów}
-
 
 \subsection{Moduł przechwytywania obrazu}
 
@@ -894,6 +884,11 @@ Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego
 
 \end{description}
 
+Z przeprowadzonych testów wydajnościowych wynika, że czas poświęcony na przetworzenie jednej klatki wynosi około 70 milisekund (wyznaczony na podstawie liczby FPS). Liczba ta znacznie różni się od średniego opóźnienia, które wynosi ponad 200 milisekund. Prawdopodobne przyczyny takiego stanu rzeczy:
+\begin{itemize}
+\item Opóźnienie kamer
+\item Nieoptymalne, wielowątkowe przetwarzanie kilku klatek w tym samym czasie
+\end{itemize}
 
 \subsection{Testy użytkowe}
 
@@ -999,6 +994,16 @@ TODO
 \begin{thebibliography}{20}%jak ktoś ma więcej książek, to niech wpisze większą liczbę
 % \bibitem[numerek]{referencja} Autor, \emph{Tytuł}, Wydawnictwo, rok, strony
 % cytowanie: \cite{referencja1, referencja 2,...}
+
+\bibitem[1] {VRdefinition} \emph{Strona internetowa magazynu Komputer Świat} http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx
+
+\bibitem[2]{VRlatency} \emph{Strona internetowa Tested} http://www.tested.com/tech/concepts/452656-challenge-latency-virtual-reality/
+
+\bibitem[3]{VRsickness} LaViola, J. J. Jr, \emph{A discussion of cybersickness in virtual environments}, ACM SIGCHI Bulletin 32., 2000, 47-56.
+
+\bibitem[4] {IPdistance} \emph{Anthropometric Survey of U.S. Army Pilot Personnel: Methods and Summary Statistics} http://www.dtic.mil/docs/citations/ADA634277, 2012.
+
+%przykłady biblio, do usunięcia
 
 \bibitem[1]{Ktos} A. Aaaaa, \emph{Tytuł}, Wydawnictwo, rok, strona-strona.
 \bibitem[2]{Innyktos} J. Bobkowski, S. Dobkowski, \emph{Blebleble}, Magazyn nr, rok, strony.
