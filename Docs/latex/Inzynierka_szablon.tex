@@ -303,7 +303,7 @@ samodzielnie, co poświadczam własnoręcznym podpisem.
 Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
 
 Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
-Po stworzeniu tego systemu, zbadano czy i jak bardzo wizja uzyskana przez gogle wirtualnej rzeczywistości w połączeniu z kamerami różni się od naturalnej wizji człowieka. Sprawdzono czy osiągnięty rezultat jest wystarczająco dobry, aby użytkownik czuł się komfortowo korzystając z gogli.
+Drugim celem pracy, po stworzeniu takiego systemu, było zbadanie czy i jak bardzo wizja uzyskana przez gogle wirtualnej rzeczywistości w połączeniu z kamerami różni się od naturalnej wizji człowieka. Czy osiągnięty efekt będzie akceptowalny dla użytkownika.
 
 \chapter{Technologia VR/AR. Wizja ludzka.}
 
@@ -319,10 +319,12 @@ W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzec
 
 Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii, nawet takich jak telewizja trójwymiarowa.
 
-Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.\cite{VRdefinition}
+Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.
+
+\textbf {źródło: http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx }
 
 \begin{definition}[Rozszerzona rzeczywistość]
-\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy.
+\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy. Systemy AR nie zapewniają interakcji z częścią wirtualną świata.
 \end{definition}
 
 Rozwiązania rozszerzonej rzeczywistości wzbogacają zmysły człowieka poprzez przekazanie im dodatkowych informacji. O ile w przypadku wirtualnej rzeczywistości użytkownik, w pewnym sensie, odcinał się od świata rzeczywistego, tak w przypadku rzeczywistości rozszerzonej ten kontakt z rzeczywistością pozostaje. Istnieją samochody oraz myśliwce wyposażone w HUD - przezroczysty ekran wyświetlający informacje takie jak na przykład prędkość, z jaką porusza się samochód, nie zasłaniając tego co za nim się znajduje. Dość znanym zastosowaniem rozszerzonej rzeczywistości jest, wydana w 2016 roku, gra Pokemon GO. Użytkownik przy pomocy swojego smartphone'a spacerując po mieście zbiera pokemony, które wyświetlają się na ekranie telefonu jako obraz nałożony na  świat rzeczywisty, widziany przez kamerę urządzenia.
@@ -333,19 +335,20 @@ Przykładami urządzeń AR obecnymi na rynku są Google Glass i Microsoft HoloLe
 \textit{Mieszaną rzeczywistością} (ang. MR - Mixed Reality) nazywamy rozszerzenie klasy rozwiązań AR o interakcję użytkownika z wirtualną częścią świata.
 \end{definition}
 
-Niektóre źródła rozróżniają rozszerzoną rzeczywistość od mieszanej rzeczywistości utrzymując, że rozwiązania AR nie zapewniają interakcji z wirtualną częścią rzeczywistości. W związku z rozróżnieniem tych dwóch zagadnień, definicja rzeczywistości została zamieszczona w niniejszej pracy. Zagadnienie mieszanej rzeczywistości leży jednak poza zakresem niniejszej pracy, dlatego nie jest szerzej opisane. 
+Zagadnienie mieszanej rzeczywistości leży poza zakresem niniejszej pracy. Definicja została zamieszczona w celu rozróżnienia tej klasy rozwiązań od rozwiązań rozszerzonej rzeczywistości.
 
-\subsection{Problemy użytkowe VR/AR }
+\subsection{ Problemy użytkowe VR/AR }
 
 Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za sobą szereg wyzwań stawianych deweloperom, oraz konsekwencji, których użytkownicy muszą być świadomi.
 
+\pagebreak
 \begin{description}
 \item [Wymogi wydajnościowe] \hfill \\
-W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$\cite{VRlatency}.
+W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć $90 FPS$, a opóźnienie obrazu nie powinno przekraczać $20 ms$.
 \item [Wpływ na wzrok] \hfill \\
 Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
 \item [Choroba symulacyjna] \hfill \\
-Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce co skutkuje objawami podobnymi do choroby lokomocyjnej, mimo braku jakiegokolwiek ruchu.\cite{VRsickness}
+Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce co skutkuje objawami podobnymi do choroby lokomocyjnej.
 \item [Zbyt wysoka immersja] \hfill \\
 Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od wirtualnej rozgrywki mają problem z rozróżnianiem świata rzeczywistego od wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że rozrywka VR jest znacznie bardziej wymagająca dla organizmu od tradycyjnej, co już zostało wcześniej opisane. 
 Kolejny problem dotyczący immersji jest związany z osobami mającymi problemy kardiologiczne. Realistyczne wrażenia z gier typu horror mogą doprowadzić takie osoby nawet do zawału serca.
@@ -359,7 +362,7 @@ Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego ocz
 
 \subsection{Odległość między źrenicami}
 
-Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku\cite{IPdistance} objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
+Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
 
 \begin{table}[h!]
 \centering
@@ -374,6 +377,8 @@ Mężczyzna     & 53.0                                 & 77.0                   
 
 Z powyższych danych jednoznacznie wynika, że odległość pomiędzy ludzkimi źrenicami zawiera się w przedziale od 51.0 milimetrów do 77.0 milimetrów.
 
+\textbf{(http://www.dtic.mil/docs/citations/ADA634277 - do przypisów)}
+
 \subsection{Akomodacja oka}
 
 \begin{definition}[Akomodacja oka]
@@ -386,9 +391,11 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 \textit{Punktem bliży wzrokowej} nazywamy minimalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt bliży wzrokowej leży w odległości $10 cm$ od oka.
 \end{definition}
 
+\begin{minipage}{\linewidth}
 \begin{definition}[Punkt dali wzrokowej]
 \textit{Punktem dali wzrokowej} nazywamy maksymalną odległość, przy której akomodacja oka wpływa na ostrość obrazu. U człowieka punkt dali wzrokowej leży w odległości $6 m$ od oka.
 \end{definition}
+\end{minipage}
 
 \subsection{Zbieżność oczu}
 
@@ -473,6 +480,38 @@ Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odwzorowania
 
 W tym rozdziale przedstawione zostaną efekty pracy. Omówione zostaną decyzje architektoniczne oraz szczegóły techniczne zaimplementowanego rozwiązania.
 
+\section{Wybrane technologie i oprogramowanie}
+
+\subsection{Języki i technologie }
+
+\begin{description}
+\item [Język programowania C\# ] \hfill \\
+System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszłych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
+
+\item [EmguCV] \hfill \\
+Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki.
+
+\item [Silnik Unity3D] \hfill \\
+Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli Oculus Rift.
+
+\begin{minipage}{\linewidth}
+\item [Windows Presentation Foundation] \hfill \\
+Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
+\end{minipage}\\
+
+\item [Windows Communication Foundation] \hfill \\
+Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o .NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
+\end{description}
+
+\subsection{Oprogramowanie}
+
+\begin{description}
+\item [Microsoft Visual Studio] \hfill \\
+Zintegrowane środowisko programistyczne firmy Microsoft. Jest to najpopularniejsze IDE wykorzystywane w tworzeniu aplikacji opartych o .NET Framework.
+\item [SoapUI] \hfill \\
+Aplikacja służąca do testów serwisów webowych. Wykorzystana przez nas do testów połączenia pomiędzy procesem głównym, a aplikacją konfiguracyjną.
+\end{description}
+
 \section{Schemat systemu}
 
 \subsection{Droga obrazu}
@@ -500,40 +539,11 @@ Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warst
 W celu zapewnienia poprawnego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta lub chwilowo wyłączona z systemu, bez utraty jego podstawowych funkcjonalności. Równolegle do pozostałych warstw (nie bierze bezpośredniego udziału w drodze obrazu od kamer do oczu) działa  aplikacja konfiguracyjna, która zapewnia graficzny interfejs do sterowania działaniem systemu. Aplikacja działa w osobnym procesie, komunikując się z głównym procesem za pomocą WCF.
 
 \subsection{Funkcjonalność przetwarzania obrazu}
-Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytkownika. System przewiduje możliwość dodawania nowych przekształceń obrazu. Obiekty, realizujące te przekształcenia muszą być utworzone według kontraktu zdefiniowanego w dostarczonej bibliotece programistycznej. Przekształcenia realizowane są w ustalonej kolejności. Sterowanie procesem przetwarzania obrazu realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich z poziomu aplikacji konfiguracyjnej.
 
-\section{Wybrane technologie i oprogramowanie}
-\subsection{Języki i technologie }
-\begin{description}
-\item [Język programowania C\# ] \hfill \\
-System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszłych problemów integracją modułów. W pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
-
-\item [EmguCV] \hfill \\
-Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki. 
-
-\item [Silnik Unity3D] \hfill \\
-Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli Oculus Rift.
-
-\begin{minipage}{\linewidth}
-\item [Windows Presentation Foundation] \hfill \\
-Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
-\end{minipage}\\
-
-\item [Windows Communication Foundation] \hfill \\
-Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o .NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
-\end{description}
-
-Wszystkie te technologie zostały wybrane do realizacji pracy, ponieważ zespół, który nad nią pracował, miał doświadczenie w pracy z nimi wyniesione z poprzednich projektów realizowanych w ramach studiów i pracy zawodowej.
-
-\subsection{Oprogramowanie}
-\begin{description}
-\item [Microsoft Visual Studio] \hfill \\
-Zintegrowane środowisko programistyczne firmy Microsoft. Jest to najpopularniejsze IDE wykorzystywane w tworzeniu aplikacji opartych o .NET Framework.
-\item [SoapUI] \hfill \\
-Aplikacja służąca do testów serwisów webowych. Wykorzystana przez nas do testów połączenia pomiędzy procesem głównym, a aplikacją konfiguracyjną.
-\end{description}
+Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu podczas jego drogi do oczu użytkownika. System przewiduje możliwość dodawania własnych przekształceń obrazu po odpowiednim ich utworzeniu według kontraktu ustalonego w dostarczonej bibliotece programistycznej. Przekształcenia realizowane są w pewnej ustalonej kolejności. Sterowanie procesem przetwarzania obrazu realizowane jest poprzez możliwość zmiany kolejności aplikowanych przekształceń oraz wyłączenia części z nich.
 
 \section{Opis modułów}
+
 
 \subsection{Moduł przechwytywania obrazu}
 
@@ -884,74 +894,59 @@ Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego
 
 \end{description}
 
-Z przeprowadzonych testów wydajnościowych wynika, że czas poświęcony na przetworzenie jednej klatki wynosi około 70 milisekund (wyznaczony na podstawie liczby FPS). Liczba ta znacznie różni się od średniego opóźnienia, które wynosi ponad 200 milisekund. Prawdopodobne przyczyny takiego stanu rzeczy:
-\begin{itemize}
-\item Opóźnienie kamer
-\item Nieoptymalne, wielowątkowe przetwarzanie kilku klatek w tym samym czasie
-\end{itemize}
 
 \subsection{Testy użytkowe}
 
 W tym podrozdziale omówione zostaną testy, które zostały wykonane pod kątem zbadania ogólnego wrażenia użytkownika, który korzysta z konstruowanych gogli AR. Podczas testów uwaga była skierowana w stronę uzyskania jak najlepszego odwzorowania naturalnej wizji ludzkiej. W tym celu sprawdzono czy człowiek, patrząc przez gogle, jest w stanie radzić sobie z czynnościami, które wymagają korzystania ze zmysłu wzroku, a które w normalnych warunkach nie stanowią problemu. Wykonując te testy sprawdzono w jaki sposób wydajność systemu, omówiona w poprzednim podrozdziale, wpływa na koordynację wzrokowo-ruchową człowieka wykorzystującego stworzony system.
 
-Ogólnym wrażeniem, które towarzyszyło podczas wykonywania wszystkich poniżej wymienionych testów było znaczne przybliżenie obrazu. Użytkownik ma wrażenie obserwowania otaczającej go rzeczywistości podobnie jak w przypadku lornetki. Spowodowane jest to kilkoma czynnikami. Kamery z powodu gogli na których się znajduja i samej konstrukcji uchwytu, znajdują się o <ile> centymetrów bliżej celu na który się patrzy niż oczy.  To powoduje problemy jeśli chodzi o kordynacje ruchową użytkownika. Człowiek wiele rzeczy wykonuje odruchowo, polegając na wyrobionych przez lat przyzwyczajeniach w kwestii oceny odległości. Wykonując ruch ręką, często nie musi kontrolować tego ruchu przez cały czas jego trwania. Zazwyczaj patrząc na cel, na podstawie doświadczeń manulanych z całego życia, wiadomo dokładnie jaki ruch ręką trzeba wykonać, żeby dotarła ona do celu. Jednak przeprowadzając testy w goglach, okazuje się że z powodu odmiennych sygnałów wzrokowych i odczucia głębi, użytkownik musi od nowa nauczyć się pewnych odruchów i oceniać odległość w jakiej znajdują się przedmioty. \\
-
-Dodatkowo z powodu bliższego ustawienia kamer, pewne pole widzenia  (znajdujące się najbliżej ciała) jest wyłączone. Powoduje to również wolniejszą reakcje użytkownika, ponieważ w normalnych warunkach użytkownik widzi swoją rękę już od bardzo wczesnego etapu ruchu. Przy wyłączonym najbliższym polu widzenia, często okazuje się, że ręka po wejściu w pole widzenia jest w innym miejscu niż było to oczekiwane, dlatego  potrzebna jest późniejsza, dodatkowa koretka ruchu co powoduje częściową dezorientację u użytkownika i opóźnia jego czas reakcji.
+Niedogodnością towarzyszącą wszystkim z poniżej wymienionych testów było znaczne przybliżenie obrazu. Wrażenia użytkownika były podobne jak podczas używania lornetki. Spowodowane jest to odległością kamer od oczu, która z powodu uchwytu oraz rozmiaru samych gogli wynosi około 10 centymetrów w kierunku patrzenia. Związane z tym jest również ograniczone pole widzenia,  użytkownik nie widzi swojej ręki na wczesnym etapie wykonywanego ruchu. Powoduje to, że czasami pojawia się ona w polu widzenia w innym miejscu niż było to spodziewane. Dodatkowo optyka kamer jest w wielu aspektach odmienna od optyki ludzkiego oka, co wpływa na uczucie nienaturalnego obrazu.  Kolejnym aspektem jest ograniczone pole widzenia
+Wspomniane czynniki powodują istotne problemy z koordynacją ruchową użytkownika. Czynności wykonywane w normalnych warunkach odruchowo muszą  być uczone od nowa,  powoduje to konieczność większej koncentracji na wykonaniu zadania oraz opóźnienie w jego realizacji. 
 
 \begin{description}
 \item[Czytanie książki] \hfill \\
 \textit{Opis} \\
 Czytanie książki o standardowym rozmiarze czcionki. \\
 \textit{Rezultat} \\
-Czytanie tekstu było możliwe jednak wymagało większego stopnia skupienia niż bez użycia gogli. Spowodowane jest to gorszą ostrością obrazu niż w rzeczywistości, co powoduje potrzebę większej koncentracji na rozpoznawaniu liter i śledzenia aktualnie czytanej linii tekstu. Z powodu wspomnianego przybliżenia obrazu, może okazać się, że czytanie książki trzymając ją w rękach jest niemożliwe. Książka znajduje się wtedy zbyt blisko na niekomfortowej odległości oraz ostrość kamer w tym punkcie może nie być wystarczająco dobra. Dlatego najlepsze wrażenie zostało uzyskane oddalając książkę na odległość wyprostowanych rąk lub umieszając ją na stole i oddaleniu się na odległość która zapewniała wystarczającą ostrość obrazu.    
+Czytanie tekstu było możliwe jednak wymagało większego stopnia skupienia niż bez użycia gogli. Spowodowane jest to gorszą ostrością obrazu niż w rzeczywistości, co powoduje potrzebę większej koncentracji na rozpoznawaniu liter i śledzenia aktualnie czytanej linii tekstu. Z powodu wspomnianego przybliżenia obrazu, może okazać się, że czytanie książki trzymając ją w rękach na odległości do której użytkownik jest przyzwyczajony jest niemożliwe. Książka znajduje się w takich przypadkach na niekomfortowej odległości, przez co tekst jest zbyt duży, a ostrość kamer w tym punkcie może nie być wystarczająco dobra. Dlatego najlepsze wrażenie zostało uzyskane oddalając książkę na odległość wyprostowanych rąk lub po umieszczeniu jej na stole i oddaleniu się na odległość która zapewniała wystarczającą ostrość obrazu.    
 
 \item[Odbijanie piłki do tenisa stołowego] \hfill \\
 \textit{Opis} \\
  Za pomocą paletki do tenisa stołowego użytkownik musi podbić piłkę jak największą liczbę razy zanim spadnie ona na ziemię. \\
 \textit{Rezultat}\\
-Użytkownik gogli miał duże problemy z wielokrotnym podbijaniem piłki. Pierwszą niedogodnością była konieczność trzymania paletki na mocno wyciągniętej do przodu ręce. W przypadku gdy trzeba było odbić piłkę która znalazła się blisko ciała, zazwyczaj niemożliwe było odpowiednie szybkie jej zlokalizowanie ponieważ przez powiększony i przybliżony obraz pole widzenia było zawężone. W przypadku gdy piłka znajdowała się odpowiednio daleko, najlepsze wyniki udało się osiągnąć przy mniejszej częstotliwości odbić, a więc wtedy kiedy lot piłki w powietrzu trwał dłużej. Użytkownik miał wtedy więcej czasu na ustalenie miejsca w którym spadnie piłka i musiał starać się je przewidzieć. Ze względu na opóźnienie obrazu, błyskawiczna reakcja nie była możliwa dlatego każde odbicie wymagało odpowiedniego wcześniej przewidzenia toru lotu piłki  i przygotowania paletki na jej spadek. Jednakże, przy mniejszej częstotliwości piłka spadała z większą prędkością przez co ustawienie paletki pod złym kątem powodowało znaczną zmianę kierunku lotu piłki po odbiciu, co wraz ze znacznym jej oddaleniem się uniemożliwiało kolejne podbicie. Przy większych częstotliwościach błędy złego ustawienia paletki są mniej kosztowne, jednak wymagają szybszego czasu reakcji, który jest niemożliwy do osiągnięcia ze względu na opóźnienie obrazu. W takich przypadkach użytkownik odruchowo zamiast skupiać się na przesyłanym obrazie, próbował odbijać piłkę opierając się na własnym wyczuciu i w znacznym stopniu ignorując sygnały wzrokowe, które były rozpraszające i niezgodne z przeczuciami po odebraniu fizycznych bodźców w ręce. 
+Użytkownik gogli miał duże problemy z wielokrotnym podbijaniem piłki. Pierwszą niedogodnością była konieczność trzymania paletki na mocno wyciągniętej do przodu ręce. W przypadku próby odbicia piłki znajdującej się blisko ciała,  niemożliwe było odpowiednie szybkie jej zlokalizowanie ponieważ powiększony i przybliżony obraz powodował zawężone pole widzenia. W przypadku gdy piłka znajdowała się odpowiednio daleko, najlepsze wyniki udało się osiągnąć przy mniejszej częstotliwości odbić, a więc wtedy kiedy lot piłki w powietrzu trwał dłużej. Użytkownik miał wtedy więcej czasu na ustalenie miejsca w którym spadnie piłka i starał się je przewidzieć. Ze względu na opóźnienie obrazu, błyskawiczna reakcja nie była możliwa dlatego, każde odbicie wymagało odpowiedniego wcześniej przewidzenia toru lotu piłki  i przygotowania paletki na jej spadek.  Przy większych częstotliwościach błędy złego ustawienia paletki są mniej kosztowne, jednak wymagają szybszego czasu reakcji, który jest niemożliwy do osiągnięcia ze względu na opóźnienie obrazu. W takich przypadkach użytkownik odruchowo zamiast skupiać się na przesyłanym obrazie, próbował odbijać piłkę opierając się na własnym wyczuciu i w znacznym stopniu ignorując sygnały wzrokowe, które były rozpraszające i niezgodne z przeczuciami po odebraniu fizycznych bodźców w ręce. 
 
 \item[Gra w łapki] \hfill \\
 \textit{Opis} \\
 Popularna zabawa, w której największe znaczenie ma czas reakcji. Dwie osoby stają naprzeciwko siebie z wystawionymi dłońmi z przodu tak, aby dłonie jednej osoby były nad dłońmi drugiej. Zadaniem gracza, którego dłonie są niżej, jest uderzenie dłoni drugiego gracza z góry. Drugi gracz broni się poprzez zabranie rąk. Celem testu jest zbadanie jak użytkownik gogli poradzi sobie przeciwko graczowi bez gogli. \\
 \textit{Rezultat}\\
-Użytkownik gogli nie miał problemu jeśli jego rolą było uderzenie rąk przeciwnika. Jednak w tym przypadku opóźnienie obrazu docierającego do oka mialo niewielkie znaczenie ponieważ nie wpływało ono na odruchowo wykonywane uderzenie, które można przeprowadzić równie skutecznie z zamkniętymi oczami. Test wykazał trudności gdy użytkownik gogli musiał bronić się unikając uderzenia drugiej osoby. Opóźnienie obrazu było na tyle duże, że uniknięcie uderzenia było niemożliwe ponieważ uczucie uderzenie dochodziło do mózgu w podobnym czasie co zauważenie ruchu ręki drugiej osoby.
+Użytkownik gogli nie miał problemu jeśli jego rolą było uderzenie rąk przeciwnika. Jednak w tym przypadku opóźnienie obrazu docierającego do oka miało niewielkie znaczenie ponieważ nie wpływało ono na odruchowo wykonywane uderzenie, które można przeprowadzić równie skutecznie z zamkniętymi oczami. Test wykazał trudności gdy użytkownik gogli musiał bronić się unikając uderzenia drugiej osoby. Opóźnienie obrazu było na tyle duże, że uniknięcie uderzenia było niemożliwe ponieważ uczucie uderzenie dochodziło do mózgu w podobnym czasie co zauważenie ruchu ręki drugiej osoby.
 
 \item[Chwytanie przedmiotu] \hfill \\
 \textit{Opis} \\
 Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i porównać go z czasem, kiedy gogli nie używa. \\
 \textit{Rezultat} \\
-Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot nie trafia w niego przy pierwszej próbie i musi korygowac swój ruch powtarzając próbę złapania przedmiotu na wyczucie kilkukrotnie. Jeśli jednak użytkownik chce być dokładny podczas pierwszego ruchu, musi on wykonać go znacznie wolniej próbując kontrolować rękę w trakcie jej ruchu, co wymaga porównania jej pozycji z obrazem docierającym do mózgu. Dlatego też precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i przy większym skupieniu niż bez założonych gogli.
+Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot nie trafia w niego przy pierwszej próbie i musi korygować swój ruch powtarzając próbę złapania przedmiotu na wyczucie kilkukrotnie. Jeśli użytkownik próbował być dokładny podczas pierwszego ruchu, musiał on wykonać go znacznie wolniej, próbując kontrolować rękę w trakcie jej ruchu. Wymagało to porównania jej pozycji z obrazem docierającym do mózgu. Z tego powodu precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i przy większym skupieniu niż bez założonych gogli.
 
 \item[Celowanie laserem w punkt (statyczny lub dynamiczny)] \hfill \\
 \textit{Opis} \\
 Za pomocą wskaźnika laserowego użytkownik musi wskazać wyświetlony na ekranie punkt. Ekran znajduje się w znacznej odległości od użytkownika, która pozwala na to aby punkt był dobrze widoczny jednak musi zapewniać stabilną ostrość obrazu.
 \textit{Rezultat} \\
-Celując w statyczny punkt, użytkownik nie miał problemu w trafienie go za pomocą wskaźnika. Dobry efekt udało się osiągnąć ponieważ ruchy ręką ze wskaźnikiem wykonywane są odruchowo. Znaczna odległość od celu powoduje, że zachowana jest wysoka ostrość obrazu. Pierwsze wykonywane ruchy wymagają większej koncentracji i obserwacji reakcji wskaźnika na ruch ręką, jednak użytkownik bardzo szybko zyskuje świadomość efektu swoich ruchów przez co jest w stanie bardzo szybko zbliżyć wskaźnik do wyświetlanego punktu, a następnie dokonać tylko drobnej korekty jego położenia w celu dokładnego trafienia. Gorszy rezultat został osiągnięty podczas testów z dynamicznym, poruszającym się po ekranie punktem. Podobnie jak w pozostałych testach opóźnienie przesyłu obrazu miało bardzo duże znaczenie. Przy odpowiednio szybko zmieniającym się (płynnie) położeniu punktu, użytkownik nie był w stanie nadążyć za punktem i jego zmianami kierunku ruchu. Podczas tych prób trafienie w punkt było rezultatem czysto przypadkowym lub próbą odganięcia przez użytkownika gdzie pojawi się punkt w następnej chwili, jednak śledzenie punktu  za pomocą wskaźnika nie było możliwe.
+Celując w statyczny punkt, użytkownik nie miał problemu w trafienie go za pomocą wskaźnika. Dobry efekt udało się osiągnąć, ponieważ ruchy ręką ze wskaźnikiem wykonywane są odruchowo. Znaczna odległość od celu powoduje, że zachowana jest wysoka ostrość obrazu. Pierwsze wykonywane ruchy wymagają większej koncentracji i obserwacji reakcji wskaźnika na ruch ręką, jednak użytkownik bardzo szybko zyskuje świadomość efektu swoich ruchów przez co jest w stanie bardzo szybko zbliżyć wskaźnik do wyświetlanego punktu, a następnie dokonać tylko drobnej korekty jego położenia w celu dokładnego trafienia. Gorszy rezultat został osiągnięty podczas testów z dynamicznym, poruszającym się po ekranie punktem. Podobnie jak w pozostałych testach opóźnienie przesyłu obrazu miało bardzo duże znaczenie. Przy odpowiednio szybko zmieniającym się płynnie położeniu punktu, użytkownik nie był w stanie nadążyć za punktem i jego zmianami kierunku ruchu. Podczas tych prób trafienie w punkt było rezultatem czysto przypadkowym lub próbą odgadnięcia przez użytkownika gdzie pojawi się punkt w następnej chwili, jednak śledzenie punktu  za pomocą wskaźnika nie było możliwe.
 
-\item[Rzucanie przedmiotem do celu] \hfill \\
-TODO
-
-\item[Chodzenie po linii prostej] \hfill \\
-\textit{Opis} \\
-Zadaniem jest przejście po rozciągniętej linii prostej możliwie długiego odcinka, będącego w zasięgu kabli podłączonych do gogli.
-\textit{Rezultat} \\
-Użytkownik przy spokojnym, spacerowym tempie był w stanie bez żadnego problemu przejść po linii prostej. Niewielkie odchylenia od linii pojawiły się przy próbie przejścia po niej w możliwie szybkim tempie. Przy większej prędkości z powodu opóźnienia obrazu użytkownik miał problemy z szybką reakcją na zmianę toru ruchu i poprawnym balansem ciała. W takim przypadku użytkownik próbował opierać się na innych zmysłach niż wzrok w większym stopniu niż w rzeczywistości. Testy przy większej prędkości były mniej miarodajne z powodu niedużego zasięgu kabli łączących gogle z komputerem.
 \end{description}
 
 \section{Wnioski}
 
-W czasie w którym była pisana ta praca, tematyka rozszerzonej rzeczywistości była popularna i prowadzone były nad nią liczne prace, jednak większość z nich dopiero w trakcie rozwoju. Powodowało to, że wiele dostępnych bibliotek nie było dostępna w stabilnych i w pełni przetestowanych wersjach. Dodatkowo bardzo częste aktualizacje bibliotek i środowisk do tworzenia aplikacji w wirtualnej i rozszerzonej rzeczywistości spowodowały problemy z kompatybilnością ich pomiędzy sobą. \\
-Istotnym zagadnieniem dotyczącym wydajności systemu jest konieczność przechwycenia i przetworzenia obrazu z dwóch, a nie jednej kamery. Wymaga to znacznie większej mocy obliczeniowej i wymaga rozłożenia obliczeń na wiele wątków. Silnik grafiki, wykorzystywany do przekazywania obrazu do oczu, pozwala na wykonywanie operacji tylko w jednym, głównym wątku. Utrudnia to optymalizację całego procesu. \\
-Istotnym wnioskiem jest wybór technologii wykorzystanych do implementacji projektu działającego w czasie rzeczywistym. W stworzonym systemie wybrane technologie spowodowały duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo nie pozwoliło to na pełną optymalizację systemu, ponieważ używane biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co utrudnione jest wykorzystanie przez programistów np. procesorów graficznych do przyśpieszenia obliczeń.
+Istotnym zagadnieniem dotyczącym wydajności systemu jest konieczność przechwycenia i przetworzenia obrazu z dwóch, a nie jednej kamery. Wymaga to znacznie większej mocy obliczeniowej oraz rozdzielenia obliczeń między wiele wątków jednocześnie. Silnik grafiki, wykorzystywany do przekazywania obrazu do oczu, nie pozwala na równoległe konwersje obrazów trafiających do oczu. Utrudnia to znacznie optymalizację rozwiązania. \\
+Wybór technologii wykorzystanych do implementacji projektu działającego w czasie rzeczywistym jest jedną z najważniejszych kwestii, które powinny być bardzo dokładnie przemyślane na etapie projektowania architektury rozwiązania. W stworzonym systemie wybrane technologie spowodowały duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo nie pozwoliło to na pełną optymalizację systemu, ponieważ używane biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co utrudnione jest wykorzystanie przez programistów np. procesorów graficznych do przyspieszenia obliczeń.
 
 \subsection{Co wyszło dobrze}
 
-Udało się zrealizować zakładaną funkcjonalność systemu. Dzięki wykorzystaniu dwóch kamer obraz trafiający do oczu daje pożądany efekt uczucia głębi obrazu. Było to jednym z głównych powodów dla których został zrealizowany temat pracy. Większość istniejących już projektów dotyczących rozszerzonej rzeczywistości wykorzystuje tylko jedną kamerę, dzięki czemu łatwiej jest uzyskać dobrą wydajność i sterować obrazem, ale obraz nie zachowuje głębi właściwej dla rzeczywistego postrzegania przez człowieka. Jednak celem tej pracy było zbadanie możliwości rozszerzonej rzeczywistości w oparciu o widzenie stereoskopowe co udało się zrealizować. Dodatkowo mając na uwadze dalsze rozwijanie stworzonego systemu, została utworzona warstwa przetwarzania obrazów która może być łatwo rozszerzona o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych filtrów obrazu lub wykorzystania sztucznej inteligencji do ich przetwarzania. Udało się również stworzyć komunikację procesową pomiędzy aplikacją konfiguracyjną a aplikacją zajmującą się przekazywaniem obrazu. W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści do systemu. Takie rozwiązanie nie wymaga, aby proces sterowania parametrami obrazu odbywał się na tym samym komputerze co jego pobieranie i przekazywanie do gogli. Przygotowując pracę został także stworzony łatwy do wydrukowania uchwyt pozwalający na łatwy i stabilny montaż kamer do gogli. Element ten może zostać wykorzystany przy dalszym rozwijaniu systemu lub przy innych projektach o podobnej tematyce.
+Udało się zrealizować zakładaną funkcjonalność systemu. Dzięki wykorzystaniu dwóch kamer obraz trafiający do oczu daje pożądany efekt uczucia głębi obrazu. Było to jednym z głównych powodów dla których został zrealizowany temat pracy. Większość istniejących już projektów dotyczących rozszerzonej rzeczywistości wykorzystuje tylko jedną kamerę, dzięki czemu łatwiej jest uzyskać dobrą wydajność i sterować obrazem, ale obraz nie zachowuje głębi właściwej dla rzeczywistego postrzegania przez człowieka. Jednak celem tej pracy było zbadanie możliwości rozszerzonej rzeczywistości w oparciu o widzenie stereoskopowe i udało się to zrealizować. Dodatkowo mając na uwadze dalsze rozwijanie stworzonego systemu, stworzona została warstwa przetwarzania obrazów, która może być łatwo rozszerzona o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych efektów. Udało się również stworzyć komunikację procesową pomiędzy aplikacją konfiguracyjną, a aplikacją zajmującą się przekazywaniem obrazu. W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści do systemu. Proces sterowania parametrami obrazu może odbywać się na innym komputerze niż jego pobieranie i przekazywanie do gogli. Podczas pracy, został stworzony łatwy do wydrukowania za pomocą drukarki 3D uchwyt, pozwalający na łatwy i stabilny montaż kamer do gogli. Element ten może zostać wykorzystany przy dalszym rozwijaniu systemu lub przy innych projektach o podobnej tematyce.
 
 \subsection{Co nie wyszło dobrze}
 
-W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu pozwalającej na bezproblemowe wykonywanie podstawowych manualnych czynności. Istniejące opóźnienie nie pozwala na wykonywanie precyzyjnych ruchów ciała w oparciu o bodźce wzrokowe. Ze względu na techniczne ograniczenia gogli nie ma możliwości śledzenia ruchu gałek ocznych. Powoduje to również rozbieżności w odczuciach dotyczących obrazu porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się dostosowując się do odległości obiektu na który patrzą. W naszym rozwiązaniu oddanie tego efektu polegało by na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak automatyzacja tego nie była przewidziana w ramach tej pracy. Osiągane to było poprzez ręczną korekcję kamer w razie potrzeby. Działanie systemu bywa niestabilne, związane jest to z dwoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu, te mogą być różne w zależności od wykorzystywanych kamer lub komputera, dlatego warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, które wciąż są w fazie rozwoju i powodują wewnętrzne, czasami niemożliwe do obsłużenia błędy.
+W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu. Wykonywanie prostych manualnych czynności jest utrudnione ze względu na pojawiające się opóźnienie obrazu. Precyzyjne ruchy ciała w oparciu o bodźce wzrokowe możliwe są jedynie przy wykonywaniu ich bardzo wolno. U użytkownika występuje odruchowe wspomaganie kontroli ruchów innymi zmysłami niż wzrokowy w stopniu znacznie większym niż ma to miejsce w rzeczywistości. Ze względu na techniczne ograniczenia wykorzystywanych gogli system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu oddanie tego efektu polegało by na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak automatyzacja tego procesu nie była przewidziana w założeniach pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby. Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu, te mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, które wciąż są w fazie rozwoju i powodują wewnętrzne, czasami niemożliwe do obsłużenia błędy.
 
 \chapter{Przyszłość rozwiązania}
 TODO
@@ -994,16 +989,6 @@ TODO
 \begin{thebibliography}{20}%jak ktoś ma więcej książek, to niech wpisze większą liczbę
 % \bibitem[numerek]{referencja} Autor, \emph{Tytuł}, Wydawnictwo, rok, strony
 % cytowanie: \cite{referencja1, referencja 2,...}
-
-\bibitem[1] {VRdefinition} \emph{Strona internetowa magazynu Komputer Świat} http://www.komputerswiat.pl/centrum-wiedzy-konsumenta/gaming/wszystko-o-wirtualnej-rzeczywistosci/co-to-jest-wirtualna-rzeczywistosc.aspx
-
-\bibitem[2]{VRlatency} \emph{Strona internetowa Tested} http://www.tested.com/tech/concepts/452656-challenge-latency-virtual-reality/
-
-\bibitem[3]{VRsickness} LaViola, J. J. Jr, \emph{A discussion of cybersickness in virtual environments}, ACM SIGCHI Bulletin 32., 2000, 47-56.
-
-\bibitem[4] {IPdistance} \emph{Anthropometric Survey of U.S. Army Pilot Personnel: Methods and Summary Statistics} http://www.dtic.mil/docs/citations/ADA634277, 2012.
-
-%przykłady biblio, do usunięcia
 
 \bibitem[1]{Ktos} A. Aaaaa, \emph{Tytuł}, Wydawnictwo, rok, strona-strona.
 \bibitem[2]{Innyktos} J. Bobkowski, S. Dobkowski, \emph{Blebleble}, Magazyn nr, rok, strony.
