@@ -936,8 +936,11 @@ Za pomocą wskaźnika laserowego użytkownik musi wskazać wyświetlony na ekran
 \textit{Rezultat} \\
 Celując w statyczny punkt, użytkownik nie miał problemu w trafienie go za pomocą wskaźnika. Dobry efekt udało się osiągnąć, ponieważ ruchy ręką ze wskaźnikiem wykonywane są odruchowo. Znaczna odległość od celu powoduje, że zachowana jest wysoka ostrość obrazu. Pierwsze wykonywane ruchy wymagają większej koncentracji i obserwacji reakcji wskaźnika na ruch ręką, jednak użytkownik bardzo szybko zyskuje świadomość efektu swoich ruchów przez co jest w stanie bardzo szybko zbliżyć wskaźnik do wyświetlanego punktu, a następnie dokonać tylko drobnej korekty jego położenia w celu dokładnego trafienia. Gorszy rezultat został osiągnięty podczas testów z dynamicznym, poruszającym się po ekranie punktem. Podobnie jak w pozostałych testach opóźnienie przesyłu obrazu miało bardzo duże znaczenie. Przy odpowiednio szybko zmieniającym się płynnie położeniu punktu, użytkownik nie był w stanie nadążyć za punktem i jego zmianami kierunku ruchu. Podczas tych prób trafienie w punkt było rezultatem czysto przypadkowym lub próbą odgadnięcia przez użytkownika gdzie pojawi się punkt w następnej chwili, jednak śledzenie punktu  za pomocą wskaźnika nie było możliwe.
 
-\item[Rzucanie przedmiotem do celu] \hfill \\
-TODO
+\item[Rzucanie piłką do celu] \hfill \\
+\textit{Opis} \\
+Do wykonania testu potrzebna jest piłka tenisowa oraz wyznaczony cel. 
+\textit{Opis} \\
+Użytkownik rzucał piłką tenisową, próbując trafić do rąk osoby stojącej na przeciwko niego. W czasie tego testu najlepiej objawiła się wada związana z nadmiernym przybliżeniem obrazu. Użytkownikowi wydawało się, że stojąca naprzeciwko osoba jest w dużo mniejszej odległości niż w rzeczywistości. Dlatego też rzucał piłką ze zbyt małą  siła lub zbyt nisko unosząc rękę. Oszacowanie odległości było na tyle mylące, że piłka dotykała ziemi często już w połowie odległości między użytkownikiem a celem.
 
 \end{description}
 
@@ -955,13 +958,15 @@ Udało się zrealizować zakładaną funkcjonalność systemu. Dzięki wykorzyst
 W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu. Wykonywanie prostych manualnych czynności jest utrudnione ze względu na pojawiające się opóźnienie obrazu. Precyzyjne ruchy ciała w oparciu o bodźce wzrokowe możliwe są jedynie przy wykonywaniu ich bardzo wolno. U użytkownika występuje odruchowe wspomaganie kontroli ruchów innymi zmysłami niż wzrokowy w stopniu znacznie większym niż ma to miejsce w rzeczywistości. Ze względu na techniczne ograniczenia wykorzystywanych gogli system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu oddanie tego efektu polegało by na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak automatyzacja tego procesu nie była przewidziana w założeniach pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby. Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu, te mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, które wciąż są w fazie rozwoju i powodują wewnętrzne, czasami niemożliwe do obsłużenia błędy.
 
 \chapter{Przyszłość rozwiązania}
-TODO
+
+Ten rozdział dotyczy potencjalnych zastosowań dla stworzonego systemu, ale także opisuje w jaki sposób można rozszerzyć go o nowe funkcjonalności lub usprawnić te już istniejące.
 
 \section{Dalszy rozwój systemu}
-TODO
+
+Przygotowane funkcjonalności systemu umożliwiają wykorzystanie go do prac nad innymi projektami związanymi z tematyką rozszerzonej rzeczywistości. Przygotowane w czasie tej pracy przekształcenia obrazu prezentują jedynie podstawowe możliwości warstwy przetwarzania obrazu. Może być ona wzbogacona, na przykład o przekształcenia wykorzystujące algorytmy sztucznej inteligencji do rozpoznawania obiektów lub osób. Stosowane efekty mogą nie tylko przekształcać obraz za pomocą filtrów, ale także nakładać na niego tekst lub inne informacje takie jak wskazówki nawigacyjne.
 
 \subsection{Usprawnienia}
-TODO
+
 \begin{description}
 \item [Zwiększenie wydajności] \hfill \\
 Wydajność zaimplementowanego systemu nie jest wystarczająca, aby móc komfortowo korzystać z gogli przez większą ilość czasu. Pierwszym krokiem, jaki powinien być podjęty w celu rozwinięcia systemu, powinno być poprawienie procesu przekazywania obrazu z kamer do gogli. W celu zmaksymalizowania wydajności zalecane jest przepisanie modułu na natywny język programowania, na przykład C/C++. Ponadto warto zwrócić uwagę na sposoby przekazywania obrazu i synchronizacji odpowiedzialnych za to wątków, gdyż prawdopodobnie można je jeszcze zoptymalizować.
@@ -974,21 +979,28 @@ Układ gogli i kamer wymusza przesunięcie punktu, w którym obraz jest pobieran
 \end{description}
 
 \subsection{Dodatkowe funkcjonalności}
-TODO
+
 \begin{description}
 \item [Wykrywanie ruchu gałki ocznej]
+W części dotyczącej testów systemu zostało wspomniane o nienaturalnych odczuciach w związku z brakiem ruchu kamer umieszczonych na goglach. W celu zniwelowania tego problemu, należy pobierać dodatkowe informacje o ruchu gałek ocznych użytkownika, a następnie za pomocą specjalnego urządzenia poruszać kamerami zgodnie z nimi. Takie rozwiązanie pozwoliłoby znacznie poprawić wrażenia z użytkowania systemu oraz ułatwić  adaptację mózgu do obrazu zmieniającego się tak jak w widzeniu rzeczywistym.
+
 \item [Pobieranie informacji o ruchu głowy]
+Przygotowany system wykorzystuje urządzenie, które umożliwia śledzenie ruchu głowy. Dane dotyczące jej położenia nie są jednak wykorzystywane, ponieważ kamery przymocowane są do gogli obracają się razem z głową. Potencjalnym wykorzystaniem systemu mogą być rozwiązania w których kamery znajdują się w innym miejscu niż użytkownik oglądający pochodzący z nich obraz. W celu umożliwienia takich zastosowań należałoby dodać możliwość pobrania informacji o obecnym położeniu głowy, co pozwoliłoby na rotacje kamer zgodnie z ruchem  głowy użytkownika.
+
 \item [Opracowanie szybkiego przesyłu obrazu na odległość]
+Funkcjonalnością, która zwiększyłaby potencjał rozwiązania o nowe zastosowania, byłaby możliwość bezprzewodowego połączenia gogli z kamerami. Obecnie wymagane jest aby kamery były podpięte za pomocą kabli do tego samego komputera co gogle wirtualnej rzeczywistości. Jednak gdyby udało się zastosować szybką i bezprzewodową transmisję danych można by wykorzystać system do zdalnego kontrolowania urządzeń w czasie rzeczywistym.
+
 \end{description}
 
 \section{Potencjalne zastosowania}
-TODO
-\begin{description}
-\item [Zdalnie sterowane roboty]
-\item [Zdalnie pilotowane drony]
-\item [Zdalne oglądanie np. mieszkań]
-\end{description}
 
+\begin{description}
+\item [Zdalnie sterowane roboty] \hfill \\
+Takie oczekiwania i wyobrażenia dotyczące wykorzystania rozszerzonej rzeczywistości od samego początku jej rozwoju. Przede wszystkim wojsko zainteresowane było stworzeniem robota o sylwetce człowieka, który byłby kontrolowany zdalnie przez ludzkiego żołnierza. Kamery umieszczone w głowie robota przesyłałyby obraz do człowieka umieszczonego w maszynie przechwytującej ruchy ludzkich kończyn. Użytkownik takiej maszyny przy odpowiednio dobrej głębi obrazu i jego naturalności mógłby w czasie rzeczywistym reagować na otaczające go wydarzenia. Człowiek potrafi najlepiej sterować własnym ciałem, dlatego maksymalne upodobnienie sterowania robotem do poruszania własnym ciałem przynosi najlepsze efekty. Takie zastosowanie pozwala połączyć łatwe sterowanie na wzór ludzkiego z przewagą fizyczną robota nad ludzkim ciałem.
+  
+\item [Zdalne podróżowanie] \hfill \\
+Pomimo ogromnego postępu transportu pasażerskiego w ostatnich dekadach, podróżowanie wciąż bywa uciążliwe lub niemożliwe dla wielu osób. Rozwiązaniem takiej sytuacji byłoby umożliwienie zdalnych podróży z przewodnikiem. Użytkownik zakładając gogle wirtualnej rzeczywistości mógłby wybrać przewodnika z dowolnego rejonu świata z którym mógłby się połączyć i dołączyć do jego wycieczki. Przewodnik posiadający stację z zamontowanymi kamerami udostępniałby obraz użytkownikowi oraz mógł opowiadać  mu informację na temat miejsca w którym się znajduje. Takie rozwiązanie nie wymaga tworzenia zaawansowanych robotów humanoidalnych, ale udostępnia użytkownikowi zwiedzanie i poruszanie się po danym obszarze poprzez głosowe porozumiewanie się z przewodnikiem i ustalanie trasy zwiedzania.
+\end{description}
 % -------------------- 6. Bibliografia -----------------------
 % Bibliografia leksykograficznie wg nazwisk autorów
 
@@ -1004,12 +1016,6 @@ TODO
 
 \bibitem[4] {IPdistance} \emph{Anthropometric Survey of U.S. Army Pilot Personnel: Methods and Summary Statistics} http://www.dtic.mil/docs/citations/ADA634277, 2012.
 
-%przykłady biblio, do usunięcia
-
-\bibitem[1]{Ktos} A. Aaaaa, \emph{Tytuł}, Wydawnictwo, rok, strona-strona.
-\bibitem[2]{Innyktos} J. Bobkowski, S. Dobkowski, \emph{Blebleble}, Magazyn nr, rok, strony.
-\bibitem[3]{B} C. Brink, \emph{Power structures}, Algebra Universalis 30(2), 1993, 177-216.
-\bibitem[4]{H} F. Burris, H. P. Sankappanavar, \emph{A Course of Universal Algebra}, Springer-Verlag, New York, 1981.
 \end{thebibliography}
 \thispagestyle{empty}
 
