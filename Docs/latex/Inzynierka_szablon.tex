@@ -306,9 +306,9 @@ Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowani
 
 Po stworzeniu tego systemu, zbadano czy wizja uzyskana z wykorzystaniem gogli wirtualnej rzeczywistości połączonych z kamerami znacznie różni się od naturalnej wizji człowieka i jeżeli tak, to jak to wpływa na komfort i możliwość korzystania z systemu. Opisano związane z tym problemy oraz dalsze kroki, jakie należy podjąć tworząc tego typu rozwiązania.
 
-\chapter{Technologia VR/AR. Wizja ludzka.}
+\chapter{Technologia VR/AR. Zmysł wzroku.}
 
-W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Poruszone zostaną problemy, jakie wiążą się z zastosowaniem tych technologii. Przedstawiona zostanie też natura wizji stereoskopowej człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
+W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Poruszone zostaną problemy, jakie wiążą się z zastosowaniem tych technologii. Przedstawiona zostanie też natura widzenia stereoskopowego człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
 
 \section{Wirtualna i rozszerzona rzeczywistość}
 
@@ -334,7 +334,7 @@ Przykładami urządzeń AR obecnymi na rynku są Google Glass i Microsoft HoloLe
 \textit{Mieszaną rzeczywistością} (ang. MR - Mixed Reality) nazywamy rozszerzenie klasy rozwiązań AR o interakcję użytkownika z wirtualną częścią świata.
 \end{definition}
 
-Niektóre źródła\cite{ARMRdifferences} rozróżniają rozszerzoną rzeczywistość od mieszanej rzeczywistości utrzymując, że rozwiązania AR nie zapewniają interakcji z wirtualną częścią rzeczywistości. W związku z rozróżnieniem tych dwóch zagadnień, definicja rzeczywistości została zamieszczona w niniejszej pracy. Zagadnienie mieszanej rzeczywistości leży jednak poza zakresem niniejszej pracy, dlatego nie jest szerzej opisane. 
+Niektóre źródła\cite{ARMRdifferences} rozróżniają rozszerzoną rzeczywistość od mieszanej rzeczywistości utrzymując, że rozwiązania AR nie zapewniają interakcji z wirtualną częścią rzeczywistości. W związku z rozróżnieniem tych dwóch zagadnień, w niniejszej pracy został umieszczony jedynie opis pierwszej z nich. Zagadnienie mieszanej rzeczywistości leży jednak poza zakresem niniejszej pracy, dlatego nie jest szerzej opisane. 
 
 \subsection{Problemy użytkowe VR/AR }
 
@@ -342,19 +342,19 @@ Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za so
 
 \begin{description}
 \item [Wymogi wydajnościowe] \hfill \\
-W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć conajmniej 60 FPS, aby zachować płynność obrazu. Jednak wiele źródeł utrzymuje, że o ile 60 FPS jest minimum do uniknięcia znacznego dyskomfortu, to do w pełni komfortowego korzystania z gogli konieczne jest osiągnięcie nawet 90 FPS\cite{VRframesPerSecond}. Opóźnienie obrazu powinno wynosić maksymalnie 15 ms\cite{VRlatency}, w celu uniknięcia niespójności pomiędzy np. wykonaniem ruchu głowy, którego mózg jest świadomy, a obrazem.
+W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości, systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć conajmniej 60 FPS, aby zachować płynność obrazu. Jednak według wielu źródeł, 60 FPS jest minimum do uniknięcia znacznego dyskomfortu, a do w pełni komfortowego korzystania z gogli konieczne jest osiągnięcie nawet 90 FPS\cite{VRframesPerSecond}. Opóźnienie obrazu powinno wynosić maksymalnie 15 ms\cite{VRlatency}, w celu uniknięcia niespójności pomiędzy np. wykonaniem ruchu głowy, którego mózg jest świadomy, a obrazem.
 \item [Wpływ na wzrok] \hfill \\
 Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
 \item [Choroba symulacyjna] \hfill \\
 Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce co skutkuje objawami podobnymi do choroby lokomocyjnej, mimo braku jakiegokolwiek ruchu.\cite{VRsickness}
 \item [Zbyt wysoka immersja] \hfill \\
-Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od wirtualnej rozgrywki mają problem z rozróżnianiem świata rzeczywistego od wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że rozrywka VR jest znacznie bardziej wymagająca dla organizmu od tradycyjnej, co już zostało wcześniej opisane. 
+Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od wirtualnej rozgrywki, mają problem z rozróżnianiem świata rzeczywistego od wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że rozrywka VR jest znacznie bardziej wymagająca dla organizmu od tradycyjnej, co już zostało wcześniej opisane. 
 Kolejny problem dotyczący immersji jest związany z osobami mającymi problemy kardiologiczne. Realistyczne wrażenia z gier typu horror mogą doprowadzić takie osoby nawet do zawału serca.
 \end{description}
 
 \section{Wizja stereoskopowa człowieka}
 
-Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane mniej więcej równolegle w ten sam punkt. Umożliwia to zebranie dwóch podobnych do siebie obrazów. Różnica między nimi polega na przesunięciu oczu (kamer) względem siebie, przez co każdy obiekt jest widziany na jednym obrazie z nieco innej perspektywy, niż na drugim. Mózg nakładając na siebie te obrazy, dzięki tej różnicy, tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
+Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane prawie równolegle w ten sam punkt. Umożliwia to zebranie dwóch podobnych do siebie obrazów. Różnica między nimi polega na przesunięciu oczu (kamer) względem siebie, przez co każdy obiekt jest widziany na jednym obrazie z nieco innej perspektywy, niż na drugim. Mózg nakładając na siebie te obrazy, dzięki tej różnicy, tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
 
 \subsection{Odległość między źrenicami}
 
@@ -397,13 +397,13 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{images/zbieznosc}
+\includegraphics[scale=1]{images/zbieznosc}
 \caption[Zbieżność oczu (źródło: http://www.swiatlo.tak.pl/1/index.php/funkcje-wzroku-akomodacja-adaptacja-zbieznosc/)]{Zbieżność oczu}
 \end{figure}
 
 \chapter{Cel i założenia projektu} % Cel i założenia projektu
 
-Rozdział poświęcony jest opisaniu celu projektu, który powstaje w ramach niniejszej pracy inżynierskiej. Wyspecyfikowane zostaną wymagania, jakie tworzony system musi spełniać.
+Rozdział poświęcony jest opisaniu celu projektu, który powstał w ramach niniejszej pracy inżynierskiej. Wyspecyfikowane zostaną wymagania, jakie tworzony system musi spełniać.
 
 \section{Funkcjonalność systemu}
 System ma umożliwiać przekazanie obrazu z dwóch kamer do gogli wirtualnej rzeczywistości, tworząc tym samym gogle rozszerzonej rzeczywistości. Takie gogle następnie będą mogły posłużyć do wykorzystywania aplikacji przeznaczonych na rozwiązania AR. 
@@ -427,14 +427,14 @@ C910 Pro HD to kamera USB stworzona przez firmę Logitech. Umożliwia przechwyty
 
 Wydział MiNI zapewnił dwa egzemplarze tych kamer na rzecz niniejszej pracy. W związku z tym, że panoramiczny obraz, standardowo zapewniany przez kamery, jest daleki od natury ludzkiego oka ograniczymy się do obrazu 4:3. Zatem rozdzielczość obrazu w naszej pracy będzie wynosiła 1440 pikseli na 1080 pikseli na jedno oko.
 
-Obudowa tej kamery jest dość duża, szczególnie w pozycji poziomej. Jest to problematyczne, ponieważ minimalna odległość między soczewkami, na jaką możemy umieścić kamery w tej pozycji, wynosi około 100 milimetrów. Jest to znacznie powyżej górnego ograniczenia odległości między ludzkimi źrenicami. W związku z tym konieczne będzie umieszczenie tych kamer w pozycji pionowej. Skutkuje to tym, że efektywna rozdzielczość przechwytywanego obrazu będzie wynosiła 1080 pikseli na 1440 pikseli.
+Obudowa tej kamery jest zbyt duża, szczególnie w pozycji poziomej. Jest to problemem, ponieważ minimalna odległość między soczewkami, na jaką możemy umieścić kamery w tej pozycji, wynosi około 100 milimetrów. Jest to znacznie powyżej górnego ograniczenia odległości między ludzkimi źrenicami. W związku z tym konieczne będzie umieszczenie tych kamer w pozycji pionowej. Skutkuje to tym, że efektywna rozdzielczość przechwytywanego obrazu będzie wynosiła 1080 pikseli na 1440 pikseli.
 
-\section{Odwzorowanie wizji stereoskopowej}
+\section{Odwzorowanie widzenia stereoskopowego}
 
-Uzyskanie efektu wizji trójwymiarowej podczas używania gogli z zaimplementowanym rozwiązaniem jest jednym z najważniejszych celów tego projektu. W tym podrozdziale znajduje się odniesienie do cech wizji stereoskopowej, opisanych w poprzednim rozdziale, pod kątem tego, jak wpływają na tworzone rozwiązanie w ramach niniejszej pracy. 
+Uzyskanie efektu wizji trójwymiarowej, podczas używania gogli z zaimplementowanym rozwiązaniem, jest jednym z najważniejszych celów tego projektu. W tym podrozdziale znajduje się odniesienie do cech widzenia stereoskopowego, opisanych w poprzednim rozdziale, pod kątem tego, jak wpływają na tworzone rozwiązanie w ramach niniejszej pracy. 
 
-\subsection{Parametryzacja wizji}
-Wizję stereoskopową można opisać trzema parametrami:
+\subsection{Parametryzacja widzenia}
+Widzenie stereoskopowe można opisać trzema parametrami:
 \begin{itemize}
 \item Kąt widzenia kamer
 \item Odległość między obiektywami kamer
@@ -445,9 +445,9 @@ Pierwszy z tych parametrów - kąt widzenia kamer, jest zależny bezpośrednio o
 
 Dwa kolejne - odległość między kamerami i odchylenie osi widzenia, są istotne przy uzyskaniu efektu głębi podczas patrzenia przez gogle. Przy założeniu, że obserwujemy jeden punkt, istnieje korelacja między tymi parametrami pozwalająca uzyskać efekt głębi patrząc na przedmioty w okolicy obserwowanego punktu nawet w sytuacji, gdy odległość, bądź odchylenie odbiegają od idealnego ustawienia dla danego użytkownika. Przykładem będzie odchylenie osi widzenia do środka w przypadku, gdy odległości między obiektywami są większe, niż między oczami użytkownika. Jednakże efekt w ten sposób uzyskany jest tylko punktowy, a obiekty położone w innej odległości od punktu odniesienia nie będą widziane jako trójwymiarowe.
 
-\subsection{Cechy ludzkiej wizji w projekcie}
+\subsection{Cechy zmysłu wzroku w projekcie}
 
-W podrozdziale \textit{Wizja stereoskopowa człowieka} zostały przedstawione cechy ludzkiej wizji, które mają wpływ na przebieg niniejszej pracy. W tym podrozdziale omówione zostaną założenia, jakie zostały podjęte podczas realizacji projektu w celu spełnienia tych wymagań, oraz uzasadnienie w przypadku braku możliwości spełnienia danego wymagania.
+W podrozdziale \textit{Widzenie stereoskopowe człowieka} zostały przedstawione cechy ludzkiej wizji, które mają wpływ na przebieg niniejszej pracy. W tym podrozdziale omówione zostaną założenia, jakie zostały podjęte podczas realizacji projektu w celu spełnienia tych wymagań, oraz uzasadnienie w przypadku braku możliwości spełnienia danego wymagania.
 
 \begin{description}
 
@@ -464,7 +464,7 @@ Kamery docelowo miały zostać umieszczone na goglach, ale przewidziana jest mo�
 Zjawisko akomodacji oka w niniejszej pracy jest nie do odwzorowania z wykorzystaniem dostępnego sprzętu. Wymaga ono śledzenia gałki ocznej w celu wyznaczenia punktu, który jest obserwowany przez użytkownika, a następnie wyostrzenie obrazu w danym punkcie. Gogle Oculus Rift nie mają obecnie takiej możliwości.
 
 \item[Zbieżność oczu] \hfill \\
-Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odwzorowania z takich samych powodów co zjawisko \textit{akomodacji oka}. Należałoby wyznaczyć punkt obserwowany przez użytkownika, a następnie skierować kamery w dany punkt. Wymagałoby to też stworzenia urządzenia, które poruszałoby kamerami w zależności od obserwowanego punktu. Wykracza to znacznie poza zakres tej pracy.
+Zjawisko zbieżności oczu w niniejszej pracy również jest nie do odwzorowania z takich samych powodów co zjawisko \textit{akomodacji oka}. Należałoby wyznaczyć punkt obserwowany przez użytkownika, a następnie skierować kamery w dany punkt. Wymagałoby to też stworzenia urządzenia, które poruszałoby kamerami w zależności od obserwowanego punktu. Wykracza to znacznie poza zakres realizowanej pracy.
 
 \end{description}
 
@@ -600,7 +600,7 @@ Klasa ta w konstruktorze jako argument przyjmuje obiekt implementujący interfej
 \caption[Przekształcenie diagram diagram]{Interfejs obiektu przekształcającego obraz}
 \end{figure}
 
-Metoda \textit{Process} jako argument przyjmuje referencje do obrazu reprezentowanego za pomocą typu Image<Bgr, byte> pochodzącego z biblioteki EmguCV. Operowanie na tym typie pozwala wykorzystać metody pochodzące ze wspomnianej biblioteki, co pozwalają na szybszą konwersję obrazu przeprowadzając część operacji przy wykorzystaniu karty graficznej. Metoda nie zwraca żadnej wartości lecz operuje na przekazanym obrazie stosując dla niego zaimplementowane przekształcenia.  \\
+Metoda \textit{Process} jako argument przyjmuje referencje do obrazu reprezentowanego za pomocą typu pochodzącego z biblioteki EmguCV. Operowanie na tym typie pozwala wykorzystać metody pochodzące ze wspomnianej biblioteki, co pozwalają na szybszą konwersję obrazu przeprowadzając część operacji przy wykorzystaniu karty graficznej. Metoda nie zwraca żadnej wartości lecz operuje na przekazanym obrazie stosując dla niego zaimplementowane przekształcenia.  \\
 Dodatkowo interfejs wymaga posiadania przez klasy następujących właściwości:
 \begin{itemize}
 \item  \textit{Name}, typu tekstowego - zawierająca nazwę przekształcenia.
@@ -611,7 +611,7 @@ Dodatkowo interfejs wymaga posiadania przez klasy następujących właściwości
 
 \subsection{Moduł przekazywania obrazu do gogli}
 
-W tym module znajdują się wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Poprzednie moduły zaimplementowano przy użyciu języka C\# oraz  platformy .NET. Dlatego do przekazywania obrazu do gogli Oculus Rift został wykorzystany silnik Unity3d umożliwiający importowanie zewnętrznych bibliotek stworzonych w tych technologiach.
+W tym module znajdują się wszystkie operacje związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Poprzednie moduły zaimplementowano przy użyciu języka C\# oraz  platformy .NET. Dlatego do przekazywania obrazu do gogli Oculus Rift został wykorzystany silnik Unity3D umożliwiający importowanie zewnętrznych bibliotek stworzonych w tych technologiach.
 
 Unity3d jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli Oculus Rift (https://developer.oculus.com/downloads/unity/), który w samym edytorze silnika Unity funkcjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
@@ -702,7 +702,7 @@ Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji
 Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$ we wskazaną stronę dla odpowiedniego oka.
 
 \item [Kontrola przetwarzania obrazu] \hfill \\
-Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu jednocześnie. Dlatego w głównym widoku umieszczona została jedna kontrolka \textit{SettingsControl}. Zawiera ona listę w postaci kontrolki \textit{System.Windonws.Control.ListBox} na której umieszczone zostały wszystkie dostępne w systemie obiekty do przetwarzania obrazu. W celu zarządzania tymi obiektami został stworzony szablon wyświetalny dla każdej pozycji z listy składający się z następujących elementów:
+Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu jednocześnie. Dlatego w głównym widoku umieszczona została jedna kontrolka \textit{SettingsControl}. Zawiera ona listę na której umieszczone zostały wszystkie dostępne w systemie obiekty do przetwarzania obrazu. W celu zarządzania tymi obiektami został stworzony szablon wyświetalny dla każdej pozycji z listy składający się z następujących elementów:
 
 \begin{itemize}
 \item Nazwa przekształcenia realizowanego przez obiekt.
@@ -718,7 +718,7 @@ Sterowanie przetwarzaniem obrazu możliwe jest tylko dla obu źródeł obrazu je
 \end{figure}
 
 Lista dostępnych przekształceń obrazu wraz z informacją o ich aktywności otrzymywana jest po wywołaniu metody \textit{GetAllImageProcessors} z serwisu \textit{IViewProviderService}. \\
-Za pomocą dwóch stanów (zaznaczenie lub brak zaznaczenia) kontrolki \textit{System.Windows.Control.CheckBox} możliwe jest włączanie lub wyłączanie pojedynczych przekształceń. Po zmianie stanu kontrolki wywoływana jest metoda \textit{SetProcessorState}, która ustawia aktywność wybranego obiekty na wskazany stan. \\
+Za pomocą dwóch stanów (zaznaczenie lub brak zaznaczenia)pola wyboru możliwe jest włączanie lub wyłączanie pojedynczych przekształceń. Po zmianie stanu kontrolki wywoływana jest metoda \textit{SetProcessorState}, która ustawia aktywność wybranego obiekty na wskazany stan. \\
 Prezentowana lista odpowiada kolejnością liście obiektów przekształcających obraz.  Przekształcenia wykonywane są zaczynając od tego znajdującego się na górze listy. Zarządzanie tą kolejnością możliwe jest za pomocą przycisków, które przesuwają obiekt w dół lub w górę listy wywołując metodę serwisu o nazwie \textit{ChangeProcessorPriority}.
 
 \end{description}
@@ -989,7 +989,7 @@ Wydajność zaimplementowanego systemu nie jest wystarczająca, aby móc komfort
 Opisany projekt gogli przewiduje dwie kamery USB podłączone do komputera (lub HUB'u USB). Powoduje to trudności z montażem kamer na goglach, zwiększenie ilości przewodów pomiędzy komputerem, a użytkownikiem oraz konieczność odpowiedniego ustawiania kamer. Proponowanym rozwiązaniem na dalszy rozwój projektu jest stworzenie dedykowanego układu dwóch kamer, zamkniętego w obudowie, umożliwiającego łatwy montaż na goglach VR. Z takiej obudowy można poprowadzić jeden przewód, który obsługiwałby obie kamery. Taki układ zapewniałby odpowiednie ustawienia kamer oraz umożliwiałby wygodną kalibrację kamer, tak jak jest to zrealizowane w przypadku soczewek gogli VR.
 
 \item [Poszerzenie pola widzenia] \hfill \\
-Układ gogli i kamer wymusza przesunięcie punktu, w którym obraz jest pobierany, o pewną odległość do przodu. Różnica odległości między oczami, a kamerą powoduje, że użytkownik traci z pola widzenia te obszary, które leżą na granicy normalnego wzroku. Ponadto skutkuje to wrażeniem użytkownika, że obiekty, na które patrzy są znacznie bliżej niego niż w rzeczywistości. Aby zastosować tego typu rozwiązanie w praktyce należałoby znaleźć sposób na rozwiązanie tego problemu, ponieważ, jak wynikło to z opisanych testów użytkowych, jest to istotny problem utrudniający wykonywanie podstawowych czynności. Problem wydaje się być ciężki do rozwiązania przy wykorzystaniu obecnie używanych gogli VR i zamontowanych na nich kamer z powodu ich dużych rozmiarów.
+Układ gogli i kamer wymusza przesunięcie punktu, w którym obraz jest pobierany, o pewną odległość do przodu. Różnica odległości między oczami, a kamerą powoduje, że użytkownik traci z pola widzenia te obszary, które leżą na granicy normalnego wzroku. Ponadto skutkuje to wrażeniem użytkownika, że obiekty, na które patrzy są znacznie bliżej niego niż w rzeczywistości. Aby zastosować tego typu rozwiązanie w praktyce należałoby znaleźć sposób rozwiązania tego problemu, ponieważ, jak wynika to z opisanych testów użytkowych, jest to istotny problem utrudniający wykonywanie podstawowych czynności. Problem wydaje się być ciężki do rozwiązania przy wykorzystaniu obecnie używanych gogli VR i zamontowanych na nich kamer z powodu ich dużych rozmiarów.
 \end{description}
 
 \subsection{Dodatkowe funkcjonalności}
