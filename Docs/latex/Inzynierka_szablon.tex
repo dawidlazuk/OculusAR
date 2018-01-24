@@ -31,7 +31,7 @@
 \usepackage[inner=20mm, outer=20mm, bindingoffset=10mm, top=25mm, bottom=25mm]{geometry}
 
 
-\linespread{1.5}
+\linespread{1.15}
 %\allowdisplaybreaks
 \usepackage{indentfirst} % opcjonalnie; pierwszy akapit z wcięciem
 \setlength{\parindent}{5mm}
@@ -298,11 +298,11 @@ samodzielnie, co poświadczam własnoręcznym podpisem.
 \markboth{}{Wstęp}
 \addcontentsline{toc}{chapter}{Wstęp}
 
-Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące zainteresowanie nimi w wielu branżach.
+Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
 
-W niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony został system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
+Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
 
-Po stworzeniu tego systemu, zbadano różnicę pomiędzy widzeniem z wykorzystaniem gogli wirtualnej rzeczywistości połączonych z kamerami oraz naturalnym widzeniem człowieka. Sprawdzono też jak wpływa to na komfort i możliwość korzystania z systemu. Opisano związane z tym problemy oraz dalsze kroki, jakie należy podjąć tworząc tego typu rozwiązania.
+Po stworzeniu tego systemu, zbadano czy wizja uzyskana z wykorzystaniem gogli wirtualnej rzeczywistości połączonych z kamerami znacznie różni się od naturalnej wizji człowieka i jeżeli tak, to jak to wpływa na komfort i możliwość korzystania z systemu. Opisano związane z tym problemy oraz dalsze kroki, jakie należy podjąć tworząc tego typu rozwiązania.
 
 \chapter{Technologia VR/AR. Zmysł wzroku.}
 
@@ -316,12 +316,12 @@ W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzec
 \textit{Wirtualną rzeczywistością} (ang. VR - Virtual Reality) nazywamy wrażenie przebywania użytkownika w świecie stworzonym wirtualnie. Zwykle dotyczy to obrazu, dźwięku oraz interakcji z otoczeniem, ale podejmowane są próby wykorzystania zapachu i dotyku w aplikacjach VR.
 \end{definition}
 
-Obecnie termin VR kojarzony jest zazwyczaj z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii, nawet takich jak telewizja trójwymiarowa.
+Obecnie większości ludziom termin VR kojarzy się z goglami zakładanymi na głowę użytkownika, które umożliwiają wyświetlanie sceny 3D w taki sposób, że użytkownik ma wrażenie przebywania w tej scenie. Wbudowane w urządzenie żyroskopy reagują na ruchy głowy odwzorowując je w wyświetlanym obrazie. Gogle często posiadają wbudowane głośniki (Oculus Rift) lub możliwość podpięcia słuchawek (HTC Vive), zapewniając także bodźce akustyczne. Takie rozwiązanie pozwala osiągnąć immersję nieosiągalną dla dotychczasowo wykorzystywanych technologii, nawet takich jak telewizja trójwymiarowa.
 
 Wirtualna rzeczywistość jest obecnie stosowana na bardzo szeroką skalę. Wykorzystywana jest w przemyśle rozrywkowym w postaci gier VR czy też filmów 360\textdegree, w których użytkownik może poczuć się jakby znajdował się w samym centrum akcji. Rozwiązania VR mają potencjał w przemyśle turystycznym, umożliwiając wirtualne wycieczki po egzotycznych, często trudno dostępnych miejscach. Agenci nieruchomości mogą umożliwić zainteresowanym klientom obejrzenie mieszkania czy domu jeszcze przed powstaniem budynku. Wystarczy tylko stworzyć odpowiedni model 3D i wyświetlić go w goglach wirtualnej rzeczywistości. Technologia znalazła też zastosowanie w szkoleniu żołnierzy, umożliwiając przeprowadzenie symulacji operacji na~wirtualnych poligonach.\cite{VRdefinition}
 
 \begin{definition}[Rozszerzona rzeczywistość]
-\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie obrazu stworzonego wirtualnie na wizję świata rzeczywistego. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy.
+\textit{Rozszerzoną rzeczywistością} (ang. AR - Augmented Reality) nazywamy nałożenie na wizję świata rzeczywistego obrazu stworzonego wirtualnie. Użytkownik dzięki temu może na przykład otrzymywać dodatkowe informacje o obiektach, na które patrzy.
 \end{definition}
 
 Rozwiązania rozszerzonej rzeczywistości wzbogacają zmysły człowieka poprzez przekazanie im dodatkowych informacji. O ile w przypadku wirtualnej rzeczywistości użytkownik, w pewnym sensie, odcinał się od świata rzeczywistego, tak w przypadku rzeczywistości rozszerzonej ten kontakt z rzeczywistością pozostaje. Istnieją samochody oraz myśliwce wyposażone w HUD - przezroczysty ekran wyświetlający informacje takie jak na przykład prędkość, z jaką porusza się samochód, nie zasłaniając tego co za nim się znajduje. Dość znanym zastosowaniem rozszerzonej rzeczywistości jest, wydana w 2016 roku, gra Pokemon GO. Użytkownik przy pomocy swojego smartphone'a spacerując po mieście zbiera pokemony, które wyświetlają się na ekranie telefonu jako obraz nałożony na  świat rzeczywisty, widziany przez kamerę urządzenia.
@@ -340,7 +340,7 @@ Wykorzystanie rozwiązań wirtualnej i rozszerzonej rzeczywistości niesie za so
 
 \begin{description}
 \item [Wymogi wydajnościowe] \hfill \\
-W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości, systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć co najmniej 60 FPS, aby zachować płynność obrazu. Jednak według wielu źródeł, do w pełni komfortowego korzystania z gogli konieczne jest osiągnięcie nawet 90 FPS\cite{VRframesPerSecond}. Opóźnienie obrazu powinno wynosić maksymalnie 15 ms\cite{VRlatency}, w celu uniknięcia niespójności pomiędzy np. wykonaniem ruchu głowy, którego mózg jest świadomy, a obrazem.
+W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości, systemy muszą spełniać szereg wymogów wydajnościowych. Organizm ludzki najlepiej akceptuje obraz o częstotliwości zgodnej z częstotliwością pracy oka. Podanie obrazu o częstotliwości dużo niższej będzie powodowało dyskomfort w korzystaniu z aplikacji. Przyjmuje się, że obraz w aplikacjach VR powinien mieć conajmniej 60 FPS, aby zachować płynność obrazu. Jednak według wielu źródeł, do w pełni komfortowego korzystania z gogli konieczne jest osiągnięcie nawet 90 FPS\cite{VRframesPerSecond}. Opóźnienie obrazu powinno wynosić maksymalnie 15 ms\cite{VRlatency}, w celu uniknięcia niespójności pomiędzy np. wykonaniem ruchu głowy, którego mózg jest świadomy, a obrazem.
 \item [Wpływ na wzrok] \hfill \\
 Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
 \item [Choroba symulacyjna] \hfill \\
@@ -456,7 +456,7 @@ W celu zapewnienia komfortowego korzystania z systemu jak największej grupie u�
 \item Regulację odległości kamer od siebie
 \end{itemize}
 
-Kamery, w założeniach projektu miały zostać umieszczone na goglach. Jednak możliwe jest również mocowanie na innych obiektach, przy czym powinno ono uwzględniać punkty wymienione powyżej.
+Kamery docelowo miały zostać umieszczone na goglach, ale przewidziana jest możliwość mocowania ich na czym innym, jednak z zachowaniem punktów wymienionych powyżej.
 
 \item [Akomodacja oka] \hfill \\
 Zjawisko akomodacji oka w niniejszej pracy jest nie do odwzorowania z wykorzystaniem dostępnego sprzętu. Wymaga ono śledzenia gałki ocznej w celu wyznaczenia punktu, który jest obserwowany przez użytkownika, a następnie wyostrzenie obrazu w danym punkcie. Gogle Oculus Rift nie mają obecnie takiej możliwości.
