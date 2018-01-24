@@ -25,6 +25,7 @@
 \usepackage[none]{hyphenat}
 \usepackage{float}
 \usepackage{flafter}
+\usepackage{pdfpages}
 
 % ---------------- Marginesy, akapity, interlinia ------------------
 
@@ -205,7 +206,7 @@
 % --------------------- Ustawienia użytkownika ------------------
 
 \newcommand{\tytul}{Gogle rozszerzonej rzeczywistości jako modyfikacja gogli wirtualnej rzeczywistości}
-\renewcommand{\title}{Augmented Reality googles as modified Virtual Reality googles}
+\renewcommand{\title}{Augmented Reality goggles as modified Virtual Reality goggles}
 \renewcommand{\author}{Dawid Łazuk, Piotr Piwowarski}
 \newcommand{\album}{268791,268825}
 \newcommand{\type}{inżyniers} % magisters, licencjac (Master or Engineer in English)
@@ -213,7 +214,6 @@
 
 \lstdefinestyle{sharpc}{language=[Sharp]C, rulecolor=\color{blue!80!black}}
 
-\usepackage{pdfpages}
 
 \begin{document}
 \sloppy
@@ -232,12 +232,12 @@
 \tytul
 \end{center}
 
-Niniejsza praca ma na celu przedstawienie możliwości wykorzystania gogli wirtualnej rzeczywistości do realizacji efektu rzeczywistości rozszerzonej. System stworzony w ramach tej pracy, umożliwia przechwytywanie obrazu z dwóch kamer, a następnie przesyłanie go do ludzkich oczu za pomocą gogli wirtualnej rzeczywistości.
-Praca porusza także kwestie dotyczące problemów, powodowanych przez odmienne cechy obrazu cyfrowego i obrazu rzeczywistego. 
+Niniejsza praca ma na celu przedstawienie możliwości wykorzystania gogli wirtualnej rzeczywistości do realizacji efektu rzeczywistości rozszerzonej. System stworzony w ramach tej pracy, umożliwia przechwytywanie obrazu z dwóch kamer, a następnie przesyłanie go do ludzkich oczu za pomocą gogli wirtualnej rzeczywistości. Założeniem pracy było uzyskanie efektu widzenia stereoskopowego przy użyciu stworzonych gogli.
+Praca porusza kwestie dotyczące problemów, powodowanych przez odmienne cechy obrazu cyfrowego i obrazu rzeczywistego oraz różnice, między ludzkim zmysłem wzroku, a osiąganym przez skonstruowane gogle. 
 
-Integralną częścią pracy jest warstwa przetwarzania obrazu, umożliwiająca aplikowanie zdefiniowanych przekształceń do obrazu, podczas jego przesyłania z kamer do gogli.\\
+Integralną częścią systemu, stworzonego na potrzeby pracy, jest warstwa przetwarzania obrazu, umożliwiająca aplikowanie wcześniej zdefiniowanych przekształceń do obrazu, podczas jego przesyłania z kamer do gogli.\\
 
-\noindent \textbf{Słowa kluczowe:} wirtualna rzeczywistość, rozszerzona rzeczywistość, przetwarzanie obrazu
+\noindent \textbf{Słowa kluczowe:} wirtualna rzeczywistość, rozszerzona rzeczywistość, przetwarzanie obrazu, zmysł wzroku, widzenie stereoskopowe
 \end{abstract}
 
 \null\thispagestyle{empty}\newpage
@@ -249,11 +249,11 @@ Integralną częścią pracy jest warstwa przetwarzania obrazu, umożliwiająca 
 \title
 \end{center}
 
-The purpose of this thesis is to present possible application of the  virtual reality gogles in implementation of augmented reality effect. The system created as part of this work allows to capture image from two cameras and then transfer it to human eyes using virtual reality goggles. The thesis also addresses issues related to problems caused by different features of digital image and real image.
+The purpose of this thesis is to present possible application of the virtual reality goggles into an implementation of augmented reality effect. The system created, as the main part of this thesis, enables user to capture images from two cameras and then apply them to human eyes with the use of virtual reality goggles. This thesis also addresses issues related to problems caused by different features of digital image and real image and differences between human vision and achieved result with the constructed goggles.
 
-The integral part of the thesis is the image processing layer, enabling the application of defined transformations to the image, during its transmission from cameras to goggles. \\
+The integral part of the system, described by this thesis, is the image processing layer, enabling user to apply defined transformations into the acquired images, during its transmission from cameras to goggles. \\
 
-\noindent \textbf{Keywords:} virtual reality, augmented reality,image processing \end{abstract}}
+\noindent \textbf{Keywords:} virtual reality, augmented reality, image processing, human vision, stereoscopic vision \end{abstract}}
 
 \null\thispagestyle{empty}\newpage
 
@@ -403,6 +403,7 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 \centering
 \includegraphics[scale=1]{images/zbieznosc}
 \caption[Zbieżność oczu\cite{zbieznosc}]{Zbieżność oczu}
+\
 \end{figure}
 
 \chapter{Cel i założenia projektu} % Cel i założenia projektu
