@@ -396,7 +396,7 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{images/zbieznosc}
-\caption[Zbieżność oczu (źródło: http://www.swiatlo.tak.pl/1/index.php/funkcje-wzroku-akomodacja-adaptacja-zbieznosc/)]{Zbieżność oczu}
+\caption[Zbieżność oczu\cite{zbieznosc}]{Zbieżność oczu}
 \end{figure}
 
 \chapter{Cel i założenia projektu} % Cel i założenia projektu
@@ -560,7 +560,7 @@ Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla daneg
 
 Funkcjonalności modułu są współdzielone przez aplikację główną oraz konfiguracyjną. Ta~część kontraktu, która jest wykorzystywana przez aplikację konfiguracyjną, jest wydzielona jako kontrakt serwisu udostępnionego tej aplikacji, zgodnie ze wzorcem projektowym \textit{fasada}. Dzięki temu ukryte zostały zbędne funkcjonalności modułu z punktu widzenia aplikacji konfiguracyjnej upraszczając jego interfejs.
 
-Podczas testów modułu wystąpiły sytuacje, gdzie aplikacja zawieszała się na wywołaniu metody z biblioteki EmguCV pobierającej kolejną klatkę z kamery. Występowało to w sytuacji, kiedy obiekt odpowiedzialny za pobieranie obrazu był ustawiony na kamerę, która nie istniała w systemie (jej indeksowi nie odpowiadało żadne urządzenie). Moduł zawiera rozwiązanie zapobiegające tego typu sytuacjom. Przy każdym pobraniu klatki do odpowiedniego pola jest zapisany czas jej pobrania. Podczas tworzenia instancji modułu tworzony i uruchamiany jest wątek, który co jakiś czas sprawdza czas od ostatniego pobrania klatki dla kanału. Jeżeli jest on większy od ustalonego dopuszczalnego maksimum, to wątek tego kanału jest przerywany, a w jego miejsce tworzony nowy. 
+Podczas testów modułu wystąpiły sytuacje, w których aplikacja zawieszała się na wywołaniu metody z biblioteki EmguCV pobierającej kolejną klatkę z kamery. Występowało to w sytuacji, kiedy obiekt odpowiedzialny za pobieranie obrazu był ustawiony na kamerę, która nie istniała w systemie (jej indeksowi nie odpowiadało żadne urządzenie). Moduł zawiera rozwiązanie zapobiegające tego typu sytuacjom. Przy każdym pobraniu klatki do odpowiedniego pola zapisywany jest czas jej pobrania. Podczas tworzenia instancji modułu tworzony i uruchamiany jest wątek, który co jakiś czas sprawdza czas od ostatniego pobrania klatki dla kanału. Jeżeli jest on większy od ustalonego dopuszczalnego maksimum, to wątek tego kanału jest przerywany, a w jego miejsce tworzony nowy. 
 W zaimplementowanym rozwiązaniu maksymalna dopuszczalna przerwa między klatkami i czas co jaki jest ona sprawdzana wynosi 10 sekund.
 
 \subsection{Moduł przetwarzania obrazu}
@@ -637,7 +637,7 @@ Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obr
 \end{figure}
 
 Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje, potrzebne przy konwersji obrazu do tekstury. W systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury, utworzony na podstawie przekazanego obrazu, za pomocą typu \textit{System.Drawing.Bitmap}. Metoda\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz reprezentowany za pomocą typu z biblioteki EmguCV.
-Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje przekazany obraz do wskazanej, istniejącej tekstury. Jest wykorzystywana w celu poprawy wydajności i uniknięcia niepotrzebnego tworzenia tekstur, przy każdej konwersji obrazu.
+Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje przekazany obraz do wskazanej, istniejącej tekstury. Wykorzystywana jest w celu poprawy wydajności i uniknięcia niepotrzebnego tworzenia tekstur, przy każdej konwersji obrazu.
 
 Z powyższego opisu wynika, że najważniejsze operacje modułu to:
 \begin{itemize}
@@ -685,14 +685,14 @@ W celu większej przejrzystości, dla wymienionych części zostały stworzone s
 \item Przycisk do obrotu obrazu o $90^\circ$ w prawo.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{images/channelcontrol_screen}
 \caption[Widok aplikacji]{Kontrolki \textit{ChannelControl}.}
 \end{figure}
 
 Aplikacja w trakcie działania, za pomoca oddzielnego wątku wywołuje metodę \textit{UpdateFrames} w serwisie {IViewProviderService}, która wywołuje pobranie obrazu z kamery. Następnie za pomocą metody \textit{GetCurrentViewAsBitmaps} z tego samego serwisu, otrzymuje obrazy z obu kamer w formacie \textit{System.Drawing.Bitmap} i ładuje je do kontrolek wyświetlających obrazy, odświeżając widok całej aplikacji. \\
-Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji z listy, zawierającej wszystkie dostępnymi źródła. Wtedy za pomocą metody \textit{SetCapture} z serwisu, ustawiamy wybrane źródło dla lewego lub prawego oka. \\
+Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji z listy, zawierającej wszystkie dostępnymi źródła. Wtedy za pomocą metody \textit{SetCapture} z serwisu, wybierane jest źródło dla lewego lub prawego oka. \\
 Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$ we wskazaną stronę, dla wybranego oka.
 
 \item [Kontrola przetwarzania obrazu] \hfill \\
@@ -736,7 +736,7 @@ Opis interfejsów zawartych w kontrakcie:
 tem \textit{IViewProviderService} - serwis składający się ze wcześniej wymienionych części oraz metod związanych z pobieraniem obrazu.
 \end{itemize}
 
-Szczegółowy opis metod zawartych w wymienionych interfejsach, może zostać pominięty, ponieważ polegają one na wywołaniu metod o tych samych nazwach z klas implementujących interfejs \textit{IViewProvider}, którego opis znajduje się w poprzedniej części dokumentu.
+Szczegółowy opis metod zawartych w wymienionych interfejsach, został pominięty, ponieważ polegają one na wywołaniu metod o tych samych nazwach z klas implementujących interfejs \textit{IViewProvider}, którego opis znajduje się w poprzedniej części dokumentu.
 
 Interfejs \textit{IViewProviderService} implementowany jest przez następujące klasy:
 
@@ -802,11 +802,11 @@ Pierwszą z kwestii, która została poruszona jest opóźnienie przesyłania ob
 
 Założenia:
 \begin{itemize}
-\item Różnicę czasu między wyświetleniem obrazu w aplikacji Unity, a w goglach VR przyjmujemy jako 0 ms. Nie mamy wpływu na zmianę tego opóźnienia bez ingerencji w kod biblioteki zewnętrznej, zatem nie obejmujemy testami tego opóźnienia.
+\item Różnicę czasu między wyświetleniem obrazu w aplikacji Unity, a w goglach VR przyjmujemy jako 0 ms. Nie ma możliwości zmiany tego opóźnienia bez ingerencji w kod biblioteki zewnętrznej, zatem nie jest ono objęte w testach.
 \item Pomiary wykonywane są przy dwóch podłączonych kamerach. Obie pobierają obraz z taką samą rozdzielczością.
 \end{itemize}
 
-Do wykonania testu potrzebne są: kamera, ekran, stoper. Kamerę, która będzie wykorzystywana przez aplikację do pobierania obrazu, kierujemy w stronę ekranu. Stoper opieramy o ekran tak, aby był widziany przez kamerę. Jeżeli wszystko jest ustawione poprawnie, to na ekranie stoper powinien być widoczny dwukrotnie. Widziany bezpośrednio przez kamerę oraz wyświetlany na ekranie. Oba obrazy stopera powinny być na tyle czytelne, aby zatrzymując obraz można było odczytać z niego czas.
+Do wykonania testu potrzebne są: kamera, ekran, stoper. Kamera, która będzie wykorzystywana przez aplikację do pobierania obrazu, skierowana jest w stronę ekranu. Stoper należy oprzeć o ekran tak, aby był widziany przez kamerę. Jeżeli wszystko jest ustawione poprawnie, to na ekranie stoper powinien być widoczny dwukrotnie. Widziany bezpośrednio przez kamerę oraz wyświetlany na ekranie. Oba obrazy stopera powinny być na tyle czytelne, aby zatrzymując obraz można było odczytać z niego czas.
 Różnica pomiędzy czasem, wyświetlanym na bezpośrednim obrazie stopera, a czasem z jego obrazu ekranowego, jest opóźnieniem danej klatki.
 Należy wykonać kilka pomiarów, a następnie na ich podstawie wyznaczyć opóźnienie obrazu.
 
@@ -998,7 +998,7 @@ Użytkownik gogli nie miał problemu, jeśli jego rolą było uderzenie rąk prz
 Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i porównać go z czasem, kiedy gogli nie używa. \\
 
 \textit{Rezultat} \\
-Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja, spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot, nie trafia w niego przy pierwszej próbie i musi korygować swój ruch powtarzając próbę złapania przedmiotu na wyczucie kilkukrotnie. Jeśli użytkownik próbował być dokładny podczas pierwszego ruchu, musiał on wykonać go znacznie wolniej, próbując kontrolować rękę w trakcie jej ruchu. Wymagało to porównania jej pozycji z obrazem docierającym do mózgu. Z tego powodu precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i przy większym skupieniu, niż bez założonych gogli.
+Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja, spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot, nie trafia w niego przy pierwszej próbie i musi korygować swój ruch w celu złapania przedmiotu. Jeśli użytkownik chciał być dokładny podczas pierwszego ruchu, musiał on wykonać go znacznie wolniej, próbując kontrolować rękę w trakcie jej ruchu. Wymagało to porównania jej pozycji z obrazem docierającym do mózgu. Z tego powodu precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i przy większym skupieniu, niż bez założonych gogli.
 
 \item[Celowanie laserem w punkt (statyczny lub dynamiczny)] \hfill \\
 \textit{Opis} \\
@@ -1104,6 +1104,8 @@ Pomimo ogromnego postępu transportu pasażerskiego w ostatnich dekadach, podró
 \bibitem[8] {eyeAccomodation} \emph{Strona internetowa HyperPhysics},\\http://hyperphysics.phy-astr.gsu.edu/hbase/vision/accom.html/,
 
 \bibitem[9] {eyeConvergence} Cassin B., Solomon S. \emph{Dictionary of Eye Terminology}, Fl: Triad Publishing Company, 1990,
+
+\bibitem[10] {zbieznosc} \emph{Strona internetowa Światło i Oświetlenie},\\http://www.swiatlo.tak.pl/1/index.php/funkcje-wzroku-akomodacja-adaptacja-zbieznosc/
 
 \end{thebibliography}
 \thispagestyle{empty}
