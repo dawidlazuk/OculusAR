@@ -791,6 +791,12 @@ Przeprowadzone testy można podzielić na dwie kategorie. Pierwszą z nich będ�
 \subsection{Testy wydajności}
 Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że tego typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli.
 
+Wszystkie testy zostały wykonane dla dwóch rozdzielczości obrazu:
+\begin{itemize}
+\item 1440 x 1080
+\item 640 x 480
+\end{itemize}
+
 \begin{description}
 \item[Opóźnienie przesyłanego obrazu] \hfill \\
 Pierwszą z kwestii, która została poruszona jest opóźnienie przesyłania obrazu na linii kamery - gogle. Jest to prawdopodobnie najważniejszy problem, od rozwiązania którego zależy to, czy system będzie nadawał się do użytku. Zbyt duże opóźnienia spowodują, że użytkownik nie będzie w stanie zareagować w odpowiednim czasie na zmiany w otoczeniu, ponieważ informacja o nich dotrze do niego za późno. W ramach testów zmierzono różnicę między czasem wyświetlanej klatki, a czasem rzeczywistym.
@@ -832,16 +838,39 @@ Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót
 9  & 230                        & 210                                  & 220                            \\
 10 & 200                        & 180                                  & 270                            
 \end{tabular}
-\caption{Pomiary opóźnień (rozdzielczość 1440x1080)}
+\caption{Pomiary opóźnień (rozdzielczość 1440 x 1080)}
 \end{table}
 
-Na podstawie powyższych pomiarów wyznaczono średnie opóźnienia dla każdego z tych trzech przypadków:
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót o 90\textdegree {[}ms{]} \\ \hline
+1  & 120                        & 230                                  & 160                            \\
+2  & 220                        & 160                                  & 190                            \\
+3  & 140                        & 80                                   & 160                            \\
+4  & 120                        & 240                                  & 200                            \\
+5  & 120                        & 150                                  & 220                            \\
+6  & 150                        & 130                                  & 230                            \\
+7  & 140                        & 160                                  & 220                            \\
+8  & 140                        & 150                                  & 180                            \\
+9  & 180                        & 160                                  & 160                            \\
+10 & 210                        & 130                                  & 160                            \\ 
+\end{tabular}
+\caption{Pomiary opóźnień (rozdzielczość 640 x 480)}
+\end{table}
 
-\begin{itemize}
-\item 208 ms - przekazywanie obrazu bez przetwarzania 
-\item 211 ms - przekazywanie obrazu z konwersją do skali szarości
-\item 252 ms - przekazywanie obrazu obróconego o 90\textdegree
-\end{itemize}
+Na podstawie powyższych pomiarów wyznaczono średnie opóźnienia dla każdego z tych trzech przypadków oraz dwóch rozdzielczości:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{r|cc}
+                                     & 1440 x 1080 & 640 x 480 \\ \hline
+Bez przetwarzania {[}ms{]}           & 208         & 154       \\
+Konwersja do skali szarości {[}ms{]} & 211         & 159       \\
+Obrót o 90\textdegree {[}ms{]}       & 252         & 188      
+\end{tabular}
+\caption{Średnie opóźnienia obrazu}
+\end{table}
 
 
 \item[Ilość klatek na sekundę] \hfill \\
@@ -876,20 +905,57 @@ Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obr�
 9  & 14,29                       & 14,29                                 & 14,29                           \\
 10 & 14,29                       & 14,29                                 & 14,29                           
 \end{tabular}
-\caption{Pomiary ilości FPS (rozdzielczość 1440x1080)}
+\caption{Pomiary ilości FPS (rozdzielczość 1440 x 1080)}
 \end{table}
 
-Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego z tych trzech przypadków:
+\begin{table}[H]
+\centering
+\label{my-label}
+\begin{tabular}{lccc}
+Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obrót o 90\textdegree {[}FPS{]} \\ \hline
+1  & 18,87                       & 23,81                                 & 24,39                           \\
+2  & 23,81                       & 23,26                                 & 21,28                           \\
+3  & 23,81                       & 23,81                                 & 24,39                           \\
+4  & 23,81                       & 23,26                                 & 23,26                           \\
+5  & 23,81                       & 24,39                                 & 23,26                           \\
+6  & 23,26                       & 23,81                                 & 23,81                           \\
+7  & 23,81                       & 23,81                                 & 23,81                           \\
+8  & 23,81                       & 23,81                                 & 23,81                           \\
+9  & 24,39                       & 24,39                                 & 23,81                           \\
+10 & 23,81                       & 23,81                                 & 24,39                           \\ 
+\end{tabular}
+\caption{Pomiary ilości FPS (rozdzielczość 640 x 480)}
+\end{table}
 
-\begin{itemize}
-\item 14.23 FPS - przekazywanie obrazu bez przetwarzania 
-\item 14.29 FPS - przekazywanie obrazu z konwersją do skali szarości
-\item 14.21 FPS - przekazywanie obrazu obróconego o 90\textdegree
-\end{itemize}
+Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego z tych trzech przypadków i dwóch rozdzielczości:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{r|cc}
+\multicolumn{1}{l|}{}                 & 1440 x 1080 & 640 x 480 \\ \hline
+Bez przetwarzania {[}FPS{]}           & 14.23       & 23.32     \\
+Konwersja do skali szarości {[}FPS{]} & 14.29       & 23.81     \\
+Obrót o 90\textdegree {[}FPS{]}       & 14.21       & 23.62    
+\end{tabular}
+\caption{Średnie ilości FPS}
+\end{table}
+
+Z ilości FPS można wyznaczyć ilość milisekund, która jest potrzebna do przetworzenia jednej klatki:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{r|cc}
+\multicolumn{1}{l|}{}                 & 1440 x 1080 & 640 x 480 \\ \hline
+Bez przetwarzania {[}ms{]}           & 70.29       & 42.89     \\
+Konwersja do skali szarości {[}ms{]} & 70.00       & 41.99     \\
+Obrót o 90\textdegree {[}ms{]}       & 70.39       & 42.34
+\end{tabular}
+\caption{Średnie ilości milisekund na przetworzenie jednej klatki}
+\end{table}
 
 \end{description}
 
-Z przeprowadzonych testów wydajnościowych wynika, że czas poświęcony na przetworzenie jednej klatki wynosi około 70 milisekund (wyznaczony na podstawie liczby FPS). Liczba ta znacznie różni się od średniego opóźnienia, które wynosi ponad 200 milisekund. Prawdopodobne przyczyny takiego stanu rzeczy:
+Z przeprowadzonych testów wydajnościowych dla rozdzielczości 1440 x 1080 wynika, że czas poświęcony na przetworzenie jednej klatki wynosi około 70 milisekund (wyznaczony na podstawie liczby FPS). Liczba ta znacznie różni się od średniego opóźnienia, które wynosi ponad 200 milisekund. Dla rozdzielczości 640 x 480 różnica jest proporcjonalna. Prawdopodobne przyczyny takiego stanu rzeczy:
 \begin{itemize}
 \item Opóźnienie kamer
 \item Nieoptymalne, wielowątkowe przetwarzanie kilku klatek w tym samym czasie
@@ -1050,8 +1116,6 @@ Pomimo ogromnego postępu transportu pasażerskiego w ostatnich dekadach, podró
 \chapter*{Wykaz symboli i skrótów}
 
 \begin{tabular}{cl}
-nzw. & nadzwyczajny \\
-* & operator gwiazdka \\
 HUD & head-up display \\
 FPS & frames per second \\
 IDE & Integrated Development Environment \\
