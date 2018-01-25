@@ -490,7 +490,7 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 
 System składa się z modułów realizujących ściśle określone zadania, dlatego też łatwo wydzielić je do osobnych projektów. Poniższy schemat przedstawia architekturę rozwiązania wraz z zaznaczonym kierunkiem przekazywania obrazu pomiędzy warstwami. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{images/architecture_schema}
 \caption[Architektura systemu]{Architektura systemu}
@@ -618,7 +618,7 @@ W tym module znajdują się wszystkie operacje, związane z przekazywaniem przec
 
 Unity3D jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń, oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem, dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli Oculus Rift (https://developer.oculus.com/downloads/unity/), który w  edytorze silnika Unity funkcjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{images/unityscene}
 \caption[Scena Unity]{Scena w programie Unity Editor}
@@ -787,7 +787,7 @@ Projekt uchwytu wykonał Maciej Spychała - członek Koła Naukowego Wirtualnej 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.2]{images/googleWithCameras}
-\caption[Skonstruowane gogle]{Skonstruowane gogle}
+\caption[Skonstruowane gogle]{Gogle na głowie użytkownika}
 \end{figure}
 
 \section{Testy rozwiązania}
@@ -980,12 +980,24 @@ Wspomniane czynniki powodują istotne problemy z koordynacją wzrokowo-ruchową 
 
 W przypadku, kiedy kamery będą ustawione w taki sposób, że będą zbiegać do środka nieznacznie bardziej, niż naturalna zbieżność oczu użytkownika, to jest on w stanie skorygować to mięśniami oczu, zwiększając ich zbieżność tak, jakby patrzył na obiekt blisko położony. Umożliwia to uzyskanie efektu widzenia stereoskopowego nawet przy ustawieniu kamer nieznacznie odbiegającym od idealnego, ale jest to dyskomfortowe z powodu męczenia mięśni oczu. W przypadku dłuższego czasu użytkowania jest to~niezalecane rozwiązanie.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.18]{images/googleWithCameras}
+\caption[Skonstruowane gogle]{Gogle na głowie użytkownika}
+\end{figure}
+
 \item[Czytanie książki] \hfill \\
 \textit{Opis} \\
 Czytanie książki o standardowym rozmiarze czcionki. \\
 
 \textit{Rezultat} \\
 Czytanie tekstu było możliwe, jednak wymagało większego stopnia skupienia, niż bez użycia gogli. Spowodowane jest to gorszą ostrością obrazu, niż w rzeczywistości, co~powoduje potrzebę większej koncentracji na rozpoznawaniu liter i śledzenia aktualnie czytanej linii tekstu. Z powodu wspomnianego przybliżenia obrazu, może okazać się, że czytanie książki trzymając ją w rękach na odległości do której użytkownik jest przyzwyczajony, jest niemożliwe. Książka znajduje się w takich przypadkach na~niekomfortowej odległości, przez co tekst jest zbyt duży, a ostrość kamer w tym punkcie może nie być wystarczająco dobra. Dlatego najlepsze wrażenie zostało uzyskane oddalając książkę na odległość wyprostowanych rąk lub po umieszczeniu jej na stole i oddaleniu się na odległość, która zapewniała wystarczającą ostrość obrazu.    
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/lapkiTest}
+\caption[ReadingTest]{Czytanie książki}
+\end{figure}
 
 \item[Odbijanie piłki do tenisa stołowego] \hfill \\
 \textit{Opis} \\
@@ -994,12 +1006,28 @@ Czytanie tekstu było możliwe, jednak wymagało większego stopnia skupienia, n
 \textit{Rezultat}\\
 Użytkownik gogli miał duże problemy z wielokrotnym podbijaniem piłki. Pierwszą niedogodnością była konieczność trzymania paletki na mocno wyciągniętej do przodu ręce. W przypadku próby odbicia piłki znajdującej się blisko ciała,  niemożliwe było odpowiednie szybkie jej zlokalizowanie, ponieważ powiększony i przybliżony obraz powodował zawężone pole widzenia. W przypadku gdy piłka znajdowała się odpowiednio daleko, najlepsze wyniki udało się osiągnąć przy mniejszej częstotliwości odbić, a więc wtedy kiedy lot~piłki w powietrzu trwał dłużej. Użytkownik miał wtedy więcej czasu na ustalenie miejsca w którym spadnie piłka i starał się je przewidzieć. Ze względu na opóźnienie obrazu, błyskawiczna reakcja nie była możliwa dlatego, każde odbicie wymagało odpowiedniego wcześniej przewidzenia toru lotu piłki i~przygotowania paletki na jej spadek. Przy większych częstotliwościach błędy złego ustawienia paletki są mniej kosztowne, jednak wymagają szybszego czasu reakcji, który jest niemożliwy do osiągnięcia ze względu na~opóźnienie obrazu. W takich przypadkach, użytkownik odruchowo, zamiast skupiać się na przesyłanym obrazie, próbował odbijać piłkę opierając się na własnym wyczuciu, w~znacznym stopniu ignorując sygnały wzrokowe, które były rozpraszające i niezgodne z~przeczuciami po odebraniu fizycznych bodźców w ręce. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/lapkiTest}
+\caption[BounceTest]{Odbijanie piłki}
+\end{figure}
+
 \item[Gra w łapki] \hfill \\
+
+\item [Test łapki] \hfill \\
+
 \textit{Opis} \\
 Popularna zabawa, w której największe znaczenie ma czas reakcji. Dwie osoby stają naprzeciwko siebie z wystawionymi dłońmi z przodu tak, aby dłonie jednej osoby były nad dłońmi drugiej. Zadaniem gracza, którego dłonie są niżej, jest uderzenie dłoni drugiego gracza z góry. Drugi gracz broni się poprzez zabranie rąk. Celem testu jest zbadanie jak~użytkownik gogli poradzi sobie przeciwko graczowi bez gogli. \\
 
 \textit{Rezultat}\\
 Użytkownik gogli nie miał problemu, jeśli jego rolą było uderzenie rąk przeciwnika. Jednak w tym przypadku, opóźnienie obrazu docierającego do oka miało niewielkie znaczenie, ponieważ nie wpływało ono na odruchowo wykonywane uderzenie, które można przeprowadzić równie skutecznie z zamkniętymi oczami. Test wykazał trudności, gdy~użytkownik gogli musiał bronić się unikając uderzenia drugiej osoby. Opóźnienie obrazu było na tyle duże, że uniknięcie uderzenia było niemożliwe ponieważ uczucie uderzenie dochodziło do mózgu w podobnym czasie co zauważenie ruchu ręki drugiej osoby.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/lapkiTest}
+\caption[LapkiTest]{Test łapki}
+\end{figure}
+
 
 \item[Chwytanie przedmiotu] \hfill \\
 \textit{Opis} \\
@@ -1008,6 +1036,12 @@ Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład m
 \textit{Rezultat} \\
 Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja, spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot, nie trafia w niego przy pierwszej próbie i musi korygować swój ruch w celu złapania przedmiotu. Jeśli użytkownik chciał być dokładny podczas pierwszego ruchu, musiał on wykonać go znacznie wolniej, próbując kontrolować rękę w trakcie jej ruchu. Wymagało to porównania jej pozycji z obrazem docierającym do mózgu. Z tego powodu precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i~przy większym skupieniu, niż bez założonych gogli.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/lapkiTest}
+\caption[CaptureTest]{Chwytanie przedmiotu}
+\end{figure}
+
 \item[Celowanie laserem w punkt (statyczny lub dynamiczny)] \hfill \\
 \textit{Opis} \\
 Za pomocą wskaźnika laserowego użytkownik musi wskazać wyświetlony na ekranie punkt. Ekran znajduje się w znacznej odległości od użytkownika, która pozwala na to aby punkt był dobrze widoczny jednak musi zapewniać stabilną ostrość obrazu.
@@ -1015,12 +1049,24 @@ Za pomocą wskaźnika laserowego użytkownik musi wskazać wyświetlony na ekran
 \textit{Rezultat} \\
 Celując w statyczny punkt, użytkownik nie miał problemu z trafieniem go za pomocą wskaźnika. Dobry efekt udało się osiągnąć, ponieważ ruchy ręką ze wskaźnikiem wykonywane są odruchowo. Znaczna odległość od celu powoduje, że zachowana jest wysoka ostrość obrazu. Pierwsze wykonywane ruchy wymagają większej koncentracji i~obserwacji reakcji wskaźnika na ruch ręką, jednak użytkownik bardzo szybko zyskuje świadomość efektu swoich ruchów, przez co jest w stanie bardzo szybko zbliżyć wskaźnik do~wyświetlanego punktu, a następnie dokonać tylko drobnej korekty jego położenia, w celu dokładnego trafienia. Gorszy rezultat został osiągnięty podczas testów z dynamicznym, poruszającym się po ekranie punktem. Podobnie jak w pozostałych testach, opóźnienie przesyłu obrazu miało bardzo duże znaczenie. Przy odpowiednio szybko zmieniającym się płynnie położeniu punktu, użytkownik nie był w stanie nadążyć za punktem i~jego zmianami kierunku ruchu. Podczas tych prób, trafienie w punkt było rezultatem czysto przypadkowym lub próbą odgadnięcia przez użytkownika gdzie pojawi się punkt w~następnej chwili, jednak śledzenie punktu za pomocą wskaźnika nie było możliwe.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/lapkiTest}
+\caption[AimingTest]{Celowanie laserem}
+\end{figure}
+
 \item[Rzucanie piłką do celu] \hfill \\
 \textit{Opis} \\
 Do wykonania testu potrzebna jest piłka tenisowa oraz wyznaczony cel. 
 
 \textit{Rezultat} \\
 Użytkownik rzucał piłką tenisową, próbując trafić do rąk osoby stojącej na przeciwko niego. W czasie tego testu, najbardziej zauważalna była wada związana z nadmiernym przybliżeniem obrazu. Użytkownikowi wydawało się, że stojąca naprzeciwko osoba znajduje się dużo bliżej niego, niż w rzeczywistości. Dlatego też rzucał piłką ze zbyt małą siła lub~zbyt nisko unosząc rękę. Oszacowanie odległości było na tyle mylące, że piłka dotykała ziemi zwykle już w połowie odległości pomiędzy użytkownikiem, a celem.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/lapkiTest}
+\caption[ThrowingTest]{Rzucanie piłką}
+\end{figure}
 
 \end{description}
 
