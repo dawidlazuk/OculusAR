@@ -360,13 +360,12 @@ Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku\cite{
 
 \begin{table}[h!]
 \centering
-\label{my-label}
 \begin{tabular}{lcccc}
 \textbf{Płeć} & \multicolumn{1}{l}{\textbf{Minimum}} & \multicolumn{1}{l}{\textbf{Maksimum}} & \multicolumn{1}{l}{\textbf{Średnia}} & \multicolumn{1}{l}{\textbf{Mediana}} \\
 Kobieta       & 51.0                                 & 74.5                                  & 61.7                                 & 62.0                                 \\
 Mężczyzna     & 53.0                                 & 77.0                                  & 64.0                                 & 64.0                                
 \end{tabular}
-\caption{Odległości między źrenicami}
+\caption{Odległości między źrenicami na podstawie \cite{IPdistance}}
 \end{table}
 
 Z powyższych danych jednoznacznie wynika, że odległość pomiędzy ludzkimi źrenicami zawiera się w przedziale od 51.0 milimetrów do 77.0 milimetrów.
@@ -396,9 +395,12 @@ U człowieka akomodacja oka jest realizowana poprzez zmianę kształtu soczewki,
 \begin{figure}[h]
 \centering
 \includegraphics[scale=1]{images/zbieznosc}
-\caption[Zbieżność oczu\cite{zbieznosc}]{Zbieżność oczu}
+\caption[Zbieżność oczu\cite{zbieznosc}]{Zbieżność oczu \cite{zbieznosc}}
+\label{zbieznoscRysunek}
 \
 \end{figure}
+
+Na rysunku \ref{zbieznoscRysunek} punkt $O$ odpowiada punktowi dali wzrokowej, a punkt $O'$ punktowi bliży wzrokowej. 
 
 \chapter{Cel i założenia projektu} % Cel i założenia projektu
 
@@ -411,7 +413,7 @@ System ma umożliwiać efekt widzenia stereoskopowego, aby użytkownik miał wra
 
 System ma umożliwiać przetwarzanie przechwyconego obrazu zanim trafi on do oczu. Przetwarzanie to może być realizowane, na przykład, poprzez nałożenie prostych filtrów na~obraz, lub też wykorzystania bardziej zaawansowanych algorytmów (na przykład wykrywania twarzy).
 
-\section{Środowisko sprzętowe}
+\section{Środowisko sprzętowe i programowe}
 W tym podrozdziale omówione zostaną urządzenia wykorzystane w pracy. Przedstawiona zostanie specyfikacja sprzętu zapewnionego przez Wydział Matematyki i Nauk Informacyjnych Politechniki Warszawskiej. Omówimy także problemy wynikające z wykorzystania danego rodzaju sprzętu oraz propozycje ich rozwiązania.
 
 \subsection{Gogle Oculus Rift}
@@ -427,6 +429,26 @@ C910 Pro HD to kamera USB stworzona przez firmę Logitech. Umożliwia przechwyty
 Wydział MiNI zapewnił dwa egzemplarze tych kamer na rzecz niniejszej pracy. W związku z tym, że panoramiczny obraz, standardowo zapewniany przez kamery, jest daleki od natury ludzkiego oka ograniczymy się do obrazu 4:3. Zatem rozdzielczość obrazu w naszej pracy będzie wynosiła 1440 pikseli na 1080 pikseli na jedno oko.
 
 Obudowa tej kamery jest zbyt duża, szczególnie w pozycji poziomej. Jest to problemem, ponieważ minimalna odległość między soczewkami, na jaką możemy umieścić kamery w~tej~pozycji, wynosi około 100 milimetrów. Jest to znacznie powyżej górnego ograniczenia odległości między ludzkimi źrenicami. W związku z tym konieczne będzie umieszczenie tych kamer w~pozycji pionowej. Skutkuje to tym, że efektywna rozdzielczość przechwytywanego obrazu będzie wynosiła 1080 pikseli na 1440 pikseli.
+
+\subsection{Języki i technologie }
+\begin{description}
+\item [Język programowania C\# ] \hfill \\
+System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszłych problemów integracją modułów. W~pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
+
+\item [EmguCV] \hfill \\
+Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki. 
+
+\item [Silnik Unity3D] \hfill \\
+Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli Oculus Rift.
+
+\item [Windows Presentation Foundation] \hfill \\
+Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
+
+\item [Windows Communication Foundation] \hfill \\
+Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o~.NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
+\end{description}
+
+Wszystkie wymienione technologie zostały wybrane do realizacji pracy, ponieważ zespół, który nad nią pracował, miał doświadczenie w pracy z nimi wyniesione z poprzednich projektów realizowanych w ramach studiów i pracy zawodowej.
 
 \section{Odwzorowanie widzenia stereoskopowego}
 
@@ -483,49 +505,21 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 
 \subsection{Architektura systemu}
 
-System składa się z modułów realizujących ściśle określone zadania, dlatego też łatwo wydzielić je do osobnych projektów. Poniższy schemat przedstawia architekturę rozwiązania wraz z zaznaczonym kierunkiem przekazywania obrazu pomiędzy warstwami. 
+System składa się z modułów realizujących ściśle określone zadania, dlatego też łatwo wydzielić je do osobnych projektów. Schemat na rysunku \ref{schematArchitektury} przedstawia architekturę rozwiązania wraz z zaznaczonym kierunkiem przekazywania obrazu pomiędzy warstwami. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{images/architecture_schema}
 \caption[Architektura systemu]{Architektura systemu}
+\label{schematArchitektury}
 \end{figure}
 
-Jak widać na rysunku, obraz zanim trafi do oka przechodzi przez wszystkie warstwy. Najpierw przy użyciu biblioteki EmguCV obraz jest pobierany z kamer. Następnie przy użyciu stworzonych na potrzeby systemu klas, stosowane są dla niego odpowiednie przekształcenia. Końcowy efekt osiągany jest poprzez przesłanie przetworzonego obrazu do gogli VR, za~pomocą aplikacji działającej przy użyciu silnika Unity. Aplikacja konfiguracyjna, która została stworzona z wykorzystaniem technologii WPF ,umożliwia modyfikację parametrów w warstwach przechwytywania i przetwarzania obrazu, podczas działania systemu. 
+Jak widać na rysunku \ref{schematArchitektury}, obraz zanim trafi do oka przechodzi przez wszystkie warstwy. Najpierw przy użyciu biblioteki EmguCV obraz jest pobierany z kamer. Następnie przy użyciu stworzonych na potrzeby systemu klas, stosowane są dla niego odpowiednie przekształcenia. Końcowy efekt osiągany jest poprzez przesłanie przetworzonego obrazu do gogli VR, za~pomocą aplikacji działającej przy użyciu silnika Unity. Aplikacja konfiguracyjna, która została stworzona z wykorzystaniem technologii WPF, umożliwia modyfikację parametrów w warstwach przechwytywania i przetwarzania obrazu, podczas działania systemu. 
 
 W celu zapewnienia podstawowego działania systemu, niezbędne są warstwy przechwytywania obrazu z kamer oraz przekazywania go do gogli. Warstwa przetwarzania obrazu jest opcjonalna i mogłaby być usunięta, lub chwilowo wyłączona z systemu, bez~utraty jego podstawowych funkcjonalności. Równolegle do pozostałych warstw (nie bierze bezpośredniego udziału w drodze obrazu od kamer do oczu) działa aplikacja konfiguracyjna, która zapewnia graficzny interfejs do sterowania działaniem systemu. Aplikacja działa w~osobnym procesie, komunikując się z~głównym procesem wykorzystując serwis WCF.
 
 \subsection{Funkcjonalność przetwarzania obrazu}
 Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń do obrazu, podczas jego drogi do oczu użytkownika. System przewiduje możliwość dodawania nowych przekształceń. Obiekty, realizujące te przekształcenia muszą być utworzone według kontraktu, zdefiniowanego w dostarczonej bibliotece programistycznej. Przekształcenia wykonywane są~w~ustalonej kolejności. Z poziomu aplikacji konfiguracyjnej możliwe jest zarządzenie kolejnością ich wykonywania lub wyłączenie części z nich.
-
-\section{Wybrane technologie i oprogramowanie}
-\subsection{Języki i technologie }
-\begin{description}
-\item [Język programowania C\# ] \hfill \\
-System został wykonany z wykorzystaniem języka programowania C\# oraz platformy programistycznej .NET Framework. Wybór tej technologii był podyktowany doświadczeniem zespołu w jej wykorzystaniu. Również wykorzystany silnik Unity3D wspiera .NET co sugerowało uniknięcie przyszłych problemów integracją modułów. W~pracy .NET Framework został wykorzystany do napisania funkcjonalności pobierania obrazu z kamer i przetwarzania go, zanim trafi do modułu przekazywania obrazu do gogli.
-
-\item [EmguCV] \hfill \\
-Biblioteka opakowująca popularną bibliotekę do przetwarzania obrazów - OpenCV, w interfejs umożliwiający wykorzystanie jej w aplikacjach napisanych w języku C\#. Wykorzystana do implementacji modułów przechwytywania i przetwarzania obrazu. Przykładowe algorytmy przetwarzania obrazu również zostały napisane z wykorzystaniem tej biblioteki. 
-
-\item [Silnik Unity3D] \hfill \\
-Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałów interaktywnych.  Pozwala tworzyć aplikacje na przeglądarki internetowe, komputery osobiste, konsole gier wideo oraz urządzenia mobilne. Środowisko to zostało wybrane ze względu na łatwą integrację z pozostałymi używanymi technologiami. Zostało wykorzystane do stworzenia warstwy przekazywania obrazu do gogli Oculus Rift.
-
-\item [Windows Presentation Foundation] \hfill \\
-Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
-
-\item [Windows Communication Foundation] \hfill \\
-Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o~.NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
-\end{description}
-
-Wszystkie wymienione technologie zostały wybrane do realizacji pracy, ponieważ zespół, który nad nią pracował, miał doświadczenie w pracy z nimi wyniesione z poprzednich projektów realizowanych w ramach studiów i pracy zawodowej.
-
-\subsection{Oprogramowanie}
-\begin{description}
-\item [Microsoft Visual Studio] \hfill \\
-Zintegrowane środowisko programistyczne firmy Microsoft. Jest to najpopularniejsze IDE wykorzystywane w tworzeniu aplikacji opartych o .NET Framework.
-\item [SoapUI] \hfill \\
-Aplikacja służąca do testów serwisów webowych. Wykorzystana przez nas do testów połączenia pomiędzy procesem głównym, a aplikacją konfiguracyjną.
-\end{description}
 
 \section{Opis modułów}
 
@@ -772,7 +766,7 @@ W związku z tymi wymaganiami, wykorzystano już zamontowany do gogli uchwyt kon
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{images/cameraHolder}
-\caption[Projekt uchwytu]{Projekt uchwytu}
+\caption[Projekt uchwytu]{Projekt uchwytu (autor: Maciej Spychała)}
 \end{figure}
 
 Części te są połączone ze sobą śrubami. Konstrukcja uchwytu umożliwia przesuwanie kamer po prowadnicy w celu regulacji odległości między kamerami.
@@ -789,7 +783,7 @@ Projekt uchwytu wykonał Maciej Spychała - członek Koła Naukowego Wirtualnej 
 Przeprowadzone testy można podzielić na dwie kategorie. Pierwszą z nich będą testy obiektywne, czyli takie, które można przedstawić w formie danych liczbowych. Tego typu testy będą związane bezpośrednio z wydajnością systemu i jej wpływem na wrażenia użytkownika. Drugą kategorią będą testy subiektywne, opierające się na indywidualnych odczuciach związanych z korzystaniem z kostruowanych gogli AR. 
 
 \subsection{Testy wydajności}
-Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że~tego~typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli.
+Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że~tego~typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli. \\ \\
 
 Wszystkie testy zostały wykonane dla dwóch rozdzielczości obrazu:
 \begin{itemize}
@@ -822,7 +816,9 @@ Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadk
 \item przekazywanie obrazu obróconego o 90\textdegree
 \end{itemize}
 
-W poniższej tabeli przedstawione są pomiary:
+W tabelach \ref{opoznienia1440x1080} i \ref{opoznienia640x480} przedstawione są wyniki pomiarów dla obu rozdzielczości. Na postawie tych pomiarów wyznaczono średnie opóźnienia dla każdego przypadku. Średnie opóźnienia podane są w tabeli \ref{srednieOpoznienia}.
+
+\newpage
 \begin{table}[H]
 \centering
 \begin{tabular}{lccc}
@@ -839,6 +835,7 @@ Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót
 10 & 200                        & 180                                  & 270                            
 \end{tabular}
 \caption{Pomiary opóźnień (rozdzielczość 1440 x 1080)}
+\label{opoznienia1440x1080}
 \end{table}
 
 \begin{table}[H]
@@ -857,9 +854,8 @@ Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót
 10 & 210                        & 130                                  & 160                            \\ 
 \end{tabular}
 \caption{Pomiary opóźnień (rozdzielczość 640 x 480)}
+\label{opoznienia640x480}
 \end{table}
-
-Na podstawie powyższych pomiarów wyznaczono średnie opóźnienia dla każdego z tych trzech przypadków oraz dwóch rozdzielczości:
 
 \begin{table}[H]
 \centering
@@ -870,15 +866,16 @@ Konwersja do skali szarości {[}ms{]} & 211         & 159       \\
 Obrót o 90\textdegree {[}ms{]}       & 252         & 188      
 \end{tabular}
 \caption{Średnie opóźnienia obrazu}
+\label{srednieOpoznienia}
 \end{table}
 
 
-\item[Ilość klatek na sekundę] \hfill \\
-Następną kwestią wydajnościową jest ilość klatek na sekundę (FPS). Odpowiednio wysoka ilość FPS jest niezbędna, aby osiągnąć efekt płynności obrazu, na który użytkownik patrzy. Jeżeli ilość ta będzie niewystarczająca osoba, która korzysta z gogli, będzie miała wrażenie zacinania się obrazu. To zjawisko jest zwane potocznie "klatkowaniem".
+\item[Liczba klatek na sekundę] \hfill \\
+Następną kwestią wydajnościową jest liczba klatek na sekundę (FPS). Odpowiednio wysoka liczba FPS jest niezbędna, aby osiągnąć efekt płynności obrazu, na który użytkownik patrzy. Jeżeli liczba ta będzie niewystarczająca osoba, która korzysta z gogli, będzie miała wrażenie zacinania się obrazu. To zjawisko jest zwane potocznie ,,klatkowaniem'', od przyczyny, która je powoduje.
 
 \textit{Sposób wykonania testu}
 
-Do głównej pętli aplikacji, przetwarzającej klatki, dodano niewielką ilość kodu, który zlicza liczbę iteracji pętli (odświeżeń obrazu) i co ustaloną ilość wypisuje aktualny czas na~konsolę. Operacje te nie pobierają dużo mocy obliczeniowej na ich wykonanie zatem można założyć, że ich wpływ na wynik pomiarów jest pomijalny. Dzieląc ustaloną liczbę klatek przez różnicę czasów (w sekundach) wypisanych w dwóch kolejnych iteracjach otrzymano liczbę klatek na sekundę.
+Do głównej pętli aplikacji, przetwarzającej klatki, dodano niewielką ilość kodu, który zlicza liczbę iteracji pętli (odświeżeń obrazu) i co ustaloną liczbę wypisuje aktualny czas na~konsolę. Operacje te nie pobierają dużo mocy obliczeniowej na ich wykonanie zatem można założyć, że ich wpływ na wynik pomiarów jest pomijalny. Dzieląc ustaloną liczbę klatek przez różnicę czasów (w sekundach) wypisanych w dwóch kolejnych iteracjach otrzymano liczbę klatek na sekundę.
 
 \textit{Wyniki}
 
@@ -889,7 +886,8 @@ Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadk
 \item przekazywanie obrazu obróconego o 90\textdegree
 \end{itemize}
 
-W poniższej tabeli przedstawione są pomiary:
+W tabelach \ref{fps1440x1080} i \ref{fps640x480} przedstawione są wyniki pomiarów dla obu rozdzielczości. Na postawie tych pomiarów wyznaczono średnie liczby FPS dla każdego przypadku. Średnie liczby FPS podane są w tabeli \ref{srednieFPS}.
+
 \begin{table}[H]
 \centering
 \begin{tabular}{lccc}
@@ -905,12 +903,12 @@ Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obr�
 9  & 14,29                       & 14,29                                 & 14,29                           \\
 10 & 14,29                       & 14,29                                 & 14,29                           
 \end{tabular}
-\caption{Pomiary ilości FPS (rozdzielczość 1440 x 1080)}
+\caption{Pomiary liczby FPS (rozdzielczość 1440 x 1080)}
+\label{fps1440x1080}
 \end{table}
 
 \begin{table}[H]
 \centering
-\label{my-label}
 \begin{tabular}{lccc}
 Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obrót o 90\textdegree {[}FPS{]} \\ \hline
 1  & 18,87                       & 23,81                                 & 24,39                           \\
@@ -924,10 +922,9 @@ Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obr�
 9  & 24,39                       & 24,39                                 & 23,81                           \\
 10 & 23,81                       & 23,81                                 & 24,39                           \\ 
 \end{tabular}
-\caption{Pomiary ilości FPS (rozdzielczość 640 x 480)}
+\caption{Pomiary liczby FPS (rozdzielczość 640 x 480)}
+\label{fps640x480}
 \end{table}
-
-Na podstawie powyższych pomiarów wyznaczono średnią ilość FPS dla każdego z tych trzech przypadków i dwóch rozdzielczości:
 
 \begin{table}[H]
 \centering
@@ -938,9 +935,10 @@ Konwersja do skali szarości {[}FPS{]} & 14.29       & 23.81     \\
 Obrót o 90\textdegree {[}FPS{]}       & 14.21       & 23.62    
 \end{tabular}
 \caption{Średnie ilości FPS}
+\label{srednieFPS}
 \end{table}
 
-Z ilości FPS można wyznaczyć ilość milisekund, która jest potrzebna do przetworzenia jednej klatki:
+Z ilości FPS można wyznaczyć ilość milisekund, która jest potrzebna do przetworzenia jednej klatki. Czas ten jest podany w tabeli \ref{czasNaKlatke}.
 
 \begin{table}[H]
 \centering
@@ -951,6 +949,7 @@ Konwersja do skali szarości {[}ms{]} & 70.00       & 41.99     \\
 Obrót o 90\textdegree {[}ms{]}       & 70.39       & 42.34
 \end{tabular}
 \caption{Średnie ilości milisekund na przetworzenie jednej klatki}
+\label{czasNaKlatke}
 \end{table}
 
 \end{description}
@@ -1043,12 +1042,12 @@ Użytkownik rzucał piłką tenisową, próbując trafić do rąk osoby stojące
 Istotnym zagadnieniem dotyczącym wydajności systemu jest konieczność przechwycenia i~przetworzenia obrazu z dwóch, a nie jednej kamery. Wymaga to znacznie większej mocy obliczeniowej oraz rozdzielenia obliczeń między wiele wątków jednocześnie. Silnik grafiki, wykorzystany do przekazywania obrazu do oczu, nie pozwala na równoległe konwersje obrazów trafiających do oczu. Utrudnia to znacznie optymalizację rozwiązania. \\
 Wybór technologii wykorzystanych do implementacji projektu działającego w czasie rzeczywistym jest jedną z najważniejszych kwestii, które powinny być bardzo dokładnie przemyślane na etapie projektowania architektury rozwiązania. W stworzonym systemie, wybrane technologie spowodowały duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo, nie pozwoliło to na pełną optymalizację systemu, ponieważ użyte biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co~utrudnione jest wykorzystanie przez programistów np. procesorów graficznych do przyspieszenia obliczeń.
 
-\subsection{Co wyszło dobrze}
+\subsection{Wnioski pozytywne}
 
 Udało się zrealizować zakładaną funkcjonalność systemu. Dzięki wykorzystaniu dwóch kamer, a także odpowiedniemu ich ustawieniu, obraz trafiający do oczu daje pożądany efekt głębi obrazu. Było to jednym z głównych celów niniejszej pracy. Większość istniejących już projektów dotyczących rozszerzonej rzeczywistości wykorzystuje tylko jedną kamerę, dzięki czemu łatwiej jest uzyskać dobrą wydajność i sterować obrazem, ale obraz nie zachowuje głębi właściwej dla rzeczywistego postrzegania przez człowieka. Celem tej pracy było zbadanie możliwości rozszerzonej rzeczywistości w oparciu o widzenie stereoskopowe i udało się to zrealizować. Dodatkowo mając na uwadze dalsze rozwijanie stworzonego systemu, stworzona została warstwa przetwarzania obrazów, która może być rozbudowywana o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych efektów. Została zaimplementowana również komunikacja międzyprocesowa, pomiędzy aplikacją konfiguracyjną, a aplikacją zajmującą się przekazywaniem obrazu. W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści do systemu. Proces sterowania parametrami obrazu może odbywać się na innym komputerze, niż jego pobieranie i przekazywanie do gogli.
 Uchwyt do kamer, stworzony na potrzeby pracy, zostanie w laboratorium Koła Naukowego Wirtualnej Rzeczywistości, dzięki czemu będzie mógł zostać wykorzystany przy innych tego typu projektach.
 
-\subsection{Co nie wyszło dobrze}
+\subsection{Problemy}
 
 W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu. Wykonywanie prostych manualnych czynności jest utrudnione, ze względu na opóźnienie obrazu. Precyzyjne ruchy ciała w oparciu o bodźce wzrokowe, możliwe są jedynie przy wykonywaniu ich bardzo wolno. U użytkownika występuje odruchowe wspomaganie kontroli ruchów innymi zmysłami niż wzrokowy, w stopniu znacznie większym niż ma to miejsce w~rzeczywistości. Ze względu na techniczne ograniczenia wykorzystywanych gogli, system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się, dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu odtworzenie tej cechy polegałoby na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak poza zakresem niniejszej pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby. Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu. Te mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten, na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, będące wciąż w fazie rozwoju i posiadają wewnętrzne błędy, które powodują, czasami niemożliwe do~usunięcia, błędy w tworzonym systemie.
 
@@ -1141,7 +1140,8 @@ HUD & head-up display \\
 FPS & frames per second \\
 IDE & Integrated Development Environment \\
 HTTP & Hypertext Transfer Protocol \\
-$\widetilde{}$ & tylda
+WPF & Windows Presentation Foundation \\
+WCF & Windows Communication Foundation \\
 \end{tabular}
 \thispagestyle{empty}
 
