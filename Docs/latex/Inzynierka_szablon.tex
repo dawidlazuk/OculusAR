@@ -1050,14 +1050,43 @@ Użytkownik rzucał piłką tenisową, próbując trafić do rąk osoby stojące
 Istotnym zagadnieniem dotyczącym wydajności systemu jest konieczność przechwycenia i~przetworzenia obrazu z dwóch, a nie jednej kamery. Wymaga to znacznie większej mocy obliczeniowej oraz rozdzielenia obliczeń między wiele wątków jednocześnie. Silnik grafiki, wykorzystany do przekazywania obrazu do oczu, nie pozwala na równoległe konwersje obrazów trafiających do oczu. Utrudnia to znacznie optymalizację rozwiązania. \\
 Wybór technologii wykorzystanych do implementacji projektu działającego w czasie rzeczywistym jest jedną z najważniejszych kwestii, które powinny być bardzo dokładnie przemyślane na etapie projektowania architektury rozwiązania. W stworzonym systemie, wybrane technologie spowodowały duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo, nie pozwoliło to na pełną optymalizację systemu, ponieważ użyte biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co~utrudnione jest wykorzystanie przez programistów np. procesorów graficznych do~przyspieszenia obliczeń.
 
-\subsection{Wnioski pozytywne}
+\subsection{Pozytywne rezultaty}
 
-Udało się zrealizować zakładaną funkcjonalność systemu. Dzięki wykorzystaniu dwóch kamer, a także odpowiedniemu ich ustawieniu, obraz trafiający do oczu daje pożądany efekt głębi obrazu. Było to jednym z głównych celów niniejszej pracy. Większość istniejących już projektów dotyczących rozszerzonej rzeczywistości wykorzystuje tylko jedną kamerę, dzięki czemu łatwiej jest uzyskać dobrą wydajność i sterować obrazem, ale obraz nie zachowuje głębi właściwej dla rzeczywistego postrzegania przez człowieka. Celem tej pracy było zbadanie możliwości rozszerzonej rzeczywistości w oparciu o widzenie stereoskopowe i udało się to zrealizować. Dodatkowo mając na uwadze dalsze rozwijanie stworzonego systemu, stworzona została warstwa przetwarzania obrazów, która może być rozbudowywana o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych efektów. Została zaimplementowana również komunikacja międzyprocesowa, pomiędzy aplikacją konfiguracyjną, a aplikacją zajmującą się przekazywaniem obrazu. W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści do systemu. Proces sterowania parametrami obrazu może odbywać się na innym komputerze, niż jego pobieranie i przekazywanie do gogli.
+Większość istniejących projektów dotyczących wirtualnej rzeczywistości wykorzystuje tylko jedną kamerę, dzięki czemu łatwiej jest uzyskać dobrą wydajność i sterować obrazem, ale obraz ten nie zachowuje głębi właściwej dla rzeczywistego postrzegania przez człowieka.
+Celem tej pracy było zbadanie możliwości rozszerzonej rzeczywistości w oparciu o widzenie stereoskopowe i udało się to zrealizować.
+
+\begin{description}
+
+\item[Uzyskanie efektu głębi obrazu] \hfill \\
+Dzięki wykorzystaniu dwóch kamer, a także odpowiedniemu ich ustawieniu, obraz trafiający do oczu daje pożądany efekt głębi obrazu. Było to jednym z głównych celów niniejszej pracy. 
+
+\item[Rozszerzalna warstwa przetwarzania obrazu] \hfill \\
+Mając na uwadze dalsze rozwijanie stworzonego systemu, stworzona została warstwa przetwarzania obrazów, która może być rozbudowywana o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych efektów. 
+
+\item[Sterowanie parametrami systemu] \hfill \\
+W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści. Proces sterowania parametrami obrazu może odbywać się na innym komputerze, niż jego pobieranie i przekazywanie do gogli . 
+
+\item[Montaż kamer na goglach] \hfill \\
 Uchwyt do kamer, stworzony na potrzeby pracy, zostanie w laboratorium Koła Naukowego Wirtualnej Rzeczywistości, dzięki czemu będzie mógł zostać wykorzystany przy innych tego typu projektach.
+
+\end{description}
 
 \subsection{Problemy}
 
-W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu. Wykonywanie prostych manualnych czynności jest utrudnione, ze względu na opóźnienie obrazu. Precyzyjne ruchy ciała w oparciu o bodźce wzrokowe, możliwe są jedynie przy wykonywaniu ich bardzo wolno. U użytkownika występuje odruchowe wspomaganie kontroli ruchów innymi zmysłami niż wzrokowy, w stopniu znacznie większym niż ma to miejsce w~rzeczywistości. Ze względu na techniczne ograniczenia wykorzystywanych gogli, system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się, dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu odtworzenie tej cechy polegałoby na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak poza zakresem niniejszej pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby. Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu. Te mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten, na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, będące wciąż w fazie rozwoju i posiadają wewnętrzne błędy, które powodują, czasami niemożliwe do~usunięcia, błędy w tworzonym systemie.
+W systemie pojawiły się różnego rodzaju problemy i ograniczenia. Dotyczyły one kwestii technicznych wykorzystanego sprzętu oraz wyboru zbyt złożonych technologii do realizacji niektórych funkcjonalności.
+
+\begin{description}
+
+\item[Wydajność systemu] \hfill \\
+W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu. Wykonywanie prostych manualnych czynności jest utrudnione, ze względu na opóźnienie obrazu. Precyzyjne ruchy ciała w oparciu o bodźce wzrokowe, możliwe są jedynie przy wykonywaniu ich bardzo wolno. U użytkownika występuje odruchowe wspomaganie kontroli ruchów innymi zmysłami niż wzrokowy, w stopniu znacznie większym niż ma to miejsce w~rzeczywistości.
+
+\item[Odwzorowanie ruchu gałek ocznych] \hfill \\
+Ze względu na techniczne ograniczenia wykorzystywanych gogli, system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się, dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu odtworzenie tej cechy polegałoby na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak poza zakresem niniejszej pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby.
+
+\item[Stabilność systemu] \hfill \\
+Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu. Te mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten, na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, będące wciąż w fazie rozwoju i posiadają wewnętrzne błędy, które powodują, czasami niemożliwe do~usunięcia, błędy w tworzonym systemie.
+
+\end{description}  
 
 \chapter{Przyszłość rozwiązania}
 
