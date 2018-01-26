@@ -304,7 +304,11 @@ Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowani
 
 Po stworzeniu tego systemu, zbadano czy wizja uzyskana z wykorzystaniem gogli wirtualnej rzeczywistości połączonych z kamerami znacznie różni się od naturalnej wizji człowieka i jeżeli tak, to jak to wpływa na komfort i możliwość korzystania z systemu. Opisano związane z tym problemy oraz dalsze kroki, jakie należy podjąć tworząc tego typu rozwiązania.
 
-\chapter{Technologia VR/AR. Zmysł wzroku.}
+Za implementację i opis modułu przechwytywania obrazu z kamer oraz serwisu komunikacji międzyprocesowej pomiędzy dwoma aplikacjami, na które się składa system, był odpowiedzialny Dawid Łazuk. Wykonał i opisał testy wydajnościowe systemu oraz napisał rozdział \textit{Technologia VR/AR, Zmysł wzroku}.
+
+Za implementację i opis modułu przekazywania obrazu do gogli oraz aplikacji konfiguracyjnej był odpowiedzialny Piotr Piwowarski. Przeprowadził i opisał testy użytkowe skonstruowanych gogli, a także opisał wnioski z pracy i wizję na przyszłość stworzonego rozwiązania.
+
+\chapter{Technologia VR/AR, Zmysł wzroku}
 
 W tym rozdziale omówione zostaną zagadnienia wirtualnej oraz rozszerzonej rzeczywistości. Poruszone zostaną problemy, jakie wiążą się z zastosowaniem tych technologii. Przedstawiona zostanie też natura widzenia stereoskopowego człowieka w zakresie zjawisk, które będą miały wpływ na przebieg prac i ich rezultat.
 
@@ -356,7 +360,7 @@ Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego ocz
 
 \subsection{Odległość między źrenicami}
 
-Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku\cite{IPdistance} objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w poniższej tabeli. Dane są przedstawione w milimetrach.
+Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku\cite{IPdistance} objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w~tabeli~\ref{IPdistanceTable}. Dane są przedstawione w milimetrach.
 
 \begin{table}[h!]
 \centering
@@ -366,9 +370,10 @@ Kobieta       & 51.0                                 & 74.5                     
 Mężczyzna     & 53.0                                 & 77.0                                  & 64.0                                 & 64.0                                
 \end{tabular}
 \caption{Odległości między źrenicami na podstawie \cite{IPdistance}}
+\label{IPdistanceTable}
 \end{table}
 
-Z powyższych danych jednoznacznie wynika, że odległość pomiędzy ludzkimi źrenicami zawiera się w przedziale od 51.0 milimetrów do 77.0 milimetrów.
+Z danych przedstawionych w tabeli \ref{IPdistanceTable} jednoznacznie wynika, że odległość pomiędzy ludzkimi źrenicami zawiera się w przedziale od 51.0 milimetrów do 77.0 milimetrów.
 
 \subsection{Akomodacja oka}
 
@@ -444,6 +449,7 @@ Zintegrowane środowisko do tworzenia trójwymiarowych gier i innych materiałó
 \item [Windows Presentation Foundation] \hfill \\
 Windows Presentation Foundation (WPF) jest technologią służącą do tworzenia interfejsów użytkownika w aplikacjach desktopowych w środowisku .NET. W niniejszej pracy technologia ta została wykorzystana do napisania aplikacji konfiguracyjnej, która szerzej opisana będzie w dalszej części pracy.
 
+\newpage
 \item [Windows Communication Foundation] \hfill \\
 Windows Communication Foundation (WCF) jest technologią integrującą i unifikującą wszystkie technologie służące do komunikacji międzyprocesowej w aplikacjach opartych o~.NET Framework. W niniejszej pracy WCF został wykorzystany do zaimplementowania komunikacji pomiędzy procesem głównym systemu, a aplikacją konfiguracyjną.
 \end{description}
@@ -466,6 +472,7 @@ Pierwszy z tych parametrów - kąt widzenia kamer, jest zależny bezpośrednio o
 
 Dwa kolejne - odległość między kamerami i odchylenie osi widzenia, są istotne przy uzyskaniu efektu głębi podczas patrzenia przez gogle. Przy założeniu, że obserwujemy jeden punkt, istnieje korelacja między tymi parametrami pozwalająca uzyskać efekt głębi patrząc na przedmioty w okolicy obserwowanego punktu nawet w sytuacji, gdy odległość, bądź odchylenie odbiegają od idealnego ustawienia dla danego użytkownika. Przykładem będzie odchylenie osi widzenia do środka w przypadku, gdy odległości między obiektywami są większe, niż między oczami użytkownika. Jednakże efekt w ten sposób uzyskany jest tylko punktowy, a obiekty położone w~innej odległości od punktu odniesienia nie będą widziane jako trójwymiarowe.
 
+\newpage
 \subsection{Cechy zmysłu wzroku w projekcie}
 
 W podrozdziale \textit{Widzenie stereoskopowe człowieka} zostały przedstawione cechy ludzkiego zmysłu wzroku, które mają wpływ na przebieg niniejszej pracy. W tym podrozdziale omówione zostaną założenia, jakie zostały podjęte podczas realizacji projektu w celu spełnienia tych~wymagań, oraz uzasadnienie w przypadku braku możliwości spełnienia danego wymagania.
@@ -525,26 +532,27 @@ Funkcjonalność ta realizowana jest poprzez zastosowanie serii przekształceń 
 
 \subsection{Moduł przechwytywania obrazu}
 
-W tym module zaimplementowane są wszystkie operacje powiązane z kamerami. Kontrakt tego modułu przedstawia się następująco:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.9]{images/IViewProvider}
-\caption[Przechwytywanie diagram]{Interfejsy przechwytywania obrazów}
-\end{figure}
-
-Interfejs \textit{IViewCalibrator} jest odpowiedzialny za operacje związane z kalibracją obrazu. W~tym projekcie jedyną taką operacją jest obrót obrazu, w celu zrównoważenia ewentualnego obrotu kamery (metoda \textit{RotateImage}).
-Interfejs \textit{ICaptureManager} odpowiada za wszystko, co jest związane z przechwytywaniem obrazu. Metoda \textit{SetCapture} ustawia dany kanał na~kamerę o danym indeksie w systemie. Indeksy przypisywane są urządzeniom podczas ich wykrywania. Metoda \textit{GetCaptureDetails} pobiera informacje o przechwytywanym obrazie, na przykład rozdzielczość obrazu, jego rotację czy indeks kamery, z której pochodzi.
-Interfejs \textit{IViewProvider} jest głównym interfejsem, który jest implementowany przez moduł. Obejmuje sobą funkcjonalności interfejsów poprzednio wymienionych oraz udostępnia metody bezpośrednio związane z pobieraniem obrazu. Metoda \textit{UpdateFrames} wysyła sygnał do wątków pobierających obraz, aby pobrały kolejną klatkę. Pozostałe dwie metody - \textit{GetCurrentView} i \textit{GetCurrentViewAsBitmaps} pobierają obecne klatki w różnych formatach. Pierwsza z nich, wykorzystywana przez proces główny, pobiera obraz jako klasy Image biblioteki EmguCV. Druga jest wykorzystywana przez aplikację konfiguracyjną, a obraz pobrany z jej wykorzystaniem jest postaci klas System.Drawing.Bitmap.
-
-Z powyższego opisu wynika, że najważniejsze operacje modułu to:
+W tym module zaimplementowane są wszystkie operacje powiązane z kamerami. Moduł jest odpowiedzialny za:
 \begin{itemize}
 \item Wybór kamery dla danego kanału.
 \item Pobranie obrazu z wybranych kamer dla obu kanałów
 \item Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery.
 \end{itemize}
 
-Poniżej są przedstawione zasady działania każdej z tych operacji:
+Kontrakt tego modułu przedstawiony jest na rysunku \ref{kontraktViewProvider}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9]{images/IViewProvider}
+\caption[Przechwytywanie diagram]{Interfejsy przechwytywania obrazów}
+\label{kontraktViewProvider}
+\end{figure}
+
+Interfejs \textit{IViewCalibrator} jest odpowiedzialny za operacje związane z kalibracją obrazu. W~tym projekcie jedyną taką operacją jest obrót obrazu, w celu zrównoważenia ewentualnego obrotu kamery (metoda \textit{RotateImage}).
+Interfejs \textit{ICaptureManager} odpowiada za wszystko, co jest związane z przechwytywaniem obrazu. Metoda \textit{SetCapture} ustawia dany kanał na~kamerę o danym indeksie w systemie. Indeksy przypisywane są urządzeniom podczas ich wykrywania. Metoda \textit{GetCaptureDetails} pobiera informacje o przechwytywanym obrazie, na przykład rozdzielczość obrazu, jego rotację czy indeks kamery, z której pochodzi.
+Interfejs \textit{IViewProvider} jest głównym interfejsem, który jest implementowany przez moduł. Obejmuje sobą funkcjonalności interfejsów poprzednio wymienionych oraz udostępnia metody bezpośrednio związane z pobieraniem obrazu. Metoda \textit{UpdateFrames} wysyła sygnał do wątków pobierających obraz, aby pobrały kolejną klatkę. Pozostałe dwie metody - \textit{GetCurrentView} i \textit{GetCurrentViewAsBitmaps} pobierają obecne klatki w różnych formatach. Pierwsza z nich, wykorzystywana przez proces główny, pobiera obraz jako klasy Image biblioteki EmguCV. Druga jest wykorzystywana przez aplikację konfiguracyjną, a obraz pobrany z jej wykorzystaniem jest postaci klas System.Drawing.Bitmap.
+
+Poniżej są przedstawione zasady działania operacji zaimplementowanych w tym module:
 \begin{description}
 \item [Wybór kamery dla danego kanału] \hfill \\
 Dla każdego kanału w module jest pole, w którym jest przechowywany obiekt odpowiedzialny za komunikację z daną kamerą. Do tych pól odwołują się pozostałe funkcjonalności, pobierające obraz. W przypadku zmiany kamery w danym kanale, wartość odpowiedniego pola jest podmieniana na obiekt odpowiadający kamerze docelowej. Zmiana ta jest transparentna dla pozostałych funkcjonalności.
@@ -605,6 +613,12 @@ Dodatkowo interfejs wymaga posiadania przez klasy, następujących właściwośc
 
 W tym module znajdują się wszystkie operacje, związane z przekazywaniem przechwyconego obrazu z kamer do gogli. Poprzednie moduły zaimplementowano przy użyciu języka C\# oraz  platformy .NET. Dlatego w celu przekazania obrazu do gogli Oculus Rift, został wykorzystany silnik Unity3D, umożliwiający importowanie zewnętrznych bibliotek, stworzonych w tych technologiach.
 
+Najważniejsze operacje modułu to:
+\begin{itemize}
+\item Przekazanie i wyświetlanie obrazu
+\item Konwersja obrazu
+\end{itemize}
+
 Unity3D jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń, oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem, dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli Oculus Rift (https://developer.oculus.com/downloads/unity/), który w  edytorze silnika Unity funkcjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
 \begin{figure}[H]
@@ -615,8 +629,7 @@ Unity3D jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi ur
 
 Wykorzystując funkcjonalności tego pakietu, stworzona została scena w silniku Unity, zawierająca dwie kamery i dwie tekstury. Kamery posiadają właściwość o nazwie \textit{TargetEye}, która pozwala decydować, czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka), w urządzeniu Oculus Rift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery, po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom, związanym z grafiką 3D, co wpływa na wydajność systemu. W celu wyświetlenia obrazu jako tekstury, potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
 
-
-W module zostały przewidziane następujące interfejsy, zapewniające metody do realizacji kluczowych jego elementów.
+W module zostały zdefiniowane następujące interfejsy, zapewniające metody do realizacji kluczowych jego elementów.
 
 \begin{figure}[h]
 \centering
@@ -633,15 +646,9 @@ Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obr
 \end{figure}
 
 Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje, potrzebne przy konwersji obrazu do tekstury. W systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury, utworzony na~podstawie przekazanego obrazu, za pomocą typu \textit{System.Drawing.Bitmap}. Metoda\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz reprezentowany za pomocą typu z biblioteki EmguCV.
-Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z~przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje przekazany obraz do wskazanej, istniejącej tekstury. Wykorzystywana jest w celu poprawy wydajności i uniknięcia niepotrzebnego tworzenia tekstur, przy każdej konwersji obrazu.
+Metoda \textit{DataFromImage} zwraca tablice typu \textit{byte} z~przekazanego do niej obrazu, która potrzebna jest do konwersji obrazu na~teksturę w silniku Unity. Natomiast metoda \textit{LoadFromImage}  ładuje przekazany obraz do~wskazanej, istniejącej tekstury. Wykorzystywana jest w celu poprawy wydajności i~uniknięcia niepotrzebnego tworzenia tekstur, przy każdej konwersji obrazu.
 
-Z powyższego opisu wynika, że najważniejsze operacje modułu to:
-\begin{itemize}
-\item Przekazanie i wyświetlanie obrazu
-\item Konwersja obrazu
-\end{itemize}
-
-Poniżej są przedstawione zasady działania każdej z tych operacji:
+Poniżej są przedstawione zasady działania operacji zaimplementowanych w tym module:
 
 \begin{description}
 \item [Przekazanie i wyświetlanie obrazu] \hfill \\
@@ -717,7 +724,7 @@ Prezentowana lista odpowiada kolejnością liście obiektów przekształcającyc
 
 Ta część systemu odpowiada za komunikację, pomiędzy procesem aplikacji Unity oraz~procesem aplikacji konfiguracyjnej. Do tego celu została wykorzystana technologia \textit{WCF}  (Windows Communication Foundation), stworzona przez firmę Microsoft. W założeniu, pierwszą uruchomioną aplikacją powinna być aplikacja Unity, która w momencie startu wystawia serwis w~sieci lokalnej pod adresem \textit{http://localhost:{port}/OculusAR}, gdzie port jest wartością pochodzącą z pliku konfiguracyjnego aplikacji. Aplikacja konfiguracyjna podczas uruchomienia próbuje się~podłączyć do serwisu znajdującego się pod tym adresem, jeśli wystąpi błąd z połączeniem, użytkownik dostaje stosowny komunikat, informujący o przyczynie błędu. 
 
-\pagebreak
+\newpage
 Technologia \textit{WCF} wymaga, aby zdefiniować metody będące kontraktem dostępnych operacji, przez klasę, która obsługuje dany serwis. Kontrakt ten zdefiniowany został następująco:
 \begin{figure}[H]
 \centering
@@ -783,7 +790,7 @@ Projekt uchwytu wykonał Maciej Spychała - członek Koła Naukowego Wirtualnej 
 Przeprowadzone testy można podzielić na dwie kategorie. Pierwszą z nich będą testy obiektywne, czyli takie, które można przedstawić w formie danych liczbowych. Tego typu testy będą związane bezpośrednio z wydajnością systemu i jej wpływem na wrażenia użytkownika. Drugą kategorią będą testy subiektywne, opierające się na indywidualnych odczuciach związanych z korzystaniem z kostruowanych gogli AR. 
 
 \subsection{Testy wydajności}
-Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że~tego~typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli. \\ \\
+Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że~tego~typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli.
 
 Wszystkie testy zostały wykonane dla dwóch rozdzielczości obrazu:
 \begin{itemize}
@@ -938,7 +945,7 @@ Obrót o 90\textdegree {[}FPS{]}       & 14.21       & 23.62
 \label{srednieFPS}
 \end{table}
 
-Z ilości FPS można wyznaczyć ilość milisekund, która jest potrzebna do przetworzenia jednej klatki. Czas ten jest podany w tabeli \ref{czasNaKlatke}.
+Z liczby FPS można wyznaczyć liczbę milisekund, która jest potrzebna do przetworzenia jednej klatki. Czas ten jest podany w tabeli \ref{czasNaKlatke}.
 
 \begin{table}[H]
 \centering
@@ -948,7 +955,7 @@ Bez przetwarzania {[}ms{]}           & 70.29       & 42.89     \\
 Konwersja do skali szarości {[}ms{]} & 70.00       & 41.99     \\
 Obrót o 90\textdegree {[}ms{]}       & 70.39       & 42.34
 \end{tabular}
-\caption{Średnie ilości milisekund na przetworzenie jednej klatki}
+\caption{Średnia liczba milisekund na przetworzenie jednej klatki}
 \label{czasNaKlatke}
 \end{table}
 
@@ -1001,7 +1008,7 @@ Użytkownik gogli nie miał problemu, jeśli jego rolą było uderzenie rąk prz
 \caption[LapkiTest]{Gra w łapki}
 \end{figure}
 
-
+\newpage
 \item[Chwytanie przedmiotu] \hfill \\
 \textit{Opis} \\
 Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie~wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i porównać go z czasem, kiedy gogli nie używa. \\
@@ -1015,7 +1022,7 @@ Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywn
 \caption[CaptureTest]{Chwytanie przedmiotu}
 \end{figure}
 
-\item[Celowanie laserem w punkt (statyczny lub dynamiczny)] \hfill \\
+\item[Celowanie laserem w punkt] \hfill \\
 \textit{Opis} \\
 Za pomocą wskaźnika laserowego użytkownik musi wskazać wyświetlony na ekranie punkt. Ekran znajduje się w znacznej odległości od użytkownika, która pozwala na to aby punkt był dobrze widoczny jednak musi zapewniać stabilną ostrość obrazu.
 
@@ -1037,10 +1044,11 @@ Użytkownik rzucał piłką tenisową, próbując trafić do rąk osoby stojące
 
 \end{description}
 
+\newpage
 \section{Wnioski}
 
 Istotnym zagadnieniem dotyczącym wydajności systemu jest konieczność przechwycenia i~przetworzenia obrazu z dwóch, a nie jednej kamery. Wymaga to znacznie większej mocy obliczeniowej oraz rozdzielenia obliczeń między wiele wątków jednocześnie. Silnik grafiki, wykorzystany do przekazywania obrazu do oczu, nie pozwala na równoległe konwersje obrazów trafiających do oczu. Utrudnia to znacznie optymalizację rozwiązania. \\
-Wybór technologii wykorzystanych do implementacji projektu działającego w czasie rzeczywistym jest jedną z najważniejszych kwestii, które powinny być bardzo dokładnie przemyślane na etapie projektowania architektury rozwiązania. W stworzonym systemie, wybrane technologie spowodowały duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo, nie pozwoliło to na pełną optymalizację systemu, ponieważ użyte biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co~utrudnione jest wykorzystanie przez programistów np. procesorów graficznych do przyspieszenia obliczeń.
+Wybór technologii wykorzystanych do implementacji projektu działającego w czasie rzeczywistym jest jedną z najważniejszych kwestii, które powinny być bardzo dokładnie przemyślane na etapie projektowania architektury rozwiązania. W stworzonym systemie, wybrane technologie spowodowały duży narzut czasowy na przekazywanie obrazu pomiędzy wszystkimi warstwami. Dodatkowo, nie pozwoliło to na pełną optymalizację systemu, ponieważ użyte biblioteki nie umożliwiają pełnej kontroli nad dokonywanymi operacjami, przez co~utrudnione jest wykorzystanie przez programistów np. procesorów graficznych do~przyspieszenia obliczeń.
 
 \subsection{Wnioski pozytywne}
 
