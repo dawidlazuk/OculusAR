@@ -348,10 +348,10 @@ W celu komfortowego korzystania z rozwiązań wirtualnej rzeczywistości, system
 \item [Wpływ na wzrok] \hfill \\
 Nie podlega wątpliwościom, że długotrwała praca przy monitorze szkodzi. Mięśnie gałki ocznej, które w normalnych warunkach są odpowiedzialne za akomodację oka, zastygają w jednej pozycji, ponieważ ekran jest w mniej więcej stałej odległości od oka. Intensywne światło też ma negatywny wpływ na oczy. W przypadku gogli wirtualnej rzeczywistości mamy do czynienia z relatywnie dużym ekranem, zasłaniającym praktycznie całe pole widzenia użytkownika, w odległości rzędu kilkudziesięciu milimetrów od oka. Długotrwała praca oczu w takich warunkach może doprowadzić do pogorszenia wzroku.
 \item [Choroba symulacyjna] \hfill \\
-Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z~różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w~tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub~filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na~ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik~nie wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce, co skutkuje objawami podobnymi do~choroby lokomocyjnej, mimo braku jakiegokolwiek ruchu.\cite{VRsickness}
+Ludzki organizm jest skonstruowany tak, że mózg pobiera informacje dotyczące otoczenia z~różnych zmysłów. W normalnych warunkach bodźce z różnych układów odbierane w~tym samym czasie odpowiadają sobie. W zagadnieniach wirtualnej rzeczywistości układem zmysłów, powodującym problemy, jest układ oczy - błędnik. W grach lub~filmach, w których występuje ruch, oczy użytkownika odbierają bodźce wskazujące na~ruch organizmu. Natomiast jeśli użytkownik siedzi na przykład w fotelu, jego błędnik nie~wykrywa ruchu. Mózg otrzymuje sprzeczne bodźce, co skutkuje objawami podobnymi do~choroby lokomocyjnej, mimo braku jakiegokolwiek ruchu.\cite{VRsickness}
 \item [Zbyt wysoka immersja] \hfill \\
-Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub~kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od~wirtualnej rozgrywki mają problem z rozróżnianiem świata rzeczywistego od~wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że~rozrywka VR jest znacznie bardziej wymagająca dla organizmu od tradycyjnej, co~już~zostało wcześniej opisane. 
-Kolejny problem dotyczący immersji jest związany z~osobami mającymi problemy kardiologiczne. Realistyczne wrażenia z gier typu horror mogą doprowadzić takie osoby nawet do zawału serca.
+Znane są przypadki ludzi umierających przed ekranem monitora po kilkunastu lub~kilkudziesięciu godzinach nieustannej gry. Osoby uzależnione w takim stopniu od~wirtualnej rozgrywki mają problem z rozróżnianiem świata rzeczywistego od~wirtualnego, zapominając nawet o potrzebach fizjologicznych. Wysoka immersja, osiągana przez rozwiązania wirtualnej rzeczywistości, może spotęgować ten problem. Zwłaszcza, że~rozrywka VR jest znacznie bardziej wymagająca dla organizmu od~tradycyjnej, co~już~zostało wcześniej opisane. 
+Kolejny problem dotyczący immersji jest związany z~osobami mającymi problemy kardiologiczne. Realistyczne wrażenia z gier typu~horror mogą doprowadzić takie osoby nawet do zawału serca.
 \end{description}
 
 \section{Wizja stereoskopowa człowieka}
@@ -506,7 +506,7 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 
 \begin{description}
 \item [Warstwa przechwytywania obrazu] \hfill \\ Jest odpowiedzialna za pobieranie obrazów z kamer i przygotowanie ich do dalszego przetwarzania - rotację obrazu w zależności od położenia kamery.
-\item [Warstwa przetwarzania obrazu] \hfill \\ Wykonuje przetwarzanie obrazu według algorytmów zdefiniowanych przez użytkownika lub programistę.
+\item [Warstwa przetwarzania obrazu] \hfill \\ Wykonuje przetwarzanie obrazu według algorytmów zdefiniowanych przez użytkownika lub~programistę.
 \item [Warstwa przekazywania obrazu do gogli] \hfill \\ Odpowiada za konwersję obrazu do postaci przyjmowanej przez gogle VR.
 \end{description}
 
@@ -514,6 +514,7 @@ Planując wykonanie projektu droga, jaką musi przebyć obraz od przechwycenia g
 
 System składa się z modułów realizujących ściśle określone zadania, dlatego też łatwo wydzielić je do osobnych projektów. Schemat na rysunku \ref{schematArchitektury} przedstawia architekturę rozwiązania wraz z zaznaczonym kierunkiem przekazywania obrazu pomiędzy warstwami. 
 
+\newpage
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.3]{images/architecture_schema}
@@ -559,7 +560,7 @@ Dla każdego kanału w module jest pole, w którym jest przechowywany obiekt odp
 \item [Pobranie obrazu z wybranych kamer dla obu kanałów] \hfill \\
 Operacja jest zrealizowana wielowątkowo. Każdy z dwóch kanałów ma swój wątek, czeka na sygnał pobrania klatki, pobiera klatkę wykonując jednocześnie jej obrót, wysyła sygnał informujący o zakończeniu pobierania klatki. Operacje te wykonują się w pętli dopóki wątek nie zostanie przerwany.
 \item [Obrót obrazu w celu zrównoważenia ewentualnego obrotu kamery] \hfill \\
-Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji)~tej wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
+Moduł przechowuje informację o ilości obrotów o kąt prosty obrazu dla danego kanału. Zwiększenie (zmniejszenie) kąta obrotu polega na inkrementacji (dekrementacji) tej~wartości poprzez wywołanie odpowiedniej metody. Na podstawie tej wartości przy pobraniu każdej klatki obliczany jest kąt, o który dany obraz ma być obrócony.
 \end{description}
 
 Funkcjonalności modułu są współdzielone przez aplikację główną oraz konfiguracyjną. Ta~część kontraktu, która jest wykorzystywana przez aplikację konfiguracyjną, jest wydzielona jako kontrakt serwisu udostępnionego tej aplikacji, zgodnie ze wzorcem projektowym \textit{fasada}. Dzięki temu ukryte zostały zbędne funkcjonalności modułu z punktu widzenia aplikacji konfiguracyjnej upraszczając jego interfejs.
@@ -619,7 +620,7 @@ Najważniejsze operacje modułu to:
 \item Konwersja obrazu
 \end{itemize}
 
-Unity3D jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń, oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem, dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli Oculus Rift (https://developer.oculus.com/downloads/unity/), który w  edytorze silnika Unity funkcjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
+Unity3D jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi urządzeń VR. Jednak producenci gogli zapewniają dedykowane biblioteki programistyczne dla swoich urządzeń, oparte na tym silniku. Pozwalają one na dodanie obsługi wirtualnej rzeczywistosci oraz sterowanie przekazywanym obrazem, dla każdego oka osobno. Wykorzystany został pakiet \textit{Oculus Utitites for Unity} udostępniany przez producenta gogli Oculus Rift\footnote{https://developer.oculus.com/downloads/unity/}, który w  edytorze silnika Unity funkcjonuje pod nazwą \textit{OVR plugin}.  \hfill \\
 
 \begin{figure}[H]
 \centering
@@ -696,7 +697,7 @@ W celu większej przejrzystości, dla wymienionych części zostały stworzone s
 
 Aplikacja w trakcie działania, za pomoca oddzielnego wątku wywołuje metodę \textit{UpdateFrames} w serwisie {IViewProviderService}, która wywołuje pobranie obrazu z~kamery. Następnie za pomocą metody \textit{GetCurrentViewAsBitmaps} z tego samego serwisu, otrzymuje obrazy z obu kamer w formacie \textit{System.Drawing.Bitmap} i ładuje je do kontrolek wyświetlających obrazy, odświeżając widok całej aplikacji. \\
 Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji z listy, zawierającej wszystkie dostępnymi źródła. Wtedy za pomocą metody \textit{SetCapture} z serwisu, wybierane jest źródło dla lewego lub prawego oka. \\
-Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z~nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$~we wskazaną stronę, dla wybranego oka.
+Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z~nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$~we~wskazaną stronę, dla wybranego oka.
 
 \item [Kontrola przetwarzania obrazu] \hfill \\
 Sterowanie przetwarzaniem obrazu jest możliwe, tylko dla obu źródeł obrazu jednocześnie. Dlatego w głównym widoku, umieszczona została jedna kontrolka \textit{SettingsControl}. Zawiera ona listę, na której umieszczone zostały wszystkie dostępne w systemie obiekty do~przetwarzania obrazu. Lista dostępnych obiektów pobierana jest z serwisu wystawianego przez aplikację Unity. W celu zarządzania tymi obiektami został stworzony szablon, wyświetlany dla każdej pozycji z listy, składający się z następujących elementów:
@@ -722,7 +723,7 @@ Prezentowana lista odpowiada kolejnością liście obiektów przekształcającyc
 
 \subsection{Serwis komunikacji międzyprocesowej}
 
-Ta część systemu odpowiada za komunikację, pomiędzy procesem aplikacji Unity oraz~procesem aplikacji konfiguracyjnej. Do tego celu została wykorzystana technologia \textit{WCF}  (Windows Communication Foundation), stworzona przez firmę Microsoft. W założeniu, pierwszą uruchomioną aplikacją powinna być aplikacja Unity, która w momencie startu wystawia serwis w~sieci lokalnej pod adresem \textit{http://localhost:{port}/OculusAR}, gdzie port jest wartością pochodzącą z pliku konfiguracyjnego aplikacji. Aplikacja konfiguracyjna podczas uruchomienia próbuje się~podłączyć do serwisu znajdującego się pod tym adresem, jeśli wystąpi błąd z połączeniem, użytkownik dostaje stosowny komunikat, informujący o przyczynie błędu. 
+Ta część systemu odpowiada za komunikację, pomiędzy procesem aplikacji Unity oraz~procesem aplikacji konfiguracyjnej. Do tego celu została wykorzystana technologia \textit{WCF}  (Windows Communication Foundation), stworzona przez firmę Microsoft. W założeniu, pierwszą uruchomioną aplikacją powinna być aplikacja Unity, która w momencie startu wystawia serwis w~sieci lokalnej pod adresem \textit{http://localhost:{port}/OculusAR}, gdzie port jest wartością pochodzącą z pliku konfiguracyjnego aplikacji. Aplikacja konfiguracyjna podczas uruchomienia próbuje się~podłączyć do serwisu znajdującego się pod tym adresem, jeśli wystąpi błąd z~połączeniem, użytkownik dostaje stosowny komunikat, informujący o przyczynie błędu. 
 
 \newpage
 Technologia \textit{WCF} wymaga, aby zdefiniować metody będące kontraktem dostępnych operacji, przez klasę, która obsługuje dany serwis. Kontrakt ten zdefiniowany został następująco:
@@ -878,7 +879,7 @@ Obrót o 90\textdegree {[}ms{]}       & 252         & 188
 
 
 \item[Liczba klatek na sekundę] \hfill \\
-Następną kwestią wydajnościową jest liczba klatek na sekundę (FPS). Odpowiednio wysoka liczba FPS jest niezbędna, aby osiągnąć efekt płynności obrazu, na który użytkownik patrzy. Jeżeli liczba ta będzie niewystarczająca osoba, która korzysta z gogli, będzie miała wrażenie zacinania się obrazu. To zjawisko jest zwane potocznie ,,klatkowaniem'', od przyczyny, która je powoduje.
+Następną kwestią wydajnościową jest liczba klatek na sekundę (FPS). Odpowiednio wysoka liczba FPS jest niezbędna, aby osiągnąć efekt płynności obrazu, na który użytkownik patrzy. Jeżeli liczba ta będzie niewystarczająca osoba, która korzysta z~gogli, będzie miała wrażenie zacinania się obrazu. To zjawisko jest zwane potocznie ,,klatkowaniem'', od przyczyny, która je powoduje.
 
 \textit{Sposób wykonania testu}
 
@@ -973,7 +974,7 @@ W tym podrozdziale omówione zostaną testy, które zostały wykonane pod kątem
 
 \begin{description}
 \item[Ogólne wrażenie] \hfill \\
-Na początkowym etapie korzystania z gogli użytkownik czuje się dyskomfort, ponieważ efekt zauważalnie odbiega od naturalnego widzenia. Jednak po jakimś czasie organizm przyzwyczaja się. Nie zaobserwowano większych negatywnych odczuć, takich jak np. zawroty głowy, których spodziewano się przed rozpoczęciem testów.
+Na początkowym etapie korzystania z gogli użytkownik czuje się dyskomfort, ponieważ efekt zauważalnie odbiega od naturalnego widzenia. Jednak po jakimś czasie organizm przyzwyczaja się. Nie zaobserwowano większych negatywnych odczuć, takich jak np.~zawroty głowy, których spodziewano się przed rozpoczęciem testów.
 
 Niedogodnością towarzyszącą wszystkim z poniżej wymienionych testów było znaczne przybliżenie obrazu. Wrażenia użytkownika były podobne jak podczas używania lornetki. Spowodowane jest to rozmiarem skonstruowanych gogli, który skutkuje tym, że kamery znajdują się około 12 centymetrów dalej niż oczy użytkownika. Związane z tym jest również ograniczone pole widzenia. Użytkownik nie widzi swojej ręki na wczesnym etapie wykonywanego ruchu. Powoduje to, że użytkownik sięgał w inne miejsca, niż zamierzał i~wymagało to korekty, śledząc ruch dłoni wzrokiem. Dodatkowo optyka kamer jest w~wielu aspektach odmienna od optyki ludzkiego oka, co wpływa na uczucie nienaturalnego obrazu.
 
@@ -1011,7 +1012,7 @@ Użytkownik gogli nie miał problemu, jeśli jego rolą było uderzenie rąk prz
 \newpage
 \item[Chwytanie przedmiotu] \hfill \\
 \textit{Opis} \\
-Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie~wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i porównać go z czasem, kiedy gogli nie używa. \\
+Do wykonania testu potrzebne są dwie osoby oraz mały przedmiot, na przykład moneta. Pierwsza z nich, nie korzystająca z gogli, trzyma dłonie na stole. Pod jedną z tych dłoni znajduje się przedmiot. Druga osoba, użytkownik gogli, ma za zadanie jak najszybciej zakryć przedmiot dłonią po tym jak pierwsza go odkryje. Dzięki temu, że użytkownik nie~wie, pod którą dłonią znajduje się przedmiot, można zbadać czas jego reakcji i~porównać go z czasem, kiedy gogli nie używa. \\
 
 \textit{Rezultat} \\
 Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywnie na wynik użytkownika gogli. Pierwszym z czynników było opóźnienie obrazu, które powodowało, że użytkownik zauważał odkrycie przedmiotu po upływie ułamka sekundy. Drugim czynnikiem jest dezorientacja, spowodowana przybliżeniem obrazu, która została wspomniana w ogólnych wnioskach z testów. Powoduje ona, że użytkownik próbując odruchowo jak najszybciej złapać przedmiot, nie trafia w niego przy pierwszej próbie i musi korygować swój ruch w celu złapania przedmiotu. Jeśli użytkownik chciał być dokładny podczas pierwszego ruchu, musiał on wykonać go znacznie wolniej, próbując kontrolować rękę w trakcie jej ruchu. Wymagało to porównania jej pozycji z obrazem docierającym do mózgu. Z tego powodu precyzyjne złapanie przedmiotu jest wykonywane dużo wolniej i~przy większym skupieniu, niż bez założonych gogli.
@@ -1064,10 +1065,10 @@ Dzięki wykorzystaniu dwóch kamer, a także odpowiedniemu ich ustawieniu, obraz
 Mając na uwadze dalsze rozwijanie stworzonego systemu, stworzona została warstwa przetwarzania obrazów, która może być rozbudowywana o nowe funkcjonalności. Przygotowane ramy pod tworzenie nowych przekształceń nie narzucają poważnych ograniczeń i mogą posłużyć do stworzenia dowolnych efektów. 
 
 \item[Sterowanie parametrami systemu] \hfill \\
-W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści. Proces sterowania parametrami obrazu może odbywać się na innym komputerze, niż jego pobieranie i przekazywanie do gogli . 
+W pierwotnych założeniach projektu nie było wymagania, aby konfiguracja systemu była zrealizowana w postaci osobnego procesu, jednak rozwiązanie to wnosi istotne korzyści. Proces sterowania parametrami obrazu może odbywać się na innym komputerze, niż jego pobieranie i przekazywanie do gogli. Aplikację konfiguracyjną można również wyłączyć, dzięki czemu nie będzie zużywała zasobów komputera, wpływając tym samym na wydajność systemu. 
 
 \item[Montaż kamer na goglach] \hfill \\
-Uchwyt do kamer, stworzony na potrzeby pracy, zostanie w laboratorium Koła Naukowego Wirtualnej Rzeczywistości, dzięki czemu będzie mógł zostać wykorzystany przy innych tego typu projektach.
+Udało się zamontować kamery na goglach tak, aby ich położenie odpowiadało położeniu oczu człowieka. Uchwyt do kamer, stworzony na potrzeby pracy, zostanie w~laboratorium Koła Naukowego Wirtualnej Rzeczywistości, dzięki czemu będzie mógł zostać wykorzystany przy innych tego typu projektach.
 
 \end{description}
 
@@ -1081,10 +1082,10 @@ W systemie pojawiły się różnego rodzaju problemy i ograniczenia. Dotyczyły 
 W stworzonym rozwiązaniu nie udało się zapewnić wysokiej wydajności systemu. Wykonywanie prostych manualnych czynności jest utrudnione, ze względu na opóźnienie obrazu. Precyzyjne ruchy ciała w oparciu o bodźce wzrokowe, możliwe są jedynie przy wykonywaniu ich bardzo wolno. U użytkownika występuje odruchowe wspomaganie kontroli ruchów innymi zmysłami niż wzrokowy, w stopniu znacznie większym niż ma to miejsce w~rzeczywistości.
 
 \item[Odwzorowanie ruchu gałek ocznych] \hfill \\
-Ze względu na techniczne ograniczenia wykorzystywanych gogli, system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się, dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu odtworzenie tej cechy polegałoby na odpowiednim poruszaniu kamer umieszczonych na goglach, jednak poza zakresem niniejszej pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby.
+Ze względu na techniczne ograniczenia wykorzystywanych gogli, system nie posiada możliwości śledzenia ruchu gałek ocznych. Powoduje to rozbieżności w odczuciach dotyczących obrazu, porównując do rzeczywistego widzenia. Ludzkie oczy poruszają się, dostosowując się do odległości obiektu na który patrzą. W stworzonym rozwiązaniu odtworzenie tej cechy polegałoby na odpowiednim poruszaniu kamer umieszczonych na~goglach, jednak poza zakresem niniejszej pracy. Pożądany efekt był osiągany poprzez ręczną korekcję kamer w razie potrzeby.
 
 \item[Stabilność systemu] \hfill \\
-Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu. Te mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten, na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, będące wciąż w fazie rozwoju i posiadają wewnętrzne błędy, które powodują, czasami niemożliwe do~usunięcia, błędy w tworzonym systemie.
+Działanie systemu bywa niestabilne, związane jest to z kilkoma czynnikami. Pośrednio wykorzystywane są sterowniki systemowe dotyczące urządzeń przechwytywania obrazu. Te~mogą być różne w zależności od wykorzystywanych kamer lub komputera. Z tego powodu warstwa przechwytywania obrazu może powodować błędy na komputerach innych niż ten, na którym prowadzony był główny proces tworzenia pracy oraz testów z goglami wirtualnej rzeczywistości. Za nieprzewidziane błędy w aplikacji odpowiadają również wykorzystywane biblioteki, będące wciąż w fazie rozwoju i posiadają wewnętrzne błędy, które powodują, czasami niemożliwe do~usunięcia, błędy w tworzonym systemie.
 
 \end{description}  
 
@@ -1123,7 +1124,7 @@ W poprzednich rozdziałach poruszono kwestię nienaturalnych wrażeń oraz ogran
 Przygotowany system wykorzystuje urządzenie, które umożliwia śledzenie ruchu głowy. Dane dotyczące jej położenia nie są jednak wykorzystywane, ponieważ kamery przymocowane są do gogli i obracają się razem z głową. Potencjalnym wykorzystaniem systemu mogą być rozwiązania, w których kamery znajdują się w innym miejscu niż użytkownik oglądający pochodzący z nich obraz. W celu umożliwienia takich zastosowań należałoby dodać możliwość pobrania informacji o obecnym położeniu głowy, a także jej~ruchu. Na podstawie zebranych danych można ruch użytkownika odwzorować ruchem urządzenia, na którym są zamontowane kamery. Umożliwiłoby to pobieranie obrazu z~innego miejsca tak, jakby użytkownik się tam znajdował.
 
 \item [Opracowanie szybkiego przesyłu obrazu na odległość] \hfill \\
-Funkcjonalnością, która zwiększyłaby potencjał rozwiązania o nowe zastosowania, byłaby możliwość bezprzewodowego połączenia gogli z kamerami. Obecnie wymagane jest aby kamery były podłączone za pomocą kabli do tego samego komputera, co gogle wirtualnej rzeczywistości. Jednak zastosowanie szybkiej transmisji obrazu na odległość, umożliwiłoby wykorzystanie systemu do zdalnego kontrolowania urządzeń w czasie rzeczywistym.
+Funkcjonalnością, która zwiększyłaby potencjał rozwiązania o nowe zastosowania, byłaby możliwość bezprzewodowego połączenia gogli z kamerami. Obecnie wymagane jest, aby kamery były podłączone za pomocą kabli do tego samego komputera co gogle wirtualnej rzeczywistości. Jednak zastosowanie szybkiej transmisji obrazu na odległość, umożliwiłoby wykorzystanie systemu do zdalnego kontrolowania urządzeń w czasie rzeczywistym.
 
 \end{description}
 
