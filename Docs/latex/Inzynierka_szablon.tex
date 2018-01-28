@@ -26,6 +26,7 @@
 \usepackage{float}
 \usepackage{flafter}
 \usepackage{pdfpages}
+\usepackage{caption} \captionsetup[table]{singlelinecheck=false}		
 
 % ---------------- Marginesy, akapity, interlinia ------------------
 
@@ -363,13 +364,13 @@ Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego ocz
 Badania antropometryczne personelu armii Stanów Zjednoczonych w 2012 roku\cite{IPdistance} objęły swoim zakresem odległości między ludzkimi źrenicami. Wyniki tych badań są zawarte w~tabeli~\ref{IPdistanceTable}. Dane są przedstawione w milimetrach.
 
 \begin{table}[h!]
+\caption{Odległości między źrenicami na podstawie \cite{IPdistance}}
 \centering
 \begin{tabular}{lcccc}
 \textbf{Płeć} & \multicolumn{1}{l}{\textbf{Minimum}} & \multicolumn{1}{l}{\textbf{Maksimum}} & \multicolumn{1}{l}{\textbf{Średnia}} & \multicolumn{1}{l}{\textbf{Mediana}} \\
 Kobieta       & 51.0                                 & 74.5                                  & 61.7                                 & 62.0                                 \\
 Mężczyzna     & 53.0                                 & 77.0                                  & 64.0                                 & 64.0                                
 \end{tabular}
-\caption{Odległości między źrenicami na podstawie \cite{IPdistance}}
 \label{IPdistanceTable}
 \end{table}
 
@@ -834,6 +835,7 @@ Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadk
 W tabelach \ref{opoznienia1440x1080} i \ref{opoznienia640x480} przedstawione są wyniki pomiarów dla obu rozdzielczości. Na postawie tych pomiarów wyznaczono średnie opóźnienia dla każdego przypadku. Średnie opóźnienia podane są w tabeli \ref{srednieOpoznienia}.
 
 \begin{table}[H]
+\caption{Pomiary opóźnień (rozdzielczość 1440 x 1080)}
 \centering
 \begin{tabular}{lccc}
 Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót o 90\textdegree {[}ms{]} \\ \hline
@@ -848,11 +850,11 @@ Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót
 9  & 230                        & 210                                  & 220                            \\
 10 & 200                        & 180                                  & 270                            
 \end{tabular}
-\caption{Pomiary opóźnień (rozdzielczość 1440 x 1080)}
 \label{opoznienia1440x1080}
 \end{table}
 
 \begin{table}[H]
+\caption{Pomiary opóźnień (rozdzielczość 640 x 480)}
 \centering
 \begin{tabular}{lccc}
 Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót o 90\textdegree {[}ms{]} \\ \hline
@@ -867,11 +869,11 @@ Nr & Bez przetwarzania {[}ms{]} & Konwersja do skali szarości {[}ms{]} & Obrót
 9  & 180                        & 160                                  & 160                            \\
 10 & 210                        & 130                                  & 160                            \\ 
 \end{tabular}
-\caption{Pomiary opóźnień (rozdzielczość 640 x 480)}
 \label{opoznienia640x480}
 \end{table}
 
 \begin{table}[H]
+\caption{Średnie opóźnienia obrazu}
 \centering
 \begin{tabular}{r|cc}
                                      & 1440 x 1080 & 640 x 480 \\ \hline
@@ -879,7 +881,6 @@ Bez przetwarzania {[}ms{]}           & 208         & 154       \\
 Konwersja do skali szarości {[}ms{]} & 211         & 159       \\
 Obrót o 90\textdegree {[}ms{]}       & 252         & 188      
 \end{tabular}
-\caption{Średnie opóźnienia obrazu}
 \label{srednieOpoznienia}
 \end{table}
 
@@ -903,6 +904,7 @@ Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadk
 W tabelach \ref{fps1440x1080} i \ref{fps640x480} przedstawione są wyniki pomiarów dla obu rozdzielczości. Na postawie tych pomiarów wyznaczono średnie liczby FPS dla każdego przypadku. Średnie liczby FPS podane są w tabeli \ref{srednieFPS}.
 
 \begin{table}[H]
+\caption{Pomiary liczby FPS (rozdzielczość 1440 x 1080)}
 \centering
 \begin{tabular}{lccc}
 Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obrót o 90\textdegree {[}FPS{]} \\ \hline
@@ -917,11 +919,11 @@ Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obr�
 9  & 14,29                       & 14,29                                 & 14,29                           \\
 10 & 14,29                       & 14,29                                 & 14,29                           
 \end{tabular}
-\caption{Pomiary liczby FPS (rozdzielczość 1440 x 1080)}
 \label{fps1440x1080}
 \end{table}
 
 \begin{table}[H]
+\caption{Pomiary liczby FPS (rozdzielczość 640 x 480)}
 \centering
 \begin{tabular}{lccc}
 Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obrót o 90\textdegree {[}FPS{]} \\ \hline
@@ -936,11 +938,11 @@ Nr & Bez przetwarzania {[}FPS{]} & Konwersja do skali szarości {[}FPS{]} & Obr�
 9  & 24,39                       & 24,39                                 & 23,81                           \\
 10 & 23,81                       & 23,81                                 & 24,39                           \\ 
 \end{tabular}
-\caption{Pomiary liczby FPS (rozdzielczość 640 x 480)}
 \label{fps640x480}
 \end{table}
 
 \begin{table}[H]
+\caption{Średnie liczby FPS}
 \centering
 \begin{tabular}{r|cc}
 \multicolumn{1}{l|}{}                 & 1440 x 1080 & 640 x 480 \\ \hline
@@ -948,13 +950,13 @@ Bez przetwarzania {[}FPS{]}           & 14.23       & 23.32     \\
 Konwersja do skali szarości {[}FPS{]} & 14.29       & 23.81     \\
 Obrót o 90\textdegree {[}FPS{]}       & 14.21       & 23.62    
 \end{tabular}
-\caption{Średnie liczby FPS}
 \label{srednieFPS}
 \end{table}
 
 Z liczby FPS można wyznaczyć liczbę milisekund, która jest potrzebna do przetworzenia jednej klatki. Czas ten jest podany w tabeli \ref{czasNaKlatke}.
 
 \begin{table}[H]
+\caption{Średnia liczba milisekund na przetworzenie jednej klatki}
 \centering
 \begin{tabular}{r|cc}
 \multicolumn{1}{l|}{}                 & 1440 x 1080 & 640 x 480 \\ \hline
@@ -962,7 +964,6 @@ Bez przetwarzania {[}ms{]}           & 70.29       & 42.89     \\
 Konwersja do skali szarości {[}ms{]} & 70.00       & 41.99     \\
 Obrót o 90\textdegree {[}ms{]}       & 70.39       & 42.34
 \end{tabular}
-\caption{Średnia liczba milisekund na przetworzenie jednej klatki}
 \label{czasNaKlatke}
 \end{table}
 
