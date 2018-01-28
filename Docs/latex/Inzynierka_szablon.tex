@@ -285,11 +285,11 @@ Oświadczenie % Declaration - for English
 % ------------------- 4. Spis treści ---------------------
 % \selectlanguage{english} - for English
 
+\thispagestyle{empty}
 \tableofcontents
 \thispagestyle{empty}
 \newpage
 % -------------- 5. ZASADNICZA CZĘŚĆ PRACY --------------------
-\null\thispagestyle{empty}\newpage
 \setcounter{page}{11}
 \pagestyle{fancy}
 
@@ -300,7 +300,7 @@ Oświadczenie % Declaration - for English
 
 Szybki rozwój techniki spowodował zwiększenie jej obecności w codziennym życiu. Rozwój interfejsów użytkownika i badania nad jego wrażeniami z wykorzystywania różnych systemów spowodowały powstanie technologii takich jak wirtualna rzeczywistość i rozszerzona rzeczywistość. Służą one zarówno do rozrywki jak i też do ułatwienia życia i usprawnienia pracy ludziom. Rozwiązania tego typu stają się coraz popularniejsze i można zaobserwować rosnące nimi zainteresowanie w wielu branżach.
 
-Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ``wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
+Dlatego też, w niniejszej pracy podjęto się zbadania możliwości zastosowania gogli wirtualnej rzeczywistości w aplikacjach wykorzystujących rzeczywistość rozszerzoną. Stworzony zostanie system, który umożliwia przekazanie obrazu widzianego przez kamery, symulujące ludzkie oczy, do gogli wirtualnej rzeczywistości. Powstałe w ten sposób ,,wirtualne okulary'' będą mogły zostać wykorzystane do uruchomienia na nich aplikacji przeznaczonych na systemy rozszerzonej rzeczywistości.
 
 Po stworzeniu tego systemu, zbadano czy wizja uzyskana z wykorzystaniem gogli wirtualnej rzeczywistości połączonych z kamerami znacznie różni się od naturalnej wizji człowieka i jeżeli tak, to jak to wpływa na komfort i możliwość korzystania z systemu. Opisano związane z tym problemy oraz dalsze kroki, jakie należy podjąć tworząc tego typu rozwiązania.
 
@@ -356,7 +356,7 @@ Kolejny problem dotyczący immersji jest związany z~osobami mającymi problemy 
 
 \section{Wizja stereoskopowa człowieka}
 
-Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane prawie równolegle w ten sam punkt. Umożliwia to zebranie dwóch podobnych do~siebie obrazów. Różnica między nimi polega na przesunięciu oczu (kamer) względem siebie, przez co każdy obiekt jest widziany na jednym obrazie z nieco innej perspektywy, niż na drugim. Mózg nakładając na siebie te obrazy, dzięki tej różnicy, tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
+Człowiek doświadcza widzenia trójwymiarowego dzięki temu, że dwoje jego oczu jest skierowane prawie równolegle w ten sam punkt. Umożliwia to zebranie dwóch podobnych do~siebie obrazów. Różnica między nimi polega na przesunięciu oczu (kamer) względem siebie, przez co każdy obiekt jest widziany na jednym obrazie z nieco innej perspektywy, niż na~drugim. Mózg nakładając na siebie te obrazy, dzięki tej różnicy, tworzy efekt głębi umożliwiając człowiekowi ocenę odległości przedmiotów, na które patrzy.
 
 \subsection{Odległość między źrenicami}
 
@@ -545,7 +545,7 @@ Kontrakt tego modułu przedstawiony jest na rysunku \ref{kontraktViewProvider}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{images/IViewProvider}
-\caption[Przechwytywanie diagram]{Interfejsy przechwytywania obrazów}
+\caption[Interfejsy przechwytywania obrazów]{Interfejsy przechwytywania obrazów}
 \label{kontraktViewProvider}
 \end{figure}
 
@@ -582,7 +582,7 @@ Kluczowym elementem modułu jest sposób włączenia warstwy przetwarzania obraz
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{images/IProcessedViewProvider}
-\caption[Przetwarzanie diagram]{Interfejsy przetwarzania obrazów}
+\caption[Interfejsy przetwarzania obrazów]{Interfejsy przetwarzania obrazów}
 \end{figure}
 
 Metoda \textit{GetAllImageProcessors} zwraca listę nazw wszystkich dostępnych obiektów przekształcających obraz wraz z informacją o ich aktywności.
@@ -598,7 +598,7 @@ Klasa ta w konstruktorze, jako argument przyjmuje obiekt, implementujący interf
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{images/IImageProcessor}
-\caption[Przekształcenie diagram diagram]{Interfejs obiektu przekształcającego obraz}
+\caption[Interfejs obiektu przekształcającego obraz]{Interfejs obiektu przekształcającego obraz}
 \end{figure}
 
 Metoda \textit{Process} jako argument przyjmuje referencje do obrazu reprezentowanego za~pomocą typu pochodzącego z biblioteki EmguCV. Operowanie na tym typie pozwala wykorzystać metody pochodzące ze wspomnianej biblioteki, co pozwala na szybszą konwersję obrazu, przeprowadzając część operacji przy wykorzystaniu karty graficznej. Metoda nie zwraca żadnej wartości, lecz operuje na przekazanym obrazie stosując dla~niego zaimplementowane przekształcenia.  \\
@@ -625,7 +625,7 @@ Unity3D jest silnikiem grafiki 3D i w podstawowej wersji nie wspiera obsługi ur
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{images/unityscene}
-\caption[Scena Unity]{Scena w programie Unity Editor}
+\caption[Scena w edytorze Unity]{Scena w programie Unity Editor}
 \end{figure}
 
 Wykorzystując funkcjonalności tego pakietu, stworzona została scena w silniku Unity, zawierająca dwie kamery i dwie tekstury. Kamery posiadają właściwość o nazwie \textit{TargetEye}, która pozwala decydować, czy obraz w polu widzenia kamery trafia do lewego lub prawego ekranu (oka), w urządzeniu Oculus Rift. Na każdej z tekstur również wyświetlany jest obraz tylko dla jednego oka. Tekstury renderowane są jedynie w polu widzenia odpowiedniej kamery, zamiast być wyświetlane jak standardowy obiekt sceny. Dzięki temu podczas obrotów kamery, po wykryciu ruchu urządzenia VR, tekstura nie jest poddawana żadnym przekształceniom, związanym z grafiką 3D, co wpływa na wydajność systemu. W celu wyświetlenia obrazu jako tekstury, potrzebna jest jego odpowiednia konwersja, która jest również ważną częścią modułu.
@@ -635,7 +635,7 @@ W module zostały zdefiniowane następujące interfejsy, zapewniające metody do
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{images/IStereoVidTransmitter}
-\caption[Przekazywanie diagram]{Interfejs zwracający tekstury do wyświetlenia}
+\caption[Interfejs zwracający tekstury do wyświetlenia]{Interfejs zwracający tekstury do wyświetlenia}
 \end{figure}
 
 Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obrazów, w odpowiednim formacie, gotowych do wyświetlenia na scenie programu Unity. Metoda \textit{GetStereoView} zwraca obiekt zawierający dwie tekstury - dla lewego i prawego oka. 
@@ -643,7 +643,7 @@ Interfejs \textit{IStereoVidTransmitter} jest odpowiedzialny za dostarczenie obr
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.9]{images/ITextureConverter}
-\caption[Konwersja diagram]{Interfejs dokonujący konwersji obrazu do tekstury}
+\caption[Interfejs konwersji tekstur]{Interfejs dokonujący konwersji obrazu do tekstury}
 \end{figure}
 
 Interfejs \textit{ITextureConverter} odpowiada za wszystkie operacje, potrzebne przy konwersji obrazu do tekstury. W systemie wykorzystywany jest przez klasy implementujące interfejs \textit{IStereoVidTransmitter}. Metoda \textit{FromBitmap} zwraca nowy obiekt tekstury, utworzony na~podstawie przekazanego obrazu, za pomocą typu \textit{System.Drawing.Bitmap}. Metoda\textit{FromImage} działa analogicznie do poprzedniej, jednak jako argument przyjmuje obraz reprezentowany za pomocą typu z biblioteki EmguCV.
@@ -666,7 +666,7 @@ Do wykonania aplikacji został użyty framework \textit{WPF} (Windows Presentati
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{images/mainwindow_screen}
-\caption[Widok aplikacji]{Widok aplikacji konfiguracyjnej}
+\caption[Interfejs aplikacji konfiguracyjnej]{Interfejs aplikacji konfiguracyjnej}
 \end{figure}
 
 Widok ten można podzielić na dwie części, ze względu na spełniane funkcjonalności:
@@ -692,12 +692,12 @@ W celu większej przejrzystości, dla wymienionych części zostały stworzone s
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{images/channelcontrol_screen}
-\caption[Widok aplikacji]{Kontrolki \textit{ChannelControl}.}
+\caption[Widok kontrolek kanałów]{Kontrolki \textit{ChannelControl}.}
 \end{figure}
 
 Aplikacja w trakcie działania, za pomoca oddzielnego wątku wywołuje metodę \textit{UpdateFrames} w serwisie {IViewProviderService}, która wywołuje pobranie obrazu z~kamery. Następnie za pomocą metody \textit{GetCurrentViewAsBitmaps} z tego samego serwisu, otrzymuje obrazy z obu kamer w formacie \textit{System.Drawing.Bitmap} i ładuje je do kontrolek wyświetlających obrazy, odświeżając widok całej aplikacji. \\
 Zmiana źródła obrazu (kamery) możliwa jest poprzez wybór odpowiedniej opcji z listy, zawierającej wszystkie dostępnymi źródła. Wtedy za pomocą metody \textit{SetCapture} z serwisu, wybierane jest źródło dla lewego lub prawego oka. \\
-Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z~nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o $90^\circ$~we~wskazaną stronę, dla wybranego oka.
+Obrót obrazu dokonywany jest za pomocą dwóch przycisków. Po kliknięciu jednego z~nich następuje wywołanie metody \textit{RotateImage} z serwisu, która realizuje obrót o~$90^\circ$~we~wskazaną stronę, dla wybranego oka.
 
 \item [Kontrola przetwarzania obrazu] \hfill \\
 Sterowanie przetwarzaniem obrazu jest możliwe, tylko dla obu źródeł obrazu jednocześnie. Dlatego w głównym widoku, umieszczona została jedna kontrolka \textit{SettingsControl}. Zawiera ona listę, na której umieszczone zostały wszystkie dostępne w systemie obiekty do~przetwarzania obrazu. Lista dostępnych obiektów pobierana jest z serwisu wystawianego przez aplikację Unity. W celu zarządzania tymi obiektami został stworzony szablon, wyświetlany dla każdej pozycji z listy, składający się z następujących elementów:
@@ -712,7 +712,7 @@ Sterowanie przetwarzaniem obrazu jest możliwe, tylko dla obu źródeł obrazu j
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.5]{images/settingscontrol_screen}
-\caption[Widok aplikacji]{Kontrolka \textit{SettingsControl}.}
+\caption[Widok kontrolki ustawień]{Kontrolka \textit{SettingsControl}.}
 \end{figure}
 
 Lista dostępnych przekształceń obrazu wraz z informacją o ich aktywności otrzymywana jest po wywołaniu metody \textit{GetAllImageProcessors} z serwisu \textit{IViewProviderService}. \\
@@ -730,7 +730,7 @@ Technologia \textit{WCF} wymaga, aby zdefiniować metody będące kontraktem dos
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{images/IViewProviderService}
-\caption[Serwisy diagram]{Interfejsy serwisów}
+\caption[Interfejsy serwisów]{Interfejsy serwisów}
 \end{figure}
 
 Opis interfejsów zawartych w kontrakcie:
@@ -788,7 +788,7 @@ Projekt uchwytu wykonał Maciej Spychała - członek Koła Naukowego Wirtualnej 
 \end{figure}
 
 \section{Testy rozwiązania}
-Przeprowadzone testy można podzielić na dwie kategorie. Pierwszą z nich będą testy obiektywne, czyli takie, które można przedstawić w formie danych liczbowych. Tego typu testy będą związane bezpośrednio z wydajnością systemu i jej wpływem na wrażenia użytkownika. Drugą kategorią będą testy subiektywne, opierające się na indywidualnych odczuciach związanych z korzystaniem z kostruowanych gogli AR. 
+Przeprowadzone testy można podzielić na dwie kategorie. Pierwszą z nich będą testy obiektywne, czyli takie, które można przedstawić w formie danych liczbowych. Tego typu testy będą związane bezpośrednio z wydajnością systemu i jej wpływem na wrażenia użytkownika. Drugą kategorią będą testy subiektywne, opierające się na indywidualnych odczuciach związanych z korzystaniem ze skostruowanych gogli AR. 
 
 \subsection{Testy wydajności}
 Ten podrozdział jest poświęcony testom wydajności systemu. W związku z tym, że~tego~typu systemy należą do klasy tzw. systemów czasu rzeczywistego, jest to bardzo istotna kwestia przy tworzeniu takich rozwiązań. Nawet minimalne przekroczenie akceptowalnych przez ludzki organizm opóźnień może bardzo wpłynąć na komfort i ogólne wrażenie z korzystania z gogli.
@@ -801,7 +801,7 @@ Wszystkie testy zostały wykonane dla dwóch rozdzielczości obrazu:
 
 \begin{description}
 \item[Opóźnienie przesyłanego obrazu] \hfill \\
-Pierwszą z kwestii, która została poruszona jest opóźnienie przesyłania obrazu na linii kamery - gogle. Jest to prawdopodobnie najważniejszy problem, od rozwiązania którego zależy to, czy system będzie nadawał się do użytku. Zbyt duże opóźnienia spowodują, że użytkownik nie będzie w stanie zareagować w odpowiednim czasie na zmiany w otoczeniu, ponieważ informacja o nich dotrze do niego za późno. W ramach testów zmierzono różnicę między czasem wyświetlanej klatki, a czasem rzeczywistym.
+Pierwszą z kwestii, która została poruszona jest opóźnienie przesyłania obrazu na linii kamery - gogle. Jest to prawdopodobnie najważniejszy problem, od rozwiązania którego zależy to, czy system będzie nadawał się do użytku. Zbyt duże opóźnienia spowodują, że~użytkownik nie będzie w stanie zareagować w odpowiednim czasie na zmiany w~otoczeniu, ponieważ informacja o nich dotrze do niego za późno. W ramach testów zmierzono różnicę między czasem wyświetlanej klatki, a czasem rzeczywistym.
 
 \textit{Sposób wykonania testu}
 
@@ -815,6 +815,12 @@ Do wykonania testu potrzebne są: kamera, ekran, stoper. Kamera, która będzie 
 Różnica pomiędzy czasem, wyświetlanym na bezpośrednim obrazie stopera, a czasem z jego obrazu ekranowego, jest opóźnieniem danej klatki.
 Należy wykonać kilka pomiarów, a następnie na ich podstawie wyznaczyć opóźnienie obrazu.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.25]{images/delayGray}
+\caption[Test opóźnień]{Test opóźnień (obraz w skali szarości)}
+\end{figure}
+
 \textit{Wyniki}
 
 Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadków:
@@ -824,9 +830,9 @@ Wykonano po 10 pomiarów opóźnienia obrazu dla każdego z poniższych przypadk
 \item przekazywanie obrazu obróconego o 90\textdegree
 \end{itemize}
 
+\newpage
 W tabelach \ref{opoznienia1440x1080} i \ref{opoznienia640x480} przedstawione są wyniki pomiarów dla obu rozdzielczości. Na postawie tych pomiarów wyznaczono średnie opóźnienia dla każdego przypadku. Średnie opóźnienia podane są w tabeli \ref{srednieOpoznienia}.
 
-\newpage
 \begin{table}[H]
 \centering
 \begin{tabular}{lccc}
@@ -942,7 +948,7 @@ Bez przetwarzania {[}FPS{]}           & 14.23       & 23.32     \\
 Konwersja do skali szarości {[}FPS{]} & 14.29       & 23.81     \\
 Obrót o 90\textdegree {[}FPS{]}       & 14.21       & 23.62    
 \end{tabular}
-\caption{Średnie ilości FPS}
+\caption{Średnie liczby FPS}
 \label{srednieFPS}
 \end{table}
 
@@ -1006,7 +1012,7 @@ Użytkownik gogli nie miał problemu, jeśli jego rolą było uderzenie rąk prz
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/lapkiTest}
-\caption[LapkiTest]{Gra w łapki}
+\caption[Gra w łapki]{Gra w łapki}
 \end{figure}
 
 \newpage
@@ -1020,7 +1026,7 @@ Podczas tego testu można było zaobserwować dwa czynniki wpływające negatywn
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.18]{images/chwytaniePilki}
-\caption[CaptureTest]{Chwytanie przedmiotu}
+\caption[Chwytanie przedmiotu]{Chwytanie przedmiotu}
 \end{figure}
 
 \item[Celowanie laserem w punkt] \hfill \\
@@ -1040,7 +1046,7 @@ Użytkownik rzucał piłką tenisową, próbując trafić do rąk osoby stojące
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.18]{images/rzucaniePilki}
-\caption[ThrowingTest]{Rzucanie piłką do celu}
+\caption[Rzucanie piłką do celu]{Rzucanie piłką do celu}
 \end{figure}
 
 \end{description}
@@ -1174,12 +1180,16 @@ Pomimo ogromnego postępu transportu pasażerskiego w ostatnich dekadach, podró
 \chapter*{Wykaz symboli i skrótów}
 
 \begin{tabular}{cl}
-HUD & head-up display \\
+AR & Augmented Reality \\
 FPS & frames per second \\
-IDE & Integrated Development Environment \\
 HTTP & Hypertext Transfer Protocol \\
-WPF & Windows Presentation Foundation \\
+HUD & head-up display \\
+IDE & Integrated Development Environment \\
+np. & Na przykład \\
+tzw. & Tak zwany \\
+VR & Virtual Reality \\
 WCF & Windows Communication Foundation \\
+WPF & Windows Presentation Foundation \\
 \end{tabular}
 \thispagestyle{empty}
 
