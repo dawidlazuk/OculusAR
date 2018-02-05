@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImageExtension.cs" />
+    <Compile Include="Processors\ColorProcessor.cs" />
     <Compile Include="Processors\GrayImageProcessor.cs" />
     <Compile Include="ProcessedViewProvider.cs" />
     <Compile Include="Processors\SobelProcessor.cs" />

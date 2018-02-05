@@ -112,7 +112,8 @@ namespace ViewVisualization.ViewModels
             {
                 new GrayImageProcessor(),
                 new SmoothBilateralProcessor(7,255,34),
-                new SobelProcessor()
+                new SobelProcessor(),
+                new ColorProcessor()
             });
             ViewProviderService service = ViewProviderService.Create(processedProvider);
 #endif
